@@ -5,6 +5,7 @@
  *   npm run eval                      # full run → data/results.json + public/results.csv
  *   npm run eval -- --limit 20        # smoke test (prints a summary, writes no results)
  *   npm run eval -- --concurrency 16
+ *   npm run eval -- --speed 50        # time single requests per model, throttled calls discarded → data/speed.json
  *   npm run eval -- --partial         # file the answers so far (reviews both models answered), no calls
  *   npm run eval:mock                 # simulated answers → data/results.mock.json (layout preview only)
  *
@@ -17,7 +18,7 @@
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { experimental_evaluate as evaluate, generateText } from "ai";
-import type { ModelInfo, ModelKey, Prediction, ResultsFile, SampleFile, SampleItem, Sentiment } from "../lib/types";
+import type { ModelInfo, ModelKey, Prediction, ResultsFile, SampleFile, SampleItem, Sentiment, SpeedFile } from "../lib/types";
 
 const { values } = parseArgs({
   options: {
@@ -25,6 +26,7 @@ const { values } = parseArgs({
     limit: { type: "string" },
     mock: { type: "boolean", default: false },
     partial: { type: "boolean", default: false },
+    speed: { type: "string" },
     sample: { type: "string", default: "data/sample.json" },
   },
 });
@@ -88,7 +90,7 @@ function gatewayCost(meta: unknown): number | undefined {
   return typeof n === "number" && Number.isFinite(n) ? n : undefined;
 }
 
-async function classifyJev(item: SampleItem): Promise<Prediction> {
+async function classifyJev(item: SampleItem, maxRetries = MAX_RETRIES): Promise<Prediction> {
   const start = performance.now();
   const result = await evaluate({
     model: MODELS.jev.id,
@@ -123,7 +125,7 @@ function parseSentiment(text: string): Sentiment | null {
   return hits.size === 1 ? ([...hits][0] as Sentiment) : null;
 }
 
-async function classifyQwen(item: SampleItem): Promise<Prediction> {
+async function classifyQwen(item: SampleItem, maxRetries = MAX_RETRIES): Promise<Prediction> {
   const start = performance.now();
   const result = await generateText({
     model: MODELS.qwen.id,
@@ -145,7 +147,7 @@ async function classifyQwen(item: SampleItem): Promise<Prediction> {
   };
 }
 
-const CLASSIFIERS: Record<ModelKey, (item: SampleItem) => Promise<Prediction>> = {
+const CLASSIFIERS: Record<ModelKey, (item: SampleItem, maxRetries?: number) => Promise<Prediction>> = {
   jev: classifyJev,
   qwen: classifyQwen,
 };
@@ -285,12 +287,57 @@ function toCsv(results: ResultsFile, sample: SampleFile): string {
   return [header.join(","), ...lines].join("\n") + "\n";
 }
 
+// ─── Speed test ─────────────────────────────────────────────────────────────
+// The accuracy run's latencies include SDK retries and back-off after gateway
+// rate limits. Here each request is one attempt (maxRetries 0), models run one
+// request at a time, and a throttled request is discarded and re-sent after a
+// pause, so only unthrottled round trips are timed.
+
+const SPEED_MIN_GAP_MS: Record<ModelKey, number> = { jev: 0, qwen: 12_500 }; // Qwen: 5 req/min team limit
+
+const isRateLimit = (err: unknown) => /rate ?limit|429/i.test(`${(err as Error)?.name} ${(err as Error)?.message}`);
+const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+async function speedTest(sample: SampleFile, n: number) {
+  const items = sample.items.slice(0, n + 1); // first call is a discarded warm-up
+  const models = {} as SpeedFile["models"];
+  for (const key of ["jev", "qwen"] as const) {
+    const latencies: number[] = [];
+    let throttled = 0;
+    let last = 0;
+    for (const [i, item] of items.entries()) {
+      for (;;) {
+        await wait(Math.max(0, last + SPEED_MIN_GAP_MS[key] - Date.now()));
+        last = Date.now();
+        try {
+          const p = await CLASSIFIERS[key](item, 0);
+          if (i > 0) latencies.push(p.latencyMs);
+          break;
+        } catch (err) {
+          if (!isRateLimit(err)) throw err;
+          throttled++;
+          await wait(20_000);
+        }
+      }
+      process.stdout.write(`\r${MODELS[key].name} ${latencies.length}/${n} timed, ${throttled} throttled (discarded)   `);
+    }
+    const sorted = [...latencies].sort((a, b) => a - b);
+    const q = (p: number) => sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))];
+    models[key] = { latenciesMs: latencies, p50: q(0.5), p95: q(0.95), throttledDiscarded: throttled };
+    console.log(`\n${MODELS[key].id.padEnd(22)} p50 ${models[key].p50} ms · p95 ${models[key].p95} ms`);
+  }
+  const out: SpeedFile = { runAt: new Date().toISOString(), n, models };
+  writeFileSync("data/speed.json", JSON.stringify(out, null, 1) + "\n");
+  console.log("\nFiled → data/speed.json");
+}
+
 async function main() {
   const sample = JSON.parse(readFileSync(values.sample!, "utf8")) as SampleFile;
   const limit = values.limit ? Number(values.limit) : undefined;
   let items = limit ? sample.items.slice(0, limit) : sample.items;
   const concurrency = Number(values.concurrency);
   const { items: _omit, ...sampleMeta } = sample;
+  if (values.speed) return speedTest(sample, Number(values.speed));
   const started = Date.now();
 
   let answers: Record<ModelKey, Map<string, Prediction>>;

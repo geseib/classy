@@ -51,6 +51,14 @@ export type ModelInfo = {
   pricing?: { inputPerMTok: number; outputPerMTok: number };
 };
 
+/** `npm run eval -- --speed N`: single-attempt request timings, throttled calls discarded. */
+export type SpeedFile = {
+  runAt: string;
+  /** Reviews timed per model (first N of the sample), after one discarded warm-up call. */
+  n: number;
+  models: Record<ModelKey, { latenciesMs: number[]; p50: number; p95: number; throttledDiscarded: number }>;
+};
+
 export type ResultsFile = {
   /** True only for `npm run eval:mock` output. The page labels it loudly. */
   simulated: boolean;

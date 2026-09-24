@@ -1,6 +1,6 @@
 import { loadData } from "@/lib/load";
 import { agreement, byLength, calibration, confidenceOf, joinRows, modelMetrics, type Row } from "@/lib/stats";
-import type { ModelInfo, ModelKey, ResultsFile, SampleFile } from "@/lib/types";
+import type { ModelInfo, ModelKey, ResultsFile, SampleFile, SpeedFile } from "@/lib/types";
 import {
   AccuracyChart,
   AgreementTable,
@@ -17,6 +17,7 @@ import Gallery, { type GalleryItem, type GalleryTab } from "@/components/Gallery
 export const dynamic = "force-static";
 
 const fmt = (n: number) => n.toLocaleString("en-US");
+const ms = (v: number) => (v < 1000 ? `${fmt(Math.round(v))} ms` : `${(v / 1000).toFixed(1)} s`);
 const usd = (c: number | null) => (c === null ? "n/a" : `$${c < 0.1 ? c.toFixed(4) : c.toFixed(2)}`);
 const fmtP = (p: number) => (p < 0.001 ? "p < 0.001" : `p = ${p.toFixed(3)}`);
 const monthYear = (iso: string) =>
@@ -31,7 +32,7 @@ const PLANNED: ModelInfo[] = [
 ];
 
 export default function Page() {
-  const { sample, results } = loadData();
+  const { sample, results, speed } = loadData();
   const models = results?.models ?? PLANNED;
   return (
     <>
@@ -47,7 +48,7 @@ export default function Page() {
         </div>
       )}
       <Nav hasResults={!!results && !results.simulated} />
-      {results ? <WithResults results={results} sample={sample} /> : <Pending sample={sample} models={models} />}
+      {results ? <WithResults results={results} sample={sample} speed={speed} /> : <Pending sample={sample} models={models} />}
       <Footer />
     </>
   );
@@ -102,7 +103,17 @@ function Hero({ n, models, pending, children }: { n: number; models: ModelInfo[]
   );
 }
 
-function Scorecards({ metrics, models, pValue }: { metrics: Record<ModelKey, ReturnType<typeof modelMetrics>>; models: ModelInfo[]; pValue: number }) {
+function Scorecards({
+  metrics,
+  models,
+  pValue,
+  speed,
+}: {
+  metrics: Record<ModelKey, ReturnType<typeof modelMetrics>>;
+  models: ModelInfo[];
+  pValue: number;
+  speed: SpeedFile | null;
+}) {
   const [a, b] = models.map((m) => metrics[m.key]);
   const diff = Math.abs(a.accuracy - b.accuracy) * 100;
   return (
@@ -126,6 +137,16 @@ function Scorecards({ metrics, models, pValue }: { metrics: Record<ModelKey, Ret
               <div className={`meter meter-${m.key}`} aria-hidden>
                 <span style={{ width: pct(s.accuracy) }} />
               </div>
+              <dl className="sc-stats">
+                <div>
+                  <dt>Median response</dt>
+                  <dd>{speed ? ms(speed.models[m.key].p50) : "n/a"}</dd>
+                </div>
+                <div>
+                  <dt>Cost / 1k reviews</dt>
+                  <dd>{usd(s.expectedCostPer1k)}</dd>
+                </div>
+              </dl>
               <div className="sc-kind">{m.kind === "evaluation" ? "Purpose-built evaluation model" : "General-purpose flash LLM"}</div>
             </div>
           );
@@ -175,7 +196,7 @@ function Protocol({ sample }: { sample: Omit<SampleFile, "items"> }) {
 
 // ─── Results page ───────────────────────────────────────────────────────────
 
-function WithResults({ results, sample }: { results: ResultsFile; sample: SampleFile }) {
+function WithResults({ results, sample, speed }: { results: ResultsFile; sample: SampleFile; speed: SpeedFile | null }) {
   const rows = joinRows(results, sample.items);
   const models = results.models;
   const [J, Q] = models;
@@ -264,7 +285,7 @@ function WithResults({ results, sample }: { results: ResultsFile; sample: Sample
   return (
     <main>
       <Hero n={n} models={models}>
-        <Scorecards metrics={metrics} models={models} pValue={agree.pValue} />
+        <Scorecards metrics={metrics} models={models} pValue={agree.pValue} speed={speed} />
       </Hero>
 
       <section className="band">
@@ -355,7 +376,7 @@ function WithResults({ results, sample }: { results: ResultsFile; sample: Sample
                       <td>{pct(s.recall.positive)}</td>
                       <td>{pct(s.recall.negative)}</td>
                       <td>{s.unanswered}</td>
-                      <td>{fmt(Math.round(s.latency.p50))} ms</td>
+                      <td>{speed ? ms(speed.models[m.key].p50) : "n/a"}</td>
                       <td>
                         {s.meanInputTokens === null || s.meanOutputTokens === null
                           ? "n/a"
@@ -370,8 +391,10 @@ function WithResults({ results, sample }: { results: ResultsFile; sample: Sample
             </table>
           </div>
           <figcaption>
-            <strong>Table 1.</strong> Recall + / − is accuracy on positive and on negative reviews. Latency is wall-clock per request
-            from one client through AI Gateway, retries included; treat it as indicative. Tokens are the mean per review. Expected cost is
+            <strong>Table 1.</strong> Recall + / − is accuracy on positive and on negative reviews. Median latency comes from a separate speed test
+            {speed ? ` of ${fmt(speed.n)} reviews per model` : ""}: one request at a time from one client through AI Gateway, each
+            timed as a single attempt, with any request the gateway throttled discarded rather than retried
+            {speed ? ` (95th percentile: ${models.map((m) => `${m.name} ${ms(speed.models[m.key].p95)}`).join(", ")})` : ""}. Tokens are the mean per review. Expected cost is
             those tokens at list price (
             {models
               .filter((m) => m.pricing)
