@@ -1,824 +1,1652 @@
 {
- "runAt": "2026-09-24T20:00:31.535Z",
- "model": {
-  "key": "sonnet",
-  "id": "anthropic/claude-sonnet-5",
-  "name": "Claude Sonnet 5",
-  "vendor": "Anthropic",
-  "kind": "generative",
-  "call": "Claude Code subagent (model: sonnet), same system prompt and review template as Qwen",
-  "pricing": {
-   "inputPerMTok": 2,
-   "outputPerMTok": 10
+ "references": [
+  {
+   "runAt": "2026-09-24T20:00:31.535Z",
+   "model": {
+    "key": "sonnet",
+    "id": "anthropic/claude-sonnet-5",
+    "name": "Claude Sonnet 5",
+    "vendor": "Anthropic",
+    "kind": "generative",
+    "call": "Claude Code subagent (model: sonnet), same system prompt and review template as Qwen",
+    "pricing": {
+     "inputPerMTok": 2,
+     "outputPerMTok": 10
+    }
+   },
+   "rows": [
+    {
+     "id": "imdb-29252",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-29252",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-08071",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-08071",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-25343",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-25343",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-36892",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-36892",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-16285",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-16285",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-37125",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-37125",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-14020",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-14020",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-02240",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-02240",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-23256",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-23256",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-00091",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-00091",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-29413",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-29413",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38444",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-38444",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-42578",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-42578",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-39486",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-39486",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17120",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-17120",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-47049",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-47049",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-44712",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-44712",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-07021",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-07021",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-11421",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-11421",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-39416",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-39416",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-15817",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-15817",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-48535",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-48535",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-18321",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-18321",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-16596",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-16596",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19954",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-19954",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-34062",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-34062",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-21860",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-21860",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-27189",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-27189",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-03457",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-03457",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46438",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46438",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38416",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-38416",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-26605",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-26605",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-27013",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-27013",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-49009",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-49009",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-06468",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-06468",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-29834",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-29834",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-01716",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-01716",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-06433",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-06433",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-36268",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-36268",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-10523",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-10523",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-16180",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-16180",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-32577",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-32577",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19943",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-19943",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-41497",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-41497",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17977",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-17977",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-06795",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-06795",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-23334",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-23334",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-44571",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-44571",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46651",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46651",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-15092",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-15092",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-09541",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-09541",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-04619",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-04619",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-25940",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-25940",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-29103",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-29103",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-11202",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-11202",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-27907",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-27907",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38178",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-38178",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-18902",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-18902",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-41113",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-41113",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-42985",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-42985",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46070",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46070",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-44747",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-44747",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17127",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-17127",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-48775",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-48775",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-05918",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-05918",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-48354",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-48354",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-00638",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-00638",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-05341",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-05341",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17447",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-17447",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19987",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-19987",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-41493",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-41493",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-20074",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-20074",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-26189",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-26189",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38448",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-38448",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46479",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46479",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-09209",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-09209",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-47179",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-47179",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19957",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-19957",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-28556",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-28556",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46941",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-46941",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    }
+   ],
+   "throttledDiscarded": 0,
+   "via": "subagent",
+   "estimatedTokens": {
+    "inputPerReview": 399,
+    "outputPerReview": 1,
+    "basis": "input taken from Qwen’s measured prompt tokens on the same reviews (the tokenizers differ) and output counted as the one-word answer only, excluding any thinking tokens"
+   }
+  },
+  {
+   "runAt": "2026-09-24T20:03:31.588Z",
+   "model": {
+    "key": "haiku",
+    "id": "anthropic/claude-haiku-4.5",
+    "name": "Claude Haiku 4.5",
+    "vendor": "Anthropic",
+    "kind": "generative",
+    "call": "Claude Code subagent (model: haiku), same system prompt and review template as Qwen",
+    "pricing": {
+     "inputPerMTok": 1,
+     "outputPerMTok": 5
+    }
+   },
+   "rows": [
+    {
+     "id": "imdb-29252",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-29252",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-08071",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-08071",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-25343",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-25343",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-36892",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-36892",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-16285",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-16285",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-37125",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-37125",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-14020",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-14020",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-02240",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-02240",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-23256",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-23256",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-00091",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-00091",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-29413",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-29413",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38444",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-38444",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-42578",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-42578",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-39486",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-39486",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17120",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-17120",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-47049",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-47049",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-44712",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-44712",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-07021",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-07021",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-11421",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-11421",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-39416",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-39416",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-15817",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-15817",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-48535",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-48535",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-18321",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-18321",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-16596",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-16596",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19954",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-19954",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-34062",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-34062",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-21860",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-21860",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-27189",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-27189",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-03457",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-03457",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46438",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46438",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38416",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-38416",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-26605",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-26605",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-27013",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-27013",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-49009",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-49009",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-06468",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-06468",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-29834",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-29834",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-01716",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-01716",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-06433",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-06433",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-36268",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-36268",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-10523",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-10523",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-16180",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-16180",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-32577",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-32577",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19943",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-19943",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-41497",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-41497",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17977",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-17977",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-06795",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-06795",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-23334",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-23334",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-44571",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-44571",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46651",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46651",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-15092",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-15092",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-09541",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-09541",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-04619",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-04619",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-25940",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-25940",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-29103",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-29103",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-11202",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-11202",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-27907",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-27907",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38178",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-38178",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-18902",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-18902",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-41113",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-41113",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-42985",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-42985",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46070",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46070",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-44747",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-44747",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17127",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-17127",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-48775",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-48775",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-05918",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-05918",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-48354",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-48354",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-00638",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-00638",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-05341",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-05341",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-17447",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-17447",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19987",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-19987",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-41493",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-41493",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-20074",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-20074",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-26189",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-26189",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-38448",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-38448",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46479",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-46479",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-09209",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-09209",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-47179",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-47179",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-19957",
+     "label": "positive",
+     "answer": {
+      "id": "imdb-19957",
+      "prediction": "positive",
+      "raw": "positive",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-28556",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-28556",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    },
+    {
+     "id": "imdb-46941",
+     "label": "negative",
+     "answer": {
+      "id": "imdb-46941",
+      "prediction": "negative",
+      "raw": "negative",
+      "latencyMs": 0
+     }
+    }
+   ],
+   "throttledDiscarded": 0,
+   "via": "subagent",
+   "estimatedTokens": {
+    "inputPerReview": 399,
+    "outputPerReview": 1,
+    "basis": "input taken from Qwen’s measured prompt tokens on the same reviews (the tokenizers differ) and output counted as the one-word answer only, excluding any thinking tokens"
+   }
   }
- },
- "rows": [
-  {
-   "id": "imdb-29252",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-29252",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-08071",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-08071",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-25343",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-25343",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-36892",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-36892",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-16285",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-16285",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-37125",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-37125",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-14020",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-14020",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-02240",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-02240",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-23256",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-23256",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-00091",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-00091",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-29413",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-29413",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-38444",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-38444",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-42578",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-42578",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-39486",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-39486",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-17120",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-17120",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-47049",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-47049",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-44712",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-44712",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-07021",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-07021",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-11421",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-11421",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-39416",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-39416",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-15817",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-15817",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-48535",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-48535",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-18321",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-18321",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-16596",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-16596",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-19954",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-19954",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-34062",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-34062",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-21860",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-21860",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-27189",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-27189",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-03457",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-03457",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-46438",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-46438",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-38416",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-38416",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-26605",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-26605",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-27013",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-27013",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-49009",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-49009",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-06468",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-06468",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-29834",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-29834",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-01716",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-01716",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-06433",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-06433",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-36268",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-36268",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-10523",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-10523",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-16180",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-16180",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-32577",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-32577",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-19943",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-19943",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-41497",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-41497",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-17977",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-17977",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-06795",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-06795",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-23334",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-23334",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-44571",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-44571",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-46651",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-46651",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-15092",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-15092",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-09541",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-09541",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-04619",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-04619",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-25940",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-25940",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-29103",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-29103",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-11202",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-11202",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-27907",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-27907",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-38178",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-38178",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-18902",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-18902",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-41113",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-41113",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-42985",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-42985",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-46070",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-46070",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-44747",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-44747",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-17127",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-17127",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-48775",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-48775",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-05918",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-05918",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-48354",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-48354",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-00638",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-00638",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-05341",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-05341",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-17447",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-17447",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-19987",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-19987",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-41493",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-41493",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-20074",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-20074",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-26189",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-26189",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-38448",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-38448",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-46479",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-46479",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-09209",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-09209",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-47179",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-47179",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-19957",
-   "label": "positive",
-   "answer": {
-    "id": "imdb-19957",
-    "prediction": "positive",
-    "raw": "positive",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-28556",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-28556",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  },
-  {
-   "id": "imdb-46941",
-   "label": "negative",
-   "answer": {
-    "id": "imdb-46941",
-    "prediction": "negative",
-    "raw": "negative",
-    "latencyMs": 0
-   }
-  }
- ],
- "throttledDiscarded": 0,
- "via": "subagent",
- "estimatedTokens": {
-  "inputPerReview": 399,
-  "outputPerReview": 1,
-  "basis": "input taken from Qwen’s measured prompt tokens on the same reviews (the tokenizers differ) and output counted as the one-word answer only, excluding any thinking tokens"
- }
+ ]
 }

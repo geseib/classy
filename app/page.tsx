@@ -613,42 +613,66 @@ function ReferenceSection({
   speed: SpeedFile | null;
   sectionNo: number;
 }) {
-  const R = reference.model;
-  const n = reference.rows.length;
+  const refs = reference.references;
+  const ids = refs[0].rows.map((r) => r.id);
+  const n = ids.length;
+  const label = new Map(refs[0].rows.map((r) => [r.id, r.label]));
   const byId = new Map(results.rows.map((r) => [r.id, r]));
-  const subagent = reference.via === "subagent";
-  const est = reference.estimatedTokens;
-  const refCost =
-    R.pricing && est ? ((est.inputPerReview * R.pricing.inputPerMTok + est.outputPerReview * R.pricing.outputPerMTok) / 1e6) * 1000 : null;
-  const refRight = reference.rows.filter((r) => r.answer.prediction === r.label).length;
-  const lines = [
-    {
-      key: "ref",
+  const anySubagent = refs.some((r) => r.via === "subagent");
+  const refLines = refs.map((ref) => {
+    const R = ref.model;
+    const est = ref.estimatedTokens;
+    const cost =
+      R.pricing && est
+        ? ((est.inputPerReview * R.pricing.inputPerMTok + est.outputPerReview * R.pricing.outputPerMTok) / 1e6) * 1000
+        : null;
+    const right = ref.rows.filter((r) => r.answer.prediction === r.label).length;
+    return {
+      key: R.key,
       name: R.name,
-      right: refRight,
-      speed: subagent ? "not measured" : ms(quantileMs(reference.rows.map((r) => r.answer.latencyMs))),
-      cost: refCost === null ? "n/a" : `${subagent ? "≥ " : ""}${usd(refCost)}`,
-    },
-    ...results.models.map((m) => ({
-      key: m.key,
-      name: m.name,
-      right: reference.rows.filter((r) => byId.get(r.id)?.[m.key].prediction === r.label).length,
-      speed: speed ? ms(speed.models[m.key].p50) : "n/a",
-      cost: usd(metrics[m.key].expectedCostPer1k),
-    })),
+      right,
+      ci: wilson(right, n),
+      speed: ref.via === "subagent" ? "not measured" : ms(quantileMs(ref.rows.map((r) => r.answer.latencyMs))),
+      cost: cost === null ? "n/a" : `${ref.via === "subagent" ? "≥ " : ""}${usd(cost)}`,
+      price: R.pricing ? `${R.name} $${R.pricing.inputPerMTok} in / $${R.pricing.outputPerMTok} out` : "",
+    };
+  });
+  const lines = [
+    ...refLines,
+    ...results.models.map((m) => {
+      const right = ids.filter((id) => byId.get(id)?.[m.key].prediction === label.get(id)).length;
+      return {
+        key: m.key,
+        name: m.name,
+        right,
+        ci: wilson(right, n),
+        speed: speed ? ms(speed.models[m.key].p50) : "n/a",
+        cost: usd(metrics[m.key].expectedCostPer1k),
+        price: "",
+      };
+    }),
   ];
-  const [lo, hi] = wilson(refRight, n);
+  const names = refLines.map((l) => l.name);
+  const est = refs.find((r) => r.estimatedTokens)?.estimatedTokens;
   return (
     <>
       <section id="reference">
         <h3>
-          <span className="sec">{sectionNo}</span>Reference: {R.name} on {fmt(n)} reviews
+          <span className="sec">{sectionNo}</span>Reference: {names.join(" and ")} on {fmt(n)} reviews
         </h3>
         <p>
-          For scale, a frontier general-purpose model answered the first {fmt(n)} reviews of the same shuffled sample, with the same
-          system prompt and review template as {results.models[1].name} and without seeing the labels. {fmt(n)} reviews is enough to
-          place it, not to rank it: at {pct(refRight / n)} its 95% interval runs from {pct(lo)} to {pct(hi)}, so extrapolated to
-          1,000 reviews it would get roughly {fmt(Math.round(lo * 1000))}–{fmt(Math.round(hi * 1000))} right.
+          For scale, {refs.length > 1 ? "two Anthropic models" : "a frontier general-purpose model"} answered the first {fmt(n)}{" "}
+          reviews of the same shuffled sample, with the same system prompt and review template as {results.models[1].name} and
+          without seeing the labels. {fmt(n)} reviews is enough to place a model, not to rank it:{" "}
+          {refLines
+            .map(
+              (l) =>
+                `${l.name} scored ${pct(l.right / n)}, a 95% interval of ${pct(l.ci[0])}–${pct(l.ci[1])}, or roughly ${fmt(
+                  Math.round(l.ci[0] * 1000),
+                )}–${fmt(Math.round(l.ci[1] * 1000))} right if extrapolated to 1,000 reviews`,
+            )
+            .join("; ")}
+          .
         </p>
       </section>
       <figure className="figure">
@@ -659,6 +683,7 @@ function ReferenceSection({
                 <th scope="col">Model</th>
                 <th scope="col">Correct</th>
                 <th scope="col">Accuracy</th>
+                <th scope="col">95% CI</th>
                 <th scope="col">Median response</th>
                 <th scope="col">Cost / 1k reviews</th>
               </tr>
@@ -666,11 +691,17 @@ function ReferenceSection({
             <tbody>
               {lines.map((l) => (
                 <tr key={l.key}>
-                  <th scope="row">{l.key === "ref" ? l.name : <><ModelSwatch k={l.key as ModelKey} />{l.name}</>}</th>
+                  <th scope="row">
+                    {l.key === "jev" || l.key === "qwen" ? <ModelSwatch k={l.key} /> : null}
+                    {l.name}
+                  </th>
                   <td>
                     {fmt(l.right)} / {fmt(n)}
                   </td>
                   <td>{pct(l.right / n)}</td>
+                  <td>
+                    {pct(l.ci[0])}–{pct(l.ci[1])}
+                  </td>
                   <td>{l.speed}</td>
                   <td>{l.cost}</td>
                 </tr>
@@ -679,21 +710,19 @@ function ReferenceSection({
           </table>
         </div>
         <figcaption>
-          <strong>Table 2.</strong> All three models on the same {fmt(n)} reviews. Response times for {results.models.map((m) => m.name).join(" and ")}{" "}
-          are from the speed test in Table 1; their costs are the full-run figures at list price.{" "}
-          {subagent ? (
+          <strong>Table 2.</strong> All models on the same {fmt(n)} reviews. Response times for{" "}
+          {results.models.map((m) => m.name).join(" and ")} are from the speed test in Table 1; their costs are the full-run figures
+          at list price.{" "}
+          {anySubagent ? (
             <>
-              {R.name} was run through Claude Code subagents rather than AI Gateway, because the gateway account’s free tier doesn’t
-              include it. Each subagent got ten reviews to judge one by one and gave the same one-word answer, inside Claude Code’s own
-              instructions, so this is close to, not identical with, a bare API call. There is no per-request timing, and its cost is a
-              lower-bound estimate at list price (${R.pricing?.inputPerMTok} in / ${R.pricing?.outputPerMTok} out per million tokens),
-              with {est?.basis}.
+              {names.join(" and ")} {refs.length > 1 ? "were" : "was"} run through Claude Code subagents rather than AI Gateway,
+              because the gateway account’s free tier doesn’t include {refs.length > 1 ? "them" : "it"}. Each subagent got ten reviews
+              to judge one by one and gave the same one-word answer, inside Claude Code’s own instructions, so this is close to, not
+              identical with, a bare API call. There is no per-request timing, and cost is a lower-bound estimate at list price (
+              {refLines.map((l) => l.price).join("; ")} per million tokens), with {est?.basis}.
             </>
           ) : (
-            <>
-              {R.name} was called through AI Gateway one request at a time, each timed as a single attempt; cost is its measured
-              tokens at list price.
-            </>
+            <>Reference models were called through AI Gateway one request at a time; cost is measured tokens at list price.</>
           )}
         </figcaption>
       </figure>

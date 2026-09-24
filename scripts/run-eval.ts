@@ -24,6 +24,7 @@ import type {
   ModelKey,
   Prediction,
   ReferenceFile,
+  ReferenceRun,
   ResultsFile,
   SampleFile,
   SampleItem,
@@ -347,7 +348,7 @@ async function speedTest(sample: SampleFile, n: number) {
 // A frontier generative model on a small slice, for scale. Same system prompt
 // and template as Qwen. Sonnet 5 rejects `temperature`, so it runs at defaults.
 
-const REFERENCE: ReferenceFile["model"] = {
+const REFERENCE: ReferenceRun["model"] = {
   key: "sonnet",
   id: "anthropic/claude-sonnet-5",
   name: "Claude Sonnet 5",
@@ -379,7 +380,7 @@ async function classifyReference(item: SampleItem): Promise<Prediction> {
 }
 
 async function referenceRun(sample: SampleFile, n: number) {
-  const rows: ReferenceFile["rows"] = [];
+  const rows: ReferenceRun["rows"] = [];
   let throttled = 0;
   for (const item of sample.items.slice(0, n)) {
     for (;;) {
@@ -399,8 +400,11 @@ async function referenceRun(sample: SampleFile, n: number) {
     const right = rows.filter((r) => r.answer.prediction === r.label).length;
     process.stdout.write(`\r${REFERENCE.name} ${rows.length}/${n} · ${right} correct · ${throttled} throttled (discarded)   `);
   }
-  const out: ReferenceFile = { runAt: new Date().toISOString(), model: REFERENCE, rows, throttledDiscarded: throttled, via: "api" };
-  writeFileSync("data/reference.json", JSON.stringify(out, null, 1) + "\n");
+  const run: ReferenceRun = { runAt: new Date().toISOString(), model: REFERENCE, rows, throttledDiscarded: throttled, via: "api" };
+  const file = "data/reference.json";
+  const prev: ReferenceFile = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : { references: [] };
+  const out: ReferenceFile = { references: [...prev.references.filter((r) => r.model.id !== REFERENCE.id), run] };
+  writeFileSync(file, JSON.stringify(out, null, 1) + "\n");
   console.log("\n\nFiled → data/reference.json");
 }
 
