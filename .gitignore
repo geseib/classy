@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# secrets
+.env
+.env*.local
+.vercel
+
+# local-only eval artifacts
+data/.checkpoints/
+data/results.mock.json
+data/*.csv
+data/*.zip
+
+.DS_Store
