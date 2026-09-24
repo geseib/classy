@@ -70,8 +70,9 @@ export type ReferenceRun = {
    * "api": called through AI Gateway like the benchmark models (timed, token counts measured).
    * "subagent": answered by a Claude Code subagent on the same prompt, blind to labels; no per-request
    * timing, and tokens are an estimate, so cost is a lower bound at list price.
+   * "local": run on-device (scripts/needle_eval.py), each request timed on that machine; no per-token cost.
    */
-  via: "api" | "subagent";
+  via: "api" | "subagent" | "local";
   estimatedTokens?: { inputPerReview: number; outputPerReview: number; basis: string };
   /** Anything about how this run went that a reader should know, shown in the table caption. */
   note?: string;

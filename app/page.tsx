@@ -618,7 +618,8 @@ function ReferenceSection({
   const n = ids.length;
   const label = new Map(refs[0].rows.map((r) => [r.id, r.label]));
   const byId = new Map(results.rows.map((r) => [r.id, r]));
-  const anySubagent = refs.some((r) => r.via === "subagent");
+  const subagentRefs = refs.filter((r) => r.via === "subagent");
+  const subagentNames = subagentRefs.map((r) => r.model.name).join(" and ");
   const refLines = refs.map((ref) => {
     const R = ref.model;
     const est = ref.estimatedTokens;
@@ -633,8 +634,9 @@ function ReferenceSection({
       right,
       ci: wilson(right, n),
       speed: ref.via === "subagent" ? "not measured" : ms(quantileMs(ref.rows.map((r) => r.answer.latencyMs))),
-      cost: cost === null ? "n/a" : `${ref.via === "subagent" ? "≥ " : ""}${usd(cost)}`,
-      price: R.pricing ? `${R.name} $${R.pricing.inputPerMTok} in / $${R.pricing.outputPerMTok} out` : "",
+      cost:
+        ref.via === "local" ? "$0 (on-device)" : cost === null ? "n/a" : `${ref.via === "subagent" ? "≥ " : ""}${usd(cost)}`,
+      price: R.pricing && ref.via === "subagent" ? `${R.name} $${R.pricing.inputPerMTok} in / $${R.pricing.outputPerMTok} out` : "",
     };
   });
   const lines = [
@@ -724,18 +726,26 @@ function ReferenceSection({
           <strong>Table 2.</strong> All models on the same {fmt(n)} reviews. Response times for{" "}
           {results.models.map((m) => m.name).join(" and ")} are from the speed test in Table 1; their costs are the full-run figures
           at list price.{" "}
-          {anySubagent ? (
+          {subagentRefs.length > 0 && (
             <>
-              The reference {refs.length > 1 ? "models were" : "model was"} run through Claude Code subagents rather than AI
-              Gateway, because the gateway account’s free tier doesn’t include {refs.length > 1 ? "them" : "it"}. Each subagent got ten reviews
-              to judge one by one and gave the same one-word answer, inside Claude Code’s own instructions, so this is close to, not
-              identical with, a bare API call. There is no per-request timing, and cost is a lower-bound estimate at list price (
-              {refLines.map((l) => l.price).join("; ")} per million tokens), with {est?.basis}.
-              {refs.filter((r) => r.note).map((r) => ` ${r.note}`)}
+              {subagentNames} {subagentRefs.length > 1 ? "were" : "was"} run through Claude Code subagents rather than AI Gateway,
+              because the gateway account’s free tier doesn’t include {subagentRefs.length > 1 ? "them" : "it"}. Each subagent got ten
+              reviews to judge one by one and gave the same one-word answer, inside Claude Code’s own instructions, so this is close
+              to, not identical with, a bare API call. There is no per-request timing, and cost is a lower-bound estimate at list
+              price ({refLines.filter((l) => l.price).map((l) => l.price).join("; ")} per million tokens), with {est?.basis}.{" "}
             </>
-          ) : (
-            <>Reference models were called through AI Gateway one request at a time; cost is measured tokens at list price.</>
           )}
+          {refs.some((r) => r.via === "local") && (
+            <>
+              Models marked on-device ran locally with the same instructions and label definitions, posed as a single tool whose
+              only argument is the label, one fresh request per review; their response time is that machine’s, not a network
+              round trip.{" "}
+            </>
+          )}
+          {refs.some((r) => r.via === "api") && (
+            <>Gateway reference models were called one request at a time; cost is measured tokens at list price. </>
+          )}
+          {refs.filter((r) => r.note).map((r) => `${r.note} `)}
         </figcaption>
       </figure>
     </>
