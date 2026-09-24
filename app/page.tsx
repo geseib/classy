@@ -653,6 +653,8 @@ function ReferenceSection({
     }),
   ];
   const est = refs.find((r) => r.estimatedTokens)?.estimatedTokens;
+  const full = n === results.rows.length;
+  const spread = Math.max(...lines.map((l) => l.right)) - Math.min(...lines.map((l) => l.right));
   return (
     <>
       <section id="reference">
@@ -660,18 +662,28 @@ function ReferenceSection({
           <span className="sec">{sectionNo}</span>Reference models on {fmt(n)} reviews
         </h3>
         <p>
-          For scale, {refs.length > 1 ? `${["two", "three", "four", "five"][refs.length - 2] ?? refs.length} reference models` : "a reference model"} answered the first {fmt(n)}{" "}
-          reviews of the same shuffled sample, with the same system prompt and review template as {results.models[1].name} and
-          without seeing the labels. {fmt(n)} reviews is enough to place a model, not to rank it:{" "}
-          {refLines
-            .map(
-              (l) =>
-                `${l.name} scored ${pct(l.right / n)}, a 95% interval of ${pct(l.ci[0])}–${pct(l.ci[1])}, or roughly ${fmt(
-                  Math.round(l.ci[0] * 1000),
-                )}–${fmt(Math.round(l.ci[1] * 1000))} right if extrapolated to 1,000 reviews`,
-            )
-            .join("; ")}
-          .
+          For scale, {refs.length > 1 ? `${["two", "three", "four", "five"][refs.length - 2] ?? refs.length} reference models` : "a reference model"} answered{" "}
+          {full ? `all ${fmt(n)} reviews of the sample` : `the first ${fmt(n)} reviews of the same shuffled sample`}, with the same system
+          prompt and review template as {results.models[1].name} and without seeing the labels.{" "}
+          {full ? (
+            <>
+              All {["two", "three", "four", "five", "six"][lines.length - 2] ?? lines.length} models land within {spread} reviews of each other, well inside one another’s 95% intervals, so on
+              accuracy this task doesn’t separate them; cost and speed do.
+            </>
+          ) : (
+            <>
+              {fmt(n)} reviews is enough to place a model, not to rank it:{" "}
+              {refLines
+                .map(
+                  (l) =>
+                    `${l.name} scored ${pct(l.right / n)}, a 95% interval of ${pct(l.ci[0])}–${pct(l.ci[1])}, or roughly ${fmt(
+                      Math.round(l.ci[0] * 1000),
+                    )}–${fmt(Math.round(l.ci[1] * 1000))} right if extrapolated to 1,000 reviews`,
+                )
+                .join("; ")}
+              .
+            </>
+          )}
         </p>
       </section>
       <figure className="figure">
