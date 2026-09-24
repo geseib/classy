@@ -652,16 +652,15 @@ function ReferenceSection({
       };
     }),
   ];
-  const names = refLines.map((l) => l.name);
   const est = refs.find((r) => r.estimatedTokens)?.estimatedTokens;
   return (
     <>
       <section id="reference">
         <h3>
-          <span className="sec">{sectionNo}</span>Reference: {names.join(" and ")} on {fmt(n)} reviews
+          <span className="sec">{sectionNo}</span>Reference models on {fmt(n)} reviews
         </h3>
         <p>
-          For scale, {refs.length > 1 ? "two Anthropic models" : "a frontier general-purpose model"} answered the first {fmt(n)}{" "}
+          For scale, {refs.length > 1 ? `${["two", "three", "four", "five"][refs.length - 2] ?? refs.length} reference models` : "a reference model"} answered the first {fmt(n)}{" "}
           reviews of the same shuffled sample, with the same system prompt and review template as {results.models[1].name} and
           without seeing the labels. {fmt(n)} reviews is enough to place a model, not to rank it:{" "}
           {refLines
@@ -715,8 +714,8 @@ function ReferenceSection({
           at list price.{" "}
           {anySubagent ? (
             <>
-              {names.join(" and ")} {refs.length > 1 ? "were" : "was"} run through Claude Code subagents rather than AI Gateway,
-              because the gateway account’s free tier doesn’t include {refs.length > 1 ? "them" : "it"}. Each subagent got ten reviews
+              The reference {refs.length > 1 ? "models were" : "model was"} run through Claude Code subagents rather than AI
+              Gateway, because the gateway account’s free tier doesn’t include {refs.length > 1 ? "them" : "it"}. Each subagent got ten reviews
               to judge one by one and gave the same one-word answer, inside Claude Code’s own instructions, so this is close to, not
               identical with, a bare API call. There is no per-request timing, and cost is a lower-bound estimate at list price (
               {refLines.map((l) => l.price).join("; ")} per million tokens), with {est?.basis}.
