@@ -73,6 +73,8 @@ export type ReferenceRun = {
    */
   via: "api" | "subagent";
   estimatedTokens?: { inputPerReview: number; outputPerReview: number; basis: string };
+  /** Anything about how this run went that a reader should know, shown in the table caption. */
+  note?: string;
 };
 
 /** `npm run eval -- --reference N` adds or replaces its model's run here. */

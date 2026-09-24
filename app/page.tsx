@@ -719,6 +719,7 @@ function ReferenceSection({
               to judge one by one and gave the same one-word answer, inside Claude Code’s own instructions, so this is close to, not
               identical with, a bare API call. There is no per-request timing, and cost is a lower-bound estimate at list price (
               {refLines.map((l) => l.price).join("; ")} per million tokens), with {est?.basis}.
+              {refs.filter((r) => r.note).map((r) => ` ${r.note}`)}
             </>
           ) : (
             <>Reference models were called through AI Gateway one request at a time; cost is measured tokens at list price.</>
