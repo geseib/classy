@@ -17,6 +17,7 @@ import Gallery, { type GalleryItem, type GalleryTab } from "@/components/Gallery
 export const dynamic = "force-static";
 
 const fmt = (n: number) => n.toLocaleString("en-US");
+const usd = (c: number | null) => (c === null ? "n/a" : `$${c < 0.1 ? c.toFixed(4) : c.toFixed(2)}`);
 const fmtP = (p: number) => (p < 0.001 ? "p < 0.001" : `p = ${p.toFixed(3)}`);
 const monthYear = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
@@ -178,7 +179,10 @@ function WithResults({ results, sample }: { results: ResultsFile; sample: Sample
   const rows = joinRows(results, sample.items);
   const models = results.models;
   const [J, Q] = models;
-  const metrics = { jev: modelMetrics(rows, "jev"), qwen: modelMetrics(rows, "qwen") };
+  const metrics = {
+    jev: modelMetrics(rows, "jev", J.pricing),
+    qwen: modelMetrics(rows, "qwen", Q.pricing),
+  };
   const agree = agreement(rows);
   const lengths = byLength(rows);
   const cal = calibration(rows, "jev");
@@ -329,7 +333,9 @@ function WithResults({ results, sample }: { results: ResultsFile; sample: Sample
                   <th scope="col">Recall −</th>
                   <th scope="col">No answer</th>
                   <th scope="col">Median latency</th>
-                  <th scope="col">Cost / 1k reviews</th>
+                  <th scope="col">Tokens in / out</th>
+                  <th scope="col">Expected cost / 1k</th>
+                  <th scope="col">Billed / 1k</th>
                 </tr>
               </thead>
               <tbody>
@@ -350,7 +356,13 @@ function WithResults({ results, sample }: { results: ResultsFile; sample: Sample
                       <td>{pct(s.recall.negative)}</td>
                       <td>{s.unanswered}</td>
                       <td>{fmt(Math.round(s.latency.p50))} ms</td>
-                      <td>{s.costPer1k === null ? "n/a" : `$${s.costPer1k < 0.1 ? s.costPer1k.toFixed(4) : s.costPer1k.toFixed(2)}`}</td>
+                      <td>
+                        {s.meanInputTokens === null || s.meanOutputTokens === null
+                          ? "n/a"
+                          : `${fmt(Math.round(s.meanInputTokens))} / ${fmt(Math.round(s.meanOutputTokens))}`}
+                      </td>
+                      <td>{usd(s.expectedCostPer1k)}</td>
+                      <td>{usd(s.costPer1k)}</td>
                     </tr>
                   );
                 })}
@@ -359,8 +371,18 @@ function WithResults({ results, sample }: { results: ResultsFile; sample: Sample
           </div>
           <figcaption>
             <strong>Table 1.</strong> Recall + / − is accuracy on positive and on negative reviews. Latency is wall-clock per request
-            from one client through AI Gateway, retries included; treat it as indicative. Cost is what AI Gateway reported, where it
-            reported it.
+            from one client through AI Gateway, retries included; treat it as indicative. Tokens are the mean per review. Expected cost is
+            those tokens at list price (
+            {models
+              .filter((m) => m.pricing)
+              .map((m) => `${m.name} $${m.pricing!.inputPerMTok} in / $${m.pricing!.outputPerMTok} out`)
+              .join("; ")}{" "}
+            per million tokens), whatever free tier or credits apply. Billed is what AI Gateway charged this run
+            {models
+              .filter((m) => metrics[m.key].costPer1k === 0)
+              .map((m) => `; ${m.name} was billed $0 on this account (free tier)`)
+              .join("")}
+            .
           </figcaption>
         </figure>
 

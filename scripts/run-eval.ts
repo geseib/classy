@@ -63,6 +63,7 @@ const MODELS: Record<ModelKey, ModelInfo> = {
     vendor: "Typesafe AI",
     kind: "evaluation",
     call: "experimental_evaluate({ state: review, questions: { sentiment: { type: 'choice', … } } })",
+    pricing: { inputPerMTok: 0.042, outputPerMTok: 0 },
   },
   qwen: {
     key: "qwen",
@@ -71,6 +72,7 @@ const MODELS: Record<ModelKey, ModelInfo> = {
     vendor: "Alibaba",
     kind: "generative",
     call: "generateText({ system, prompt, temperature: 0 })",
+    pricing: { inputPerMTok: 0.03, outputPerMTok: 0.13 },
   },
 };
 

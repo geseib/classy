@@ -47,6 +47,8 @@ export type ModelInfo = {
   kind: "evaluation" | "generative";
   /** How the SDK was called, shown verbatim in the methodology section. */
   call: string;
+  /** List price in USD per million tokens, used for expected cost regardless of free tiers or credits. */
+  pricing?: { inputPerMTok: number; outputPerMTok: number };
 };
 
 export type ResultsFile = {

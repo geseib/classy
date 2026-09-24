@@ -1,10 +1,10 @@
 {
  "simulated": false,
  "partial": {
-  "answered": 358,
+  "answered": 441,
   "of": 1000
  },
- "runAt": "2026-09-24T15:43:00.044Z",
+ "runAt": "2026-09-24T16:10:59.899Z",
  "durationMs": 4,
  "sdk": {
   "ai": "7.0.113",
@@ -34,7 +34,11 @@
    "name": "Jev",
    "vendor": "Typesafe AI",
    "kind": "evaluation",
-   "call": "experimental_evaluate({ state: review, questions: { sentiment: { type: 'choice', … } } })"
+   "call": "experimental_evaluate({ state: review, questions: { sentiment: { type: 'choice', … } } })",
+   "pricing": {
+    "inputPerMTok": 0.042,
+    "outputPerMTok": 0
+   }
   },
   {
    "key": "qwen",
@@ -42,7 +46,11 @@
    "name": "Qwen3.7 Flash",
    "vendor": "Alibaba",
    "kind": "generative",
-   "call": "generateText({ system, prompt, temperature: 0 })"
+   "call": "generateText({ system, prompt, temperature: 0 })",
+   "pricing": {
+    "inputPerMTok": 0.03,
+    "outputPerMTok": 0.13
+   }
   }
  ],
  "rows": [
@@ -7920,6 +7928,1832 @@
     "inputTokens": 275,
     "outputTokens": 302,
     "cost": 0.00004751
+   }
+  },
+  {
+   "id": "imdb-24738",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-24738",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 260,
+    "inputTokens": 477,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-24738",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 63427,
+    "inputTokens": 229,
+    "outputTokens": 423,
+    "cost": 0.00006186
+   }
+  },
+  {
+   "id": "imdb-40524",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-40524",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 285,
+    "inputTokens": 1019,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-40524",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 57562,
+    "inputTokens": 756,
+    "outputTokens": 616,
+    "cost": 0.00010276
+   }
+  },
+  {
+   "id": "imdb-16059",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-16059",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 283,
+    "inputTokens": 627,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-16059",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3135,
+    "inputTokens": 375,
+    "outputTokens": 154,
+    "cost": 0.00003127
+   }
+  },
+  {
+   "id": "imdb-44809",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-44809",
+    "prediction": "positive",
+    "pPositive": 0.85,
+    "latencyMs": 239,
+    "inputTokens": 509,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-44809",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 15596,
+    "inputTokens": 254,
+    "outputTokens": 1101,
+    "cost": 0.00015075
+   }
+  },
+  {
+   "id": "imdb-26157",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-26157",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 282,
+    "inputTokens": 621,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-26157",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 54306,
+    "inputTokens": 371,
+    "outputTokens": 367,
+    "cost": 0.00005884
+   }
+  },
+  {
+   "id": "imdb-00157",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-00157",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 325,
+    "inputTokens": 1455,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-00157",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 44525,
+    "inputTokens": 1147,
+    "outputTokens": 612,
+    "cost": 0.00011397
+   }
+  },
+  {
+   "id": "imdb-43951",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-43951",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 347,
+    "inputTokens": 733,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-43951",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 63416,
+    "inputTokens": 473,
+    "outputTokens": 570,
+    "cost": 0.00008829
+   }
+  },
+  {
+   "id": "imdb-16891",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-16891",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 234,
+    "inputTokens": 600,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-16891",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 56141,
+    "inputTokens": 348,
+    "outputTokens": 342,
+    "cost": 0.0000549
+   }
+  },
+  {
+   "id": "imdb-20943",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-20943",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 270,
+    "inputTokens": 554,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-20943",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 7195,
+    "inputTokens": 305,
+    "outputTokens": 461,
+    "cost": 0.00006908
+   }
+  },
+  {
+   "id": "imdb-13777",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-13777",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 262,
+    "inputTokens": 541,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-13777",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4853,
+    "inputTokens": 290,
+    "outputTokens": 356,
+    "cost": 0.00005498
+   }
+  },
+  {
+   "id": "imdb-46314",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-46314",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 271,
+    "inputTokens": 502,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-46314",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 52438,
+    "inputTokens": 247,
+    "outputTokens": 424,
+    "cost": 0.00006253
+   }
+  },
+  {
+   "id": "imdb-37435",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-37435",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 59596,
+    "inputTokens": 498,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-37435",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 49354,
+    "inputTokens": 247,
+    "outputTokens": 121,
+    "cost": 0.00002314
+   }
+  },
+  {
+   "id": "imdb-06693",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-06693",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 54453,
+    "inputTokens": 782,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-06693",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 69163,
+    "inputTokens": 527,
+    "outputTokens": 793,
+    "cost": 0.0001189
+   }
+  },
+  {
+   "id": "imdb-31164",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-31164",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2430,
+    "inputTokens": 469,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-31164",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61402,
+    "inputTokens": 217,
+    "outputTokens": 478,
+    "cost": 0.00006865
+   }
+  },
+  {
+   "id": "imdb-12171",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-12171",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 240,
+    "inputTokens": 496,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-12171",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 12699,
+    "inputTokens": 247,
+    "outputTokens": 757,
+    "cost": 0.00010582
+   }
+  },
+  {
+   "id": "imdb-31795",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-31795",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 256,
+    "inputTokens": 666,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-31795",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 8571,
+    "inputTokens": 411,
+    "outputTokens": 502,
+    "cost": 0.00007759
+   }
+  },
+  {
+   "id": "imdb-12276",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-12276",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 57410,
+    "inputTokens": 496,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-12276",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 44358,
+    "inputTokens": 251,
+    "outputTokens": 145,
+    "cost": 0.00002638
+   }
+  },
+  {
+   "id": "imdb-41580",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-41580",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 55435,
+    "inputTokens": 631,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-41580",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 43820,
+    "inputTokens": 380,
+    "outputTokens": 266,
+    "cost": 0.00004598
+   }
+  },
+  {
+   "id": "imdb-33567",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-33567",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 240,
+    "inputTokens": 633,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-33567",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 62671,
+    "inputTokens": 380,
+    "outputTokens": 420,
+    "cost": 0.000066
+   }
+  },
+  {
+   "id": "imdb-44594",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-44594",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 278,
+    "inputTokens": 543,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-44594",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 63496,
+    "inputTokens": 284,
+    "outputTokens": 549,
+    "cost": 0.00007989
+   }
+  },
+  {
+   "id": "imdb-28160",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-28160",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 294,
+    "inputTokens": 496,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-28160",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 6294,
+    "inputTokens": 247,
+    "outputTokens": 494,
+    "cost": 0.00007163
+   }
+  },
+  {
+   "id": "imdb-05653",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-05653",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 295,
+    "inputTokens": 534,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-05653",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 6405,
+    "inputTokens": 286,
+    "outputTokens": 413,
+    "cost": 0.00006227
+   }
+  },
+  {
+   "id": "imdb-20396",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-20396",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 230,
+    "inputTokens": 715,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-20396",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 56460,
+    "inputTokens": 459,
+    "outputTokens": 624,
+    "cost": 0.00009489
+   }
+  },
+  {
+   "id": "imdb-44514",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-44514",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 232,
+    "inputTokens": 613,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-44514",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 51724,
+    "inputTokens": 366,
+    "outputTokens": 380,
+    "cost": 0.00006038
+   }
+  },
+  {
+   "id": "imdb-00470",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-00470",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 243,
+    "inputTokens": 415,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-00470",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 56867,
+    "inputTokens": 166,
+    "outputTokens": 190,
+    "cost": 0.00002968
+   }
+  },
+  {
+   "id": "imdb-42372",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-42372",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 241,
+    "inputTokens": 554,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-42372",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61875,
+    "inputTokens": 304,
+    "outputTokens": 691,
+    "cost": 0.00009895
+   }
+  },
+  {
+   "id": "imdb-31492",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-31492",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 238,
+    "inputTokens": 577,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-31492",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 5175,
+    "inputTokens": 328,
+    "outputTokens": 397,
+    "cost": 0.00006145
+   }
+  },
+  {
+   "id": "imdb-12675",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-12675",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 259,
+    "inputTokens": 534,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-12675",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 2153,
+    "inputTokens": 284,
+    "outputTokens": 118,
+    "cost": 0.00002386
+   }
+  },
+  {
+   "id": "imdb-00299",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-00299",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 224,
+    "inputTokens": 660,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-00299",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 57234,
+    "inputTokens": 412,
+    "outputTokens": 466,
+    "cost": 0.00007294
+   }
+  },
+  {
+   "id": "imdb-14037",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-14037",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 251,
+    "inputTokens": 508,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-14037",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 56220,
+    "inputTokens": 260,
+    "outputTokens": 634,
+    "cost": 0.00009022
+   }
+  },
+  {
+   "id": "imdb-30705",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-30705",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 269,
+    "inputTokens": 476,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-30705",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 55620,
+    "inputTokens": 228,
+    "outputTokens": 142,
+    "cost": 0.0000253
+   }
+  },
+  {
+   "id": "imdb-20466",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-20466",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 296,
+    "inputTokens": 909,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-20466",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 62117,
+    "inputTokens": 655,
+    "outputTokens": 628,
+    "cost": 0.00010129
+   }
+  },
+  {
+   "id": "imdb-40831",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-40831",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 279,
+    "inputTokens": 435,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-40831",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 8658,
+    "inputTokens": 187,
+    "outputTokens": 256,
+    "cost": 0.00003889
+   }
+  },
+  {
+   "id": "imdb-17611",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-17611",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 294,
+    "inputTokens": 1507,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-17611",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 9318,
+    "inputTokens": 1235,
+    "outputTokens": 722,
+    "cost": 0.00013091
+   }
+  },
+  {
+   "id": "imdb-22011",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-22011",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 240,
+    "inputTokens": 515,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-22011",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 53894,
+    "inputTokens": 268,
+    "outputTokens": 439,
+    "cost": 0.00006511
+   }
+  },
+  {
+   "id": "imdb-36126",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-36126",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 244,
+    "inputTokens": 405,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-36126",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 44504,
+    "inputTokens": 160,
+    "outputTokens": 172,
+    "cost": 0.00002716
+   }
+  },
+  {
+   "id": "imdb-43289",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-43289",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 57686,
+    "inputTokens": 1434,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-43289",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 66505,
+    "inputTokens": 1179,
+    "outputTokens": 753,
+    "cost": 0.00013326
+   }
+  },
+  {
+   "id": "imdb-23785",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-23785",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 253,
+    "inputTokens": 495,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-23785",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 58116,
+    "inputTokens": 246,
+    "outputTokens": 141,
+    "cost": 0.00002571
+   }
+  },
+  {
+   "id": "imdb-29003",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-29003",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 275,
+    "inputTokens": 459,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-29003",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 4724,
+    "inputTokens": 213,
+    "outputTokens": 375,
+    "cost": 0.00005514
+   }
+  },
+  {
+   "id": "imdb-14492",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-14492",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 251,
+    "inputTokens": 561,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-14492",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 10178,
+    "inputTokens": 313,
+    "outputTokens": 800,
+    "cost": 0.00011339
+   }
+  },
+  {
+   "id": "imdb-13272",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-13272",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 264,
+    "inputTokens": 1502,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-13272",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 48402,
+    "inputTokens": 1233,
+    "outputTokens": 436,
+    "cost": 0.00009367
+   }
+  },
+  {
+   "id": "imdb-14540",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-14540",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2462,
+    "inputTokens": 476,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-14540",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59834,
+    "inputTokens": 231,
+    "outputTokens": 116,
+    "cost": 0.00002201
+   }
+  },
+  {
+   "id": "imdb-08183",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-08183",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 257,
+    "inputTokens": 579,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-08183",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 57107,
+    "inputTokens": 327,
+    "outputTokens": 211,
+    "cost": 0.00003724
+   }
+  },
+  {
+   "id": "imdb-10334",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-10334",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 316,
+    "inputTokens": 572,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-10334",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 8972,
+    "inputTokens": 322,
+    "outputTokens": 755,
+    "cost": 0.00010781
+   }
+  },
+  {
+   "id": "imdb-22357",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-22357",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 242,
+    "inputTokens": 883,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-22357",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 5476,
+    "inputTokens": 633,
+    "outputTokens": 315,
+    "cost": 0.00005994
+   }
+  },
+  {
+   "id": "imdb-40663",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-40663",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 56538,
+    "inputTokens": 585,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-40663",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 55314,
+    "inputTokens": 333,
+    "outputTokens": 250,
+    "cost": 0.00004249
+   }
+  },
+  {
+   "id": "imdb-13457",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-13457",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 415,
+    "inputTokens": 503,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-13457",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 51617,
+    "inputTokens": 256,
+    "outputTokens": 117,
+    "cost": 0.00002289
+   }
+  },
+  {
+   "id": "imdb-36412",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-36412",
+    "prediction": "positive",
+    "pPositive": 0.73,
+    "latencyMs": 303,
+    "inputTokens": 501,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-36412",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 66813,
+    "inputTokens": 253,
+    "outputTokens": 642,
+    "cost": 0.00009105
+   }
+  },
+  {
+   "id": "imdb-43155",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-43155",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 252,
+    "inputTokens": 592,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-43155",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 60283,
+    "inputTokens": 338,
+    "outputTokens": 394,
+    "cost": 0.00006136
+   }
+  },
+  {
+   "id": "imdb-06160",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-06160",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 278,
+    "inputTokens": 509,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-06160",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 5071,
+    "inputTokens": 261,
+    "outputTokens": 368,
+    "cost": 0.00005567
+   }
+  },
+  {
+   "id": "imdb-02278",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-02278",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 243,
+    "inputTokens": 517,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-02278",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3900,
+    "inputTokens": 269,
+    "outputTokens": 280,
+    "cost": 0.00004447
+   }
+  },
+  {
+   "id": "imdb-04925",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-04925",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 268,
+    "inputTokens": 453,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-04925",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 57383,
+    "inputTokens": 206,
+    "outputTokens": 481,
+    "cost": 0.00006871
+   }
+  },
+  {
+   "id": "imdb-25677",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-25677",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 232,
+    "inputTokens": 588,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-25677",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 48685,
+    "inputTokens": 340,
+    "outputTokens": 145,
+    "cost": 0.00002905
+   }
+  },
+  {
+   "id": "imdb-46847",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-46847",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 299,
+    "inputTokens": 515,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-46847",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 61013,
+    "inputTokens": 263,
+    "outputTokens": 169,
+    "cost": 0.00002986
+   }
+  },
+  {
+   "id": "imdb-21620",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-21620",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 282,
+    "inputTokens": 503,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-21620",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 59033,
+    "inputTokens": 250,
+    "outputTokens": 502,
+    "cost": 0.00007276
+   }
+  },
+  {
+   "id": "imdb-26479",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-26479",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 309,
+    "inputTokens": 951,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-26479",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 8148,
+    "inputTokens": 691,
+    "outputTokens": 597,
+    "cost": 0.00009834
+   }
+  },
+  {
+   "id": "imdb-00664",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-00664",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 223,
+    "inputTokens": 575,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-00664",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 9821,
+    "inputTokens": 325,
+    "outputTokens": 687,
+    "cost": 0.00009906
+   }
+  },
+  {
+   "id": "imdb-29547",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-29547",
+    "prediction": "negative",
+    "pPositive": 0.05,
+    "latencyMs": 315,
+    "inputTokens": 542,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-29547",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 55467,
+    "inputTokens": 293,
+    "outputTokens": 485,
+    "cost": 0.00007184
+   }
+  },
+  {
+   "id": "imdb-18790",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-18790",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 388,
+    "inputTokens": 507,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-18790",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 50655,
+    "inputTokens": 258,
+    "outputTokens": 534,
+    "cost": 0.00007716
+   }
+  },
+  {
+   "id": "imdb-24359",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-24359",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 311,
+    "inputTokens": 538,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-24359",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59289,
+    "inputTokens": 289,
+    "outputTokens": 316,
+    "cost": 0.00004975
+   }
+  },
+  {
+   "id": "imdb-16984",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-16984",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 22457,
+    "inputTokens": 437,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-16984",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 57800,
+    "inputTokens": 190,
+    "outputTokens": 304,
+    "cost": 0.00004522
+   }
+  },
+  {
+   "id": "imdb-10622",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-10622",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 235,
+    "inputTokens": 517,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-10622",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2405,
+    "inputTokens": 270,
+    "outputTokens": 164,
+    "cost": 0.00002942
+   }
+  },
+  {
+   "id": "imdb-02654",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-02654",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 254,
+    "inputTokens": 639,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-02654",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 5483,
+    "inputTokens": 391,
+    "outputTokens": 437,
+    "cost": 0.00006854
+   }
+  },
+  {
+   "id": "imdb-21127",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-21127",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 242,
+    "inputTokens": 497,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-21127",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 56179,
+    "inputTokens": 248,
+    "outputTokens": 151,
+    "cost": 0.00002707
+   }
+  },
+  {
+   "id": "imdb-17682",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-17682",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 242,
+    "inputTokens": 550,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-17682",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 53230,
+    "inputTokens": 298,
+    "outputTokens": 319,
+    "cost": 0.00005041
+   }
+  },
+  {
+   "id": "imdb-31892",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-31892",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 287,
+    "inputTokens": 527,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-31892",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 60306,
+    "inputTokens": 275,
+    "outputTokens": 187,
+    "cost": 0.00003256
+   }
+  },
+  {
+   "id": "imdb-13181",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-13181",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 227,
+    "inputTokens": 522,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-13181",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 63671,
+    "inputTokens": 275,
+    "outputTokens": 631,
+    "cost": 0.00009028
+   }
+  },
+  {
+   "id": "imdb-11166",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-11166",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 242,
+    "inputTokens": 1353,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-11166",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 10695,
+    "inputTokens": 1079,
+    "outputTokens": 720,
+    "cost": 0.00012597
+   }
+  },
+  {
+   "id": "imdb-31420",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-31420",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 59515,
+    "inputTokens": 690,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-31420",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 6942,
+    "inputTokens": 432,
+    "outputTokens": 488,
+    "cost": 0.0000764
+   }
+  },
+  {
+   "id": "imdb-47400",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-47400",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 59489,
+    "inputTokens": 497,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-47400",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 50095,
+    "inputTokens": 251,
+    "outputTokens": 189,
+    "cost": 0.0000321
+   }
+  },
+  {
+   "id": "imdb-36025",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-36025",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 345,
+    "inputTokens": 945,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-36025",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 53432,
+    "inputTokens": 674,
+    "outputTokens": 684,
+    "cost": 0.00010914
+   }
+  },
+  {
+   "id": "imdb-12421",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-12421",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 263,
+    "inputTokens": 1475,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-12421",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 68560,
+    "inputTokens": 1210,
+    "outputTokens": 744,
+    "cost": 0.00013302
+   }
+  },
+  {
+   "id": "imdb-18146",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-18146",
+    "prediction": "positive",
+    "pPositive": 0.98,
+    "latencyMs": 260,
+    "inputTokens": 508,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-18146",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 58712,
+    "inputTokens": 260,
+    "outputTokens": 591,
+    "cost": 0.00008463
+   }
+  },
+  {
+   "id": "imdb-23151",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-23151",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 236,
+    "inputTokens": 617,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-23151",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3537,
+    "inputTokens": 366,
+    "outputTokens": 254,
+    "cost": 0.000044
+   }
+  },
+  {
+   "id": "imdb-15039",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-15039",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 221,
+    "inputTokens": 510,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-15039",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 5994,
+    "inputTokens": 261,
+    "outputTokens": 486,
+    "cost": 0.00007101
+   }
+  },
+  {
+   "id": "imdb-45884",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-45884",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 364,
+    "inputTokens": 472,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-45884",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 54360,
+    "inputTokens": 224,
+    "outputTokens": 487,
+    "cost": 0.00007003
+   }
+  },
+  {
+   "id": "imdb-03085",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-03085",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 348,
+    "inputTokens": 429,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-03085",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 48101,
+    "inputTokens": 182,
+    "outputTokens": 306,
+    "cost": 0.00004524
+   }
+  },
+  {
+   "id": "imdb-46988",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-46988",
+    "prediction": "positive",
+    "pPositive": 0.97,
+    "latencyMs": 2423,
+    "inputTokens": 518,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-46988",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 66161,
+    "inputTokens": 267,
+    "outputTokens": 797,
+    "cost": 0.00011162
+   }
+  },
+  {
+   "id": "imdb-13866",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-13866",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 222,
+    "inputTokens": 395,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-13866",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 57734,
+    "inputTokens": 148,
+    "outputTokens": 304,
+    "cost": 0.00004396
+   }
+  },
+  {
+   "id": "imdb-35236",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-35236",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 244,
+    "inputTokens": 521,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-35236",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 6366,
+    "inputTokens": 265,
+    "outputTokens": 497,
+    "cost": 0.00007256
+   }
+  },
+  {
+   "id": "imdb-25545",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-25545",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 262,
+    "inputTokens": 1037,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-25545",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 54395,
+    "inputTokens": 785,
+    "outputTokens": 445,
+    "cost": 0.0000814
+   }
+  },
+  {
+   "id": "imdb-31344",
+   "label": "negative",
+   "jev": {
+    "id": "imdb-31344",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 235,
+    "inputTokens": 489,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-31344",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 2441,
+    "inputTokens": 243,
+    "outputTokens": 133,
+    "cost": 0.00002458
+   }
+  },
+  {
+   "id": "imdb-19770",
+   "label": "positive",
+   "jev": {
+    "id": "imdb-19770",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 258,
+    "inputTokens": 1610,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "imdb-19770",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 50341,
+    "inputTokens": 1323,
+    "outputTokens": 211,
+    "cost": 0.00006712
    }
   }
  ]

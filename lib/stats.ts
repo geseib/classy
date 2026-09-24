@@ -52,10 +52,13 @@ export type ModelMetrics = {
   macroF1: number;
   latency: { p50: number; p95: number };
   meanInputTokens: number | null;
+  meanOutputTokens: number | null;
   costPer1k: number | null;
+  /** Token counts × list price, so a free tier or credits don't read as zero cost. */
+  expectedCostPer1k: number | null;
 };
 
-export function modelMetrics(rows: Row[], key: ModelKey): ModelMetrics {
+export function modelMetrics(rows: Row[], key: ModelKey, pricing?: { inputPerMTok: number; outputPerMTok: number }): ModelMetrics {
   const confusion: Confusion = {
     positive: { positive: 0, negative: 0, none: 0 },
     negative: { positive: 0, negative: 0, none: 0 },
@@ -80,7 +83,11 @@ export function modelMetrics(rows: Row[], key: ModelKey): ModelMetrics {
   }
   const lat = preds.map((p) => p.latencyMs).sort((a, b) => a - b);
   const inTok = preds.map((p) => p.inputTokens).filter((t): t is number => typeof t === "number");
+  const outTok = preds.map((p) => p.outputTokens).filter((t): t is number => typeof t === "number");
   const costs = preds.map((p) => p.cost).filter((c): c is number => typeof c === "number");
+  const mean = (xs: number[]) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null);
+  const meanIn = mean(inTok);
+  const meanOut = mean(outTok);
   return {
     key,
     n,
@@ -94,9 +101,14 @@ export function modelMetrics(rows: Row[], key: ModelKey): ModelMetrics {
     f1,
     macroF1: (f1.positive + f1.negative) / 2,
     latency: { p50: quantile(lat, 0.5), p95: quantile(lat, 0.95) },
-    meanInputTokens: inTok.length ? inTok.reduce((a, b) => a + b, 0) / inTok.length : null,
+    meanInputTokens: meanIn,
+    meanOutputTokens: meanOut,
     // Only report cost when the gateway priced every call; a partial sum would understate it.
     costPer1k: costs.length === n && n > 0 ? (costs.reduce((a, b) => a + b, 0) / n) * 1000 : null,
+    expectedCostPer1k:
+      pricing && meanIn !== null && meanOut !== null
+        ? ((meanIn * pricing.inputPerMTok + meanOut * pricing.outputPerMTok) / 1e6) * 1000
+        : null,
   };
 }
 
