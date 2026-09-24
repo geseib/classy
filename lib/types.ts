@@ -66,6 +66,13 @@ export type ReferenceFile = {
   /** Same instructions and labels as the benchmark; single attempts, one at a time, throttled calls discarded. */
   rows: { id: string; label: Sentiment; answer: Prediction }[];
   throttledDiscarded: number;
+  /**
+   * "api": called through AI Gateway like the benchmark models (timed, token counts measured).
+   * "subagent": answered by a Claude Code subagent on the same prompt, blind to labels; no per-request
+   * timing, and tokens are an estimate, so cost is a lower bound at list price.
+   */
+  via: "api" | "subagent";
+  estimatedTokens?: { inputPerReview: number; outputPerReview: number; basis: string };
 };
 
 export type ResultsFile = {

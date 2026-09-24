@@ -1,6 +1,6 @@
 import { loadData } from "@/lib/load";
-import { agreement, byLength, calibration, confidenceOf, joinRows, modelMetrics, type Row } from "@/lib/stats";
-import type { ModelInfo, ModelKey, ResultsFile, SampleFile, SpeedFile } from "@/lib/types";
+import { agreement, byLength, calibration, confidenceOf, joinRows, modelMetrics, wilson, type Row } from "@/lib/stats";
+import type { ModelInfo, ModelKey, ReferenceFile, ResultsFile, SampleFile, SpeedFile } from "@/lib/types";
 import {
   AccuracyChart,
   AgreementTable,
@@ -32,7 +32,7 @@ const PLANNED: ModelInfo[] = [
 ];
 
 export default function Page() {
-  const { sample, results, speed } = loadData();
+  const { sample, results, speed, reference } = loadData();
   const models = results?.models ?? PLANNED;
   return (
     <>
@@ -48,7 +48,7 @@ export default function Page() {
         </div>
       )}
       <Nav hasResults={!!results && !results.simulated} />
-      {results ? <WithResults results={results} sample={sample} speed={speed} /> : <Pending sample={sample} models={models} />}
+      {results ? <WithResults results={results} sample={sample} speed={speed} reference={reference} /> : <Pending sample={sample} models={models} />}
       <Footer />
     </>
   );
@@ -196,7 +196,17 @@ function Protocol({ sample }: { sample: Omit<SampleFile, "items"> }) {
 
 // ─── Results page ───────────────────────────────────────────────────────────
 
-function WithResults({ results, sample, speed }: { results: ResultsFile; sample: SampleFile; speed: SpeedFile | null }) {
+function WithResults({
+  results,
+  sample,
+  speed,
+  reference,
+}: {
+  results: ResultsFile;
+  sample: SampleFile;
+  speed: SpeedFile | null;
+  reference: ReferenceFile | null;
+}) {
   const rows = joinRows(results, sample.items);
   const models = results.models;
   const [J, Q] = models;
@@ -580,11 +590,118 @@ function WithResults({ results, sample, speed }: { results: ResultsFile; sample:
           <Gallery tabs={tabs} models={models} />
         </div>
 
-        <Method results={results} unparsedNote={unparsedNote} sectionNo={cal ? 6 : 5} />
+        {reference && (
+          <ReferenceSection reference={reference} results={results} metrics={metrics} speed={speed} sectionNo={cal ? 6 : 5} />
+        )}
+
+        <Method results={results} unparsedNote={unparsedNote} sectionNo={(cal ? 6 : 5) + (reference ? 1 : 0)} />
       </article>
     </main>
   );
 }
+
+function ReferenceSection({
+  reference,
+  results,
+  metrics,
+  speed,
+  sectionNo,
+}: {
+  reference: ReferenceFile;
+  results: ResultsFile;
+  metrics: Record<ModelKey, ReturnType<typeof modelMetrics>>;
+  speed: SpeedFile | null;
+  sectionNo: number;
+}) {
+  const R = reference.model;
+  const n = reference.rows.length;
+  const byId = new Map(results.rows.map((r) => [r.id, r]));
+  const subagent = reference.via === "subagent";
+  const est = reference.estimatedTokens;
+  const refCost =
+    R.pricing && est ? ((est.inputPerReview * R.pricing.inputPerMTok + est.outputPerReview * R.pricing.outputPerMTok) / 1e6) * 1000 : null;
+  const refRight = reference.rows.filter((r) => r.answer.prediction === r.label).length;
+  const lines = [
+    {
+      key: "ref",
+      name: R.name,
+      right: refRight,
+      speed: subagent ? "not measured" : ms(quantileMs(reference.rows.map((r) => r.answer.latencyMs))),
+      cost: refCost === null ? "n/a" : `${subagent ? "≥ " : ""}${usd(refCost)}`,
+    },
+    ...results.models.map((m) => ({
+      key: m.key,
+      name: m.name,
+      right: reference.rows.filter((r) => byId.get(r.id)?.[m.key].prediction === r.label).length,
+      speed: speed ? ms(speed.models[m.key].p50) : "n/a",
+      cost: usd(metrics[m.key].expectedCostPer1k),
+    })),
+  ];
+  const [lo, hi] = wilson(refRight, n);
+  return (
+    <>
+      <section id="reference">
+        <h3>
+          <span className="sec">{sectionNo}</span>Reference: {R.name} on {fmt(n)} reviews
+        </h3>
+        <p>
+          For scale, a frontier general-purpose model answered the first {fmt(n)} reviews of the same shuffled sample, with the same
+          system prompt and review template as {results.models[1].name} and without seeing the labels. {fmt(n)} reviews is enough to
+          place it, not to rank it: at {pct(refRight / n)} its 95% interval runs from {pct(lo)} to {pct(hi)}, so extrapolated to
+          1,000 reviews it would get roughly {fmt(Math.round(lo * 1000))}–{fmt(Math.round(hi * 1000))} right.
+        </p>
+      </section>
+      <figure className="figure">
+        <div className="table-wrap">
+          <table className="metrics">
+            <thead>
+              <tr>
+                <th scope="col">Model</th>
+                <th scope="col">Correct</th>
+                <th scope="col">Accuracy</th>
+                <th scope="col">Median response</th>
+                <th scope="col">Cost / 1k reviews</th>
+              </tr>
+            </thead>
+            <tbody>
+              {lines.map((l) => (
+                <tr key={l.key}>
+                  <th scope="row">{l.key === "ref" ? l.name : <><ModelSwatch k={l.key as ModelKey} />{l.name}</>}</th>
+                  <td>
+                    {fmt(l.right)} / {fmt(n)}
+                  </td>
+                  <td>{pct(l.right / n)}</td>
+                  <td>{l.speed}</td>
+                  <td>{l.cost}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <figcaption>
+          <strong>Table 2.</strong> All three models on the same {fmt(n)} reviews. Response times for {results.models.map((m) => m.name).join(" and ")}{" "}
+          are from the speed test in Table 1; their costs are the full-run figures at list price.{" "}
+          {subagent ? (
+            <>
+              {R.name} was run through Claude Code subagents rather than AI Gateway, because the gateway account’s free tier doesn’t
+              include it. Each subagent got ten reviews to judge one by one and gave the same one-word answer, inside Claude Code’s own
+              instructions, so this is close to, not identical with, a bare API call. There is no per-request timing, and its cost is a
+              lower-bound estimate at list price (${R.pricing?.inputPerMTok} in / ${R.pricing?.outputPerMTok} out per million tokens),
+              with {est?.basis}.
+            </>
+          ) : (
+            <>
+              {R.name} was called through AI Gateway one request at a time, each timed as a single attempt; cost is its measured
+              tokens at list price.
+            </>
+          )}
+        </figcaption>
+      </figure>
+    </>
+  );
+}
+
+const quantileMs = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)] ?? 0;
 
 function Method({ results, unparsedNote, sectionNo }: { results: ResultsFile; unparsedNote: string; sectionNo: number }) {
   const [J, Q] = results.models;

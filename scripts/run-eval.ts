@@ -399,7 +399,7 @@ async function referenceRun(sample: SampleFile, n: number) {
     const right = rows.filter((r) => r.answer.prediction === r.label).length;
     process.stdout.write(`\r${REFERENCE.name} ${rows.length}/${n} · ${right} correct · ${throttled} throttled (discarded)   `);
   }
-  const out: ReferenceFile = { runAt: new Date().toISOString(), model: REFERENCE, rows, throttledDiscarded: throttled };
+  const out: ReferenceFile = { runAt: new Date().toISOString(), model: REFERENCE, rows, throttledDiscarded: throttled, via: "api" };
   writeFileSync("data/reference.json", JSON.stringify(out, null, 1) + "\n");
   console.log("\n\nFiled → data/reference.json");
 }
