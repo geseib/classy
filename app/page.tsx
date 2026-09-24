@@ -39,6 +39,12 @@ export default function Page() {
           Simulated data for layout preview. No model was called. Run <code>npm run eval</code> to file real answers.
         </div>
       )}
+      {results?.partial && (
+        <div className="sim-banner" role="status">
+          Interim results: {fmt(results.partial.answered)} of {fmt(results.partial.of)} reviews
+          answered by both models so far. The run is still in progress.
+        </div>
+      )}
       <Nav hasResults={!!results && !results.simulated} />
       {results ? <WithResults results={results} sample={sample} /> : <Pending sample={sample} models={models} />}
       <Footer />

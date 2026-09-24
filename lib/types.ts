@@ -52,6 +52,8 @@ export type ModelInfo = {
 export type ResultsFile = {
   /** True only for `npm run eval:mock` output. The page labels it loudly. */
   simulated: boolean;
+  /** Set by `npm run eval -- --partial`: an interim filing of the reviews both models have answered so far. */
+  partial?: { answered: number; of: number };
   runAt: string;
   durationMs: number;
   sdk: { ai: string; gateway: string };

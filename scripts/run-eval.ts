@@ -5,6 +5,7 @@
  *   npm run eval                      # full run → data/results.json + public/results.csv
  *   npm run eval -- --limit 20        # smoke test (prints a summary, writes no results)
  *   npm run eval -- --concurrency 16
+ *   npm run eval -- --partial         # file the answers so far (reviews both models answered), no calls
  *   npm run eval:mock                 # simulated answers → data/results.mock.json (layout preview only)
  *
  * Auth: AI_GATEWAY_API_KEY (or VERCEL_OIDC_TOKEN from `vercel env pull`), read
@@ -23,6 +24,7 @@ const { values } = parseArgs({
     concurrency: { type: "string", default: "8" },
     limit: { type: "string" },
     mock: { type: "boolean", default: false },
+    partial: { type: "boolean", default: false },
     sample: { type: "string", default: "data/sample.json" },
   },
 });
@@ -284,7 +286,7 @@ function toCsv(results: ResultsFile, sample: SampleFile): string {
 async function main() {
   const sample = JSON.parse(readFileSync(values.sample!, "utf8")) as SampleFile;
   const limit = values.limit ? Number(values.limit) : undefined;
-  const items = limit ? sample.items.slice(0, limit) : sample.items;
+  let items = limit ? sample.items.slice(0, limit) : sample.items;
   const concurrency = Number(values.concurrency);
   const { items: _omit, ...sampleMeta } = sample;
   const started = Date.now();
@@ -295,6 +297,11 @@ async function main() {
       jev: new Map(items.map((i, n) => [i.id, mockPredict("jev", i, n)])),
       qwen: new Map(items.map((i, n) => [i.id, mockPredict("qwen", i, n)])),
     };
+  } else if (values.partial) {
+    // Interim filing from checkpoints: no model calls, and only reviews both
+    // models have answered, so a missing answer never counts as a wrong one.
+    answers = { jev: loadCheckpoint("jev"), qwen: loadCheckpoint("qwen") };
+    items = items.filter((i) => answers.jev.has(i.id) && answers.qwen.has(i.id));
   } else {
     if (!process.env.AI_GATEWAY_API_KEY && !process.env.VERCEL_OIDC_TOKEN) {
       console.error("No AI Gateway credentials. Set AI_GATEWAY_API_KEY in .env.local (see .env.example).");
@@ -333,6 +340,7 @@ async function main() {
 
   const results: ResultsFile = {
     simulated: values.mock!,
+    ...(values.partial && { partial: { answered: items.length, of: sampleMeta.size } }),
     runAt: new Date().toISOString(),
     durationMs: Date.now() - started,
     sdk: { ai: pkgVersion("ai"), gateway: pkgVersion("@ai-sdk/gateway") },
