@@ -84,13 +84,18 @@ def classify(agent, text):
     start = time.perf_counter()
     response = agent.complete("<review>\n" + text + "\n</review>", max_new_tokens=32)
     latency_ms = round((time.perf_counter() - start) * 1000)
+    # Like needle.extract(): when the engine withholds a low-confidence call, the withheld
+    # call is still the model's answer. Count it, and record that it was withheld.
     calls = response.get("function_calls") or []
+    withheld = not calls and bool(response.get("suppressed_calls"))
+    calls = calls or response.get("suppressed_calls") or []
     answer = (calls[0].get("arguments") or {}).get("sentiment") if calls else None
     return {
         "prediction": answer if answer in ("positive", "negative") else None,
         "raw": json.dumps(calls)[:200],
         "latencyMs": latency_ms,
         "confidence": response.get("confidence"),
+        "withheld": withheld,
     }
 
 
@@ -141,6 +146,8 @@ def main():
     right = sum(r.get("prediction") == i["label"] for i, r in rows)
     missing = [i["id"] for i, r in rows if not r.get("prediction")]
     lat = sorted(r["latencyMs"] for _, r in rows if r.get("prediction"))
+    withheld = sum(bool(r.get("withheld")) for _, r in rows)
+    print(f"{withheld} answers withheld by the engine's confidence gate (counted as the model's answer)")
     print(f"\n{MODEL_ID}: {right}/{len(items)} correct ({100 * right / len(items):.1f}%)")
     if lat:
         print(f"median {statistics.median(lat):.0f} ms · p95 {lat[int(0.95 * (len(lat) - 1))]} ms")
@@ -172,7 +179,7 @@ def main():
         ],
         "throttledDiscarded": 0,
         "via": "local",
-        "note": f"Needle 3 ran on-device{' with the 3.0.1 engine' if 'engine-3.0.1' in os.environ.get('NEEDLE3_LIB_PATH', '') else ''}, timed one request at a time on {machine}.",
+        "note": f"Needle 3 ran on-device{' with the 3.0.1 engine' if 'engine-3.0.1' in os.environ.get('NEEDLE3_LIB_PATH', '') else ''}, timed one request at a time on {machine}. {withheld} of its answers fell below the engine's confidence threshold and were withheld; as in needle.extract(), the withheld answer is counted.",
     }
     ref_path = ROOT / "data" / "reference.json"
     refs = json.loads(ref_path.read_text())["references"] if ref_path.exists() else []
