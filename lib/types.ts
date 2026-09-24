@@ -59,6 +59,15 @@ export type SpeedFile = {
   models: Record<ModelKey, { latenciesMs: number[]; p50: number; p95: number; throttledDiscarded: number }>;
 };
 
+/** `npm run eval -- --reference N`: a frontier model on the first N sample reviews, as a reference point. */
+export type ReferenceFile = {
+  runAt: string;
+  model: Omit<ModelInfo, "key"> & { key: string };
+  /** Same instructions and labels as the benchmark; single attempts, one at a time, throttled calls discarded. */
+  rows: { id: string; label: Sentiment; answer: Prediction }[];
+  throttledDiscarded: number;
+};
+
 export type ResultsFile = {
   /** True only for `npm run eval:mock` output. The page labels it loudly. */
   simulated: boolean;

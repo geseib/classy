@@ -6,6 +6,7 @@
  *   npm run eval -- --limit 20        # smoke test (prints a summary, writes no results)
  *   npm run eval -- --concurrency 16
  *   npm run eval -- --speed 50        # time single requests per model, throttled calls discarded → data/speed.json
+ *   npm run eval -- --reference 80    # Claude Sonnet 5 on the first 80 reviews → data/reference.json
  *   npm run eval -- --partial         # file the answers so far (reviews both models answered), no calls
  *   npm run eval:mock                 # simulated answers → data/results.mock.json (layout preview only)
  *
@@ -18,7 +19,17 @@
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { experimental_evaluate as evaluate, generateText } from "ai";
-import type { ModelInfo, ModelKey, Prediction, ResultsFile, SampleFile, SampleItem, Sentiment, SpeedFile } from "../lib/types";
+import type {
+  ModelInfo,
+  ModelKey,
+  Prediction,
+  ReferenceFile,
+  ResultsFile,
+  SampleFile,
+  SampleItem,
+  Sentiment,
+  SpeedFile,
+} from "../lib/types";
 
 const { values } = parseArgs({
   options: {
@@ -27,6 +38,7 @@ const { values } = parseArgs({
     mock: { type: "boolean", default: false },
     partial: { type: "boolean", default: false },
     speed: { type: "string" },
+    reference: { type: "string" },
     sample: { type: "string", default: "data/sample.json" },
   },
 });
@@ -331,6 +343,67 @@ async function speedTest(sample: SampleFile, n: number) {
   console.log("\nFiled → data/speed.json");
 }
 
+// ─── Reference model ────────────────────────────────────────────────────────
+// A frontier generative model on a small slice, for scale. Same system prompt
+// and template as Qwen. Sonnet 5 rejects `temperature`, so it runs at defaults.
+
+const REFERENCE: ReferenceFile["model"] = {
+  key: "sonnet",
+  id: "anthropic/claude-sonnet-5",
+  name: "Claude Sonnet 5",
+  vendor: "Anthropic",
+  kind: "generative",
+  call: "generateText({ system, prompt })",
+  pricing: { inputPerMTok: 2, outputPerMTok: 10 },
+};
+
+async function classifyReference(item: SampleItem): Promise<Prediction> {
+  const start = performance.now();
+  const result = await generateText({
+    model: REFERENCE.id,
+    system: GENERATIVE_SYSTEM,
+    prompt: GENERATIVE_TEMPLATE.replace("{review}", item.text),
+    maxOutputTokens: 2048,
+    maxRetries: 0,
+    abortSignal: AbortSignal.timeout(TIMEOUT_MS),
+  });
+  return {
+    id: item.id,
+    prediction: parseSentiment(result.text),
+    raw: result.text.trim().slice(0, 200),
+    latencyMs: Math.round(performance.now() - start),
+    inputTokens: result.usage.inputTokens,
+    outputTokens: result.usage.outputTokens,
+    cost: gatewayCost(result.finalStep.providerMetadata),
+  };
+}
+
+async function referenceRun(sample: SampleFile, n: number) {
+  const rows: ReferenceFile["rows"] = [];
+  let throttled = 0;
+  for (const item of sample.items.slice(0, n)) {
+    for (;;) {
+      try {
+        rows.push({ id: item.id, label: item.label, answer: await classifyReference(item) });
+        break;
+      } catch (err) {
+        if (!isRateLimit(err)) {
+          if (rows.length === 0) throw err; // fail fast on auth / model id
+          rows.push({ id: item.id, label: item.label, answer: { id: item.id, prediction: null, latencyMs: 0, error: describeError(err) } });
+          break;
+        }
+        throttled++;
+        await wait(20_000);
+      }
+    }
+    const right = rows.filter((r) => r.answer.prediction === r.label).length;
+    process.stdout.write(`\r${REFERENCE.name} ${rows.length}/${n} · ${right} correct · ${throttled} throttled (discarded)   `);
+  }
+  const out: ReferenceFile = { runAt: new Date().toISOString(), model: REFERENCE, rows, throttledDiscarded: throttled };
+  writeFileSync("data/reference.json", JSON.stringify(out, null, 1) + "\n");
+  console.log("\n\nFiled → data/reference.json");
+}
+
 async function main() {
   const sample = JSON.parse(readFileSync(values.sample!, "utf8")) as SampleFile;
   const limit = values.limit ? Number(values.limit) : undefined;
@@ -338,6 +411,7 @@ async function main() {
   const concurrency = Number(values.concurrency);
   const { items: _omit, ...sampleMeta } = sample;
   if (values.speed) return speedTest(sample, Number(values.speed));
+  if (values.reference) return referenceRun(sample, Number(values.reference));
   const started = Date.now();
 
   let answers: Record<ModelKey, Map<string, Prediction>>;
