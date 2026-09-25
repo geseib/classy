@@ -102,36 +102,134 @@ function Nav({ ds, hasResults }: { ds: Dataset; hasResults: boolean }) {
 
 // ─── Hero ───────────────────────────────────────────────────────────────────
 
-function Hero({
-  ds,
-  n,
-  models,
-  pending,
-  children,
-}: {
-  ds: Dataset;
-  n: number;
-  models: ModelInfo[];
-  pending?: boolean;
-  children?: React.ReactNode;
-}) {
+type HeroCopy = { title: React.ReactNode; lede: React.ReactNode };
+
+function Hero({ ds, copy, children }: { ds: Dataset; copy: HeroCopy; children?: React.ReactNode }) {
   return (
     <header className="hero" id="top">
       <div className="hero-inner">
         <p className="eyebrow">{ds.eyebrow}</p>
-        <h1>
-          {fmt(n)} {ds.headline}.
-          <br />
-          Two models. <em>No answer key.</em>
-        </h1>
-        <p className="lede">
-          {pending ? "We ask " : "We asked "}
-          <strong>{models[0].name}</strong> and <strong>{models[1].name}</strong> to call each {ds.source} {ds.noun} positive
-          or negative, without ever showing them the human {ds.key === "imdb" ? "rating" : "label"}. {pending ? "Then we score" : "Then we scored"} every answer.
-        </p>
+        <h1>{copy.title}</h1>
+        <p className="lede">{copy.lede}</p>
         {children}
       </div>
     </header>
+  );
+}
+
+const COUNT_WORDS = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+const countWord = (k: number) => COUNT_WORDS[k] ?? fmt(k);
+const seconds = (v: number) => `${(v / 1000).toFixed(1)} seconds`;
+
+/** The plain question, for a page with nothing larger to compare against. */
+function questionCopy(ds: Dataset, models: ModelInfo[], n: number, pending: boolean): HeroCopy {
+  const [J, Q] = models;
+  return {
+    title: (
+      <>
+        Can AI models tell <em>praise from complaint?</em>
+      </>
+    ),
+    lede: (
+      <>
+        {pending ? "We are giving " : "We gave "}
+        <strong>{J.name}</strong> and <strong>{Q.name}</strong> {fmt(n)} {ds.itemsPhrase} and{" "}
+        {pending ? "asking whether each is" : "asked whether each was"} positive or negative. {ds.labelFact}{" "}
+        {pending ? "We check every answer." : "We checked every answer."}
+      </>
+    ),
+  };
+}
+
+type RefRun = ReferenceFile["references"][number];
+
+/** Cost per 1,000 items at list price, and whether it is only a floor (estimated tokens). */
+function refCostPer1k(ref: RefRun): { value: number; floor: boolean } | null {
+  const p = ref.model.pricing;
+  if (!p || ref.via === "local") return null;
+  if (ref.estimatedTokens) {
+    const e = ref.estimatedTokens;
+    return { value: ((e.inputPerReview * p.inputPerMTok + e.outputPerReview * p.outputPerMTok) / 1e6) * 1000, floor: true };
+  }
+  const tin = ref.rows.map((r) => r.answer.inputTokens).filter((t): t is number => typeof t === "number");
+  const tout = ref.rows.map((r) => r.answer.outputTokens).filter((t): t is number => typeof t === "number");
+  if (!tin.length || !tout.length) return null;
+  const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
+  return { value: ((mean(tin) * p.inputPerMTok + mean(tout) * p.outputPerMTok) / 1e6) * 1000, floor: false };
+}
+
+/**
+ * "Large model not required?", with its facts read from the filed results. Only
+ * offered when the priciest reference model that answered every item scored no
+ * higher than the top of Jev's 95% interval; otherwise the data does not
+ * support the question and the page asks the plain one instead.
+ */
+function largeModelCopy(
+  ds: Dataset,
+  results: ResultsFile,
+  reference: ReferenceFile | null,
+  metrics: Record<ModelKey, ReturnType<typeof modelMetrics>>,
+  speed: SpeedFile | null,
+): HeroCopy | null {
+  const n = results.rows.length;
+  const refs = reference?.references ?? [];
+  const priced = refs.filter((r) => r.rows.length === n && refCostPer1k(r));
+  if (priced.length === 0) return null;
+  const big = priced.reduce((a, b) => (b.model.pricing!.inputPerMTok > a.model.pricing!.inputPerMTok ? b : a));
+  const bigRight = big.rows.filter((r) => r.answer.prediction === r.label).length;
+  const jev = metrics.jev;
+  if (bigRight / n > jev.ci[1]) return null;
+  const J = results.models.find((m) => m.key === "jev")!;
+  const bigCost = refCostPer1k(big)!;
+  const share = jev.expectedCostPer1k !== null ? (100 * jev.expectedCostPer1k) / bigCost.value : null;
+  // A floor on the big model's cost makes Jev's share a ceiling: say "under".
+  const shareText =
+    share === null
+      ? ""
+      : share < 1
+        ? "under 1%"
+        : bigCost.floor
+          ? `under ${Math.ceil(share)}%`
+          : `about ${Math.round(share)}%`;
+  return {
+    title: (
+      <>
+        Large model <em>not required?</em>
+      </>
+    ),
+    lede: (
+      <>
+        We asked {countWord(results.models.length + refs.length)} AI models whether each of {fmt(n)} {ds.itemsPhrase} was
+        positive or negative, without showing them the answers. <strong>{J.name}</strong>, a purpose-built evaluation model,
+        got {fmt(jev.correct)} right. <strong>{big.model.name}</strong> got {fmt(bigRight)}. {J.name} typically answered in{" "}
+        {seconds(medianResponse("jev", jev, speed))}
+        {shareText && `, for ${shareText} of ${big.model.name}’s cost`}.
+      </>
+    ),
+  };
+}
+
+/** One line under the scorecards naming the reference models that answered every item. */
+function ReferenceStrip({ reference, n, nouns }: { reference: ReferenceFile | null; n: number; nouns: string }) {
+  const refs = (reference?.references ?? []).filter((r) => r.rows.length === n);
+  if (refs.length === 0) return null;
+  return (
+    <p className="hero-foot hero-also">
+      <span className="hero-also-lead">Also on the same {fmt(n)} {nouns}</span>
+      {refs.map((r) => {
+        const right = r.rows.filter((x) => x.answer.prediction === x.label).length;
+        const c = refCostPer1k(r);
+        return (
+          <a key={r.model.key} href="#reference">
+            {r.model.name}
+            <strong>{pct(right / n)}</strong>
+            <span className="hero-also-cost">
+              {r.via === "local" ? "on-device" : c ? `${c.floor ? "≥ " : ""}${usd(c.value)} / 1k` : ""}
+            </span>
+          </a>
+        );
+      })}
+    </p>
   );
 }
 
@@ -331,8 +429,9 @@ function WithResults({
 
   return (
     <main>
-      <Hero ds={ds} n={n} models={models}>
+      <Hero ds={ds} copy={largeModelCopy(ds, results, reference, metrics, speed) ?? questionCopy(ds, models, n, false)}>
         <Scorecards metrics={metrics} models={models} pValue={agree.pValue} speed={speed} nouns={nouns} />
+        <ReferenceStrip reference={reference} n={n} nouns={nouns} />
       </Hero>
 
       <section className="band">
@@ -1042,7 +1141,7 @@ function Pending({ ds, sample, models }: { ds: Dataset; sample: SampleFile; mode
   const { items: _items, ...meta } = sample;
   return (
     <main>
-      <Hero ds={ds} n={sample.size} models={models} pending>
+      <Hero ds={ds} copy={questionCopy(ds, models, sample.size, true)}>
         <div className="scorecards">
           {models.map((m) => (
             <div className={`scorecard sc-${m.key} pending`} key={m.key}>

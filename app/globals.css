@@ -430,6 +430,33 @@ code {
   font-weight: 600;
   margin-left: 4px;
 }
+.hero-also {
+  align-items: center;
+}
+.hero-also .hero-also-lead {
+  padding: 6px 4px 6px 0;
+  border: 0;
+  background: none;
+  color: var(--ink-3);
+}
+.hero-also a {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--card) 70%, transparent);
+  text-decoration: none;
+}
+.hero-also a:hover {
+  border-color: var(--axis);
+}
+.hero-also .hero-also-cost {
+  margin-left: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
 
 .band {
   border-top: 1px solid var(--border);

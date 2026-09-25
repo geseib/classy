@@ -25,8 +25,10 @@ export type Dataset = {
   /** One item, lower case: "review", "comment". */
   noun: string;
   nouns: string;
-  /** Hero headline noun phrase, plural: "movie reviews". */
-  headline: string;
+  /** What the sample is, plural, for running text after a count: "movie reviews". */
+  itemsPhrase: string;
+  /** One sentence on where the right answers come from; present tense, true before and after a run. */
+  labelFact: string;
   eyebrow: string;
   /** Short name of the source, used in running text: "IMDB", "GitHub". */
   source: string;
@@ -59,8 +61,9 @@ export const DATASETS: Record<DatasetKey, Dataset> = {
     evalArgs: "",
     noun: "review",
     nouns: "reviews",
-    headline: "movie reviews",
-    eyebrow: "Blind benchmark · IMDB movie reviews · Vercel AI Gateway",
+    itemsPhrase: "movie reviews",
+    labelFact: "Each review’s star rating gives the right answer, and the models never see it.",
+    eyebrow: "Research · Movie reviews from IMDB · Models called through Vercel AI Gateway",
     source: "IMDB",
     labelSource: "the IMDB star-rating label",
     population: "unique IMDB reviews",
@@ -69,9 +72,9 @@ export const DATASETS: Record<DatasetKey, Dataset> = {
     bothFooledHint: "Look for sarcasm, mixed verdicts, and star ratings that don’t match the text.",
     lengthIntro: "Short reviews carry fewer clues, while long ones may spend paragraphs on plot before giving a verdict.",
     credit: "Reviews from the IMDB Large Movie Review dataset (Maas et al., 2011).",
-    metaTitle: "Classy: Blind Sentiment Benchmark",
+    metaTitle: "Classy: Large model not required?",
     metaDescription:
-      "1,000 IMDB reviews, two models on Vercel AI Gateway, no answer key. How often do typesafe-ai/jev and alibaba/qwen3.7-flash call a review positive or negative correctly?",
+      "Four AI models judged 1,000 IMDB movie reviews as positive or negative without seeing the answers. How accurate, fast and cheap were typesafe-ai/jev, alibaba/qwen3.7-flash and two Claude models?",
   },
   github: {
     key: "github",
@@ -83,8 +86,9 @@ export const DATASETS: Record<DatasetKey, Dataset> = {
     evalArgs: " -- --dataset github",
     noun: "comment",
     nouns: "comments",
-    headline: "developer comments",
-    eyebrow: "Blind benchmark · GitHub pull-request and commit comments · Vercel AI Gateway",
+    itemsPhrase: "comments from GitHub pull requests and commits",
+    labelFact: "People have labelled every comment, and the models never see those labels.",
+    eyebrow: "Research · Comments from GitHub pull requests and commits · Models called through Vercel AI Gateway",
     source: "GitHub",
     labelSource: "the human annotators’ label",
     population: "positive or negative comments in the GitHub sentiment gold standard",
@@ -96,9 +100,9 @@ export const DATASETS: Record<DatasetKey, Dataset> = {
       "Most comments are a sentence or two, and the shortest give a model almost nothing to go on beyond a word or an emoticon.",
     credit:
       "Comments from the GitHub sentiment gold standard (Novielli et al., 2020), CC BY 4.0; neutral comments removed and a balanced sample drawn.",
-    metaTitle: "Classy: Blind Sentiment Benchmark on GitHub Comments",
+    metaTitle: "Classy: Can AI models tell praise from complaint?",
     metaDescription:
-      "1,000 GitHub pull-request and commit comments, two models on Vercel AI Gateway, no answer key. How often do typesafe-ai/jev and alibaba/qwen3.7-flash call a comment positive or negative correctly?",
+      "Two AI models judged 1,000 comments from GitHub pull requests and commits as positive or negative without seeing the answers. How often were typesafe-ai/jev and alibaba/qwen3.7-flash right?",
   },
 };
 
