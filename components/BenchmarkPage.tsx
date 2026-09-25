@@ -48,8 +48,8 @@ export default function BenchmarkPage({ dataset }: { dataset: DatasetKey }) {
       )}
       {results?.partial && (
         <div className="sim-banner" role="status">
-          Interim results: {fmt(results.partial.answered)} of {fmt(results.partial.of)} {ds.nouns}
-          answered by both models so far. The run is still in progress.
+          Interim results: {fmt(results.partial.answered)} of {fmt(results.partial.of)} {ds.nouns} answered by both models so
+          far. The run is still in progress.
         </div>
       )}
       <Nav ds={ds} hasResults={!!results && !results.simulated} />
@@ -272,7 +272,8 @@ function Scorecards({
               <dl className="sc-stats">
                 <div>
                   <dt>Median response</dt>
-                  <dd>{ms(medianResponse(m.key, s, speed))}</dd>
+                  {/* Only a throttle-free speed test is quoted here; the run's own latency includes rate-limit waits. */}
+                  <dd>{speed ? ms(speed.models[m.key].p50) : "n/a"}</dd>
                 </div>
                 <div>
                   <dt>Cost / 1k {nouns}</dt>
@@ -292,7 +293,10 @@ function Scorecards({
           Paired test <strong>{fmtP(pValue)}</strong>
         </span>
         <span>
-          Class balance <strong>50 / 50</strong>
+          Class balance{" "}
+          <strong>
+            {Math.round(100 * posShare(a))} / {100 - Math.round(100 * posShare(a))}
+          </strong>
         </span>
         <span>
           Chance <strong>50%</strong>
@@ -472,9 +476,19 @@ function WithResults({
             <span className="sec">1</span>Headline accuracy
           </h3>
           <p>
-            Accuracy is the share of all {fmt(n)} {nouns} labelled correctly; an answer that could not be parsed counts as wrong.
-            Because the sample is exactly half positive and half negative, a coin flip scores 50%, and so does a model that always
-            answers the same way.
+            Accuracy is the share of all {fmt(n)} {nouns} labelled correctly; an answer that could not be parsed counts as wrong.{" "}
+            {posShare(metrics.jev) === 0.5 ? (
+              <>
+                Because the sample is exactly half positive and half negative, a coin flip scores 50%, and so does a model that
+                always answers the same way.
+              </>
+            ) : (
+              <>
+                The full sample is half positive and half negative, but the {fmt(n)} {nouns} filed so far are{" "}
+                {pct(posShare(metrics.jev))} positive, so a model that always answered “positive” would score{" "}
+                {pct(Math.max(posShare(metrics.jev), 1 - posShare(metrics.jev)))} here. A coin flip still scores 50%.
+              </>
+            )}
           </p>
         </section>
 
@@ -912,6 +926,12 @@ const quantileMs = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs
  * Median response time: the throttle-free speed test when this dataset has one,
  * otherwise the accuracy run's own per-request latency (retries included).
  */
+/** Share of scored items whose human label is positive. */
+const posShare = (m: ReturnType<typeof modelMetrics>) => {
+  const pos = m.confusion.positive.positive + m.confusion.positive.negative + m.confusion.positive.none;
+  return m.n ? pos / m.n : 0.5;
+};
+
 const medianResponse = (k: ModelKey, m: ReturnType<typeof modelMetrics>, speed: SpeedFile | null) =>
   speed ? speed.models[k].p50 : m.latency.p50;
 
