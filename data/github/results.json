@@ -1,11 +1,11 @@
 {
  "simulated": false,
  "partial": {
-  "answered": 335,
+  "answered": 506,
   "of": 1000
  },
- "runAt": "2026-09-25T13:20:04.301Z",
- "durationMs": 3,
+ "runAt": "2026-09-25T14:30:11.372Z",
+ "durationMs": 5,
  "sdk": {
   "ai": "7.0.113",
   "gateway": "4.0.91"
@@ -7410,6 +7410,28 @@
    }
   },
   {
+   "id": "gh-306959",
+   "label": "positive",
+   "jev": {
+    "id": "gh-306959",
+    "prediction": "negative",
+    "pPositive": 0.44,
+    "latencyMs": 218,
+    "inputTokens": 378,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-306959",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 63323,
+    "inputTokens": 126,
+    "outputTokens": 336,
+    "cost": 0.00004746
+   }
+  },
+  {
    "id": "gh-4029026",
    "label": "positive",
    "jev": {
@@ -7429,6 +7451,3746 @@
     "inputTokens": 116,
     "outputTokens": 87,
     "cost": 0.00001479
+   }
+  },
+  {
+   "id": "gh-2276696",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2276696",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 267,
+    "inputTokens": 398,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2276696",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4710,
+    "inputTokens": 146,
+    "outputTokens": 247,
+    "cost": 0.00003649
+   }
+  },
+  {
+   "id": "gh-2761549",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2761549",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 224,
+    "inputTokens": 365,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2761549",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4619,
+    "inputTokens": 116,
+    "outputTokens": 189,
+    "cost": 0.00002805
+   }
+  },
+  {
+   "id": "gh-3193859",
+   "label": "negative",
+   "jev": {
+    "id": "gh-3193859",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 232,
+    "inputTokens": 372,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3193859",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 55642,
+    "inputTokens": 120,
+    "outputTokens": 103,
+    "cost": 0.00001699
+   }
+  },
+  {
+   "id": "gh-256235",
+   "label": "positive",
+   "jev": {
+    "id": "gh-256235",
+    "prediction": "positive",
+    "pPositive": 0.98,
+    "latencyMs": 310,
+    "inputTokens": 394,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-256235",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 54867,
+    "inputTokens": 144,
+    "outputTokens": 310,
+    "cost": 0.00004462
+   }
+  },
+  {
+   "id": "gh-150592",
+   "label": "positive",
+   "jev": {
+    "id": "gh-150592",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 356,
+    "inputTokens": 394,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-150592",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61335,
+    "inputTokens": 145,
+    "outputTokens": 209,
+    "cost": 0.00003152
+   }
+  },
+  {
+   "id": "gh-292356",
+   "label": "negative",
+   "jev": {
+    "id": "gh-292356",
+    "prediction": "negative",
+    "pPositive": 0.03,
+    "latencyMs": 440,
+    "inputTokens": 365,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-292356",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61696,
+    "inputTokens": 116,
+    "outputTokens": 274,
+    "cost": 0.0000391
+   }
+  },
+  {
+   "id": "gh-1033035",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1033035",
+    "prediction": "positive",
+    "pPositive": 0.96,
+    "latencyMs": 2477,
+    "inputTokens": 369,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1033035",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3713,
+    "inputTokens": 120,
+    "outputTokens": 103,
+    "cost": 0.00001699
+   }
+  },
+  {
+   "id": "gh-3933220",
+   "label": "negative",
+   "jev": {
+    "id": "gh-3933220",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 57852,
+    "inputTokens": 413,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3933220",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3369,
+    "inputTokens": 162,
+    "outputTokens": 162,
+    "cost": 0.00002592
+   }
+  },
+  {
+   "id": "gh-882451",
+   "label": "negative",
+   "jev": {
+    "id": "gh-882451",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 55596,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-882451",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 57556,
+    "inputTokens": 122,
+    "outputTokens": 272,
+    "cost": 0.00003902
+   }
+  },
+  {
+   "id": "gh-1005688",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1005688",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 222,
+    "inputTokens": 363,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1005688",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 52805,
+    "inputTokens": 114,
+    "outputTokens": 79,
+    "cost": 0.00001369
+   }
+  },
+  {
+   "id": "gh-5289129",
+   "label": "positive",
+   "jev": {
+    "id": "gh-5289129",
+    "prediction": "positive",
+    "pPositive": 0.94,
+    "latencyMs": 295,
+    "inputTokens": 364,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-5289129",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61349,
+    "inputTokens": 115,
+    "outputTokens": 192,
+    "cost": 0.00002841
+   }
+  },
+  {
+   "id": "gh-336429",
+   "label": "positive",
+   "jev": {
+    "id": "gh-336429",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 233,
+    "inputTokens": 361,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-336429",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 57420,
+    "inputTokens": 112,
+    "outputTokens": 95,
+    "cost": 0.00001571
+   }
+  },
+  {
+   "id": "gh-1040335",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1040335",
+    "prediction": "positive",
+    "pPositive": 0.97,
+    "latencyMs": 316,
+    "inputTokens": 366,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1040335",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2944,
+    "inputTokens": 117,
+    "outputTokens": 109,
+    "cost": 0.00001768
+   }
+  },
+  {
+   "id": "gh-2820465",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2820465",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 592,
+    "inputTokens": 367,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2820465",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 15410,
+    "inputTokens": 118,
+    "outputTokens": 850,
+    "cost": 0.00011404
+   }
+  },
+  {
+   "id": "gh-2475580",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2475580",
+    "prediction": "positive",
+    "pPositive": 0.96,
+    "latencyMs": 417,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2475580",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 57668,
+    "inputTokens": 114,
+    "outputTokens": 104,
+    "cost": 0.00001694
+   }
+  },
+  {
+   "id": "gh-2329291",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2329291",
+    "prediction": "negative",
+    "pPositive": 0.06,
+    "latencyMs": 244,
+    "inputTokens": 382,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2329291",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 49708,
+    "inputTokens": 133,
+    "outputTokens": 560,
+    "cost": 0.00007679
+   }
+  },
+  {
+   "id": "gh-3604381",
+   "label": "negative",
+   "jev": {
+    "id": "gh-3604381",
+    "prediction": "negative",
+    "pPositive": 0.11,
+    "latencyMs": 468,
+    "inputTokens": 370,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3604381",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 63497,
+    "inputTokens": 121,
+    "outputTokens": 406,
+    "cost": 0.00005641
+   }
+  },
+  {
+   "id": "gh-170703",
+   "label": "negative",
+   "jev": {
+    "id": "gh-170703",
+    "prediction": "negative",
+    "pPositive": 0.37,
+    "latencyMs": 364,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-170703",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 54025,
+    "inputTokens": 121,
+    "outputTokens": 149,
+    "cost": 0.000023
+   }
+  },
+  {
+   "id": "gh-4496019",
+   "label": "negative",
+   "jev": {
+    "id": "gh-4496019",
+    "prediction": "negative",
+    "pPositive": 0.45,
+    "latencyMs": 222,
+    "inputTokens": 404,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4496019",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 23469,
+    "inputTokens": 154,
+    "outputTokens": 1318,
+    "cost": 0.00017596
+   }
+  },
+  {
+   "id": "gh-4550584",
+   "label": "positive",
+   "jev": {
+    "id": "gh-4550584",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 360,
+    "inputTokens": 381,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4550584",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2647,
+    "inputTokens": 132,
+    "outputTokens": 149,
+    "cost": 0.00002333
+   }
+  },
+  {
+   "id": "gh-2871307",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2871307",
+    "prediction": "positive",
+    "pPositive": 0.71,
+    "latencyMs": 449,
+    "inputTokens": 365,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2871307",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 55580,
+    "inputTokens": 117,
+    "outputTokens": 263,
+    "cost": 0.0000377
+   }
+  },
+  {
+   "id": "gh-4201369",
+   "label": "negative",
+   "jev": {
+    "id": "gh-4201369",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 350,
+    "inputTokens": 417,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4201369",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 36634,
+    "inputTokens": 168,
+    "outputTokens": 164,
+    "cost": 0.00002636
+   }
+  },
+  {
+   "id": "gh-467154",
+   "label": "positive",
+   "jev": {
+    "id": "gh-467154",
+    "prediction": "positive",
+    "pPositive": 0.84,
+    "latencyMs": 337,
+    "inputTokens": 396,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-467154",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61317,
+    "inputTokens": 147,
+    "outputTokens": 247,
+    "cost": 0.00003652
+   }
+  },
+  {
+   "id": "gh-502425",
+   "label": "negative",
+   "jev": {
+    "id": "gh-502425",
+    "prediction": "negative",
+    "pPositive": 0.03,
+    "latencyMs": 332,
+    "inputTokens": 374,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-502425",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 62085,
+    "inputTokens": 125,
+    "outputTokens": 441,
+    "cost": 0.00006108
+   }
+  },
+  {
+   "id": "gh-333835",
+   "label": "positive",
+   "jev": {
+    "id": "gh-333835",
+    "prediction": "positive",
+    "pPositive": 0.98,
+    "latencyMs": 349,
+    "inputTokens": 373,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-333835",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2494,
+    "inputTokens": 124,
+    "outputTokens": 93,
+    "cost": 0.00001581
+   }
+  },
+  {
+   "id": "gh-455672",
+   "label": "positive",
+   "jev": {
+    "id": "gh-455672",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 321,
+    "inputTokens": 378,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-455672",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3395,
+    "inputTokens": 129,
+    "outputTokens": 176,
+    "cost": 0.00002675
+   }
+  },
+  {
+   "id": "gh-3926838",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3926838",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 2566,
+    "inputTokens": 393,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3926838",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 54744,
+    "inputTokens": 142,
+    "outputTokens": 129,
+    "cost": 0.00002103
+   }
+  },
+  {
+   "id": "gh-923939",
+   "label": "negative",
+   "jev": {
+    "id": "gh-923939",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 57595,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-923939",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 53186,
+    "inputTokens": 122,
+    "outputTokens": 203,
+    "cost": 0.00003005
+   }
+  },
+  {
+   "id": "gh-848995",
+   "label": "negative",
+   "jev": {
+    "id": "gh-848995",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 54938,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-848995",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 61068,
+    "inputTokens": 113,
+    "outputTokens": 91,
+    "cost": 0.00001522
+   }
+  },
+  {
+   "id": "gh-392940",
+   "label": "negative",
+   "jev": {
+    "id": "gh-392940",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 406,
+    "inputTokens": 366,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-392940",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 60924,
+    "inputTokens": 117,
+    "outputTokens": 254,
+    "cost": 0.00003653
+   }
+  },
+  {
+   "id": "gh-2521565",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2521565",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 384,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2521565",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2066,
+    "inputTokens": 122,
+    "outputTokens": 88,
+    "cost": 0.0000151
+   }
+  },
+  {
+   "id": "gh-325513",
+   "label": "positive",
+   "jev": {
+    "id": "gh-325513",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 331,
+    "inputTokens": 429,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-325513",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59517,
+    "inputTokens": 180,
+    "outputTokens": 279,
+    "cost": 0.00004167
+   }
+  },
+  {
+   "id": "gh-1010338",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1010338",
+    "prediction": "positive",
+    "pPositive": 0.77,
+    "latencyMs": 365,
+    "inputTokens": 363,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1010338",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 56785,
+    "inputTokens": 114,
+    "outputTokens": 117,
+    "cost": 0.00001863
+   }
+  },
+  {
+   "id": "gh-1009745",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1009745",
+    "prediction": "negative",
+    "pPositive": 0.44,
+    "latencyMs": 426,
+    "inputTokens": 397,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1009745",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 72107,
+    "inputTokens": 147,
+    "outputTokens": 846,
+    "cost": 0.00011439
+   }
+  },
+  {
+   "id": "gh-2729204",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2729204",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 494,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2729204",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 60156,
+    "inputTokens": 113,
+    "outputTokens": 144,
+    "cost": 0.00002211
+   }
+  },
+  {
+   "id": "gh-248870",
+   "label": "negative",
+   "jev": {
+    "id": "gh-248870",
+    "prediction": "negative",
+    "pPositive": 0.02,
+    "latencyMs": 280,
+    "inputTokens": 418,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-248870",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 5582,
+    "inputTokens": 169,
+    "outputTokens": 278,
+    "cost": 0.00004121
+   }
+  },
+  {
+   "id": "gh-529788",
+   "label": "positive",
+   "jev": {
+    "id": "gh-529788",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 296,
+    "inputTokens": 385,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-529788",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2475,
+    "inputTokens": 131,
+    "outputTokens": 117,
+    "cost": 0.00001914
+   }
+  },
+  {
+   "id": "gh-881956",
+   "label": "positive",
+   "jev": {
+    "id": "gh-881956",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 260,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-881956",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 50987,
+    "inputTokens": 113,
+    "outputTokens": 78,
+    "cost": 0.00001353
+   }
+  },
+  {
+   "id": "gh-1180494",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1180494",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 58506,
+    "inputTokens": 388,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1180494",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 48598,
+    "inputTokens": 137,
+    "outputTokens": 112,
+    "cost": 0.00001867
+   }
+  },
+  {
+   "id": "gh-561664",
+   "label": "positive",
+   "jev": {
+    "id": "gh-561664",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2479,
+    "inputTokens": 367,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-561664",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59146,
+    "inputTokens": 118,
+    "outputTokens": 83,
+    "cost": 0.00001433
+   }
+  },
+  {
+   "id": "gh-4543270",
+   "label": "negative",
+   "jev": {
+    "id": "gh-4543270",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 55578,
+    "inputTokens": 403,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4543270",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 62734,
+    "inputTokens": 153,
+    "outputTokens": 265,
+    "cost": 0.00003904
+   }
+  },
+  {
+   "id": "gh-38475",
+   "label": "positive",
+   "jev": {
+    "id": "gh-38475",
+    "prediction": "positive",
+    "pPositive": 0.87,
+    "latencyMs": 234,
+    "inputTokens": 420,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-38475",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 6403,
+    "inputTokens": 171,
+    "outputTokens": 393,
+    "cost": 0.00005622
+   }
+  },
+  {
+   "id": "gh-5309537",
+   "label": "negative",
+   "jev": {
+    "id": "gh-5309537",
+    "prediction": "positive",
+    "pPositive": 0.7,
+    "latencyMs": 348,
+    "inputTokens": 388,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-5309537",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3412,
+    "inputTokens": 139,
+    "outputTokens": 207,
+    "cost": 0.00003108
+   }
+  },
+  {
+   "id": "gh-79311",
+   "label": "negative",
+   "jev": {
+    "id": "gh-79311",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 251,
+    "inputTokens": 366,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-79311",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 53567,
+    "inputTokens": 117,
+    "outputTokens": 105,
+    "cost": 0.00001716
+   }
+  },
+  {
+   "id": "gh-229848",
+   "label": "positive",
+   "jev": {
+    "id": "gh-229848",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 499,
+    "inputTokens": 416,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-229848",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 53344,
+    "inputTokens": 164,
+    "outputTokens": 193,
+    "cost": 0.00003001
+   }
+  },
+  {
+   "id": "gh-214209",
+   "label": "positive",
+   "jev": {
+    "id": "gh-214209",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 226,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-214209",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 60764,
+    "inputTokens": 113,
+    "outputTokens": 95,
+    "cost": 0.00001574
+   }
+  },
+  {
+   "id": "gh-631065",
+   "label": "positive",
+   "jev": {
+    "id": "gh-631065",
+    "prediction": "negative",
+    "pPositive": 0.02,
+    "latencyMs": 346,
+    "inputTokens": 379,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-631065",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 64245,
+    "inputTokens": 129,
+    "outputTokens": 382,
+    "cost": 0.00005353
+   }
+  },
+  {
+   "id": "gh-1606743",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1606743",
+    "prediction": "positive",
+    "pPositive": 0.76,
+    "latencyMs": 392,
+    "inputTokens": 363,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1606743",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3227,
+    "inputTokens": 114,
+    "outputTokens": 90,
+    "cost": 0.00001512
+   }
+  },
+  {
+   "id": "gh-1863969",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1863969",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 256,
+    "inputTokens": 381,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1863969",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 58810,
+    "inputTokens": 132,
+    "outputTokens": 235,
+    "cost": 0.00003451
+   }
+  },
+  {
+   "id": "gh-3892944",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3892944",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 368,
+    "inputTokens": 379,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3892944",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 85256,
+    "inputTokens": 130,
+    "outputTokens": 132,
+    "cost": 0.00002106
+   }
+  },
+  {
+   "id": "gh-864477",
+   "label": "positive",
+   "jev": {
+    "id": "gh-864477",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 224,
+    "inputTokens": 401,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-864477",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 35158,
+    "inputTokens": 152,
+    "outputTokens": 233,
+    "cost": 0.00003485
+   }
+  },
+  {
+   "id": "gh-227756",
+   "label": "positive",
+   "jev": {
+    "id": "gh-227756",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 384,
+    "inputTokens": 383,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-227756",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 1914,
+    "inputTokens": 134,
+    "outputTokens": 101,
+    "cost": 0.00001715
+   }
+  },
+  {
+   "id": "gh-951839",
+   "label": "negative",
+   "jev": {
+    "id": "gh-951839",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 354,
+    "inputTokens": 361,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-951839",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 29400,
+    "inputTokens": 111,
+    "outputTokens": 87,
+    "cost": 0.00001464
+   }
+  },
+  {
+   "id": "gh-2668305",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2668305",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 359,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2668305",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 22329,
+    "inputTokens": 113,
+    "outputTokens": 89,
+    "cost": 0.00001496
+   }
+  },
+  {
+   "id": "gh-2282146",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2282146",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 224,
+    "inputTokens": 397,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2282146",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 62321,
+    "inputTokens": 147,
+    "outputTokens": 195,
+    "cost": 0.00002976
+   }
+  },
+  {
+   "id": "gh-3831593",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3831593",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 481,
+    "inputTokens": 369,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3831593",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 58113,
+    "inputTokens": 120,
+    "outputTokens": 85,
+    "cost": 0.00001465
+   }
+  },
+  {
+   "id": "gh-1414586",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1414586",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 274,
+    "inputTokens": 373,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1414586",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3309,
+    "inputTokens": 124,
+    "outputTokens": 164,
+    "cost": 0.00002504
+   }
+  },
+  {
+   "id": "gh-1041077",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1041077",
+    "prediction": "positive",
+    "pPositive": 0.9,
+    "latencyMs": 222,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1041077",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59633,
+    "inputTokens": 122,
+    "outputTokens": 201,
+    "cost": 0.00002979
+   }
+  },
+  {
+   "id": "gh-685662",
+   "label": "negative",
+   "jev": {
+    "id": "gh-685662",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 2564,
+    "inputTokens": 366,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-685662",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 87097,
+    "inputTokens": 117,
+    "outputTokens": 101,
+    "cost": 0.00001664
+   }
+  },
+  {
+   "id": "gh-345880",
+   "label": "positive",
+   "jev": {
+    "id": "gh-345880",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 54862,
+    "inputTokens": 380,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-345880",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3125,
+    "inputTokens": 130,
+    "outputTokens": 115,
+    "cost": 0.00001885
+   }
+  },
+  {
+   "id": "gh-3903006",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3903006",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 234,
+    "inputTokens": 378,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3903006",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 53203,
+    "inputTokens": 129,
+    "outputTokens": 117,
+    "cost": 0.00001908
+   }
+  },
+  {
+   "id": "gh-262709",
+   "label": "positive",
+   "jev": {
+    "id": "gh-262709",
+    "prediction": "positive",
+    "pPositive": 0.96,
+    "latencyMs": 460,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-262709",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 60765,
+    "inputTokens": 122,
+    "outputTokens": 82,
+    "cost": 0.00001432
+   }
+  },
+  {
+   "id": "gh-541137",
+   "label": "negative",
+   "jev": {
+    "id": "gh-541137",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 263,
+    "inputTokens": 367,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-541137",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3003,
+    "inputTokens": 118,
+    "outputTokens": 149,
+    "cost": 0.00002291
+   }
+  },
+  {
+   "id": "gh-214963",
+   "label": "negative",
+   "jev": {
+    "id": "gh-214963",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 249,
+    "inputTokens": 385,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-214963",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4979,
+    "inputTokens": 136,
+    "outputTokens": 184,
+    "cost": 0.000028
+   }
+  },
+  {
+   "id": "gh-112620",
+   "label": "negative",
+   "jev": {
+    "id": "gh-112620",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 59024,
+    "inputTokens": 393,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-112620",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 26445,
+    "inputTokens": 144,
+    "outputTokens": 325,
+    "cost": 0.00004657
+   }
+  },
+  {
+   "id": "gh-2287194",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2287194",
+    "prediction": "positive",
+    "pPositive": 0.91,
+    "latencyMs": 388,
+    "inputTokens": 370,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2287194",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 56646,
+    "inputTokens": 121,
+    "outputTokens": 116,
+    "cost": 0.00001871
+   }
+  },
+  {
+   "id": "gh-175108",
+   "label": "negative",
+   "jev": {
+    "id": "gh-175108",
+    "prediction": "negative",
+    "pPositive": 0.02,
+    "latencyMs": 275,
+    "inputTokens": 392,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-175108",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 36440,
+    "inputTokens": 143,
+    "outputTokens": 294,
+    "cost": 0.00004251
+   }
+  },
+  {
+   "id": "gh-610284",
+   "label": "negative",
+   "jev": {
+    "id": "gh-610284",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 57924,
+    "inputTokens": 382,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-610284",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4478,
+    "inputTokens": 134,
+    "outputTokens": 247,
+    "cost": 0.00003613
+   }
+  },
+  {
+   "id": "gh-1205658",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1205658",
+    "prediction": "positive",
+    "pPositive": 0.94,
+    "latencyMs": 230,
+    "inputTokens": 442,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1205658",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 74169,
+    "inputTokens": 192,
+    "outputTokens": 105,
+    "cost": 0.00001941
+   }
+  },
+  {
+   "id": "gh-45385",
+   "label": "positive",
+   "jev": {
+    "id": "gh-45385",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 224,
+    "inputTokens": 376,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-45385",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2652,
+    "inputTokens": 125,
+    "outputTokens": 90,
+    "cost": 0.00001545
+   }
+  },
+  {
+   "id": "gh-957487",
+   "label": "positive",
+   "jev": {
+    "id": "gh-957487",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 262,
+    "inputTokens": 367,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-957487",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2834,
+    "inputTokens": 118,
+    "outputTokens": 106,
+    "cost": 0.00001732
+   }
+  },
+  {
+   "id": "gh-308824",
+   "label": "negative",
+   "jev": {
+    "id": "gh-308824",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 258,
+    "inputTokens": 365,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-308824",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 36459,
+    "inputTokens": 116,
+    "outputTokens": 128,
+    "cost": 0.00002012
+   }
+  },
+  {
+   "id": "gh-2287858",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2287858",
+    "prediction": "positive",
+    "pPositive": 0.92,
+    "latencyMs": 243,
+    "inputTokens": 374,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2287858",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 34514,
+    "inputTokens": 125,
+    "outputTokens": 127,
+    "cost": 0.00002026
+   }
+  },
+  {
+   "id": "gh-2589439",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2589439",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 331,
+    "inputTokens": 369,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2589439",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59107,
+    "inputTokens": 120,
+    "outputTokens": 68,
+    "cost": 0.00001244
+   }
+  },
+  {
+   "id": "gh-3221100",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3221100",
+    "prediction": "positive",
+    "pPositive": 0.98,
+    "latencyMs": 323,
+    "inputTokens": 376,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3221100",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3974,
+    "inputTokens": 123,
+    "outputTokens": 122,
+    "cost": 0.00001955
+   }
+  },
+  {
+   "id": "gh-1133133",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1133133",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 215,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1133133",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 26139,
+    "inputTokens": 113,
+    "outputTokens": 87,
+    "cost": 0.0000147
+   }
+  },
+  {
+   "id": "gh-1322767",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1322767",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 237,
+    "inputTokens": 370,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1322767",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 61387,
+    "inputTokens": 120,
+    "outputTokens": 208,
+    "cost": 0.00003064
+   }
+  },
+  {
+   "id": "gh-2111100",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2111100",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 373,
+    "inputTokens": 370,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2111100",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 35112,
+    "inputTokens": 121,
+    "outputTokens": 184,
+    "cost": 0.00002755
+   }
+  },
+  {
+   "id": "gh-2168518",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2168518",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 234,
+    "inputTokens": 373,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2168518",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 1909,
+    "inputTokens": 124,
+    "outputTokens": 91,
+    "cost": 0.00001555
+   }
+  },
+  {
+   "id": "gh-366063",
+   "label": "negative",
+   "jev": {
+    "id": "gh-366063",
+    "prediction": "negative",
+    "pPositive": 0.03,
+    "latencyMs": 247,
+    "inputTokens": 380,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-366063",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 86582,
+    "inputTokens": 131,
+    "outputTokens": 225,
+    "cost": 0.00003318
+   }
+  },
+  {
+   "id": "gh-351890",
+   "label": "positive",
+   "jev": {
+    "id": "gh-351890",
+    "prediction": "positive",
+    "pPositive": 0.95,
+    "latencyMs": 414,
+    "inputTokens": 366,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-351890",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 86118,
+    "inputTokens": 116,
+    "outputTokens": 209,
+    "cost": 0.00003065
+   }
+  },
+  {
+   "id": "gh-4935354",
+   "label": "positive",
+   "jev": {
+    "id": "gh-4935354",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 243,
+    "inputTokens": 399,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4935354",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2748,
+    "inputTokens": 150,
+    "outputTokens": 161,
+    "cost": 0.00002543
+   }
+  },
+  {
+   "id": "gh-43086",
+   "label": "negative",
+   "jev": {
+    "id": "gh-43086",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 2580,
+    "inputTokens": 391,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-43086",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4315,
+    "inputTokens": 142,
+    "outputTokens": 211,
+    "cost": 0.00003169
+   }
+  },
+  {
+   "id": "gh-94498",
+   "label": "positive",
+   "jev": {
+    "id": "gh-94498",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 54600,
+    "inputTokens": 384,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-94498",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 23659,
+    "inputTokens": 135,
+    "outputTokens": 147,
+    "cost": 0.00002316
+   }
+  },
+  {
+   "id": "gh-107037",
+   "label": "negative",
+   "jev": {
+    "id": "gh-107037",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 334,
+    "inputTokens": 382,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-107037",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 64009,
+    "inputTokens": 133,
+    "outputTokens": 193,
+    "cost": 0.00002908
+   }
+  },
+  {
+   "id": "gh-763914",
+   "label": "positive",
+   "jev": {
+    "id": "gh-763914",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 286,
+    "inputTokens": 364,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-763914",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2467,
+    "inputTokens": 115,
+    "outputTokens": 85,
+    "cost": 0.0000145
+   }
+  },
+  {
+   "id": "gh-2268220",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2268220",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 235,
+    "inputTokens": 380,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2268220",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4804,
+    "inputTokens": 130,
+    "outputTokens": 257,
+    "cost": 0.00003731
+   }
+  },
+  {
+   "id": "gh-376338",
+   "label": "negative",
+   "jev": {
+    "id": "gh-376338",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 306,
+    "inputTokens": 389,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-376338",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 6484,
+    "inputTokens": 139,
+    "outputTokens": 307,
+    "cost": 0.00004408
+   }
+  },
+  {
+   "id": "gh-1518264",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1518264",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 279,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1518264",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 51638,
+    "inputTokens": 121,
+    "outputTokens": 121,
+    "cost": 0.00001936
+   }
+  },
+  {
+   "id": "gh-2674637",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2674637",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 258,
+    "inputTokens": 374,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2674637",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2419,
+    "inputTokens": 125,
+    "outputTokens": 123,
+    "cost": 0.00001974
+   }
+  },
+  {
+   "id": "gh-364619",
+   "label": "positive",
+   "jev": {
+    "id": "gh-364619",
+    "prediction": "negative",
+    "pPositive": 0.45,
+    "latencyMs": 238,
+    "inputTokens": 380,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-364619",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 4951,
+    "inputTokens": 131,
+    "outputTokens": 207,
+    "cost": 0.00003084
+   }
+  },
+  {
+   "id": "gh-3985311",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3985311",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 58562,
+    "inputTokens": 360,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3985311",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2382,
+    "inputTokens": 111,
+    "outputTokens": 102,
+    "cost": 0.00001659
+   }
+  },
+  {
+   "id": "gh-736375",
+   "label": "negative",
+   "jev": {
+    "id": "gh-736375",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 58567,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-736375",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 9038,
+    "inputTokens": 113,
+    "outputTokens": 119,
+    "cost": 0.00001886
+   }
+  },
+  {
+   "id": "gh-1964078",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1964078",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 272,
+    "inputTokens": 372,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1964078",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 61882,
+    "inputTokens": 123,
+    "outputTokens": 295,
+    "cost": 0.00004204
+   }
+  },
+  {
+   "id": "gh-422519",
+   "label": "positive",
+   "jev": {
+    "id": "gh-422519",
+    "prediction": "positive",
+    "pPositive": 0.93,
+    "latencyMs": 251,
+    "inputTokens": 364,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-422519",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 33397,
+    "inputTokens": 115,
+    "outputTokens": 89,
+    "cost": 0.00001502
+   }
+  },
+  {
+   "id": "gh-385021",
+   "label": "positive",
+   "jev": {
+    "id": "gh-385021",
+    "prediction": "negative",
+    "pPositive": 0.25,
+    "latencyMs": 242,
+    "inputTokens": 370,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-385021",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2847,
+    "inputTokens": 120,
+    "outputTokens": 100,
+    "cost": 0.0000166
+   }
+  },
+  {
+   "id": "gh-2781288",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2781288",
+    "prediction": "negative",
+    "pPositive": 0.02,
+    "latencyMs": 298,
+    "inputTokens": 374,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2781288",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 23172,
+    "inputTokens": 125,
+    "outputTokens": 1305,
+    "cost": 0.0001734
+   }
+  },
+  {
+   "id": "gh-2045805",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2045805",
+    "prediction": "negative",
+    "pPositive": 0.05,
+    "latencyMs": 297,
+    "inputTokens": 373,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2045805",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 85321,
+    "inputTokens": 123,
+    "outputTokens": 250,
+    "cost": 0.00003619
+   }
+  },
+  {
+   "id": "gh-1879775",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1879775",
+    "prediction": "negative",
+    "pPositive": 0.02,
+    "latencyMs": 235,
+    "inputTokens": 373,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1879775",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4600,
+    "inputTokens": 124,
+    "outputTokens": 188,
+    "cost": 0.00002816
+   }
+  },
+  {
+   "id": "gh-86187",
+   "label": "positive",
+   "jev": {
+    "id": "gh-86187",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 234,
+    "inputTokens": 382,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-86187",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 29949,
+    "inputTokens": 132,
+    "outputTokens": 181,
+    "cost": 0.00002749
+   }
+  },
+  {
+   "id": "gh-2155726",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2155726",
+    "prediction": "positive",
+    "pPositive": 0.94,
+    "latencyMs": 259,
+    "inputTokens": 368,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2155726",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 4858,
+    "inputTokens": 119,
+    "outputTokens": 311,
+    "cost": 0.000044
+   }
+  },
+  {
+   "id": "gh-4237852",
+   "label": "positive",
+   "jev": {
+    "id": "gh-4237852",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 261,
+    "inputTokens": 374,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4237852",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 28808,
+    "inputTokens": 125,
+    "outputTokens": 108,
+    "cost": 0.00001779
+   }
+  },
+  {
+   "id": "gh-1961043",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1961043",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 272,
+    "inputTokens": 364,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1961043",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2117,
+    "inputTokens": 115,
+    "outputTokens": 85,
+    "cost": 0.0000145
+   }
+  },
+  {
+   "id": "gh-325174",
+   "label": "negative",
+   "jev": {
+    "id": "gh-325174",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 239,
+    "inputTokens": 367,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-325174",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 24170,
+    "inputTokens": 118,
+    "outputTokens": 177,
+    "cost": 0.00002655
+   }
+  },
+  {
+   "id": "gh-586595",
+   "label": "positive",
+   "jev": {
+    "id": "gh-586595",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 245,
+    "inputTokens": 363,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-586595",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59146,
+    "inputTokens": 114,
+    "outputTokens": 94,
+    "cost": 0.00001564
+   }
+  },
+  {
+   "id": "gh-639015",
+   "label": "negative",
+   "jev": {
+    "id": "gh-639015",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 230,
+    "inputTokens": 367,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-639015",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 59691,
+    "inputTokens": 118,
+    "outputTokens": 109,
+    "cost": 0.00001771
+   }
+  },
+  {
+   "id": "gh-392772",
+   "label": "positive",
+   "jev": {
+    "id": "gh-392772",
+    "prediction": "positive",
+    "pPositive": 0.65,
+    "latencyMs": 239,
+    "inputTokens": 368,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-392772",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2120,
+    "inputTokens": 119,
+    "outputTokens": 103,
+    "cost": 0.00001696
+   }
+  },
+  {
+   "id": "gh-3545201",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3545201",
+    "prediction": "positive",
+    "pPositive": 0.87,
+    "latencyMs": 258,
+    "inputTokens": 382,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3545201",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 30943,
+    "inputTokens": 134,
+    "outputTokens": 218,
+    "cost": 0.00003236
+   }
+  },
+  {
+   "id": "gh-247917",
+   "label": "positive",
+   "jev": {
+    "id": "gh-247917",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2513,
+    "inputTokens": 437,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-247917",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 88594,
+    "inputTokens": 178,
+    "outputTokens": 156,
+    "cost": 0.00002562
+   }
+  },
+  {
+   "id": "gh-1027712",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1027712",
+    "prediction": "negative",
+    "pPositive": 0.15,
+    "latencyMs": 15035,
+    "inputTokens": 367,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1027712",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61377,
+    "inputTokens": 118,
+    "outputTokens": 285,
+    "cost": 0.00004059
+   }
+  },
+  {
+   "id": "gh-1129694",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1129694",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 6749,
+    "inputTokens": 383,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1129694",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 59401,
+    "inputTokens": 134,
+    "outputTokens": 103,
+    "cost": 0.00001741
+   }
+  },
+  {
+   "id": "gh-191262",
+   "label": "positive",
+   "jev": {
+    "id": "gh-191262",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 31338,
+    "inputTokens": 399,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-191262",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 57087,
+    "inputTokens": 151,
+    "outputTokens": 167,
+    "cost": 0.00002624
+   }
+  },
+  {
+   "id": "gh-775915",
+   "label": "positive",
+   "jev": {
+    "id": "gh-775915",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 6858,
+    "inputTokens": 364,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-775915",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2852,
+    "inputTokens": 115,
+    "outputTokens": 100,
+    "cost": 0.00001645
+   }
+  },
+  {
+   "id": "gh-12654",
+   "label": "negative",
+   "jev": {
+    "id": "gh-12654",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 35595,
+    "inputTokens": 369,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-12654",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 58235,
+    "inputTokens": 120,
+    "outputTokens": 92,
+    "cost": 0.00001556
+   }
+  },
+  {
+   "id": "gh-1837027",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1837027",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 246,
+    "inputTokens": 385,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1837027",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 59498,
+    "inputTokens": 134,
+    "outputTokens": 249,
+    "cost": 0.00003639
+   }
+  },
+  {
+   "id": "gh-279369",
+   "label": "positive",
+   "jev": {
+    "id": "gh-279369",
+    "prediction": "positive",
+    "pPositive": 0.63,
+    "latencyMs": 259,
+    "inputTokens": 365,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-279369",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2344,
+    "inputTokens": 116,
+    "outputTokens": 111,
+    "cost": 0.00001791
+   }
+  },
+  {
+   "id": "gh-5520875",
+   "label": "negative",
+   "jev": {
+    "id": "gh-5520875",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 41519,
+    "inputTokens": 412,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-5520875",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 59360,
+    "inputTokens": 163,
+    "outputTokens": 216,
+    "cost": 0.00003297
+   }
+  },
+  {
+   "id": "gh-2467528",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2467528",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 226,
+    "inputTokens": 364,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2467528",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 86602,
+    "inputTokens": 115,
+    "outputTokens": 78,
+    "cost": 0.00001359
+   }
+  },
+  {
+   "id": "gh-1875018",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1875018",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 275,
+    "inputTokens": 374,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1875018",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3913,
+    "inputTokens": 125,
+    "outputTokens": 154,
+    "cost": 0.00002377
+   }
+  },
+  {
+   "id": "gh-530087",
+   "label": "positive",
+   "jev": {
+    "id": "gh-530087",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2546,
+    "inputTokens": 369,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-530087",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 53939,
+    "inputTokens": 120,
+    "outputTokens": 135,
+    "cost": 0.00002115
+   }
+  },
+  {
+   "id": "gh-267055",
+   "label": "positive",
+   "jev": {
+    "id": "gh-267055",
+    "prediction": "positive",
+    "pPositive": 0.89,
+    "latencyMs": 2474,
+    "inputTokens": 414,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-267055",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3054,
+    "inputTokens": 158,
+    "outputTokens": 167,
+    "cost": 0.00002645
+   }
+  },
+  {
+   "id": "gh-1648418",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1648418",
+    "prediction": "positive",
+    "pPositive": 0.94,
+    "latencyMs": 2511,
+    "inputTokens": 384,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1648418",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 29920,
+    "inputTokens": 135,
+    "outputTokens": 211,
+    "cost": 0.00003148
+   }
+  },
+  {
+   "id": "gh-2678836",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2678836",
+    "prediction": "positive",
+    "pPositive": 0.83,
+    "latencyMs": 2485,
+    "inputTokens": 381,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2678836",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 58663,
+    "inputTokens": 132,
+    "outputTokens": 111,
+    "cost": 0.00001839
+   }
+  },
+  {
+   "id": "gh-4830344",
+   "label": "negative",
+   "jev": {
+    "id": "gh-4830344",
+    "prediction": "negative",
+    "pPositive": 0.02,
+    "latencyMs": 2494,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4830344",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 2372,
+    "inputTokens": 113,
+    "outputTokens": 107,
+    "cost": 0.0000173
+   }
+  },
+  {
+   "id": "gh-5025133",
+   "label": "negative",
+   "jev": {
+    "id": "gh-5025133",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 2492,
+    "inputTokens": 366,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-5025133",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4352,
+    "inputTokens": 117,
+    "outputTokens": 223,
+    "cost": 0.0000325
+   }
+  },
+  {
+   "id": "gh-276756",
+   "label": "negative",
+   "jev": {
+    "id": "gh-276756",
+    "prediction": "negative",
+    "pPositive": 0.01,
+    "latencyMs": 2641,
+    "inputTokens": 377,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-276756",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 59470,
+    "inputTokens": 127,
+    "outputTokens": 193,
+    "cost": 0.0000289
+   }
+  },
+  {
+   "id": "gh-456346",
+   "label": "negative",
+   "jev": {
+    "id": "gh-456346",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 331,
+    "inputTokens": 385,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-456346",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4134,
+    "inputTokens": 134,
+    "outputTokens": 226,
+    "cost": 0.0000334
+   }
+  },
+  {
+   "id": "gh-3689433",
+   "label": "positive",
+   "jev": {
+    "id": "gh-3689433",
+    "prediction": "positive",
+    "pPositive": 0.96,
+    "latencyMs": 2494,
+    "inputTokens": 408,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3689433",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 29523,
+    "inputTokens": 154,
+    "outputTokens": 222,
+    "cost": 0.00003348
+   }
+  },
+  {
+   "id": "gh-1218482",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1218482",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 2554,
+    "inputTokens": 395,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1218482",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 66420,
+    "inputTokens": 146,
+    "outputTokens": 647,
+    "cost": 0.00008849
+   }
+  },
+  {
+   "id": "gh-1010451",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1010451",
+    "prediction": "positive",
+    "pPositive": 0.65,
+    "latencyMs": 2500,
+    "inputTokens": 362,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1010451",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 6293,
+    "inputTokens": 113,
+    "outputTokens": 324,
+    "cost": 0.00004551
+   }
+  },
+  {
+   "id": "gh-805517",
+   "label": "negative",
+   "jev": {
+    "id": "gh-805517",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 2481,
+    "inputTokens": 385,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-805517",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 3238,
+    "inputTokens": 136,
+    "outputTokens": 116,
+    "cost": 0.00001916
+   }
+  },
+  {
+   "id": "gh-46267",
+   "label": "negative",
+   "jev": {
+    "id": "gh-46267",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 243,
+    "inputTokens": 398,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-46267",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 4546,
+    "inputTokens": 148,
+    "outputTokens": 267,
+    "cost": 0.00003915
+   }
+  },
+  {
+   "id": "gh-905891",
+   "label": "positive",
+   "jev": {
+    "id": "gh-905891",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2574,
+    "inputTokens": 372,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-905891",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 47299,
+    "inputTokens": 123,
+    "outputTokens": 100,
+    "cost": 0.00001669
+   }
+  },
+  {
+   "id": "gh-64826",
+   "label": "negative",
+   "jev": {
+    "id": "gh-64826",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 2461,
+    "inputTokens": 381,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-64826",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 59777,
+    "inputTokens": 132,
+    "outputTokens": 134,
+    "cost": 0.00002138
+   }
+  },
+  {
+   "id": "gh-5054987",
+   "label": "negative",
+   "jev": {
+    "id": "gh-5054987",
+    "prediction": "positive",
+    "pPositive": 0.96,
+    "latencyMs": 2493,
+    "inputTokens": 388,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-5054987",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 81591,
+    "inputTokens": 139,
+    "outputTokens": 155,
+    "cost": 0.00002432
+   }
+  },
+  {
+   "id": "gh-1206680",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1206680",
+    "prediction": "negative",
+    "pPositive": 0.29,
+    "latencyMs": 2630,
+    "inputTokens": 390,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1206680",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 64556,
+    "inputTokens": 141,
+    "outputTokens": 350,
+    "cost": 0.00004973
+   }
+  },
+  {
+   "id": "gh-4934033",
+   "label": "negative",
+   "jev": {
+    "id": "gh-4934033",
+    "prediction": "positive",
+    "pPositive": 0.73,
+    "latencyMs": 360,
+    "inputTokens": 378,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4934033",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 60342,
+    "inputTokens": 129,
+    "outputTokens": 205,
+    "cost": 0.00003052
+   }
+  },
+  {
+   "id": "gh-50008",
+   "label": "negative",
+   "jev": {
+    "id": "gh-50008",
+    "prediction": "negative",
+    "pPositive": 0.02,
+    "latencyMs": 2481,
+    "inputTokens": 375,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-50008",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 62301,
+    "inputTokens": 126,
+    "outputTokens": 523,
+    "cost": 0.00007177
+   }
+  },
+  {
+   "id": "gh-452191",
+   "label": "positive",
+   "jev": {
+    "id": "gh-452191",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2506,
+    "inputTokens": 384,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-452191",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3685,
+    "inputTokens": 135,
+    "outputTokens": 143,
+    "cost": 0.00002264
+   }
+  },
+  {
+   "id": "gh-506024",
+   "label": "negative",
+   "jev": {
+    "id": "gh-506024",
+    "prediction": "negative",
+    "pPositive": 0.12,
+    "latencyMs": 2494,
+    "inputTokens": 368,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-506024",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 34617,
+    "inputTokens": 119,
+    "outputTokens": 769,
+    "cost": 0.00010354
+   }
+  },
+  {
+   "id": "gh-2994968",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2994968",
+    "prediction": "positive",
+    "pPositive": 0.83,
+    "latencyMs": 59649,
+    "inputTokens": 376,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2994968",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 83686,
+    "inputTokens": 127,
+    "outputTokens": 130,
+    "cost": 0.00002071
+   }
+  },
+  {
+   "id": "gh-1101131",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1101131",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2465,
+    "inputTokens": 413,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1101131",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2833,
+    "inputTokens": 159,
+    "outputTokens": 173,
+    "cost": 0.00002726
+   }
+  },
+  {
+   "id": "gh-2476592",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2476592",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 2438,
+    "inputTokens": 372,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2476592",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 48207,
+    "inputTokens": 123,
+    "outputTokens": 105,
+    "cost": 0.00001734
+   }
+  },
+  {
+   "id": "gh-334752",
+   "label": "positive",
+   "jev": {
+    "id": "gh-334752",
+    "prediction": "positive",
+    "pPositive": 0.95,
+    "latencyMs": 537,
+    "inputTokens": 371,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-334752",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 59472,
+    "inputTokens": 122,
+    "outputTokens": 128,
+    "cost": 0.0000203
+   }
+  },
+  {
+   "id": "gh-439301",
+   "label": "negative",
+   "jev": {
+    "id": "gh-439301",
+    "prediction": "positive",
+    "pPositive": 0.68,
+    "latencyMs": 234,
+    "inputTokens": 370,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-439301",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2753,
+    "inputTokens": 121,
+    "outputTokens": 121,
+    "cost": 0.00001936
+   }
+  },
+  {
+   "id": "gh-452276",
+   "label": "negative",
+   "jev": {
+    "id": "gh-452276",
+    "prediction": "positive",
+    "pPositive": 0.6,
+    "latencyMs": 250,
+    "inputTokens": 410,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-452276",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 9326,
+    "inputTokens": 159,
+    "outputTokens": 547,
+    "cost": 0.00007588
+   }
+  },
+  {
+   "id": "gh-1541699",
+   "label": "negative",
+   "jev": {
+    "id": "gh-1541699",
+    "prediction": "negative",
+    "pPositive": 0.07,
+    "latencyMs": 234,
+    "inputTokens": 389,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1541699",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 20047,
+    "inputTokens": 139,
+    "outputTokens": 230,
+    "cost": 0.00003407
+   }
+  },
+  {
+   "id": "gh-4297212",
+   "label": "negative",
+   "jev": {
+    "id": "gh-4297212",
+    "prediction": "positive",
+    "pPositive": 0.63,
+    "latencyMs": 374,
+    "inputTokens": 391,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4297212",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 12498,
+    "inputTokens": 142,
+    "outputTokens": 813,
+    "cost": 0.00010995
+   }
+  },
+  {
+   "id": "gh-4501882",
+   "label": "positive",
+   "jev": {
+    "id": "gh-4501882",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 392,
+    "inputTokens": 394,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-4501882",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 17149,
+    "inputTokens": 145,
+    "outputTokens": 158,
+    "cost": 0.00002489
+   }
+  },
+  {
+   "id": "gh-939879",
+   "label": "positive",
+   "jev": {
+    "id": "gh-939879",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 303,
+    "inputTokens": 376,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-939879",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61656,
+    "inputTokens": 127,
+    "outputTokens": 163,
+    "cost": 0.000025
+   }
+  },
+  {
+   "id": "gh-1315221",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1315221",
+    "prediction": "positive",
+    "pPositive": 0.84,
+    "latencyMs": 366,
+    "inputTokens": 372,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1315221",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 37251,
+    "inputTokens": 123,
+    "outputTokens": 318,
+    "cost": 0.00004503
+   }
+  },
+  {
+   "id": "gh-150160",
+   "label": "positive",
+   "jev": {
+    "id": "gh-150160",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 363,
+    "inputTokens": 378,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-150160",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 3280,
+    "inputTokens": 129,
+    "outputTokens": 169,
+    "cost": 0.00002584
+   }
+  },
+  {
+   "id": "gh-600527",
+   "label": "negative",
+   "jev": {
+    "id": "gh-600527",
+    "prediction": "positive",
+    "pPositive": 0.78,
+    "latencyMs": 265,
+    "inputTokens": 377,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-600527",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 55642,
+    "inputTokens": 128,
+    "outputTokens": 184,
+    "cost": 0.00002776
+   }
+  },
+  {
+   "id": "gh-3685218",
+   "label": "negative",
+   "jev": {
+    "id": "gh-3685218",
+    "prediction": "positive",
+    "pPositive": 0.65,
+    "latencyMs": 233,
+    "inputTokens": 423,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-3685218",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 79412,
+    "inputTokens": 171,
+    "outputTokens": 124,
+    "cost": 0.00002125
+   }
+  },
+  {
+   "id": "gh-2296364",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2296364",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 229,
+    "inputTokens": 418,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2296364",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 2674,
+    "inputTokens": 166,
+    "outputTokens": 159,
+    "cost": 0.00002565
+   }
+  },
+  {
+   "id": "gh-43665",
+   "label": "positive",
+   "jev": {
+    "id": "gh-43665",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 374,
+    "inputTokens": 387,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-43665",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 89959,
+    "inputTokens": 137,
+    "outputTokens": 197,
+    "cost": 0.00002972
+   }
+  },
+  {
+   "id": "gh-2987296",
+   "label": "negative",
+   "jev": {
+    "id": "gh-2987296",
+    "prediction": "negative",
+    "pPositive": 0.2,
+    "latencyMs": 225,
+    "inputTokens": 377,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2987296",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 36366,
+    "inputTokens": 128,
+    "outputTokens": 550,
+    "cost": 0.00007534
+   }
+  },
+  {
+   "id": "gh-457643",
+   "label": "negative",
+   "jev": {
+    "id": "gh-457643",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 230,
+    "inputTokens": 395,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-457643",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 52571,
+    "inputTokens": 141,
+    "outputTokens": 206,
+    "cost": 0.00003101
+   }
+  },
+  {
+   "id": "gh-6314564",
+   "label": "negative",
+   "jev": {
+    "id": "gh-6314564",
+    "prediction": "negative",
+    "pPositive": 0.12,
+    "latencyMs": 390,
+    "inputTokens": 363,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-6314564",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 68204,
+    "inputTokens": 114,
+    "outputTokens": 677,
+    "cost": 0.00009143
+   }
+  },
+  {
+   "id": "gh-386638",
+   "label": "positive",
+   "jev": {
+    "id": "gh-386638",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 260,
+    "inputTokens": 376,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-386638",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2083,
+    "inputTokens": 127,
+    "outputTokens": 102,
+    "cost": 0.00001707
+   }
+  },
+  {
+   "id": "gh-62213",
+   "label": "positive",
+   "jev": {
+    "id": "gh-62213",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 273,
+    "inputTokens": 420,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-62213",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 50723,
+    "inputTokens": 169,
+    "outputTokens": 274,
+    "cost": 0.00004069
+   }
+  },
+  {
+   "id": "gh-2508631",
+   "label": "positive",
+   "jev": {
+    "id": "gh-2508631",
+    "prediction": "positive",
+    "pPositive": 0.93,
+    "latencyMs": 224,
+    "inputTokens": 405,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-2508631",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 5947,
+    "inputTokens": 152,
+    "outputTokens": 342,
+    "cost": 0.00004902
+   }
+  },
+  {
+   "id": "gh-5529226",
+   "label": "negative",
+   "jev": {
+    "id": "gh-5529226",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 460,
+    "inputTokens": 377,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-5529226",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 2848,
+    "inputTokens": 128,
+    "outputTokens": 120,
+    "cost": 0.00001944
+   }
+  },
+  {
+   "id": "gh-110537",
+   "label": "positive",
+   "jev": {
+    "id": "gh-110537",
+    "prediction": "positive",
+    "pPositive": 0.99,
+    "latencyMs": 252,
+    "inputTokens": 383,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-110537",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 20158,
+    "inputTokens": 133,
+    "outputTokens": 181,
+    "cost": 0.00002752
+   }
+  },
+  {
+   "id": "gh-679934",
+   "label": "positive",
+   "jev": {
+    "id": "gh-679934",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 56846,
+    "inputTokens": 387,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-679934",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 61040,
+    "inputTokens": 138,
+    "outputTokens": 199,
+    "cost": 0.00003001
+   }
+  },
+  {
+   "id": "gh-1751856",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1751856",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 254,
+    "inputTokens": 381,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1751856",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2334,
+    "inputTokens": 132,
+    "outputTokens": 121,
+    "cost": 0.00001969
+   }
+  },
+  {
+   "id": "gh-132633",
+   "label": "negative",
+   "jev": {
+    "id": "gh-132633",
+    "prediction": "negative",
+    "pPositive": 0.1,
+    "latencyMs": 250,
+    "inputTokens": 380,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-132633",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 4795,
+    "inputTokens": 131,
+    "outputTokens": 300,
+    "cost": 0.00004293
+   }
+  },
+  {
+   "id": "gh-109238",
+   "label": "negative",
+   "jev": {
+    "id": "gh-109238",
+    "prediction": "negative",
+    "pPositive": 0.06,
+    "latencyMs": 260,
+    "inputTokens": 386,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-109238",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 10466,
+    "inputTokens": 137,
+    "outputTokens": 711,
+    "cost": 0.00009654
+   }
+  },
+  {
+   "id": "gh-1766397",
+   "label": "positive",
+   "jev": {
+    "id": "gh-1766397",
+    "prediction": "positive",
+    "pPositive": 1,
+    "latencyMs": 2446,
+    "inputTokens": 366,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-1766397",
+    "prediction": "positive",
+    "raw": "positive",
+    "latencyMs": 2127,
+    "inputTokens": 117,
+    "outputTokens": 95,
+    "cost": 0.00001586
+   }
+  },
+  {
+   "id": "gh-752505",
+   "label": "negative",
+   "jev": {
+    "id": "gh-752505",
+    "prediction": "negative",
+    "pPositive": 0,
+    "latencyMs": 6927,
+    "inputTokens": 386,
+    "outputTokens": 32,
+    "cost": 0
+   },
+   "qwen": {
+    "id": "gh-752505",
+    "prediction": "negative",
+    "raw": "negative",
+    "latencyMs": 8831,
+    "inputTokens": 137,
+    "outputTokens": 143,
+    "cost": 0.0000227
    }
   }
  ]

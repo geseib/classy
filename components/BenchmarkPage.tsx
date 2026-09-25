@@ -556,8 +556,9 @@ function WithResults({
             {speed && (
               <>
                 Median latency comes from a separate speed test of {fmt(speed.n)} {nouns} per model: one request at a time from one
-                client through AI Gateway, each timed as a single attempt, with any request the gateway throttled discarded rather
-                than retried (95th percentile: {models.map((m) => `${m.name} ${ms(speed.models[m.key].p95)}`).join(", ")}).{" "}
+                client through AI Gateway, each timed as a single attempt. Any request the gateway throttled or failed to serve was
+                discarded and sent again rather than timed ({discardedNote(models, speed)}). 95th percentile:{" "}
+                {models.map((m) => `${m.name} ${ms(speed.models[m.key].p95)}`).join(", ")}.{" "}
               </>
             )}
             Tokens are the mean per {noun}. Expected cost is
@@ -933,6 +934,21 @@ const posShare = (m: ReturnType<typeof modelMetrics>) => {
  */
 const medianResponse = (k: ModelKey, speed: SpeedFile | null) => (speed ? speed.models[k].p50 : null);
 const msOrNa = (v: number | null) => (v === null ? "n/a" : ms(v));
+
+/** "Qwen3.7 Flash 39 throttled; Jev 4 throttled, 5 service errors" — or "none" when nothing was discarded. */
+const discardedNote = (models: ModelInfo[], speed: SpeedFile) => {
+  const parts = models
+    .map((m) => {
+      const s = speed.models[m.key];
+      const bits = [
+        s.throttledDiscarded ? `${s.throttledDiscarded} throttled` : "",
+        s.failedDiscarded ? `${s.failedDiscarded} service error${s.failedDiscarded === 1 ? "" : "s"}` : "",
+      ].filter(Boolean);
+      return bits.length ? `${m.name} ${bits.join(", ")}` : "";
+    })
+    .filter(Boolean);
+  return parts.length ? `discarded: ${parts.join("; ")}` : "none were";
+};
 
 /**
  * AI Gateway limits on the account the benchmark ran on, not properties of the
