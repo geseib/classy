@@ -1,0 +1,6017 @@
+{
+ "source": "GitHub sentiment gold standard (Novielli et al., 2020), CC BY 4.0",
+ "seed": 42,
+ "size": 1000,
+ "populationSize": 4099,
+ "duplicatesRemoved": 1,
+ "excluded": [
+  {
+   "label": "neutral",
+   "count": 3022
+  }
+ ],
+ "unusableRemoved": 0,
+ "createdAt": "2026-09-25T10:44:29.614Z",
+ "items": [
+  {
+   "id": "gh-10580",
+   "row": 918,
+   "label": "negative",
+   "text": "argh - textile formatting ate my == signs... It should have been == true and == false above."
+  },
+  {
+   "id": "gh-1048296",
+   "row": 1112,
+   "label": "negative",
+   "text": "sad bug :("
+  },
+  {
+   "id": "gh-1034096",
+   "row": 1427,
+   "label": "positive",
+   "text": "more SmartAI power ^_^ thanks for this"
+  },
+  {
+   "id": "gh-2582076",
+   "row": 4710,
+   "label": "positive",
+   "text": "Good man! =)"
+  },
+  {
+   "id": "gh-116072",
+   "row": 2931,
+   "label": "positive",
+   "text": "Take a break. Thank you! ;)"
+  },
+  {
+   "id": "gh-4006566",
+   "row": 586,
+   "label": "positive",
+   "text": ":) cool, thanks."
+  },
+  {
+   "id": "gh-2322330",
+   "row": 2798,
+   "label": "positive",
+   "text": "Nice work everyone who contributed!"
+  },
+  {
+   "id": "gh-666774",
+   "row": 4106,
+   "label": "negative",
+   "text": "Seems unclean. Is this because we're abusing the default HubManager for all scenarios?"
+  },
+  {
+   "id": "gh-3453309",
+   "row": 3469,
+   "label": "negative",
+   "text": "In fact it's shameless copy-paste from the code above the line (see lines 195-201). I am with you on that, fixing"
+  },
+  {
+   "id": "gh-4095640",
+   "row": 2336,
+   "label": "positive",
+   "text": "It's dbname, not database. :-)"
+  },
+  {
+   "id": "gh-1363568",
+   "row": 2263,
+   "label": "negative",
+   "text": "agreed. :cry:"
+  },
+  {
+   "id": "gh-1236576",
+   "row": 2386,
+   "label": "positive",
+   "text": "Keep up the good work. :)"
+  },
+  {
+   "id": "gh-392827",
+   "row": 2549,
+   "label": "positive",
+   "text": "This is so cool!!! Arcane Missiles spell works great for now ^^"
+  },
+  {
+   "id": "gh-872872",
+   "row": 749,
+   "label": "negative",
+   "text": "Crap, I thought I had set the author right... *confused*  This was entirely done by Lordron"
+  },
+  {
+   "id": "gh-884881",
+   "row": 388,
+   "label": "negative",
+   "text": "Wow, could have probably come across a little friendlier there, Phil!"
+  },
+  {
+   "id": "gh-264405",
+   "row": 2652,
+   "label": "positive",
+   "text": "Nice commit! This will help me for encounters event :)"
+  },
+  {
+   "id": "gh-1065728",
+   "row": 1411,
+   "label": "positive",
+   "text": "ok now again :D where can i get new map,vmaps extractor for windows ? compiled ones plz.. dont say me to compile etc.. i have reasons."
+  },
+  {
+   "id": "gh-2360358",
+   "row": 5060,
+   "label": "negative",
+   "text": "@grum  I think perhaps my using of the word 'trusted' has given you the wrong idea, and the desire to be a jackass. When I say 'trusted' what I mean is 'Plugins which I can resolve a problem with with a fair amount of ease, that I know could become unstab"
+  },
+  {
+   "id": "gh-6019455",
+   "row": 4324,
+   "label": "negative",
+   "text": "Hmm weird, must have gotten messed up while refactoring."
+  },
+  {
+   "id": "gh-133012",
+   "row": 1616,
+   "label": "negative",
+   "text": "I thought you meant 3-bytes, sorry."
+  },
+  {
+   "id": "gh-1781088",
+   "row": 4620,
+   "label": "positive",
+   "text": "Doesn't hurt but kind of superfluous. :-)"
+  },
+  {
+   "id": "gh-432850",
+   "row": 4345,
+   "label": "negative",
+   "text": "That is so weird."
+  },
+  {
+   "id": "gh-1713914",
+   "row": 3051,
+   "label": "positive",
+   "text": "Nice. I didn't know this package existed. I like keeping logic out of my templates. :)"
+  },
+  {
+   "id": "gh-1153264",
+   "row": 5905,
+   "label": "negative",
+   "text": "this problem may appear only in 2 cases - broken script/AI or GREAT HACK in EffectEnvironmentalDMG. need remove hacks and errors from code, but not insert \"gags\" like this..."
+  },
+  {
+   "id": "gh-185071",
+   "row": 4474,
+   "label": "negative",
+   "text": "expire_after is what is already used internally... :( I am merging this!"
+  },
+  {
+   "id": "gh-1621959",
+   "row": 3578,
+   "label": "positive",
+   "text": "I meant where exactly in all of the statements in the `try`. That's basically what I said :P"
+  },
+  {
+   "id": "gh-1569231",
+   "row": 4167,
+   "label": "negative",
+   "text": "Oops. My mistake !"
+  },
+  {
+   "id": "gh-1197165",
+   "row": 1991,
+   "label": "negative",
+   "text": "That's weird?! I c&p'ed this from another place in DVDPlayer, which means it must be wrong there too. Are you sure?"
+  },
+  {
+   "id": "gh-3165372",
+   "row": 4789,
+   "label": "positive",
+   "text": "This is a nice way to do it."
+  },
+  {
+   "id": "gh-165527",
+   "row": 2793,
+   "label": "positive",
+   "text": "Cool!, finally crash in esES locales fixed ;-)"
+  },
+  {
+   "id": "gh-50125",
+   "row": 5089,
+   "label": "negative",
+   "text": "hmm why are there forums? ... ah yes because it is not polite to spam comments @ commits...."
+  },
+  {
+   "id": "gh-203604",
+   "row": 1282,
+   "label": "negative",
+   "text": "> Weird, this is what I get:  > http://twitpic.com/3agtdb/full  My bad, I reverted my changes, rebuilt and now I see it (Lucy has strongest effect). Must have been some caching issue.  > By the way, I'm a bit confused with the ratio the refraction us"
+  },
+  {
+   "id": "gh-1697494",
+   "row": 2938,
+   "label": "positive",
+   "text": "Much better! :thumbsup:"
+  },
+  {
+   "id": "gh-2348649",
+   "row": 2765,
+   "label": "positive",
+   "text": "piece of art :smile:"
+  },
+  {
+   "id": "gh-1036479",
+   "row": 1422,
+   "label": "positive",
+   "text": "kandera, congratulate to join team!!!!"
+  },
+  {
+   "id": "gh-2344197",
+   "row": 2042,
+   "label": "negative",
+   "text": "btw the update made it more worse :S , now normal attacks without resillence armor is causing miss miss and resillence bug is same too."
+  },
+  {
+   "id": "gh-178116",
+   "row": 1498,
+   "label": "positive",
+   "text": "Thanks for making this test so much better!"
+  },
+  {
+   "id": "gh-752695",
+   "row": 1707,
+   "label": "negative",
+   "text": "well actually this doesn't optimize anything since the profiler is turned off by default.  public static boolean a = false; // The first field in MethodProfiler  so instead of making this accessible grum just made it worse :("
+  },
+  {
+   "id": "gh-1357250",
+   "row": 2447,
+   "label": "positive",
+   "text": "@justinbmeyer: Yes, and even corrects for whichever box-sizing you're using :-)"
+  },
+  {
+   "id": "gh-1985068",
+   "row": 4619,
+   "label": "positive",
+   "text": "Super classy. This will probably come in handy elsewhere, too. :heartbeat:"
+  },
+  {
+   "id": "gh-3662070",
+   "row": 5482,
+   "label": "positive",
+   "text": "No problem. Just see this page: http://forum.xbmc.org/showthread.php?tid=141158 I see you already signed up on Transifex. I added you as a coordinator of the Dutch translation team.  Cheers, Attila"
+  },
+  {
+   "id": "gh-1043658",
+   "row": 702,
+   "label": "positive",
+   "text": "I hereby associate myself with this epic commit thread."
+  },
+  {
+   "id": "gh-2347735",
+   "row": 274,
+   "label": "negative",
+   "text": "Ooo, I want to kill it!"
+  },
+  {
+   "id": "gh-69466",
+   "row": 3007,
+   "label": "positive",
+   "text": "with movement opcode xD Thx ^^"
+  },
+  {
+   "id": "gh-46993",
+   "row": 3042,
+   "label": "positive",
+   "text": "Note fully implemented yet, but i hope very soon. =)"
+  },
+  {
+   "id": "gh-6203031",
+   "row": 4198,
+   "label": "positive",
+   "text": "Yeah, when you remove the custom class definiton via Qt Designer our BitcoinAmountField get's converted to a QLineEdit field. Try for yourself, if you want to be sure :)."
+  },
+  {
+   "id": "gh-2856696",
+   "row": 3965,
+   "label": "negative",
+   "text": "uh, what a sense makes `user` here at all? I shall not copy code..."
+  },
+  {
+   "id": "gh-1343388",
+   "row": 5274,
+   "label": "negative",
+   "text": "i dont like dbc hacks at all."
+  },
+  {
+   "id": "gh-393944",
+   "row": 5370,
+   "label": "positive",
+   "text": "This fixes an exploit where the ToC floor could be destroyed. Thanks Tobmaps for testing."
+  },
+  {
+   "id": "gh-701021",
+   "row": 3695,
+   "label": "positive",
+   "text": "I assume these are debug puts? ;)"
+  },
+  {
+   "id": "gh-263006",
+   "row": 2656,
+   "label": "positive",
+   "text": "Need preserve tradition. ^^ But note: _not_ specially selected ;)"
+  },
+  {
+   "id": "gh-791514",
+   "row": 2625,
+   "label": "positive",
+   "text": "I actually found the problem on my end, thanks!"
+  },
+  {
+   "id": "gh-3525398",
+   "row": 4375,
+   "label": "negative",
+   "text": "To me, this is an ugly way to see if there is a previous script tag that needs to end. Granted it's likely suitable and the break scenarios are rare (though possible), I personally would use something different. Not my call, though.  Edit: Whoops, this"
+  },
+  {
+   "id": "gh-4229074",
+   "row": 4642,
+   "label": "positive",
+   "text": "lol that would work wouldn't it? :+1:"
+  },
+  {
+   "id": "gh-282714",
+   "row": 4859,
+   "label": "positive",
+   "text": "Nice! I did this late last night, so not surprised I missed that, will fix shorty"
+  },
+  {
+   "id": "gh-1890903",
+   "row": 999,
+   "label": "negative",
+   "text": "This would make line 32 of config/application.yml.example somewhat misleading... :("
+  },
+  {
+   "id": "gh-1073388",
+   "row": 1160,
+   "label": "negative",
+   "text": "travis always failed now :("
+  },
+  {
+   "id": "gh-1487844",
+   "row": 6032,
+   "label": "positive",
+   "text": "> Suspension of a parent implies suspension of children  Uhm, yes, this was originally about hierarchial suspension, wasn't it? There's the flaw in my plan ... just forget everything I said - sorry! :-)"
+  },
+  {
+   "id": "gh-997154",
+   "row": 3691,
+   "label": "negative",
+   "text": "I struggled a bit with this one, but I think it's reasonable to expect interpolation keys, in a path, to be separated by non-word characters."
+  },
+  {
+   "id": "gh-2361679",
+   "row": 1202,
+   "label": "negative",
+   "text": "It was fine before this commit, this commit broken :("
+  },
+  {
+   "id": "gh-3053393",
+   "row": 4662,
+   "label": "positive",
+   "text": "Hahaha what was i thinking"
+  },
+  {
+   "id": "gh-4601390",
+   "row": 4783,
+   "label": "positive",
+   "text": "Rationale for this specific value would be appreciated. :-)"
+  },
+  {
+   "id": "gh-326172",
+   "row": 5955,
+   "label": "positive",
+   "text": "Well the problem is solved, I had a conflict with the Spell file, not always easy to juggle the modified RSA and mine:) thanks to y ;)"
+  },
+  {
+   "id": "gh-733311",
+   "row": 421,
+   "label": "positive",
+   "text": "Tx for restore working TC.  Machiavelli - if U need testers- i ready to become a tester"
+  },
+  {
+   "id": "gh-1151724",
+   "row": 6081,
+   "label": "positive",
+   "text": "If anyone was getting logged out of their pod while trying to link a Facebook, Twitter or Tumblr account after the 3.1 upgrade, this is why. Glad CSRF was mentioned in the code chat today or I wouldn't have thought about it. :grin:"
+  },
+  {
+   "id": "gh-704820",
+   "row": 6002,
+   "label": "positive",
+   "text": "Sniff it! :)"
+  },
+  {
+   "id": "gh-2554701",
+   "row": 7080,
+   "label": "negative",
+   "text": "Sorry about the TODO. I feel lost sometimes, because I worry about too much \"ticket noise\" but at the same time signature changes do break binary compatibility, so I don't feel ok just unilaterally making the change myself."
+  },
+  {
+   "id": "gh-1182869",
+   "row": 1362,
+   "label": "positive",
+   "text": ":+1: I prefer this wrapping syntax now too. :)"
+  },
+  {
+   "id": "gh-3419817",
+   "row": 25,
+   "label": "positive",
+   "text": "#3828 was the right issue ;)"
+  },
+  {
+   "id": "gh-2246535",
+   "row": 1907,
+   "label": "negative",
+   "text": "I could have been clearer in the original commit message, my bad."
+  },
+  {
+   "id": "gh-782844",
+   "row": 5709,
+   "label": "negative",
+   "text": "This is not a good approach to fixing issue #750. See pull request #757 for a better approach to fixing the issue. My script fails to do any real integrity checks. If someone uploads a malicious script (eg: A .exe with the extension .jpg) it will fall thro"
+  },
+  {
+   "id": "gh-679515",
+   "row": 2507,
+   "label": "positive",
+   "text": "@gnarf37 : So, what about an official \"hasEvent-like\" support in a near future ? :) This could be as useful for debugging as for other use cases people will think of for sure."
+  },
+  {
+   "id": "gh-1033528",
+   "row": 1428,
+   "label": "positive",
+   "text": "Finally! ^_^"
+  },
+  {
+   "id": "gh-82261",
+   "row": 4900,
+   "label": "positive",
+   "text": "true, though once could just be the same as `.max(1)` as a bit of extra sugar. just throwing ideas out there while we're at it :D"
+  },
+  {
+   "id": "gh-2267916",
+   "row": 1045,
+   "label": "negative",
+   "text": "@Darkhand81  They are refusing to answer that. :("
+  },
+  {
+   "id": "gh-3229694",
+   "row": 4453,
+   "label": "negative",
+   "text": "this one requires a better solution. Its unsupportable code"
+  },
+  {
+   "id": "gh-5768",
+   "row": 2308,
+   "label": "negative",
+   "text": "This change is simply unacceptable. Not only due to political reasons it strongly offends Taiwanese Rails users, but also it will cause many disputes over the internet and may bring up legal issues for Rails developers.  The impact is certain. I hope Rail"
+  },
+  {
+   "id": "gh-1051519",
+   "row": 1024,
+   "label": "negative",
+   "text": "I'm going to revert this then. I don't like the inconsistency between compilation SDKs."
+  },
+  {
+   "id": "gh-1859834",
+   "row": 1384,
+   "label": "positive",
+   "text": "epic :)"
+  },
+  {
+   "id": "gh-178962",
+   "row": 2717,
+   "label": "positive",
+   "text": "Ah. Cool deal. Thanks, John!"
+  },
+  {
+   "id": "gh-3790480",
+   "row": 1961,
+   "label": "negative",
+   "text": "oops. bad rebase. truly sorry. will fix it. update: correction pushed."
+  },
+  {
+   "id": "gh-761440",
+   "row": 6026,
+   "label": "positive",
+   "text": "Did someone sniff Peacebloom vs. Ghouls ? lol"
+  },
+  {
+   "id": "gh-128078",
+   "row": 6412,
+   "label": "positive",
+   "text": "The mobile \"hack\" has been removed. @kriswallsimth added this hack a while back (don't remember why). I'm fine with getting rid of it but this is not entirely BC."
+  },
+  {
+   "id": "gh-267223",
+   "row": 1721,
+   "label": "negative",
+   "text": "it does kinda seem weird. Maybe it's a bug within the minecraft server itself that needs to be done this way to work?"
+  },
+  {
+   "id": "gh-1118518",
+   "row": 6028,
+   "label": "positive",
+   "text": "Tbh no idea, i don't have sniffs for these, just based myself off the sql comment blocks :P  [EDIT] Sems a bit more logical though."
+  },
+  {
+   "id": "gh-1608648",
+   "row": 2366,
+   "label": "positive",
+   "text": "neat :)"
+  },
+  {
+   "id": "gh-405412",
+   "row": 521,
+   "label": "positive",
+   "text": "Is it worth removing the precompiledStub for 2.8.0? It seems to me that no-one sane would use 2.8.0 instead of 2.8.1. :)"
+  },
+  {
+   "id": "gh-2260856",
+   "row": 1970,
+   "label": "negative",
+   "text": "Obviously.. Crap.."
+  },
+  {
+   "id": "gh-639064",
+   "row": 7107,
+   "label": "positive",
+   "text": "Also if there was support for unsigned integers in Java :-)"
+  },
+  {
+   "id": "gh-3983069",
+   "row": 4468,
+   "label": "negative",
+   "text": "Without the if/else, a bajillion tests fail. :/"
+  },
+  {
+   "id": "gh-1550465",
+   "row": 2187,
+   "label": "negative",
+   "text": "I'm going to revert this commit, as it broke tests and made getting at types like json a bit slower."
+  },
+  {
+   "id": "gh-3116029",
+   "row": 4681,
+   "label": "positive",
+   "text": "> yay, less yellow triangles! ;)  do you even see those? ^^ I thought warnings were disabled on XCode (and the build server [seems to agree](http://videosynthesis.net/oftesting/testruns/20130214_164427-v0.7.4/))?"
+  },
+  {
+   "id": "gh-2064365",
+   "row": 2197,
+   "label": "negative",
+   "text": "weird indenting - mayaswell fix it up seeing as you're changing the lines here anyway."
+  },
+  {
+   "id": "gh-1943087",
+   "row": 1755,
+   "label": "negative",
+   "text": "Unless there's something removing items from that list this could be a real pain in the ass for very dynamic, long-running apps... like games =/"
+  },
+  {
+   "id": "gh-2949554",
+   "row": 1030,
+   "label": "negative",
+   "text": "Hm, figured it out. Turns out it was git being stupid :(  Edit: PR #1123"
+  },
+  {
+   "id": "gh-851959",
+   "row": 733,
+   "label": "positive",
+   "text": "@drogus thanks for working on this!"
+  },
+  {
+   "id": "gh-373889",
+   "row": 3843,
+   "label": "positive",
+   "text": "good point, will do, including specific section in migration docs"
+  },
+  {
+   "id": "gh-59269",
+   "row": 5967,
+   "label": "positive",
+   "text": "For all the data being moved around Rsa, it hasnt been ... \"that\" bad lol."
+  },
+  {
+   "id": "gh-405055",
+   "row": 2044,
+   "label": "negative",
+   "text": "I guess :\\  to be honest I have no idea I just noticed one day I had a 5 channel (4.1) count one that had no image so I just added all the possible combinations I got from here http://en.wikipedia.org/wiki/Surround_sound#Standard_speaker_channels I have no"
+  },
+  {
+   "id": "gh-245514",
+   "row": 2666,
+   "label": "positive",
+   "text": "jethro84530, your issue should be fixed in [11049]. Thank you for reporting!"
+  },
+  {
+   "id": "gh-4496403",
+   "row": 3718,
+   "label": "positive",
+   "text": "sounds great"
+  },
+  {
+   "id": "gh-3892195",
+   "row": 3059,
+   "label": "positive",
+   "text": "No problem, thanks for bringing up this issue though. Happy coding!"
+  },
+  {
+   "id": "gh-1330782",
+   "row": 4540,
+   "label": "negative",
+   "text": "I always get that wrong! argh"
+  },
+  {
+   "id": "gh-47915",
+   "row": 3040,
+   "label": "positive",
+   "text": "Super!!!!!!!!!!!!!!!! ))))))))))))))))))))"
+  },
+  {
+   "id": "gh-238761",
+   "row": 5395,
+   "label": "positive",
+   "text": "The emphasis is on IF. :) Anybody can simply add that spell to eg. SAI. The crash log should come from some kind of fun server.  Anyway, feel free to drop out that (maybe hacky?) check, but in that case you should drop out the check in Spell::EffectActi"
+  },
+  {
+   "id": "gh-184321",
+   "row": 200,
+   "label": "positive",
+   "text": "<button onclick=\"alert('speaking of security....')\">hhahaha WHOOPS"
+  },
+  {
+   "id": "gh-1228809",
+   "row": 1077,
+   "label": "negative",
+   "text": ":( this doesnt work. it broke cubbies oembed :("
+  },
+  {
+   "id": "gh-568743",
+   "row": 28,
+   "label": "negative",
+   "text": "not only this. equal to one of the options for receiving the award for the LFG group must fulfill all the encounters (and not just last). in the case of use your container, it can not be verified. PS If you think that I did the curves of stupidity structu"
+  },
+  {
+   "id": "gh-600103",
+   "row": 2430,
+   "label": "positive",
+   "text": "why not officially post it in the forums? I guess there would be a new record of \"Thanked bys\" for a post :D Well... thank you vlad :)"
+  },
+  {
+   "id": "gh-1094524",
+   "row": 2059,
+   "label": "negative",
+   "text": "This is really disappointing. I was really looking forward to this feature."
+  },
+  {
+   "id": "gh-346428",
+   "row": 4586,
+   "label": "positive",
+   "text": "That's a good point! I'll update the name to just `System`."
+  },
+  {
+   "id": "gh-5034403",
+   "row": 6395,
+   "label": "negative",
+   "text": "Sounds like hack, but with that difference I wonder if the `call_user_func_array` could be replaced until certain level by the same strategy used in [`Configure::write()` of 1.x version](https://github.com/cakephp/cakephp/blob/1.3/cake/libs/configure.php#"
+  },
+  {
+   "id": "gh-120238",
+   "row": 2920,
+   "label": "positive",
+   "text": ":) Happy day of system administrator!"
+  },
+  {
+   "id": "gh-998908",
+   "row": 533,
+   "label": "positive",
+   "text": "I'm an idiot, I don't know how I missed that the first time around.  I merged in your changes :D"
+  },
+  {
+   "id": "gh-264221",
+   "row": 2650,
+   "label": "positive",
+   "text": "True - I wanted to make it in SD2 before handled by some spawned triggers but ye it would be messy and actually, never got to even start it :D"
+  },
+  {
+   "id": "gh-210506",
+   "row": 1811,
+   "label": "negative",
+   "text": "Oops, sorry for that. I have to get into habit of reloading files in editor after merge to prevent doing changes on obsolete versions."
+  },
+  {
+   "id": "gh-1016187",
+   "row": 1794,
+   "label": "negative",
+   "text": "@kaelima It's not that. I'm just saying it's rude to randomly rename / remove public functions like that!"
+  },
+  {
+   "id": "gh-2028572",
+   "row": 1973,
+   "label": "negative",
+   "text": "ok guys - will revert - sorry for the inconvenience. Any idea when 1646 is being merged?"
+  },
+  {
+   "id": "gh-4508912",
+   "row": 4701,
+   "label": "positive",
+   "text": "Yes please do, would appreciate it =)"
+  },
+  {
+   "id": "gh-1180930",
+   "row": 3553,
+   "label": "negative",
+   "text": "I'm a little worried about this part, $rstFile is an arbitrary filename without the arbitrary extension. But xmlFileNameToRst has hardcoded an special treatment to exclude the xml extension  For example: $docbook = 'foo.bar'  ```php $rstFile = RstConvert:"
+  },
+  {
+   "id": "gh-4508013",
+   "row": 4703,
+   "label": "positive",
+   "text": "I'll make it consistent :)"
+  },
+  {
+   "id": "gh-1281989",
+   "row": 1100,
+   "label": "negative",
+   "text": "@dotty I won't rest until the standard is either hot pink or neon green, but bringing Windows standards into the argument is blasphemous!  No one thinking KDE, GNOME? Fedora? :("
+  },
+  {
+   "id": "gh-1379768",
+   "row": 951,
+   "label": "positive",
+   "text": "Hi evtuhovich! Can I use this fix in Rails 3.2.3?  I've tried to monkey patch it, but it doesn't fix the bug.  Thank you ;)"
+  },
+  {
+   "id": "gh-116187",
+   "row": 2928,
+   "label": "positive",
+   "text": "Thank you! Patch find and applied ^^"
+  },
+  {
+   "id": "gh-2280164",
+   "row": 2837,
+   "label": "positive",
+   "text": "@Tux2 We're working hard on ensuring the concern over waiting for approval is minimized :)  As for compatibility, abstraction is your best friend."
+  },
+  {
+   "id": "gh-4342903",
+   "row": 6587,
+   "label": "positive",
+   "text": "Well. Forget about it. I'll merge and change it. No need to give you more work. :smile:"
+  },
+  {
+   "id": "gh-294701",
+   "row": 2629,
+   "label": "positive",
+   "text": "and more safe. Thanks :)"
+  },
+  {
+   "id": "gh-1835110",
+   "row": 1939,
+   "label": "negative",
+   "text": "Coming from a Gentoo background, that seems pretty crazy that homebrew won't abort when a dep fails..."
+  },
+  {
+   "id": "gh-492641",
+   "row": 1528,
+   "label": "negative",
+   "text": "has long been proposed rewriting and editing spells as done for example in spell_dbc (and other like this). I hope no one will argue that (...) does not use this DBC in server... PS const_cast more badly..."
+  },
+  {
+   "id": "gh-406500",
+   "row": 464,
+   "label": "positive",
+   "text": "That demotivator is GREAT."
+  },
+  {
+   "id": "gh-3554405",
+   "row": 2711,
+   "label": "positive",
+   "text": "Will it work with people who run Java 7 like I do? Also Fantastic job on this project! I'm proud to be in a world of developers!"
+  },
+  {
+   "id": "gh-4150294",
+   "row": 5687,
+   "label": "negative",
+   "text": "It did all the work; sad part is, it was a hack too."
+  },
+  {
+   "id": "gh-1379501",
+   "row": 354,
+   "label": "positive",
+   "text": "Great it turn now :)"
+  },
+  {
+   "id": "gh-2023759",
+   "row": 1512,
+   "label": "negative",
+   "text": "I wonder how much of a performance hit we'll be taking for this... strict mode is has significant performance costs that are attributed to the runtime checks that are required.   JFTR...  -1"
+  },
+  {
+   "id": "gh-2302653",
+   "row": 4850,
+   "label": "positive",
+   "text": "very clever :)"
+  },
+  {
+   "id": "gh-2030724",
+   "row": 4521,
+   "label": "negative",
+   "text": "sorry, stupid comment, it was `within`, which already does dilated"
+  },
+  {
+   "id": "gh-148730",
+   "row": 2862,
+   "label": "positive",
+   "text": "lol :)"
+  },
+  {
+   "id": "gh-5008207",
+   "row": 4129,
+   "label": "negative",
+   "text": "adding a new method in an existing interface is, unfortunately, also a BC break :("
+  },
+  {
+   "id": "gh-2823575",
+   "row": 2382,
+   "label": "positive",
+   "text": "Thanks very much"
+  },
+  {
+   "id": "gh-3153796",
+   "row": 4436,
+   "label": "negative",
+   "text": "Reformatted, sorry about that!"
+  },
+  {
+   "id": "gh-794005",
+   "row": 6820,
+   "label": "positive",
+   "text": "Great stuff, after these last tweaks I think it's ready to go in.  Have you've signed the cla? (Will be needed before I can merge it in: http://www.typesafe.com/contribute/cla)  Cheers, √"
+  },
+  {
+   "id": "gh-2837884",
+   "row": 71,
+   "label": "positive",
+   "text": "Thank you"
+  },
+  {
+   "id": "gh-2286115",
+   "row": 4455,
+   "label": "negative",
+   "text": "You are absolutely right. This should be reverted. My bad."
+  },
+  {
+   "id": "gh-1728014",
+   "row": 4376,
+   "label": "negative",
+   "text": "Some stupid goof in cleaning whitespace sometime over the past year. Read: OOPS!"
+  },
+  {
+   "id": "gh-1209660",
+   "row": 1789,
+   "label": "negative",
+   "text": "^ idiot"
+  },
+  {
+   "id": "gh-2421216",
+   "row": 1017,
+   "label": "negative",
+   "text": "frustrating code is frustrating"
+  },
+  {
+   "id": "gh-784412",
+   "row": 745,
+   "label": "positive",
+   "text": "I saw...Oops :D"
+  },
+  {
+   "id": "gh-2280511",
+   "row": 1059,
+   "label": "negative",
+   "text": "Is anyone getting tired of being called a lazy developer?  The way we were brought into this discussion was not very respectful.  Who does this commit allow to become lazy, anyway?..."
+  },
+  {
+   "id": "gh-1976045",
+   "row": 2365,
+   "label": "positive",
+   "text": "Making my potential novella even more interesting!"
+  },
+  {
+   "id": "gh-4304410",
+   "row": 4878,
+   "label": "positive",
+   "text": "Yep, that makes perfect sense"
+  },
+  {
+   "id": "gh-2349632",
+   "row": 1602,
+   "label": "negative",
+   "text": "Some people still feel the urge to voice their disdain, and I certainly don't blame them."
+  },
+  {
+   "id": "gh-1733987",
+   "row": 2218,
+   "label": "negative",
+   "text": "gah ignore me, didn't see the else, sorry!"
+  },
+  {
+   "id": "gh-408154",
+   "row": 1875,
+   "label": "negative",
+   "text": "Still nothing happend to this kinda percent heal #1756 :(("
+  },
+  {
+   "id": "gh-541498",
+   "row": 1857,
+   "label": "negative",
+   "text": "it was really useless here"
+  },
+  {
+   "id": "gh-1095678",
+   "row": 5997,
+   "label": "positive",
+   "text": "When you mount a flying mount( :P) and dismount mid air you are able to continue flying, like if it was flyhack. Then you dont lose the flying abilities until you relog."
+  },
+  {
+   "id": "gh-477154",
+   "row": 396,
+   "label": "positive",
+   "text": "@mrdoob Hehe, indeed ;)."
+  },
+  {
+   "id": "gh-4086465",
+   "row": 4648,
+   "label": "positive",
+   "text": "oh boy, <3 github diffs lol"
+  },
+  {
+   "id": "gh-730904",
+   "row": 2500,
+   "label": "positive",
+   "text": "Sounds good to me! Thanks."
+  },
+  {
+   "id": "gh-1525162",
+   "row": 54,
+   "label": "positive",
+   "text": "tenchyoo!!! for evriting!"
+  },
+  {
+   "id": "gh-2287877",
+   "row": 3760,
+   "label": "negative",
+   "text": "that's what I get for copying and pasting!"
+  },
+  {
+   "id": "gh-610436",
+   "row": 4342,
+   "label": "negative",
+   "text": "my bad, fixed in b08e417"
+  },
+  {
+   "id": "gh-1006415",
+   "row": 1169,
+   "label": "negative",
+   "text": "Aww man, it's a cruel world, eh?"
+  },
+  {
+   "id": "gh-2491336",
+   "row": 4308,
+   "label": "negative",
+   "text": "Would HeartbeatsPerKeepAlive be too wordy of a name? I'm worried that people will assume that KeepAlive represents a time span in seconds without reading the docs.  Also, is there any reason we shouldn't just make this a uint autoprop instead of doing a"
+  },
+  {
+   "id": "gh-461111",
+   "row": 3929,
+   "label": "negative",
+   "text": "It deviates quite a bit from the Akka version, and Akka is in RC1 now.  We should sync before it's too late.  https://github.com/jboner/akka/blob/master/akka-actor/src/main/scala/akka/dispatch/Future.scala#L25"
+  },
+  {
+   "id": "gh-549048",
+   "row": 6068,
+   "label": "negative",
+   "text": "okay... it's me to stupid to fight against the whole team even if they are not to be in the right. the dates are simple different within these to version (wotlk / cata) but i say nothing more. a crow don't hacks another a eye out... like with doctors..."
+  },
+  {
+   "id": "gh-1272708",
+   "row": 2662,
+   "label": "positive",
+   "text": "OMG TESTS YES :heart:"
+  },
+  {
+   "id": "gh-629341",
+   "row": 4845,
+   "label": "positive",
+   "text": "on the contrary, that was a great suggestion, I just simplified the code because of that"
+  },
+  {
+   "id": "gh-1991348",
+   "row": 2952,
+   "label": "positive",
+   "text": "Anyway thanks for the quick fix. :)"
+  },
+  {
+   "id": "gh-669351",
+   "row": 5327,
+   "label": "positive",
+   "text": "so, does this fix the issue with spells getting interrupted / 2nd gcd if you e.g. spam mind flay in high haste areas / lightning bolt?  if so, this would be great!"
+  },
+  {
+   "id": "gh-425984",
+   "row": 5362,
+   "label": "positive",
+   "text": "boss_xt002.cpp(813) : warning C4018: '>=' : signed/unsigned mismatch :)"
+  },
+  {
+   "id": "gh-117384",
+   "row": 2924,
+   "label": "positive",
+   "text": "If the latest crash problems is about the crash when loading spell_bonus_data, yes it does fix it :)"
+  },
+  {
+   "id": "gh-518529",
+   "row": 4172,
+   "label": "negative",
+   "text": "d'oh! Spaces, not tabs.. even had it underlined. Sorry to make you go through all those!"
+  },
+  {
+   "id": "gh-3924280",
+   "row": 4729,
+   "label": "positive",
+   "text": "https://github.com/EdGruberman/CraftBukkit/commit/9c2f7ab206aa1e580dd8f3cbd34a202c59fbc64a >what's in 'a' name? that which we call a merge...  :-)"
+  },
+  {
+   "id": "gh-1872118",
+   "row": 1300,
+   "label": "negative",
+   "text": "COE always bugs Ebons Plague ... =/"
+  },
+  {
+   "id": "gh-2278342",
+   "row": 1057,
+   "label": "negative",
+   "text": "Everyone hates this commit. What possible reason could you have for not removing it if everyone hates it? There is no good reason..."
+  },
+  {
+   "id": "gh-1301331",
+   "row": 571,
+   "label": "positive",
+   "text": "+1, merge!"
+  },
+  {
+   "id": "gh-144581",
+   "row": 1076,
+   "label": "negative",
+   "text": "Spawned GO still in mangos not have real size... and ofc, geometry also... unknown way calculate it :("
+  },
+  {
+   "id": "gh-68887",
+   "row": 3008,
+   "label": "positive",
+   "text": "Yeah, I know, but he's bound to want to fix it he he finds it later, I'm just finding it for him now. :P"
+  },
+  {
+   "id": "gh-3903116",
+   "row": 717,
+   "label": "positive",
+   "text": "Much better!!"
+  },
+  {
+   "id": "gh-2064236",
+   "row": 2891,
+   "label": "positive",
+   "text": "I love you guys so much <3 Thanks for all your work to make us all happy :)"
+  },
+  {
+   "id": "gh-5831576",
+   "row": 4097,
+   "label": "negative",
+   "text": "Yeah sorry. If there's weren't a ton of other changes here I'd fix it but it's not worth it at this point."
+  },
+  {
+   "id": "gh-825059",
+   "row": 2493,
+   "label": "positive",
+   "text": "Also, the bug tracker said Akismet didn't like all of my links to the MDN articles and then everything crashed out and showed me Python errors. It's probably time to move the jQuery tracker to GitHub :)"
+  },
+  {
+   "id": "gh-392606",
+   "row": 1750,
+   "label": "negative",
+   "text": "Oh, uh, it's probably because I demonstrated it the wrong way around. Sorry about that."
+  },
+  {
+   "id": "gh-52100",
+   "row": 2871,
+   "label": "positive",
+   "text": "*erm `\"use strict\";`, humor fail :D"
+  },
+  {
+   "id": "gh-1320231",
+   "row": 1953,
+   "label": "negative",
+   "text": "In my experience people will fall back to never/Inf instead of thinking. So offering them that will only harm them."
+  },
+  {
+   "id": "gh-855622",
+   "row": 272,
+   "label": "negative",
+   "text": "> This makes compass fail on Win, when paths with backslashes are used, as File.expand_path() will convert backslashes to slashes.  Will this ever be fixed?"
+  },
+  {
+   "id": "gh-587948",
+   "row": 1743,
+   "label": "negative",
+   "text": "No moar YouTube and vimeo?  No moar hearts? :("
+  },
+  {
+   "id": "gh-1941645",
+   "row": 4814,
+   "label": "positive",
+   "text": "That's a good thought. Hm."
+  },
+  {
+   "id": "gh-1686526",
+   "row": 129,
+   "label": "negative",
+   "text": "`readme` is capitalized again.  I like `changelog.md`. Also `readme.md` is better than `README.md`. To me having all caps in my filenames feels somehow wrong."
+  },
+  {
+   "id": "gh-412692",
+   "row": 1337,
+   "label": "negative",
+   "text": "hate github bugs !"
+  },
+  {
+   "id": "gh-3342453",
+   "row": 5718,
+   "label": "negative",
+   "text": "This looks like a perfect opportunity for dependency injection. Have you considered passing the loader and recorder instances in as arguments? If you wanted to go all the way, you could even remove the dependency on `connection` and instead pass in a schem"
+  },
+  {
+   "id": "gh-2147438",
+   "row": 312,
+   "label": "negative",
+   "text": "> Windows and Ubuntu are also pretty ugly implementations.  Agreed, I would be happy if you could come up with a better solution. I wasn't aware of some other approaches. This is a design problem that pops up over and over so having some new tools in a t"
+  },
+  {
+   "id": "gh-528865",
+   "row": 4848,
+   "label": "positive",
+   "text": "I can't put this together right now, but would greatly appreciate someone else doing so."
+  },
+  {
+   "id": "gh-2267878",
+   "row": 2823,
+   "label": "positive",
+   "text": "@mbax Thanks, that looks like a good direction. Time is up, however. Took me too long already.  All this \"easy backwards\" and \"easy fixes\" mean that we add new projects maintain them all the time adding unnecessary complexity for the great majority of pe"
+  },
+  {
+   "id": "gh-4086421",
+   "row": 4610,
+   "label": "positive",
+   "text": ">I'm really glad to see that filter gone  So am I!"
+  },
+  {
+   "id": "gh-4093982",
+   "row": 2518,
+   "label": "positive",
+   "text": "Nop,vehicles didn't behave this erratic before Machi and Shauren started poking in the code :)"
+  },
+  {
+   "id": "gh-151410",
+   "row": 2787,
+   "label": "positive",
+   "text": "@jeresig:  That makes sense.  Thanks for the explanation!"
+  },
+  {
+   "id": "gh-3871467",
+   "row": 7104,
+   "label": "positive",
+   "text": "Added Björn to trust list :)"
+  },
+  {
+   "id": "gh-1760439",
+   "row": 1910,
+   "label": "negative",
+   "text": "postgres did not like this change :("
+  },
+  {
+   "id": "gh-1124972",
+   "row": 1174,
+   "label": "negative",
+   "text": "I second this. Please remove this :("
+  },
+  {
+   "id": "gh-2032205",
+   "row": 4813,
+   "label": "positive",
+   "text": "No, it wasn't; nice catch. Fixed."
+  },
+  {
+   "id": "gh-2300399",
+   "row": 1588,
+   "label": "negative",
+   "text": "A bit confused why its even Bukkit's concern whether or not \"worlds burn\".  Obviously its bad, but ultimately I'd say that the responsibility for making that not happen is the server admin(s).  If they just update between major versions of minecraft withou"
+  },
+  {
+   "id": "gh-659972",
+   "row": 780,
+   "label": "positive",
+   "text": "I will have a look about it, thanks."
+  },
+  {
+   "id": "gh-86106",
+   "row": 2978,
+   "label": "positive",
+   "text": "and 10 001 will revert this commit back :D"
+  },
+  {
+   "id": "gh-2136478",
+   "row": 2039,
+   "label": "negative",
+   "text": "Really weird ... I still don't have this problem ..."
+  },
+  {
+   "id": "gh-4097188",
+   "row": 1356,
+   "label": "positive",
+   "text": ":heart: thank you!"
+  },
+  {
+   "id": "gh-3665197",
+   "row": 1015,
+   "label": "negative",
+   "text": "oh, sorry, didn't saw it, had to fix it because the core wasn't compiling for me this morning"
+  },
+  {
+   "id": "gh-39456",
+   "row": 320,
+   "label": "negative",
+   "text": "Hey! This problem prevents all European folks from usage of paperclip... I am sad about it :-("
+  },
+  {
+   "id": "gh-773621",
+   "row": 1706,
+   "label": "negative",
+   "text": "This may need testing.  I'm receiving complaints from users that darkness monster spawns are either extremely low or disabled now."
+  },
+  {
+   "id": "gh-3762173",
+   "row": 4366,
+   "label": "negative",
+   "text": "hmm, actually, we already have 1 compiler pass using a different namespace than in bundles :("
+  },
+  {
+   "id": "gh-19018",
+   "row": 2275,
+   "label": "negative",
+   "text": "Yeah, this seems odd."
+  },
+  {
+   "id": "gh-656858",
+   "row": 6826,
+   "label": "negative",
+   "text": "Ouch, undocumented behavior that an empty whitelist makes ALL unknown addresses whitelisted, surprising behavior."
+  },
+  {
+   "id": "gh-791057",
+   "row": 6060,
+   "label": "negative",
+   "text": "That's right. Forget me, I'm silly when I wake up."
+  },
+  {
+   "id": "gh-2349735",
+   "row": 2141,
+   "label": "negative",
+   "text": "I certainly didn't intend to break Py2 support, did I do something wrong?"
+  },
+  {
+   "id": "gh-769625",
+   "row": 1155,
+   "label": "negative",
+   "text": "Sorry! My poor English... :("
+  },
+  {
+   "id": "gh-467973",
+   "row": 2458,
+   "label": "positive",
+   "text": "Oooo... My God! Great job!"
+  },
+  {
+   "id": "gh-437164",
+   "row": 2048,
+   "label": "negative",
+   "text": "Crap!"
+  },
+  {
+   "id": "gh-194960",
+   "row": 2528,
+   "label": "positive",
+   "text": "It's working well now! Thank you!!"
+  },
+  {
+   "id": "gh-1608079",
+   "row": 1516,
+   "label": "negative",
+   "text": "Yes. Sorry for this. Schmoo asked me about the author and I didn't pay too much attention to the patch itself. I thought it was something else."
+  },
+  {
+   "id": "gh-2711031",
+   "row": 4248,
+   "label": "positive",
+   "text": ">it's possible that this will return the wrong answer  @scottjg Yep. I was a little bit afraid of something like this.   Awesome review, btw :heart:"
+  },
+  {
+   "id": "gh-683451",
+   "row": 4842,
+   "label": "positive",
+   "text": "Great explanation. I figured it was okay, seemed too obvious to be a bug."
+  },
+  {
+   "id": "gh-1501872",
+   "row": 5929,
+   "label": "negative",
+   "text": "You're right, sorry. I should have redirected stderr to avoid the spam.  I was checking in this case because new Macs apparently don't have an unset path - rather, they have `/Developer`, which is invalid but not unset."
+  },
+  {
+   "id": "gh-107038",
+   "row": 1753,
+   "label": "negative",
+   "text": "Yes. You will have to change your session key :("
+  },
+  {
+   "id": "gh-866290",
+   "row": 2925,
+   "label": "positive",
+   "text": "I commented that line and run tests in both debug and release modes on osx and linux. And it seems to be working fine!"
+  },
+  {
+   "id": "gh-3846873",
+   "row": 5976,
+   "label": "positive",
+   "text": "If you are signed in and you are redirected to new_session_path, it will redirect you to after_sign_in_path_for automatically. :) So it does an extra hop but for the user it works the same."
+  },
+  {
+   "id": "gh-1040649",
+   "row": 2066,
+   "label": "negative",
+   "text": "@DouweM don't be that rude. The post he deleted was while he was testing... he just showed us what can be done in github. Just showed us the vulnerabilities. He could done anything worst..."
+  },
+  {
+   "id": "gh-51284",
+   "row": 3029,
+   "label": "positive",
+   "text": "Since RA is the only part of MaNGOS which still uses the old socket library, it will either be rewritten to use ACE or dropped. Personally I advocate the rewrite option, RA is still a nice-to-have feature :)"
+  },
+  {
+   "id": "gh-784044",
+   "row": 3566,
+   "label": "negative",
+   "text": "This actually makes the code harder to read. The previous line fit within the 120 character limit.  If it _did_ break the 120 character limit, the better change would be:  ``` foreach ($this->_rules['allResources']['byRoleId'] as     $roleIdCurent ="
+  },
+  {
+   "id": "gh-269614",
+   "row": 6852,
+   "label": "positive",
+   "text": "You guessed it.  Also, use pbhash :-)"
+  },
+  {
+   "id": "gh-91583",
+   "row": 4865,
+   "label": "positive",
+   "text": "hooooooray :)"
+  },
+  {
+   "id": "gh-262787",
+   "row": 2655,
+   "label": "positive",
+   "text": "Epic commit. As always, when magic commit number comes :))"
+  },
+  {
+   "id": "gh-2062974",
+   "row": 2890,
+   "label": "positive",
+   "text": "@amaranth Thank you very much for your effort and passion!"
+  },
+  {
+   "id": "gh-2023174",
+   "row": 2352,
+   "label": "positive",
+   "text": "Yes, they certainly should!"
+  },
+  {
+   "id": "gh-69224",
+   "row": 5084,
+   "label": "positive",
+   "text": "For the sake of my learning process, do you mind me asking why moving it a few lines down makes a difference? I'm not trying to be rude or offensive about it, I'm merely curious. :)  EDIT: I think I get it, it's because the pdamage variable is assigned a n"
+  },
+  {
+   "id": "gh-13486",
+   "row": 916,
+   "label": "negative",
+   "text": "Way to many caching issues, memory leaks, and other complications :(  We can always take another stab at it for 3.0."
+  },
+  {
+   "id": "gh-1349806",
+   "row": 2448,
+   "label": "positive",
+   "text": "Yep, I noticed I'd forgotten that when I got back to the ticket. Thanks!"
+  },
+  {
+   "id": "gh-2282131",
+   "row": 5912,
+   "label": "negative",
+   "text": "@CelticMinstrel Showing you to be an arrogant ass, whose calling someone a spammer who disagrees with your post, does not support your position or make you look less of an orgre.    LET ME WRITE IT SIMPLE SO EVEN THE BUKKIT CODERS CAN UNDERSTAND:  DIS"
+  },
+  {
+   "id": "gh-44524",
+   "row": 3047,
+   "label": "positive",
+   "text": "By looking at the code, it seems so. Wonderful indeed."
+  },
+  {
+   "id": "gh-2003104",
+   "row": 2359,
+   "label": "positive",
+   "text": "Eh, you and I have been down this road before :)"
+  },
+  {
+   "id": "gh-1316522",
+   "row": 1253,
+   "label": "negative",
+   "text": "Fuck yourself arogant idiot"
+  },
+  {
+   "id": "gh-3419830",
+   "row": 1550,
+   "label": "negative",
+   "text": "The evil whitespace strikes again"
+  },
+  {
+   "id": "gh-263422",
+   "row": 6012,
+   "label": "positive",
+   "text": "I love you Shauren, we trust you"
+  },
+  {
+   "id": "gh-2782160",
+   "row": 191,
+   "label": "positive",
+   "text": "RACE_WORGEN Nuuuu u don't : p"
+  },
+  {
+   "id": "gh-1785529",
+   "row": 5459,
+   "label": "negative",
+   "text": "Nuts. This is something I forget regularly with Ruby. The yield is so subtle."
+  },
+  {
+   "id": "gh-5949518",
+   "row": 4489,
+   "label": "negative",
+   "text": "I need `override` or \"The compiler says NO!\". I could change the name, but that feels weird."
+  },
+  {
+   "id": "gh-2397166",
+   "row": 2612,
+   "label": "positive",
+   "text": "I'd love to know why they're a terrible idea :)"
+  },
+  {
+   "id": "gh-5004340",
+   "row": 4206,
+   "label": "positive",
+   "text": "I still prefer RAII. Make the compiler do the work of making it leak proof. Safer *and* more convenient."
+  },
+  {
+   "id": "gh-105884",
+   "row": 1624,
+   "label": "negative",
+   "text": "hoooooly crap."
+  },
+  {
+   "id": "gh-51481",
+   "row": 3031,
+   "label": "positive",
+   "text": "I've finished rewriting RA for ACE and it looks good, any feedback is welcome :)  http://github.com/arrai/mangos/commits/acera"
+  },
+  {
+   "id": "gh-2293027",
+   "row": 5913,
+   "label": "negative",
+   "text": "@h31ix,  I check my code thoroughly, but I dislike being forced with a hack that just in the end make me do unnecessary work. Instead of checking my code, I'd actually have to take time to calm server admins who don't read, or those who don't understand"
+  },
+  {
+   "id": "gh-2795",
+   "row": 2303,
+   "label": "negative",
+   "text": "The Rails core devs are starting to sound like debian core devs. Epeen ftl =/"
+  },
+  {
+   "id": "gh-422507",
+   "row": 5982,
+   "label": "positive",
+   "text": "Would be to easy ;) and to unobfuscated :D  Fabian"
+  },
+  {
+   "id": "gh-4359032",
+   "row": 6752,
+   "label": "negative",
+   "text": "oh, forget it, my bad; maybe add a comment?"
+  },
+  {
+   "id": "gh-1447332",
+   "row": 983,
+   "label": "negative",
+   "text": "<offtopic> sorry for this post here :( In forum you have very nice post about Mangos in production servers make by Kero, is possible to move it to the mangos' wiki? </offtopic>"
+  },
+  {
+   "id": "gh-188373",
+   "row": 1036,
+   "label": "negative",
+   "text": "you are right :( Fixed in [10702]"
+  },
+  {
+   "id": "gh-2771964",
+   "row": 1985,
+   "label": "negative",
+   "text": "@jonleighton apparently [travis isn't that happy](https://travis-ci.org/rails/rails/jobs/5366764/#L233) =(. I get this running the test locally:  ```shell $ t test/application/console_test.rb  Run options: --seed 20833  # Running tests:  .....Quit:"
+  },
+  {
+   "id": "gh-4176354",
+   "row": 4601,
+   "label": "positive",
+   "text": "@ben @arrbee Bam! It now returns fully fledged references when the expression looks like a reference :wink:"
+  },
+  {
+   "id": "gh-4186097",
+   "row": 4449,
+   "label": "negative",
+   "text": "I'm no native speaker but the last part feels odd: \"and are working to keep..\""
+  },
+  {
+   "id": "gh-467951",
+   "row": 2457,
+   "label": "positive",
+   "text": "who's da man! SilverIce :)"
+  },
+  {
+   "id": "gh-999429",
+   "row": 703,
+   "label": "positive",
+   "text": "@rafaelfranca ah, thanks. I can see one broken test on my machine (railties/test/application/initializers/frameworks_test.rb:160) but I couldn't reproduce the one broken on travis-ci (railties/test/application/route_inspect_test.rb:72).  I'm running ruby"
+  },
+  {
+   "id": "gh-1049570",
+   "row": 2956,
+   "label": "positive",
+   "text": "Nice solution. Definitely should start using this method."
+  },
+  {
+   "id": "gh-933262",
+   "row": 1289,
+   "label": "negative",
+   "text": "Strange, it works fine for me :|"
+  },
+  {
+   "id": "gh-956170",
+   "row": 4379,
+   "label": "negative",
+   "text": "why closing the PHP tag and opening again just after ? It seems weird"
+  },
+  {
+   "id": "gh-91479",
+   "row": 6164,
+   "label": "negative",
+   "text": "sorry for the multiple comment here, but this problem could also be avoided by first of all doing a clean separation between DXVA Decoder and Renderer - as proposed in isidrogar's PR 346 (see https://github.com/xbmc/xbmc/pull/346)"
+  },
+  {
+   "id": "gh-2594590",
+   "row": 4409,
+   "label": "negative",
+   "text": "Indeed. Very annoying. I'm not sure of the best way to remove it, though. Suggestions?"
+  },
+  {
+   "id": "gh-1998500",
+   "row": 1976,
+   "label": "negative",
+   "text": "I have no way to test. I do not have the XBMC dev environment setup. I have tried in the past, but could never get the dependencies correct to compile... Sorry :(  Im trying again now..."
+  },
+  {
+   "id": "gh-2746527",
+   "row": 6962,
+   "label": "positive",
+   "text": "hmm, that’s a tough one: I cannot really write that class in Java for real, and writing a Java copy runs the risk of bitrotting, as would documenting the method signatures translated to Java.  Wait a second, I have an idea!"
+  },
+  {
+   "id": "gh-5180887",
+   "row": 4180,
+   "label": "negative",
+   "text": "Hm... no I don't think it does. Totally missed that!"
+  },
+  {
+   "id": "gh-1881565",
+   "row": 4416,
+   "label": "negative",
+   "text": "Here's how I would have written it: https://gist.github.com/3911240. Hopefully it's not worse than the previous version."
+  },
+  {
+   "id": "gh-4431520",
+   "row": 4835,
+   "label": "positive",
+   "text": "True, thanks for reporting the mistake :-)"
+  },
+  {
+   "id": "gh-686977",
+   "row": 4689,
+   "label": "positive",
+   "text": "would be great if you used ofLog here instead of cout. :-)"
+  },
+  {
+   "id": "gh-5716871",
+   "row": 3269,
+   "label": "positive",
+   "text": "I guess it would be even better if you can pass the name of the variable to the macro."
+  },
+  {
+   "id": "gh-3241151",
+   "row": 3094,
+   "label": "positive",
+   "text": "Solved, thanks again ;)"
+  },
+  {
+   "id": "gh-478707",
+   "row": 6051,
+   "label": "negative",
+   "text": "If i disable cases 0, 1 and 5 crash move to case 8!!  http://pastebin.com/NMhSRN5D  How i can set GCC to UTF8 encode?"
+  },
+  {
+   "id": "gh-328080",
+   "row": 2178,
+   "label": "negative",
+   "text": "The docs here describe behaviour that is pretty different from what is implemented in the code. The passed value gets constantized if it does not respond to #delivering_email, which actually is a bit weird."
+  },
+  {
+   "id": "gh-16061",
+   "row": 5249,
+   "label": "negative",
+   "text": "This required hack code in many places for lie faction to client (patch existed at forum) that affect performence of normal mode. Not nice for official sources."
+  },
+  {
+   "id": "gh-670483",
+   "row": 2510,
+   "label": "positive",
+   "text": "Thanks Mike.  You said it better."
+  },
+  {
+   "id": "gh-48714",
+   "row": 3037,
+   "label": "positive",
+   "text": "Great work. So what's left now for Dual Spec? Just the talent points moving over?"
+  },
+  {
+   "id": "gh-657645",
+   "row": 6075,
+   "label": "negative",
+   "text": "Omgf, i heard about this exploit TODAY :O  And what can be done about people who already used this exploit to benefit from passive auras? is there a way to \"clean\" it out? maybe reseting everyone's talents or by deleting certain auras from the character"
+  },
+  {
+   "id": "gh-902243",
+   "row": 1143,
+   "label": "negative",
+   "text": "evil is such a judgmental word. :("
+  },
+  {
+   "id": "gh-19025",
+   "row": 6079,
+   "label": "negative",
+   "text": "@jameskilton rogue Ajax requests cannot produce CSRF attacks, so this was just an annoyance to people hand-writing JS."
+  },
+  {
+   "id": "gh-1840823",
+   "row": 2503,
+   "label": "positive",
+   "text": "Yay, thanks for this! :)"
+  },
+  {
+   "id": "gh-4100394",
+   "row": 2522,
+   "label": "positive",
+   "text": "@clintongormley Great! Thank you so much."
+  },
+  {
+   "id": "gh-325108",
+   "row": 3574,
+   "label": "positive",
+   "text": "If you could do some profiling, that would be great. I'll merge as-is for now, and we can revisit if needed."
+  },
+  {
+   "id": "gh-721972",
+   "row": 1834,
+   "label": "negative",
+   "text": "bump ... bugged commit at least for Shield Slam its not the correct way ..."
+  },
+  {
+   "id": "gh-1529752",
+   "row": 1524,
+   "label": "negative",
+   "text": "I honestly think there are better uses of our time then worrying about this"
+  },
+  {
+   "id": "gh-158369",
+   "row": 826,
+   "label": "positive",
+   "text": "typo here :)"
+  },
+  {
+   "id": "gh-323617",
+   "row": 2615,
+   "label": "positive",
+   "text": "Great, DMR before duration calculation fixes few talents not working on 10+sec spells (Fear etc). Nice work :)"
+  },
+  {
+   "id": "gh-2452245",
+   "row": 2740,
+   "label": "positive",
+   "text": "@riyad thanks. much better now ;)"
+  },
+  {
+   "id": "gh-2138034",
+   "row": 4517,
+   "label": "negative",
+   "text": "Sorry man :("
+  },
+  {
+   "id": "gh-872375",
+   "row": 987,
+   "label": "negative",
+   "text": "don't be so lazy Btw, command was easy to find with git log --grep=\"copyr\" :P  @PSZ then it might be possible that binary files would be changed :("
+  },
+  {
+   "id": "gh-3474089",
+   "row": 4313,
+   "label": "negative",
+   "text": "That's a frikkin' merge conflict, man!\\</accent\\>"
+  },
+  {
+   "id": "gh-2158893",
+   "row": 4856,
+   "label": "positive",
+   "text": "much better now"
+  },
+  {
+   "id": "gh-480135",
+   "row": 1864,
+   "label": "negative",
+   "text": "I think this is fix for invisible buffs like Ice Block, but it doesnt fix it :-/"
+  },
+  {
+   "id": "gh-2300391",
+   "row": 1587,
+   "label": "negative",
+   "text": "@UltraFaceguy Don't keep arguing. I learned fast. I actually joined the chatroom, and one of the staff members **belittled** me. Shows how much respect they have for us, compared to the respect we have for them (which **was** considerable)."
+  },
+  {
+   "id": "gh-2181958",
+   "row": 1729,
+   "label": "negative",
+   "text": "So much changes per commit is bad..Hidden issues can be..."
+  },
+  {
+   "id": "gh-506515",
+   "row": 4559,
+   "label": "negative",
+   "text": "WDYM? Are you ironic? What is wrong? Please provide understandable feedback."
+  },
+  {
+   "id": "gh-850553",
+   "row": 4837,
+   "label": "positive",
+   "text": "ohhh this is neat :)"
+  },
+  {
+   "id": "gh-3563551",
+   "row": 2710,
+   "label": "positive",
+   "text": "that would be great. I love coding, but don't know much about the lang"
+  },
+  {
+   "id": "gh-1813329",
+   "row": 5853,
+   "label": "positive",
+   "text": "Brilliant, I didn't realise that homebrew would generate the checksums automatically. I've amended the file again to include this. Do I need to create a new pull request or should my changes be fine now?"
+  },
+  {
+   "id": "gh-38424",
+   "row": 1101,
+   "label": "negative",
+   "text": "ew no i hate this.. makes it much harder to read, this is why jquery is not readable IMO, way to much cruft"
+  },
+  {
+   "id": "gh-3485815",
+   "row": 3082,
+   "label": "positive",
+   "text": "Nice to see that somebody is working on this boss :+1:"
+  },
+  {
+   "id": "gh-1819814",
+   "row": 841,
+   "label": "positive",
+   "text": "Sounds good."
+  },
+  {
+   "id": "gh-4314154",
+   "row": 4670,
+   "label": "positive",
+   "text": "I like this mutable keyword. Only the cache is updated for better performance next time round, so perfect use case I think. I'm happy to do this, but how does it sit with OF convention? Does it work on all OF compilers? Also, the bHasChanged flag will be"
+  },
+  {
+   "id": "gh-3008039",
+   "row": 117,
+   "label": "positive",
+   "text": "@LeoColomb: look a couple comments above yours ;-)"
+  },
+  {
+   "id": "gh-2550215",
+   "row": 1948,
+   "label": "negative",
+   "text": "Hey django 1.4.3 meet this bug again :("
+  },
+  {
+   "id": "gh-3204833",
+   "row": 2201,
+   "label": "negative",
+   "text": "@MaxWayt Indeed he did, he sucks!"
+  },
+  {
+   "id": "gh-2733181",
+   "row": 777,
+   "label": "positive",
+   "text": "I agree! That sounds optimal, but I haven't had the time to implement that. This is just a bandaid for something better :P  At the moment, when you bring up a video, it will instantly play. When it finishes, the next picture is shown. If you interrupt th"
+  },
+  {
+   "id": "gh-2216587",
+   "row": 4460,
+   "label": "negative",
+   "text": "sorry. I've understood."
+  },
+  {
+   "id": "gh-255351",
+   "row": 4634,
+   "label": "positive",
+   "text": "I've just noticed all these `int`s. Our static analyzer throws warnings against using non-`size_t` for array offsets. It'd be great if we could switch these... Already enough warnings as it is. ^^"
+  },
+  {
+   "id": "gh-312604",
+   "row": 4173,
+   "label": "negative",
+   "text": "Gah. I'm an idiot. I undid this particular change in subsequent commits. In case it's not painfully obvious, I'm still figuring out git."
+  },
+  {
+   "id": "gh-783749",
+   "row": 1154,
+   "label": "negative",
+   "text": "broke jasmine:ci :("
+  },
+  {
+   "id": "gh-1713707",
+   "row": 2939,
+   "label": "positive",
+   "text": "No worries. If you want to help out, and the ant-build-script docs are not clear or up to date, please do feel free to improve that project's docs. It would be much appreciated! :)"
+  },
+  {
+   "id": "gh-3446723",
+   "row": 3086,
+   "label": "positive",
+   "text": "I'll be pushing an update for this tonight which will combine spell_random_ingredient_easy, spell_random_ingredient_medium, & spell_random_ingredient_hard into one smaller spell script. My c++ is getting better :)"
+  },
+  {
+   "id": "gh-1043261",
+   "row": 2326,
+   "label": "negative",
+   "text": "@drogus: wow, why was I persuaded that it was a 3.0 feature... Sorry for this useless comment."
+  },
+  {
+   "id": "gh-259193",
+   "row": 278,
+   "label": "negative",
+   "text": "What, no separators between the values? D:  \"CraftServer{serverName=TeneserverserverVersion=1.2.3protocolVersion=1.2.3}\""
+  },
+  {
+   "id": "gh-15075",
+   "row": 3608,
+   "label": "positive",
+   "text": "well since it's an undocumented feature, I'd say break it. To do it like Django does ;-)"
+  },
+  {
+   "id": "gh-1861971",
+   "row": 115,
+   "label": "positive",
+   "text": "I'm defending the current state of the file. Like I said, the player still ate the food. :)"
+  },
+  {
+   "id": "gh-2570356",
+   "row": 4796,
+   "label": "positive",
+   "text": "done, it saves 15 bytes or so and it definitely looks more elegant."
+  },
+  {
+   "id": "gh-170956",
+   "row": 1327,
+   "label": "negative",
+   "text": "CRAP.  my bad."
+  },
+  {
+   "id": "gh-114397",
+   "row": 1656,
+   "label": "negative",
+   "text": "OK - the latest works - thanks. Did I do something wrong?  It cost me 5 hours this morning."
+  },
+  {
+   "id": "gh-877042",
+   "row": 1828,
+   "label": "negative",
+   "text": "is only* :("
+  },
+  {
+   "id": "gh-36169",
+   "row": 387,
+   "label": "positive",
+   "text": "I think that's a good idea and it will always work as long as everyone calls their requires right up front, and not later on while the server is running."
+  },
+  {
+   "id": "gh-626553",
+   "row": 1845,
+   "label": "negative",
+   "text": "moron how i here you steal go to scool so do not call me kid coz i can be your dady"
+  },
+  {
+   "id": "gh-4058185",
+   "row": 500,
+   "label": "positive",
+   "text": "Thanks for fixing this issue! Are nightly builds available for servicestack via nuget or other means? I want to upgrade this ASAP if possible. Also, why would you want to use the Config.WebHostUrl property? Most companies have DEV, Test, STG and production"
+  },
+  {
+   "id": "gh-2281581",
+   "row": 2838,
+   "label": "positive",
+   "text": "@Puremin0rez @stefansaraev Thanks for your feedback!"
+  },
+  {
+   "id": "gh-2268499",
+   "row": 1572,
+   "label": "negative",
+   "text": "No one likes this commit, why don't you revert it?"
+  },
+  {
+   "id": "gh-216556",
+   "row": 1901,
+   "label": "negative",
+   "text": "was this really necessary? I really hate the idea of a additional dependency just because of readability."
+  },
+  {
+   "id": "gh-3832984",
+   "row": 4503,
+   "label": "negative",
+   "text": "yes I can't understand that `;` is so popular just because it is in a match case. :-("
+  },
+  {
+   "id": "gh-345906",
+   "row": 2607,
+   "label": "positive",
+   "text": "thanks for that, very helpful"
+  },
+  {
+   "id": "gh-1210049",
+   "row": 5282,
+   "label": "negative",
+   "text": "is hack ..."
+  },
+  {
+   "id": "gh-4615461",
+   "row": 4667,
+   "label": "positive",
+   "text": "Oh cool, I hadn't seen that. As we use more Poco native stuff that seems like a good convention to follow."
+  },
+  {
+   "id": "gh-1414534",
+   "row": 2927,
+   "label": "positive",
+   "text": "I would love to see this get pushed."
+  },
+  {
+   "id": "gh-396873",
+   "row": 2543,
+   "label": "positive",
+   "text": "thank you very much :)"
+  },
+  {
+   "id": "gh-1040636",
+   "row": 2067,
+   "label": "negative",
+   "text": "@chrisrhoden He told me so... @DouweM But he did not mean to harm anybody, such things can happen by accident..."
+  },
+  {
+   "id": "gh-6264884",
+   "row": 4232,
+   "label": "positive",
+   "text": "sure, sure :)"
+  },
+  {
+   "id": "gh-1146083",
+   "row": 6066,
+   "label": "negative",
+   "text": "I got it working, but just by hack, still don't understand what's wrong :S  https://github.com/alteredq/three.js/commit/ff5d13d03c4ad2e7a4845189b21d1869a7ac4c45"
+  },
+  {
+   "id": "gh-306959",
+   "row": 4892,
+   "label": "positive",
+   "text": "oh, well wtf haha yeah it's fine as-is then minus eachWorker"
+  },
+  {
+   "id": "gh-4029026",
+   "row": 2416,
+   "label": "positive",
+   "text": "Thanks this fixed my issue!"
+  },
+  {
+   "id": "gh-2276696",
+   "row": 1580,
+   "label": "negative",
+   "text": "FOR EVERYONE WHO HAS BEEN INSULTED PLEASE POST HERE http://forums.bukkit.org/threads/wolverness-needs-to-be-stopped.115045/"
+  },
+  {
+   "id": "gh-2761549",
+   "row": 4513,
+   "label": "negative",
+   "text": "My SSD wants to live :("
+  },
+  {
+   "id": "gh-3193859",
+   "row": 1607,
+   "label": "negative",
+   "text": "WORST COMMIT EVER. THANKS OBAMA."
+  },
+  {
+   "id": "gh-256235",
+   "row": 5389,
+   "label": "positive",
+   "text": "this is some fix for forge of soul pls commit someone :D http://www.trinitycore.org/t/trinitycore/ticket/285#comment:1"
+  },
+  {
+   "id": "gh-150592",
+   "row": 833,
+   "label": "positive",
+   "text": "Hey thanks to everyone. @fj of course i've added a test take a look again, this file actionpack/test/template/form_helper_test.rb has one more test."
+  },
+  {
+   "id": "gh-292356",
+   "row": 4148,
+   "label": "negative",
+   "text": "my editor is the culprit!"
+  },
+  {
+   "id": "gh-1033035",
+   "row": 1432,
+   "label": "positive",
+   "text": ":D funny  now uve added it xD"
+  },
+  {
+   "id": "gh-3933220",
+   "row": 5147,
+   "label": "negative",
+   "text": "I wasn't aware that expressing an opinion on committed code based on information from the PHP manual in an open source project was \"spamming\" everyone. I also wasn't aware that it notified every single collaborator, so cram your elitist attitude and have s"
+  },
+  {
+   "id": "gh-882451",
+   "row": 4551,
+   "label": "negative",
+   "text": "I'd probably escalate this as this is a serious security issue"
+  },
+  {
+   "id": "gh-1005688",
+   "row": 2479,
+   "label": "positive",
+   "text": "Cool, thanks."
+  },
+  {
+   "id": "gh-5289129",
+   "row": 4732,
+   "label": "positive",
+   "text": "javadocs please :)"
+  },
+  {
+   "id": "gh-336429",
+   "row": 2527,
+   "label": "positive",
+   "text": "Awesome!"
+  },
+  {
+   "id": "gh-1040335",
+   "row": 1423,
+   "label": "positive",
+   "text": "No, thank you! =]"
+  },
+  {
+   "id": "gh-2820465",
+   "row": 1035,
+   "label": "negative",
+   "text": "We've never allowed these, sorry."
+  },
+  {
+   "id": "gh-2475580",
+   "row": 4712,
+   "label": "positive",
+   "text": "No idea =)"
+  },
+  {
+   "id": "gh-2329291",
+   "row": 2051,
+   "label": "negative",
+   "text": "That's fair. It's in that weird gray zone; a 'feature' that's a big security issue..."
+  },
+  {
+   "id": "gh-3604381",
+   "row": 5588,
+   "label": "negative",
+   "text": "@trustin ups thanks... stupid osx :/"
+  },
+  {
+   "id": "gh-170703",
+   "row": 1040,
+   "label": "negative",
+   "text": "it was copy-pasted from the old code :\\ thanks"
+  },
+  {
+   "id": "gh-4496019",
+   "row": 4112,
+   "label": "negative",
+   "text": "Not really. There's not much to flame about. That is the code convention we use in our source, hence all PRs need to abide or we risk ending up with a messy code base :neckbeard:"
+  },
+  {
+   "id": "gh-4550584",
+   "row": 4226,
+   "label": "positive",
+   "text": "I agree.  Thanks for looking into this.  Should be good to pull once that change is made."
+  },
+  {
+   "id": "gh-2871307",
+   "row": 4316,
+   "label": "negative",
+   "text": "you are right,my bad..."
+  },
+  {
+   "id": "gh-4201369",
+   "row": 1829,
+   "label": "negative",
+   "text": "If you kill him you can't finish anymore the quest, even if he respawns. I had to abandon the quest, accept it again, cast low rank spells to get his hp down without killing him and then I could complete the quest. Is this blizzlike ? quite annoying."
+  },
+  {
+   "id": "gh-467154",
+   "row": 3967,
+   "label": "positive",
+   "text": "I mean definitely not of course ;-) see [this](https://github.com/symfony/symfony/pull/3403/files#L3R147)"
+  },
+  {
+   "id": "gh-502425",
+   "row": 1758,
+   "label": "negative",
+   "text": "this is crazy, but this is what making the build fail... thoughts?"
+  },
+  {
+   "id": "gh-333835",
+   "row": 2627,
+   "label": "positive",
+   "text": "This has to be one of the best commit messages in the repo!"
+  },
+  {
+   "id": "gh-455672",
+   "row": 6082,
+   "label": "positive",
+   "text": "Is the deobfuscation taken from Mojang's code? That would be pretty awesome."
+  },
+  {
+   "id": "gh-3926838",
+   "row": 5596,
+   "label": "positive",
+   "text": "Cool I've made something similar http://www.emoticode.net/c/inject-any-command-inside-an-elf32-gnulinux-executable-file.html"
+  },
+  {
+   "id": "gh-923939",
+   "row": 3811,
+   "label": "negative",
+   "text": "That piece of code is not obvious what it's good for"
+  },
+  {
+   "id": "gh-848995",
+   "row": 1292,
+   "label": "negative",
+   "text": "Oh no :("
+  },
+  {
+   "id": "gh-392940",
+   "row": 1237,
+   "label": "negative",
+   "text": "hm and now it's overwritten :("
+  },
+  {
+   "id": "gh-2521565",
+   "row": 2759,
+   "label": "positive",
+   "text": "If this is what I think it is, thank you!"
+  },
+  {
+   "id": "gh-325513",
+   "row": 5305,
+   "label": "positive",
+   "text": "I'm using similar method in GLGE but instead of checking the whole string I'm generating a simple 6 byte hash form the string and comparing that. Not 100% perfect but faster and it should work 99.999999...% of the time ;-)  see: https://github.com/supere"
+  },
+  {
+   "id": "gh-1010338",
+   "row": 1444,
+   "label": "positive",
+   "text": "interesting fix... ;)"
+  },
+  {
+   "id": "gh-1009745",
+   "row": 4543,
+   "label": "negative",
+   "text": "sorry for teasing: it’s not legal Scala :-( The closest you can get is `Σinterval2` (since the raised 2 is not a legal character for an identifier)"
+  },
+  {
+   "id": "gh-2729204",
+   "row": 2337,
+   "label": "positive",
+   "text": ":heart:"
+  },
+  {
+   "id": "gh-248870",
+   "row": 1885,
+   "label": "negative",
+   "text": "AH sorry there was a mistake :-( this SQL should be correct ... it does remove some of the dupes, but not all of them: SELECT * FROM character_inventory ci LEFT JOIN item_instance ii ON ci.item=ii.guid WHERE ii.guid IS NULL; and  DELETE ci FROM charact"
+  },
+  {
+   "id": "gh-529788",
+   "row": 5341,
+   "label": "positive",
+   "text": "Typo ^^.  IsInWhipserWhiteList -> IsInWhisperWhiteList   ;)"
+  },
+  {
+   "id": "gh-881956",
+   "row": 4688,
+   "label": "positive",
+   "text": "yep :)"
+  },
+  {
+   "id": "gh-1180494",
+   "row": 2315,
+   "label": "negative",
+   "text": "This is an obscenely expensive change I think, too expensive just to make checkinit happy.  How is it materializing?"
+  },
+  {
+   "id": "gh-561664",
+   "row": 2554,
+   "label": "positive",
+   "text": "Nice catch - that's the right fix"
+  },
+  {
+   "id": "gh-4543270",
+   "row": 4404,
+   "label": "negative",
+   "text": "I believe this change could have some unintended consequences. Query.setup_joins() has an allow_explicit_fk parameter, and this change will likely break that code. (I haven't tested this, but seems likely...)"
+  },
+  {
+   "id": "gh-38475",
+   "row": 2948,
+   "label": "positive",
+   "text": "I find this way is much more concise and easy to read.. braces just clutter the code and make it harder to scan. example: http://gist.github.com/255605 Hell if you could use try / catch without braces I would lol but ya its preference I suppose... I used"
+  },
+  {
+   "id": "gh-5309537",
+   "row": 3640,
+   "label": "negative",
+   "text": "Sorry, maybe this was the formatter that I used too (as the indentation), was not my intention to make this... I'll rollback... Thanks"
+  },
+  {
+   "id": "gh-79311",
+   "row": 1657,
+   "label": "negative",
+   "text": "it worked, weird. thanks."
+  },
+  {
+   "id": "gh-229848",
+   "row": 2685,
+   "label": "positive",
+   "text": "It's totally awesome to see Deferreds/promises added to jQuery with API basically compatible with other libraries, great addition! However, a slight nit: in all other libraries that implement thenable promises/deferreds (node-promise, promised-io, Dojo, ri"
+  },
+  {
+   "id": "gh-214209",
+   "row": 2701,
+   "label": "positive",
+   "text": "Great work."
+  },
+  {
+   "id": "gh-631065",
+   "row": 852,
+   "label": "positive",
+   "text": "XD this is useless you can easily type .reload gm_tickets and counter would reset, too^^"
+  },
+  {
+   "id": "gh-1606743",
+   "row": 2357,
+   "label": "positive",
+   "text": "About time! :)"
+  },
+  {
+   "id": "gh-1863969",
+   "row": 4333,
+   "label": "negative",
+   "text": "regex abuse.  just do: `process.platform.match === \"win32\"`  also excessive parens"
+  },
+  {
+   "id": "gh-3892944",
+   "row": 1371,
+   "label": "positive",
+   "text": "That's a great idea. Would be a way to also solve Diego's issues with context switching."
+  },
+  {
+   "id": "gh-864477",
+   "row": 5635,
+   "label": "positive",
+   "text": "I only trust you and you and me are... you know <3  Anyway, I found many errors in other patches and the fact that I check each single structure I can also update WPP with them."
+  },
+  {
+   "id": "gh-227756",
+   "row": 2684,
+   "label": "positive",
+   "text": "Lynx3d, your issue should be fixed in [10931]. Thank you for reporting!"
+  },
+  {
+   "id": "gh-951839",
+   "row": 1998,
+   "label": "negative",
+   "text": "crap"
+  },
+  {
+   "id": "gh-2668305",
+   "row": 2781,
+   "label": "positive",
+   "text": "Love it!"
+  },
+  {
+   "id": "gh-2282146",
+   "row": 5044,
+   "label": "negative",
+   "text": "@GuntherDW People like @GarretSidzaka are spamming the commit link everywhere apparently, so that's going to attract people who don't know the things you mentioned."
+  },
+  {
+   "id": "gh-3831593",
+   "row": 2536,
+   "label": "positive",
+   "text": "Have  great trip, @yihui ."
+  },
+  {
+   "id": "gh-1414586",
+   "row": 27,
+   "label": "negative",
+   "text": "So we gave up testing with the minified version? So sad."
+  },
+  {
+   "id": "gh-1041077",
+   "row": 1415,
+   "label": "positive",
+   "text": "because it wouldn't be blizzlike if I did :)"
+  },
+  {
+   "id": "gh-426577",
+   "row": 4314,
+   "label": "negative",
+   "text": "Oof, missed this before I pushed my last rename commit, sorry.  Hang on.  You're absolutely right, and I've noticed this since I wrote the original code a week ago."
+  },
+  {
+   "id": "gh-685662",
+   "row": 1163,
+   "label": "negative",
+   "text": "^ FUCK TAXES!  :("
+  },
+  {
+   "id": "gh-345880",
+   "row": 6035,
+   "label": "positive",
+   "text": "@thehack your vader meme made me laugh really hard. Your inspiration played off well. haha."
+  },
+  {
+   "id": "gh-3903006",
+   "row": 669,
+   "label": "positive",
+   "text": "This looks just fine, although I wonder if the sleep time should be a settable parameter?"
+  },
+  {
+   "id": "gh-487872",
+   "row": 3076,
+   "label": "positive",
+   "text": "Nice! I'll check this out when I get home :)"
+  },
+  {
+   "id": "gh-6137308",
+   "row": 4142,
+   "label": "negative",
+   "text": "I had it return true, not the same as having it actually work :angry: but then as you said if we write a compiler then this is a micro optimization that is not really worth spending much time on"
+  },
+  {
+   "id": "gh-262709",
+   "row": 2654,
+   "label": "positive",
+   "text": "Grats on 11111 commits. :)"
+  },
+  {
+   "id": "gh-541137",
+   "row": 2276,
+   "label": "negative",
+   "text": "this seems like a very weird fix..."
+  },
+  {
+   "id": "gh-2260775",
+   "row": 2868,
+   "label": "positive",
+   "text": "Excellent!"
+  },
+  {
+   "id": "gh-5636734",
+   "row": 4067,
+   "label": "negative",
+   "text": "I'm not sure I like the idea of changing this document to be so broad; it dilutes the utility of someone coming to look for info on caching, specifically. There's *so* much to say about optomization that over time it'd basically overwhelm the more focused"
+  },
+  {
+   "id": "gh-214963",
+   "row": 1822,
+   "label": "negative",
+   "text": "Ruby 1.9 requires a full path (e.g. File.join(Rails.root, 'app', etc etc)) :("
+  },
+  {
+   "id": "gh-112620",
+   "row": 4424,
+   "label": "negative",
+   "text": "I really don't care much if PHP4 people can't run tests.  I'd rather be able to ensure code isn't buggy than ensure compatibility with PHP4."
+  },
+  {
+   "id": "gh-2287194",
+   "row": 2807,
+   "label": "positive",
+   "text": "Great catch. Note to self: Always run formater"
+  },
+  {
+   "id": "gh-175108",
+   "row": 4125,
+   "label": "negative",
+   "text": "I'm sorry. Really discussing like that about 5, respectively 2, lines of code? I can restore it, if you *really* want to."
+  },
+  {
+   "id": "gh-610284",
+   "row": 967,
+   "label": "negative",
+   "text": "Dangit. I was on another branch where the history looked clean and didn't realize it when I pushed master."
+  },
+  {
+   "id": "gh-1205658",
+   "row": 5160,
+   "label": "positive",
+   "text": "My CI server agrees :)   --  Kenneth Reitz   On Friday, April 13, 2012 at 4:39 AM, Bradford Toney wrote:  > Python 3.x doesn't support .encode('hex') >  > ---  > Reply to this email directly or view it on GitHub: > https://github.com/kennethreitz/requests/"
+  },
+  {
+   "id": "gh-3064663",
+   "row": 5927,
+   "label": "negative",
+   "text": "Really? I used \"com.middleware.language.LanguageCookieMiddleware' and was told it didn't exist. The CMS started when I removed the line :("
+  },
+  {
+   "id": "gh-45385",
+   "row": 3046,
+   "label": "positive",
+   "text": "Congratulations, Lightguard! A new dev in the house! /cheers"
+  },
+  {
+   "id": "gh-957487",
+   "row": 5999,
+   "label": "positive",
+   "text": "woot! one more exploit gone!"
+  },
+  {
+   "id": "gh-308824",
+   "row": 2082,
+   "label": "negative",
+   "text": "Forgot a comment here :-("
+  },
+  {
+   "id": "gh-2287858",
+   "row": 4855,
+   "label": "positive",
+   "text": "Performance wise, it's probably a good idea to catch these regex's."
+  },
+  {
+   "id": "gh-2589439",
+   "row": 3754,
+   "label": "positive",
+   "text": "So this was the missing path. Nice work!"
+  },
+  {
+   "id": "gh-2332221",
+   "row": 2121,
+   "label": "negative",
+   "text": "Well that's annoying."
+  },
+  {
+   "id": "gh-474830",
+   "row": 2450,
+   "label": "positive",
+   "text": "ah - this was way easier than what I had in mind - thank you :)"
+  },
+  {
+   "id": "gh-3221100",
+   "row": 176,
+   "label": "positive",
+   "text": "A okey. I should start looking at the JavaScript/jquery ^^"
+  },
+  {
+   "id": "gh-1133133",
+   "row": 369,
+   "label": "positive",
+   "text": "thanks dasio"
+  },
+  {
+   "id": "gh-1322767",
+   "row": 2208,
+   "label": "negative",
+   "text": "ah right right. js needs first-class mixins :("
+  },
+  {
+   "id": "gh-2111100",
+   "row": 2077,
+   "label": "negative",
+   "text": "no new updates, conflic with master and mmaps :("
+  },
+  {
+   "id": "gh-2168518",
+   "row": 2877,
+   "label": "positive",
+   "text": "this resolved the missing cases i mentioned before. wonderful. thank you!"
+  },
+  {
+   "id": "gh-366063",
+   "row": 2149,
+   "label": "negative",
+   "text": "Indeed.  It would be better to parse the response JSON and check ruby object equality.  :-("
+  },
+  {
+   "id": "gh-351890",
+   "row": 2590,
+   "label": "positive",
+   "text": "tradition with waypoint record ^^"
+  },
+  {
+   "id": "gh-4935354",
+   "row": 3890,
+   "label": "positive",
+   "text": ":+1: :+1: :+1: Thanks @paulp, will keep that in mind! Would it make sense to turn `-Xlint` on in all the ant build?"
+  },
+  {
+   "id": "gh-2313292",
+   "row": 2791,
+   "label": "positive",
+   "text": "will be great"
+  },
+  {
+   "id": "gh-43086",
+   "row": 1126,
+   "label": "negative",
+   "text": "Serious bug found. If player don't move after looting chest, chest don't despawn and player may loot this again. Many-many times again :("
+  },
+  {
+   "id": "gh-94498",
+   "row": 2966,
+   "label": "positive",
+   "text": "Yeah! Confirmed this commit fix: http://pastebin.com/EB6NcaCg  Thank you Vladimir ;-)"
+  },
+  {
+   "id": "gh-107037",
+   "row": 5921,
+   "label": "negative",
+   "text": "This line break our apps :(  The only solution I know is change the session key to make their cookies expired."
+  },
+  {
+   "id": "gh-763914",
+   "row": 1479,
+   "label": "positive",
+   "text": "Kudos! Awesome++"
+  },
+  {
+   "id": "gh-2268220",
+   "row": 85,
+   "label": "negative",
+   "text": "@SuperSpyTX or perhaps, just maybe, this is a place for discussion not internet memes."
+  },
+  {
+   "id": "gh-376338",
+   "row": 1198,
+   "label": "negative",
+   "text": "Then how do we get the current planned drops? I need it for my graveyards plugin  edit: Nevermind, i'm a blind idiot"
+  },
+  {
+   "id": "gh-1518264",
+   "row": 1149,
+   "label": "negative",
+   "text": "Without any message about deprecation status, really? :("
+  },
+  {
+   "id": "gh-89708",
+   "row": 2974,
+   "label": "positive",
+   "text": "This is revision that is long enough for 10000 :-D"
+  },
+  {
+   "id": "gh-331136",
+   "row": 4279,
+   "label": "negative",
+   "text": "I'm wary about this. The rounding strikes me as arbitrary, why did you choose this exact value?"
+  },
+  {
+   "id": "gh-2674637",
+   "row": 3097,
+   "label": "positive",
+   "text": "All right. Thank you again for this, I'm testing it right now"
+  },
+  {
+   "id": "gh-364619",
+   "row": 2960,
+   "label": "positive",
+   "text": "we're just trying to come to terms with a problem in our interfaces - soon we'll want help :)"
+  },
+  {
+   "id": "gh-3985311",
+   "row": 163,
+   "label": "positive",
+   "text": "Nice"
+  },
+  {
+   "id": "gh-736375",
+   "row": 252,
+   "label": "negative",
+   "text": "Shush :("
+  },
+  {
+   "id": "gh-1964078",
+   "row": 1768,
+   "label": "negative",
+   "text": "People who use Capistrano deploy will have serious problems: ("
+  },
+  {
+   "id": "gh-422519",
+   "row": 4753,
+   "label": "positive",
+   "text": "It's about class :-)"
+  },
+  {
+   "id": "gh-385021",
+   "row": 2557,
+   "label": "positive",
+   "text": "Thanks for finally submitting this, SilveIce :)"
+  },
+  {
+   "id": "gh-2781288",
+   "row": 5507,
+   "label": "negative",
+   "text": "Because I always forget. :'( I'll put it in next time."
+  },
+  {
+   "id": "gh-2045805",
+   "row": 1972,
+   "label": "negative",
+   "text": "Damn sorry for messing/merging in your area theuni ..."
+  },
+  {
+   "id": "gh-1879775",
+   "row": 2103,
+   "label": "negative",
+   "text": "I know it's tempting, but I'm worried about false positives."
+  },
+  {
+   "id": "gh-86187",
+   "row": 2984,
+   "label": "positive",
+   "text": "10000 Revision!, Congratulation and thank you for all people who helped to do this ;)"
+  },
+  {
+   "id": "gh-93872",
+   "row": 2969,
+   "label": "positive",
+   "text": "fixed in [10057]. thank you :)"
+  },
+  {
+   "id": "gh-2155726",
+   "row": 4857,
+   "label": "positive",
+   "text": "Indeed, that's why I asked you :)"
+  },
+  {
+   "id": "gh-4237852",
+   "row": 4253,
+   "label": "positive",
+   "text": "@arrbee's implementation is significantly more elegant. Please use it! :)"
+  },
+  {
+   "id": "gh-1961043",
+   "row": 2962,
+   "label": "positive",
+   "text": "it is perfect. Thanks"
+  },
+  {
+   "id": "gh-325174",
+   "row": 2179,
+   "label": "negative",
+   "text": "This documentation disappeared in the process :-("
+  },
+  {
+   "id": "gh-586595",
+   "row": 4630,
+   "label": "positive",
+   "text": "Feels good man."
+  },
+  {
+   "id": "gh-639015",
+   "row": 1840,
+   "label": "negative",
+   "text": "Dude, ytdb sucks."
+  },
+  {
+   "id": "gh-392772",
+   "row": 5371,
+   "label": "positive",
+   "text": "Old Exploit, thank you very much!"
+  },
+  {
+   "id": "gh-5197819",
+   "row": 4646,
+   "label": "positive",
+   "text": "the double forward slashes - seems sort of strange :)  was that intentional?"
+  },
+  {
+   "id": "gh-292615",
+   "row": 1347,
+   "label": "negative",
+   "text": "sorry for my bad i see this in my C++ Tutorial maybe i don't read good"
+  },
+  {
+   "id": "gh-3545201",
+   "row": 4657,
+   "label": "positive",
+   "text": "OMG, the C# compiler was able to figure out the generic type parameter? Color me impressed for once. :)"
+  },
+  {
+   "id": "gh-247917",
+   "row": 4755,
+   "label": "positive",
+   "text": "Could we keep this constructor?  It could simply call `this(maxObjectSize, ClassResolvers.weakCachingResolver(classLoader))`.  And then let's backport it to 3.2.  I'm tempted to include this in 3.2.7. :-)  Thanks a lot for a quality patch!"
+  },
+  {
+   "id": "gh-1027712",
+   "row": 1364,
+   "label": "positive",
+   "text": "Gah, didn't notice that :)"
+  },
+  {
+   "id": "gh-1129694",
+   "row": 2053,
+   "label": "negative",
+   "text": "I don't see why this commit had to be reverted. This pretty much feels like a decision taken by a dictator."
+  },
+  {
+   "id": "gh-191262",
+   "row": 824,
+   "label": "positive",
+   "text": "Hehehe seems like we love this kind of discussions :P. I like it :). Xavier you're right in general terms, but this particular case of any? and all? makes them opposite."
+  },
+  {
+   "id": "gh-775915",
+   "row": 2906,
+   "label": "positive",
+   "text": "fantastic, thanks!"
+  },
+  {
+   "id": "gh-12654",
+   "row": 4426,
+   "label": "negative",
+   "text": "The visibility is missing and the default value seems weird"
+  },
+  {
+   "id": "gh-1837027",
+   "row": 4127,
+   "label": "negative",
+   "text": "I finally removed all the `RouteHandler` crap. I don't like it. I'll find a better way."
+  },
+  {
+   "id": "gh-279369",
+   "row": 5386,
+   "label": "positive",
+   "text": "sweet hopefully no more gcd exploits"
+  },
+  {
+   "id": "gh-1040389",
+   "row": 6021,
+   "label": "positive",
+   "text": "Nice find, thanks for pointing this out. Need to be more cautious about XSS and mass-assignment  @brookemckim would you have listened if he didn't?"
+  },
+  {
+   "id": "gh-5520875",
+   "row": 4177,
+   "label": "negative",
+   "text": "@mislav  @adamv  creating a ~/.cabal/config will happen as a matter of course when installing any haskell libs. that is a bad reason to use --global.   --global will create confusing problems for none expert haskell users"
+  },
+  {
+   "id": "gh-2467528",
+   "row": 327,
+   "label": "positive",
+   "text": "Looks good to me!"
+  },
+  {
+   "id": "gh-1875018",
+   "row": 4182,
+   "label": "negative",
+   "text": "But I really hate doing this. How can we move this out too?"
+  },
+  {
+   "id": "gh-530087",
+   "row": 438,
+   "label": "positive",
+   "text": "+1 :D (i never used that)"
+  },
+  {
+   "id": "gh-267055",
+   "row": 4894,
+   "label": "positive",
+   "text": "In fact I apply the cppling onto it, and I made some corrections. Only following the google cpplint :) rules.  http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml?showone=Casting#Casting"
+  },
+  {
+   "id": "gh-2277953",
+   "row": 1569,
+   "label": "negative",
+   "text": "There is `addgroup git gitlab` and `usermod -a -G git gitlab` ... seems I mixed them together, sorry."
+  },
+  {
+   "id": "gh-1648418",
+   "row": 1685,
+   "label": "negative",
+   "text": ".. but now testing this version, it works fine for me in both VS2010 and Win CB ... weird."
+  },
+  {
+   "id": "gh-2678836",
+   "row": 3937,
+   "label": "positive",
+   "text": "great, I'll change them all over the place in a separate PR, to make it a visible style decision"
+  },
+  {
+   "id": "gh-4830344",
+   "row": 4114,
+   "label": "negative",
+   "text": "spaaces :("
+  },
+  {
+   "id": "gh-5025133",
+   "row": 4304,
+   "label": "negative",
+   "text": "the indentation is weird on this line"
+  },
+  {
+   "id": "gh-276756",
+   "row": 2327,
+   "label": "negative",
+   "text": "Adamv is a stickler for consistency so I fear we cannot change it now."
+  },
+  {
+   "id": "gh-1890947",
+   "row": 2335,
+   "label": "positive",
+   "text": "@steveklabnik :heart:"
+  },
+  {
+   "id": "gh-179917",
+   "row": 2767,
+   "label": "positive",
+   "text": "Big thanks for good work. ps awaiting CMSG_MOVE_TIME_SKIPPED :))"
+  },
+  {
+   "id": "gh-456346",
+   "row": 1766,
+   "label": "negative",
+   "text": "I kind of want to get rid of all of these... the smileys in particular look worse than ascii smileys."
+  },
+  {
+   "id": "gh-946652",
+   "row": 1102,
+   "label": "negative",
+   "text": "omg sorry, can't read diffs anymore ... minor cerebral blackout  - red line means \"deleted\""
+  },
+  {
+   "id": "gh-3689433",
+   "row": 4214,
+   "label": "positive",
+   "text": "Because the old text \"src/qt/res/src/*.svg\" had covered the newly generated src/qt/res/src/bitcoin.svg i had to \"rewrite it arithmetically\". :) I think it's okay like this."
+  },
+  {
+   "id": "gh-1218482",
+   "row": 7115,
+   "label": "negative",
+   "text": "I would like this to not be in the API at all. It is very difficult to get this right such that you don't introduce SQL injection attacks like the current implementation allows."
+  },
+  {
+   "id": "gh-1010451",
+   "row": 1796,
+   "label": "negative",
+   "text": "evil fix!"
+  },
+  {
+   "id": "gh-805517",
+   "row": 2311,
+   "label": "negative",
+   "text": "Also why enable this one by default and not the other ones? It's pretty annoying having to enable them in every new project."
+  },
+  {
+   "id": "gh-46267",
+   "row": 1124,
+   "label": "negative",
+   "text": "shame to the community? hmm what are you supplying to the community may i ask hmm?  and not to worry its been fixed... well not in mangos anyway *smirks*"
+  },
+  {
+   "id": "gh-389054",
+   "row": 2551,
+   "label": "positive",
+   "text": "Fixed in [11508]. Thank you. VS accept old version, lol."
+  },
+  {
+   "id": "gh-905891",
+   "row": 5960,
+   "label": "positive",
+   "text": "I did indeed. I always forget about the plugins. Thanks!"
+  },
+  {
+   "id": "gh-64826",
+   "row": 6429,
+   "label": "negative",
+   "text": "That's really just a big hack. Also, it's weird to remove these specific parameters and not others."
+  },
+  {
+   "id": "gh-5054987",
+   "row": 4579,
+   "label": "negative",
+   "text": "Looks like that with the proposed refactoring of `Hole` and `Placeholder`, this method will collapse into a bunch of one-line cases!!"
+  },
+  {
+   "id": "gh-1206680",
+   "row": 1886,
+   "label": "negative",
+   "text": "I recommend doing 1. and 2. as easy ones. And I really advise you to plug 3. — it is very evil."
+  },
+  {
+   "id": "gh-4934033",
+   "row": 4358,
+   "label": "negative",
+   "text": "Thanks @stof, it's fixed. I should stop making PR late at night... :/"
+  },
+  {
+   "id": "gh-50008",
+   "row": 1645,
+   "label": "negative",
+   "text": "sorry for the previous post -.-  I was tried to put post under code"
+  },
+  {
+   "id": "gh-452191",
+   "row": 4959,
+   "label": "positive",
+   "text": "Nice, I remember I did some uber-hacky change to fix damage on missile spells lol now thats a clean fix :D"
+  },
+  {
+   "id": "gh-5418575",
+   "row": 4196,
+   "label": "positive",
+   "text": "It's not *that* severe if we allow wallets to be stored at arbitrary locations on the file system as in multiwallet-qt. It would be quite severe if _path happened to be the datadir :)"
+  },
+  {
+   "id": "gh-1126367",
+   "row": 5725,
+   "label": "negative",
+   "text": "@fxn you haven't actually given any rationale as to why you think it's actually a good idea, just endless appeal to authority.  Why is returning 0 instead of true a good idea?"
+  },
+  {
+   "id": "gh-506024",
+   "row": 1319,
+   "label": "negative",
+   "text": "Fixed, Typo in search and replace :("
+  },
+  {
+   "id": "gh-2994968",
+   "row": 2325,
+   "label": "negative",
+   "text": "Oh whoops - I was checking your master, not the main repo. Sorry!"
+  },
+  {
+   "id": "gh-1101131",
+   "row": 2558,
+   "label": "positive",
+   "text": "What is ```.removeClass()``` supposed to do here?  **edit**: Ah, ```value === undefined -> className = \"\"```, I didn't know that. has been supported ever since 96dd06e. Nice :)"
+  },
+  {
+   "id": "gh-2476592",
+   "row": 1993,
+   "label": "negative",
+   "text": "Ruby should really optimise these kind of things automatically :cry:"
+  },
+  {
+   "id": "gh-44881",
+   "row": 2250,
+   "label": "negative",
+   "text": "Epic fail... let's build enterprise so?"
+  },
+  {
+   "id": "gh-334752",
+   "row": 2703,
+   "label": "positive",
+   "text": "Maybe because I'd missed it while making a patch? :)"
+  },
+  {
+   "id": "gh-1723382",
+   "row": 665,
+   "label": "positive",
+   "text": "good work."
+  },
+  {
+   "id": "gh-439301",
+   "row": 1331,
+   "label": "negative",
+   "text": "ok, sorry for my reaction, fixed in recent commit"
+  },
+  {
+   "id": "gh-452276",
+   "row": 2123,
+   "label": "negative",
+   "text": "u make me crazy hehe Wintergrasp_spawning.sql  <<<<< sql errors http://paste2.org/p/1493703  world_WinterGrasp.sql  <<<< 100 % import no errors"
+  },
+  {
+   "id": "gh-1541699",
+   "row": 3160,
+   "label": "negative",
+   "text": "We have a `p_snprintf` that is not beyond-braindamaged under Windows. We need to use it here and everywhere else."
+  },
+  {
+   "id": "gh-1357344",
+   "row": 30,
+   "label": "negative",
+   "text": "Yeah, I was going to enhance the performance of the augmentWidthorHeight function by doing exactly what you have there. Having to call getComputedStyle multiple times sucks. I need it to also grab the box-sizing as well, so it needs to be a bit less naive"
+  },
+  {
+   "id": "gh-4297212",
+   "row": 4581,
+   "label": "negative",
+   "text": "When I did my sweep of dead code, I was pretty aggressive. Some things which were plausibly useful, just not yet being used, were included."
+  },
+  {
+   "id": "gh-4501882",
+   "row": 4775,
+   "label": "positive",
+   "text": "When it comes to maintain assertion count, your preferred version wins. :smile: . It also makes the code neater and follows the same style as the preceding assertions."
+  },
+  {
+   "id": "gh-939879",
+   "row": 2399,
+   "label": "positive",
+   "text": "Wow... Mangos rullz :) It's a great day for our community."
+  },
+  {
+   "id": "gh-1315221",
+   "row": 361,
+   "label": "positive",
+   "text": "oh shush you two. i do this all the time ^^"
+  },
+  {
+   "id": "gh-150160",
+   "row": 5724,
+   "label": "positive",
+   "text": "+1 :D  I can't count times when I forget about adding multipart to forms ;-)"
+  },
+  {
+   "id": "gh-600527",
+   "row": 3570,
+   "label": "negative",
+   "text": "I see what you mean now, this is very strange. Let me try to fix that"
+  },
+  {
+   "id": "gh-3685218",
+   "row": 4442,
+   "label": "negative",
+   "text": "Ah, sorry this diff isn't very clear. The above is for the documentation for the ``fields_for`` method. Here's what it looked like before:  ```ruby       #   <%= form_for @person do |person_form| %>       #     First name: <%= person_form.text_field :"
+  },
+  {
+   "id": "gh-1137954",
+   "row": 1265,
+   "label": "negative",
+   "text": "Aparently those missing parts are what is fucking shit up. I know what you are doing and hope you figure out, but while you don't, I beleave those pushbacks are too bad to deserve some place in here. TC was vulnerable to these \"packet spoofers\" for all its"
+  },
+  {
+   "id": "gh-2296364",
+   "row": 1586,
+   "label": "negative",
+   "text": "@grum   This commit creates an enormous amount of unnecessary comments and tickets (on bukkitdev and bukkitforums) from ignorant server admins. They do not understand what a NoClassDefFoundError means. It would be much more useful if the message was \"Thi"
+  },
+  {
+   "id": "gh-43665",
+   "row": 2900,
+   "label": "positive",
+   "text": "Well, to that end, we could use document.documentMode to actually test whether IE8 is operating in IE7 mode or not :)"
+  },
+  {
+   "id": "gh-2987296",
+   "row": 1963,
+   "label": "negative",
+   "text": "I've opened a pr here: #2588. I'm really sorry!"
+  },
+  {
+   "id": "gh-457643",
+   "row": 2131,
+   "label": "negative",
+   "text": "AV::AssetPaths is autoloaded. requiring a file that may have been autoloaded somewhere else can lead to double requires due to a ruby bug. :("
+  },
+  {
+   "id": "gh-6314564",
+   "row": 4178,
+   "label": "negative",
+   "text": "Oops forgot indentation :("
+  },
+  {
+   "id": "gh-781567",
+   "row": 735,
+   "label": "positive",
+   "text": "Wow!  Before:      real 8m54.220s     user 7m18.483s     sys 0m50.399s  After:      real 7m46.224s     user 6m13.979s     sys 0m44.507s"
+  },
+  {
+   "id": "gh-386638",
+   "row": 2555,
+   "label": "positive",
+   "text": "Would it be hard to remove 2+ spaces? I think no. :D"
+  },
+  {
+   "id": "gh-62213",
+   "row": 3015,
+   "label": "positive",
+   "text": "Haha yeah this seems stupid but I got again the Name-bug here on Github. Ownestly the author was Beaste instead of Laise when I checked the first time. Well nevertheless we had a laugh :) Ofcourse I know laise from forum. Thanks and sorry for the interrupt"
+  },
+  {
+   "id": "gh-2508631",
+   "row": 2764,
+   "label": "positive",
+   "text": "should've been clickedX as well, even though that would've increased the diff  Edit: :smile:  Well, that's kinda hard when it's the first (or second) alphabetically :)"
+  },
+  {
+   "id": "gh-5529226",
+   "row": 4265,
+   "label": "negative",
+   "text": "I can't find an rb_reg_new_str in the C API anywhere. :cry:"
+  },
+  {
+   "id": "gh-110537",
+   "row": 2935,
+   "label": "positive",
+   "text": "Wow! Thanks. Maybe the patch and has no relation to the infinite spawn chests, but he solved it perfectly."
+  },
+  {
+   "id": "gh-679934",
+   "row": 2508,
+   "label": "positive",
+   "text": "I totally understand what you guys are saying and I agree. I am sure a nice solution will came out of this thread, as always :)"
+  },
+  {
+   "id": "gh-1538058",
+   "row": 1950,
+   "label": "negative",
+   "text": "oops: context fail! (I was thinking you were still commenting on the initialCommands stuff)"
+  },
+  {
+   "id": "gh-4323893",
+   "row": 4787,
+   "label": "positive",
+   "text": "ok sounds good... I'll update it to do that (hopefully I can figure it out :p)"
+  },
+  {
+   "id": "gh-1751856",
+   "row": 561,
+   "label": "positive",
+   "text": "Thanks :-) Also, I have a new PR for libxml2 which looks much cleaner than the current master."
+  },
+  {
+   "id": "gh-132633",
+   "row": 1949,
+   "label": "negative",
+   "text": "Double build break, double my bad. I'll have to start building on ubuntu to check these things."
+  },
+  {
+   "id": "gh-109238",
+   "row": 313,
+   "label": "negative",
+   "text": "sadly, sun_path is not null terminated on OSX, but it is on Linux. I've almost got a fix for this."
+  },
+  {
+   "id": "gh-1766397",
+   "row": 608,
+   "label": "positive",
+   "text": "Thanks again for the quick fix :-)"
+  },
+  {
+   "id": "gh-752505",
+   "row": 2322,
+   "label": "negative",
+   "text": "What a ridiculous waste of time.  That was so stupid of me to add a test.  God I hate that fucking function."
+  },
+  {
+   "id": "gh-37406",
+   "row": 1179,
+   "label": "negative",
+   "text": "Well my comment was related to przemratajczak's one. I'm sorry for accidentaly being somewhat cruel, anyway."
+  },
+  {
+   "id": "gh-129704",
+   "row": 4869,
+   "label": "positive",
+   "text": "I like the `*` trick, nice one!"
+  },
+  {
+   "id": "gh-1568801",
+   "row": 2372,
+   "label": "positive",
+   "text": "Hmm, indeed a valid point  and hi Ambal ;)  Though I agree- we have strong variable names which is good enough for most cases."
+  },
+  {
+   "id": "gh-1318708",
+   "row": 3403,
+   "label": "negative",
+   "text": "Oops, sorry :/"
+  },
+  {
+   "id": "gh-777063",
+   "row": 1471,
+   "label": "positive",
+   "text": "Interesting. Thank you!"
+  },
+  {
+   "id": "gh-1298937",
+   "row": 1254,
+   "label": "negative",
+   "text": "My bad - misread!"
+  },
+  {
+   "id": "gh-338900",
+   "row": 2613,
+   "label": "positive",
+   "text": "In [11337]. Thank you :)"
+  },
+  {
+   "id": "gh-325522",
+   "row": 6085,
+   "label": "positive",
+   "text": "I was thinking something like MD5, but yours is much shorter ;)"
+  },
+  {
+   "id": "gh-1733502",
+   "row": 1761,
+   "label": "negative",
+   "text": "Is camera example supposed to be working? It's very confusing now ;/"
+  },
+  {
+   "id": "gh-775281",
+   "row": 1831,
+   "label": "negative",
+   "text": "wtf??"
+  },
+  {
+   "id": "gh-2556734",
+   "row": 1391,
+   "label": "positive",
+   "text": "Ok, cool. I've passed it along."
+  },
+  {
+   "id": "gh-2251447",
+   "row": 4374,
+   "label": "negative",
+   "text": "i was just curious, sorry for that"
+  },
+  {
+   "id": "gh-5602204",
+   "row": 4110,
+   "label": "negative",
+   "text": "Really? sorry, I did not know"
+  },
+  {
+   "id": "gh-159279",
+   "row": 4624,
+   "label": "positive",
+   "text": "Is link to wkipedia article enough? :)"
+  },
+  {
+   "id": "gh-493136",
+   "row": 4109,
+   "label": "negative",
+   "text": "Maybe it's strange, I am spell script noob :( I've tried it this way and it works. I really don't know how to do it other way"
+  },
+  {
+   "id": "gh-1381072",
+   "row": 4538,
+   "label": "negative",
+   "text": "That is ugly anyway. Screw Chicago, the only good things that have ever come from Chicago is Michael Jordan and Chicago style pizza."
+  },
+  {
+   "id": "gh-2595606",
+   "row": 2757,
+   "label": "positive",
+   "text": "Great fix, Thanks! :)"
+  },
+  {
+   "id": "gh-392257",
+   "row": 3840,
+   "label": "negative",
+   "text": "I don't like this at all. It's the provider who should provide these, don't like the leakage."
+  },
+  {
+   "id": "gh-5609729",
+   "row": 3441,
+   "label": "negative",
+   "text": "Blerg. Do we need/want to support that syntax?"
+  },
+  {
+   "id": "gh-163773",
+   "row": 5237,
+   "label": "negative",
+   "text": "I agree with Tim on this, anything implemented so far just seems really hackish, and ultimately from experience many modules rely on their own state"
+  },
+  {
+   "id": "gh-1690506",
+   "row": 1623,
+   "label": "negative",
+   "text": "afaik, `LICENSE` is convention. I haven't seen much of them in markdown.  As it's so established, I think its fine to yell SO LOUD, but I'd advocate for lowercasing `changelog.md` and `readme.md`. UPPERCASE STRESSES ME OUT. :/"
+  },
+  {
+   "id": "gh-1624843",
+   "row": 4166,
+   "label": "negative",
+   "text": "At a minimum this is the wrong place for this: objects shouldn't have their own methods for monkey patching their state. I'm seriously skeptical of whether this should exist at all, it's too much of a mess and too fragile."
+  },
+  {
+   "id": "gh-1804501",
+   "row": 3654,
+   "label": "positive",
+   "text": "ok. its clear now. Also i'm glad we got rid of `@history_path`. I'll merge it now - hope it works :)"
+  },
+  {
+   "id": "gh-1526813",
+   "row": 7117,
+   "label": "negative",
+   "text": "This code again! Will this hack never tire of creating new issues."
+  },
+  {
+   "id": "gh-477375",
+   "row": 2449,
+   "label": "positive",
+   "text": "Thank you ;-)"
+  },
+  {
+   "id": "gh-288577",
+   "row": 1808,
+   "label": "negative",
+   "text": "Hmmm, it looks nicer like this but now it's very slow on my notebook :(. Curiously now it's OpenGL that is worse than ANGLE.  Multimaterials are costly and lines are costly too. I used flat shading instead exactly for this reason."
+  },
+  {
+   "id": "gh-180020",
+   "row": 2722,
+   "label": "positive",
+   "text": "@rwldrn: Push push push! :)"
+  },
+  {
+   "id": "gh-1129740",
+   "row": 692,
+   "label": "negative",
+   "text": "-1   I prefer the code that was reverted, agree with @tarcieri"
+  },
+  {
+   "id": "gh-669425",
+   "row": 5961,
+   "label": "positive",
+   "text": "Yes, if you wish. :-) On Oct 23, 2011 10:36 AM, \"Norman Maurer\" < reply@reply.github.com> wrote:  > @Trustin: > > What do you think about also commit this to 3.2 branch ? Its a low risk > change, so I think we should do. > > WDYT ? > > -- > Reply to this e"
+  },
+  {
+   "id": "gh-543187",
+   "row": 2156,
+   "label": "negative",
+   "text": "This change makes me a bit nervous, and I see the possibility of very large performance issues on the database servers limiting to 1,000,000 rows.  How about a rough sane limit of 25?"
+  },
+  {
+   "id": "gh-6165907",
+   "row": 3591,
+   "label": "negative",
+   "text": "hmm. wasn't aware of that.   On Wed, Sep 4, 2013 at 9:45 AM, Parker Moore <notifications@github.com>wrote:  > In features/step_definitions/jekyll_steps.rb: > > > @@ -142,11 +142,11 @@ > >  end > > > >  Then /^I should see \"(.*)\" in \"(.*)\"$/ do |"
+  },
+  {
+   "id": "gh-3499522",
+   "row": 4659,
+   "label": "positive",
+   "text": "Never mind. That check would be redundant :)"
+  },
+  {
+   "id": "gh-1567427",
+   "row": 1147,
+   "label": "negative",
+   "text": "Though now I realize there's a dead comment above that `handleGroup` function :\\"
+  },
+  {
+   "id": "gh-915904",
+   "row": 5518,
+   "label": "negative",
+   "text": "Hmm, this seems odd to me.  If the directory is scanned (and I assume scanned with \"use foldernames for movie lookups\" enabled) then the item itself should have metadata assigned, and thus the videoinfotag should have correct m_strFileNameAndPath available"
+  },
+  {
+   "id": "gh-1686516",
+   "row": 1622,
+   "label": "negative",
+   "text": "That’s another good point. Seems weird to lowercase `readme` but then capitalize `CHANGELOG`."
+  },
+  {
+   "id": "gh-491198",
+   "row": 2526,
+   "label": "positive",
+   "text": "Custom demo seems working again now, thanks!  Now trying to integrate it within Symfony 1.4.11 forms starting from the demo you provided.."
+  },
+  {
+   "id": "gh-3182491",
+   "row": 1465,
+   "label": "positive",
+   "text": "nice cleanup!"
+  },
+  {
+   "id": "gh-5960033",
+   "row": 4882,
+   "label": "positive",
+   "text": "Beautiful. :)"
+  },
+  {
+   "id": "gh-6196517",
+   "row": 4770,
+   "label": "positive",
+   "text": "Well, in that world `Number.isNaN(obj)` will work correctly too :)"
+  },
+  {
+   "id": "gh-2824187",
+   "row": 5023,
+   "label": "positive",
+   "text": "Good to have this. Though checking blocks will not be superfluous until the server is in control of this flag, since hack clients manipulate this a lot both for hacks like flying, criticals, nofall.  A step towards this to work would be to have the clien"
+  },
+  {
+   "id": "gh-241057",
+   "row": 4697,
+   "label": "positive",
+   "text": "Try fix Gargoyle, and Ill take a screen :D"
+  },
+  {
+   "id": "gh-78022",
+   "row": 5959,
+   "label": "positive",
+   "text": "how about \"Login with Facebook\"? :)"
+  },
+  {
+   "id": "gh-1459143",
+   "row": 4254,
+   "label": "negative",
+   "text": "Using regular expressions to do this seems really inelegant, but I don't know a better way"
+  },
+  {
+   "id": "gh-3635649",
+   "row": 4133,
+   "label": "negative",
+   "text": ":embarrassed: Yes I recall, but I usually miss the occasional code-style, since it is not how I usually write that code. I just left the code-styles I missed as a later activity, after this is approved. Hope you don't mind that. I'd take care of this in-d"
+  },
+  {
+   "id": "gh-764229",
+   "row": 1482,
+   "label": "positive",
+   "text": "Excellent, glad to see this as a default. Will be nice to have early warnings -- especially helpful for new folks."
+  },
+  {
+   "id": "gh-3785720",
+   "row": 6321,
+   "label": "negative",
+   "text": "should we really rely on reflection to call this method ? It looks hackish to me"
+  },
+  {
+   "id": "gh-1091127",
+   "row": 7083,
+   "label": "positive",
+   "text": "Alright, thanks. I don't have access to my dev environment at the moment, so I'll have to fix what you commented on tomorrow or the day after.  Thanks again, Trustin :)"
+  },
+  {
+   "id": "gh-454512",
+   "row": 1329,
+   "label": "negative",
+   "text": "but but but  ferals are fluffy, not overpowered :'("
+  },
+  {
+   "id": "gh-2000018",
+   "row": 2214,
+   "label": "negative",
+   "text": "Yeah there's quite some legacy stuff still, especially in the routes.rb file. It became an inconsistent mess again since my last refactor of it. Guess it's time for another one…  All that new hotness and beta stuff really were just experiments that becam"
+  },
+  {
+   "id": "gh-778436",
+   "row": 6657,
+   "label": "positive",
+   "text": "I like the idea of easy to read code. How about this?      if token.present? && protect_against_forgery?"
+  },
+  {
+   "id": "gh-239719",
+   "row": 1193,
+   "label": "negative",
+   "text": "I am very sad to see this change: it totally reverses the idea of self-contained mini-require for natives and again includes it into the module system itself. That was the whole point of it existing. requireNative and internalModuleCache should have staye"
+  },
+  {
+   "id": "gh-1307916",
+   "row": 4348,
+   "label": "negative",
+   "text": "Bound functions are particularly horrific in V8 for some reason. http://jsperf.com/argument-slicing/2"
+  },
+  {
+   "id": "gh-668079",
+   "row": 4682,
+   "label": "positive",
+   "text": "Exactly that :)"
+  },
+  {
+   "id": "gh-965963",
+   "row": 4431,
+   "label": "negative",
+   "text": "sorry, will fix that"
+  },
+  {
+   "id": "gh-172861",
+   "row": 3474,
+   "label": "negative",
+   "text": "this is wrong IMO as you are loosing part of the data in case of a composite key without saying anything to the user"
+  },
+  {
+   "id": "gh-1009677",
+   "row": 1449,
+   "label": "positive",
+   "text": "*ROFL.. <3*  all i'm saying is a simple: \"thanks to everyone else that has worked on this part of project\". would have sufficed, if credit naming is an issue."
+  },
+  {
+   "id": "gh-3686444",
+   "row": 4044,
+   "label": "negative",
+   "text": "We had a solution (ffmpeg event) but unfortunately this part was not accepted upstream. Michael said that it would break some other functionality. Comparing new and old state is the only idea I have so far."
+  },
+  {
+   "id": "gh-2805551",
+   "row": 2391,
+   "label": "positive",
+   "text": "ok great"
+  },
+  {
+   "id": "gh-1300812",
+   "row": 1011,
+   "label": "negative",
+   "text": "u broke tests :("
+  },
+  {
+   "id": "gh-1448982",
+   "row": 2472,
+   "label": "positive",
+   "text": "Cool, it's great to see this headed toward Promises/A!  I think it's gonna become the norm for multiple promise implementations to be in play in any reasonably interesting app.  I found a situation where I believe it still isn't fully compliant, so I creat"
+  },
+  {
+   "id": "gh-31313",
+   "row": 1189,
+   "label": "negative",
+   "text": "yes, :( Last time i specially check mangos.sql Db version at real use with server start. So must be fixed now... and no other simialr problems"
+  },
+  {
+   "id": "gh-1837183",
+   "row": 3351,
+   "label": "negative",
+   "text": "indeed, I think it's a copy/paste issue :-/"
+  },
+  {
+   "id": "gh-359503",
+   "row": 6034,
+   "label": "positive",
+   "text": "Please don't forget to update the guides with changes like this. In this case guides have been already updated here: https://github.com/lifo/docrails/commit/089ee31aadd881a59ad60b6dcb406600dc331bfd  Thanks!"
+  },
+  {
+   "id": "gh-607457",
+   "row": 41,
+   "label": "positive",
+   "text": "lol, same time dave"
+  },
+  {
+   "id": "gh-4394249",
+   "row": 4207,
+   "label": "positive",
+   "text": "What is this doing here? Thought this is Mac OpenSSL related :)."
+  },
+  {
+   "id": "gh-1030559",
+   "row": 2697,
+   "label": "positive",
+   "text": "Thanks.. I really need to remember to run mvn clean package before push changes... I own you some beer"
+  },
+  {
+   "id": "gh-80486",
+   "row": 5964,
+   "label": "positive",
+   "text": "RSA want to say, that if fixed one thing, it would be nice fixing it by more wide way for future development, something like this =) http://paste2.org/p/833860"
+  },
+  {
+   "id": "gh-4037417",
+   "row": 2812,
+   "label": "positive",
+   "text": "Haha thanks :heart: My brain is a bit fried at the moment. :)"
+  },
+  {
+   "id": "gh-3022625",
+   "row": 4663,
+   "label": "positive",
+   "text": "Will potentially do this in the future in another pull request.  Good idea though =]"
+  },
+  {
+   "id": "gh-2940850",
+   "row": 2148,
+   "label": "negative",
+   "text": "The extra test in test_utils is an odd one.  It's a doctest that tests the custom doctest output checker.  That's not compatible with discovery, but also doesn't lend itself to be rewritten as a unit test. :("
+  },
+  {
+   "id": "gh-2034988",
+   "row": 285,
+   "label": "negative",
+   "text": "subv you noob"
+  },
+  {
+   "id": "gh-2484320",
+   "row": 4958,
+   "label": "negative",
+   "text": "@trustin even then the impl must take care to stop looping as keep looping is just not right.."
+  },
+  {
+   "id": "gh-6099139",
+   "row": 3611,
+   "label": "positive",
+   "text": "oh, thank you very much ;)"
+  },
+  {
+   "id": "gh-1455743",
+   "row": 1759,
+   "label": "negative",
+   "text": "Oh, crap ... thanks for noting that.  Edit: https://github.com/EllisLab/CodeIgniter/commit/a8262ba2fe0e11302b8d81e1afba71d4f96cd6d7"
+  },
+  {
+   "id": "gh-3583878",
+   "row": 2729,
+   "label": "positive",
+   "text": "I think that would be great! shall we call the color uniform color_uniform ?   Shall i send a PR? - I'd also add  a fix for a typo in matrixStack.getModelViewPorjectionMatrix() if that's ok =)"
+  },
+  {
+   "id": "gh-408274",
+   "row": 463,
+   "label": "positive",
+   "text": "@Kapoeira, yeah. Vehicle Id, not creature entry  @Tassader, both spells will be in that case then ;) that's why it's there"
+  },
+  {
+   "id": "gh-2080368",
+   "row": 4291,
+   "label": "negative",
+   "text": "This spacing looks weird."
+  },
+  {
+   "id": "gh-534665",
+   "row": 2125,
+   "label": "negative",
+   "text": "@jonleighton you're right!  Sorry about that.  :(  Looks like this code is new in 3.1.  Are you comfortable with this going out for rc6?"
+  },
+  {
+   "id": "gh-3758599",
+   "row": 167,
+   "label": "positive",
+   "text": "Good call. I'll add that in."
+  },
+  {
+   "id": "gh-2257847",
+   "row": 3389,
+   "label": "positive",
+   "text": "True! Is not `unescaped`, is `unreplaced` or `escaped`. Then, should I change it?"
+  },
+  {
+   "id": "gh-3950027",
+   "row": 4921,
+   "label": "positive",
+   "text": "As you see we frequently forget to update these references, master should be fine for now. But it might be a good idea if we start moving functionality."
+  },
+  {
+   "id": "gh-1041860",
+   "row": 2071,
+   "label": "negative",
+   "text": "@Apelsin, yeah sorry about that. It's late. :-/  On Mar 5, 2012, at 12:52 AM, Apelsin<reply@reply.github.com> wrote:  > @jacortinas Please re-read what I wrote. I just said I did that already and what I am asking for is how to disable ALL notifications"
+  },
+  {
+   "id": "gh-378955",
+   "row": 4981,
+   "label": "negative",
+   "text": "Apparently, every browser we support do allow an opening html comment at the start of inline script tags, exemplified by the fact it worked in 1.5.2 when we were still using script tag injection. Sadly, this feature is popular enough to have a library like"
+  },
+  {
+   "id": "gh-461415",
+   "row": 5303,
+   "label": "positive",
+   "text": "I tried with Chrome/Window/Nvidia and worked fine, then I tried Firefox/Windows/Nvidia and turns out my card is blacklisted there. Interestingly, it works fine on Firefox/Linux/Nvidia. I guess Linux drivers aren't that bad after all! ;)"
+  },
+  {
+   "id": "gh-87390",
+   "row": 4157,
+   "label": "negative",
+   "text": "oh yeah just realized it sorry, I will PR again"
+  },
+  {
+   "id": "gh-4542703",
+   "row": 4705,
+   "label": "positive",
+   "text": "To make it work :)  It was unhappy if you tried to bind to localhost, and 127.0.0.1; it would only respond on 127.0.0.1. But if you just use localhost it would respond to both. <shrug />. I had a quick poke through the code, but couldn't find anything o"
+  },
+  {
+   "id": "gh-1180692",
+   "row": 2244,
+   "label": "negative",
+   "text": "Oh, right. i totally missed that one."
+  },
+  {
+   "id": "gh-385130",
+   "row": 1877,
+   "label": "negative",
+   "text": "quest one :/"
+  },
+  {
+   "id": "gh-1371437",
+   "row": 4539,
+   "label": "negative",
+   "text": "I liked your previous self better :("
+  },
+  {
+   "id": "gh-5465564",
+   "row": 6225,
+   "label": "positive",
+   "text": "Don't forget a couple checks that are more optimal than the native implementations :) ```javascript // _ to prevent namespace collisions function _isNaN(arg) {   return !(arg >= arg); } exports.isNaN = _isNaN;  function _isFinite(arg) {   return"
+  },
+  {
+   "id": "gh-3271501",
+   "row": 1923,
+   "label": "negative",
+   "text": "And I got the error. :("
+  },
+  {
+   "id": "gh-1766848",
+   "row": 1395,
+   "label": "positive",
+   "text": "good work!! thx all."
+  },
+  {
+   "id": "gh-5490709",
+   "row": 4758,
+   "label": "positive",
+   "text": "good catch. made the patch: https://github.com/joyent/node/pull/5952"
+  },
+  {
+   "id": "gh-627219",
+   "row": 5476,
+   "label": "positive",
+   "text": "Overall: Great work!  I'm a bit worried about performance though, having everything encoded in one field means that the contention on the cache-line that holds the status will be greatly increased. Also, the inline:ability of \"become\" is questionable. W"
+  },
+  {
+   "id": "gh-2268503",
+   "row": 1047,
+   "label": "negative",
+   "text": "Well this is bad, every update I'm going to have to wait about 3 months for all the plugins i use on a daily bases to update.. I really hope this gets reverted :/"
+  },
+  {
+   "id": "gh-4254143",
+   "row": 4290,
+   "label": "negative",
+   "text": "again the wrapping thing here is weird - though I might not be understanding it correctly."
+  },
+  {
+   "id": "gh-3906831",
+   "row": 4501,
+   "label": "negative",
+   "text": "I find this confusing, if identifyRequest is Some, you're both going to reply AND DeadLetter???"
+  },
+  {
+   "id": "gh-685025",
+   "row": 4641,
+   "label": "positive",
+   "text": "Nice catch. Leftover from the evolved development :)"
+  },
+  {
+   "id": "gh-1117832",
+   "row": 4623,
+   "label": "positive",
+   "text": "Yep, will add in a separate commit.  Thanks for reviewing the code, it is really appreciated :)"
+  },
+  {
+   "id": "gh-805541",
+   "row": 2312,
+   "label": "negative",
+   "text": "Indeed. Still too bad the others aren't. I don't really get the point of having generally useful functionality hidden away in the extensions repo."
+  },
+  {
+   "id": "gh-4955099",
+   "row": 4174,
+   "label": "negative",
+   "text": "At this stage I'm not sure the rails core wants or cares about this fix. :( cc @fxn @steveklabnik"
+  },
+  {
+   "id": "gh-3748118",
+   "row": 3090,
+   "label": "positive",
+   "text": "No problemo :)"
+  },
+  {
+   "id": "gh-133132",
+   "row": 2889,
+   "label": "positive",
+   "text": "It's just getting better and better. Can't wait support for different player highguids. Thank you."
+  },
+  {
+   "id": "gh-2307620",
+   "row": 104,
+   "label": "negative",
+   "text": "@JamesNorris Hurray no more arguing!  Then I hope the people who not \"agree\"ing with the statements in the FAQ will clearly separate, distinguish, and back up their points, and not keep restating things that have been disproved.   For instance, every o"
+  },
+  {
+   "id": "gh-1892659",
+   "row": 2899,
+   "label": "positive",
+   "text": "With this development build, CPU usage went from 160% to 90% on average with 100 players online.  In addition, the random tick rate drop issue I was having are now completely gone.  This improvement is amazing.  Very good work.  If you guys are having issu"
+  },
+  {
+   "id": "gh-2819780",
+   "row": 74,
+   "label": "negative",
+   "text": "Aw man, you can't grow trees instantly anymore :("
+  },
+  {
+   "id": "gh-760343",
+   "row": 1490,
+   "label": "positive",
+   "text": "Thanks a lot!"
+  },
+  {
+   "id": "gh-419170",
+   "row": 462,
+   "label": "positive",
+   "text": "This rev makes some spells need db data, don't panic :)"
+  },
+  {
+   "id": "gh-1441352",
+   "row": 4821,
+   "label": "positive",
+   "text": "Oh, that's a good point, it might not be our instance! Your property check is looking a lot prettier now."
+  },
+  {
+   "id": "gh-2123921",
+   "row": 5988,
+   "label": "positive",
+   "text": "@josevalim are you sure that we need this `indifferent_hash.rb` file? :)"
+  },
+  {
+   "id": "gh-1674531",
+   "row": 1456,
+   "label": "positive",
+   "text": "beautifull."
+  },
+  {
+   "id": "gh-1406319",
+   "row": 2441,
+   "label": "positive",
+   "text": "I like the var. Now when people ask if we have any priors, we can say yes. :)"
+  },
+  {
+   "id": "gh-2410938",
+   "row": 1020,
+   "label": "negative",
+   "text": ":( an unintended consequence of some trivial UI shuffling. Sorry for the heart attack!"
+  },
+  {
+   "id": "gh-467832",
+   "row": 1195,
+   "label": "negative",
+   "text": "Build failed for the updates since #965 :-("
+  },
+  {
+   "id": "gh-351268",
+   "row": 4145,
+   "label": "negative",
+   "text": "@vicb: I somehow fail to come up with an elegant solution regarding explode etc. - any suggestions?"
+  },
+  {
+   "id": "gh-2296414",
+   "row": 5050,
+   "label": "negative",
+   "text": "@asofold  Sadly, this is probably good news for hackforums.net's swarm of hacked minecraft clients. Maybe it's a good time to join them and sell hacked clients. (/sarcasm)"
+  },
+  {
+   "id": "gh-58909",
+   "row": 3024,
+   "label": "positive",
+   "text": "you name real features is something looking like working button in game client? lol. I known this position: if someone not understand for what something that this is not important and lost time for him. Because if you understand for what this commit then y"
+  },
+  {
+   "id": "gh-303159",
+   "row": 1274,
+   "label": "negative",
+   "text": "oh, you really actually limited it to 5? Not sure if like :\\"
+  },
+  {
+   "id": "gh-1197186",
+   "row": 2343,
+   "label": "positive",
+   "text": "doc added, thanks"
+  },
+  {
+   "id": "gh-780502",
+   "row": 1464,
+   "label": "positive",
+   "text": "Amazing. Well done."
+  },
+  {
+   "id": "gh-44796",
+   "row": 2249,
+   "label": "negative",
+   "text": "LOLWY? :("
+  },
+  {
+   "id": "gh-2256562",
+   "row": 2347,
+   "label": "positive",
+   "text": "+1, thanks for catching this"
+  },
+  {
+   "id": "gh-3557092",
+   "row": 2713,
+   "label": "positive",
+   "text": "I always compile for Java 6 - however would like to use some features of Java 7, but hey, I can use else if, else if instead of a switch for strings and listen to every exception, as it makes backward compatible :)"
+  },
+  {
+   "id": "gh-314816",
+   "row": 397,
+   "label": "positive",
+   "text": "This is awesome ;)"
+  },
+  {
+   "id": "gh-1918951",
+   "row": 2973,
+   "label": "positive",
+   "text": "@tsigo thank you. didnt know about aliases in factories :)"
+  },
+  {
+   "id": "gh-174854",
+   "row": 4898,
+   "label": "positive",
+   "text": "haha this is some hella-awkward misunderstanding of operator precedence, yay parens"
+  },
+  {
+   "id": "gh-389837",
+   "row": 2552,
+   "label": "positive",
+   "text": ">accept old version  if WIN32 is defined :)"
+  },
+  {
+   "id": "gh-1245144",
+   "row": 130,
+   "label": "negative",
+   "text": "Just Mario-Karted into work, while dealing with already terrible Atlanta drivers who are trying to cope with the fact that winds have knocked out every light in Midtown, for this? I feel like I'm taking crazy pills.   At the same time, its whatever dude."
+  },
+  {
+   "id": "gh-598837",
+   "row": 2333,
+   "label": "negative",
+   "text": "Yes, my bad I didn't review it properly."
+  },
+  {
+   "id": "gh-3684200",
+   "row": 4367,
+   "label": "negative",
+   "text": "This sentence looks weird."
+  },
+  {
+   "id": "gh-973164",
+   "row": 1164,
+   "label": "negative",
+   "text": "yes, sorry the ifdef is incorrect, it's fixed now"
+  },
+  {
+   "id": "gh-125124",
+   "row": 2914,
+   "label": "positive",
+   "text": "Don't make me blush :)"
+  },
+  {
+   "id": "gh-71337",
+   "row": 1733,
+   "label": "negative",
+   "text": "I have the same error as starpeak :("
+  },
+  {
+   "id": "gh-1968183",
+   "row": 287,
+   "label": "positive",
+   "text": "lol"
+  },
+  {
+   "id": "gh-195290",
+   "row": 2735,
+   "label": "positive",
+   "text": "great job ambal!"
+  },
+  {
+   "id": "gh-3832225",
+   "row": 2576,
+   "label": "positive",
+   "text": "Thanks bro, missed it! :smile:"
+  },
+  {
+   "id": "gh-187548",
+   "row": 2750,
+   "label": "positive",
+   "text": "thanks!!!! Hope this will solve the problem with ACE-depend crashes"
+  },
+  {
+   "id": "gh-2355395",
+   "row": 2778,
+   "label": "positive",
+   "text": "Finally! This will make everything so much easier :3"
+  },
+  {
+   "id": "gh-2307149",
+   "row": 1070,
+   "label": "negative",
+   "text": "@mbax First you bring us to leave and now you try to stop us doing so? there's just one word for that: Fail!"
+  },
+  {
+   "id": "gh-981838",
+   "row": 1824,
+   "label": "negative",
+   "text": "hum weird, i don't have any memory about that i'm going to make more research"
+  },
+  {
+   "id": "gh-1675305",
+   "row": 1142,
+   "label": "negative",
+   "text": "sorry, please ignore this comment. compiler was stuck... rebuilding OF fixed it."
+  },
+  {
+   "id": "gh-3573171",
+   "row": 3080,
+   "label": "positive",
+   "text": "Yay for improving consistency, +1"
+  },
+  {
+   "id": "gh-4396634",
+   "row": 6751,
+   "label": "negative",
+   "text": "violated, mutilated, maimed, …"
+  },
+  {
+   "id": "gh-2819190",
+   "row": 6042,
+   "label": "positive",
+   "text": "Trust me, I'm not a Rails committer, and I've been on the receiving side of that badgering. :-)"
+  },
+  {
+   "id": "gh-780206",
+   "row": 1463,
+   "label": "positive",
+   "text": "Good stuff!"
+  },
+  {
+   "id": "gh-268795",
+   "row": 4227,
+   "label": "positive",
+   "text": "Good catch :)"
+  },
+  {
+   "id": "gh-602222",
+   "row": 1847,
+   "label": "negative",
+   "text": "did i said, give it NOW!? or do nothing else just it, seriously... stop being a pessimist."
+  },
+  {
+   "id": "gh-1098120",
+   "row": 2879,
+   "label": "positive",
+   "text": "You just made my day. Thank you so much."
+  },
+  {
+   "id": "gh-1592199",
+   "row": 2213,
+   "label": "negative",
+   "text": "A silly mistake I noticed too late! They've been invalidated, but, you're right - they should be generic \"REPLACE ME\"-type values."
+  },
+  {
+   "id": "gh-158821",
+   "row": 2820,
+   "label": "positive",
+   "text": "Gratz for new status, DasBlub!"
+  },
+  {
+   "id": "gh-3265828",
+   "row": 4985,
+   "label": "positive",
+   "text": "Didn't forget. :smiley: I don't have push access to RubyGems for redcarpet."
+  },
+  {
+   "id": "gh-2313740",
+   "row": 1596,
+   "label": "negative",
+   "text": "@JamesNorris You're an annoying troll, and he was joking about using bytecode bypasses."
+  },
+  {
+   "id": "gh-413714",
+   "row": 5365,
+   "label": "positive",
+   "text": "Shauren, you are.. woah. (I bet my inbox will be spammed by replies of github!)  EDIT Isn't it just sad that Shauren has to fix the dirt made by someone else? Just my thoughts.."
+  },
+  {
+   "id": "gh-2394344",
+   "row": 4434,
+   "label": "negative",
+   "text": "This is very bad and will break a lot of things"
+  },
+  {
+   "id": "gh-426912",
+   "row": 1534,
+   "label": "negative",
+   "text": "nice, i thought was my fault and was going crazy"
+  },
+  {
+   "id": "gh-941825",
+   "row": 2402,
+   "label": "positive",
+   "text": "Cool :)"
+  },
+  {
+   "id": "gh-196692",
+   "row": 1817,
+   "label": "negative",
+   "text": "I'm afraid I don't follow :(   If I understood well, `gl_PointCoord` gives every fragment (u,v) coordinates inside these automatically generated quads, so that you can do mapping as you please (e.g. in unrelated classical quads I did flip texture in shad"
+  },
+  {
+   "id": "gh-1217114",
+   "row": 4482,
+   "label": "negative",
+   "text": "I'm concerned that this code is too functional at such a low level. I can imagine it being a hotspot. Obviously we will see when we do performance testing but usually you want C-like code when doing operations like this one to avoid a lot of CPU and memor"
+  },
+  {
+   "id": "gh-2053396",
+   "row": 4700,
+   "label": "positive",
+   "text": "I stand corrected! Cheers   On 7 November 2012 10:04, Sergey Bogdanov <notifications@github.com> wrote:  > In src/ServiceStack.Common/ServiceClient.Web/ServiceClientBase.cs: > > > @@ -904,10 +904,8 @@ public virtual TResponse PostFileWithRequest<TR"
+  },
+  {
+   "id": "gh-1363512",
+   "row": 2261,
+   "label": "negative",
+   "text": "This line is so confusing. :cry:"
+  },
+  {
+   "id": "gh-2120529",
+   "row": 1730,
+   "label": "negative",
+   "text": "Cannon spells bugged..."
+  },
+  {
+   "id": "gh-6445842",
+   "row": 7110,
+   "label": "positive",
+   "text": "Forget about it :-) all fine."
+  },
+  {
+   "id": "gh-1328360",
+   "row": 2626,
+   "label": "positive",
+   "text": "Good call on adding the wiki guides. :)"
+  },
+  {
+   "id": "gh-318",
+   "row": 2300,
+   "label": "negative",
+   "text": "(apologies for the weird formatting there, i didn't realise it was going to use Markdown...)"
+  },
+  {
+   "id": "gh-6101145",
+   "row": 4390,
+   "label": "negative",
+   "text": "@jrbasso I tried that, does not work :("
+  },
+  {
+   "id": "gh-238241",
+   "row": 2668,
+   "label": "positive",
+   "text": "it is told that 11111 will be vehicles implementation :)"
+  },
+  {
+   "id": "gh-228392",
+   "row": 2681,
+   "label": "positive",
+   "text": ":) without corrects of scriptmgr calls in SD2 library was not load :)"
+  },
+  {
+   "id": "gh-1530764",
+   "row": 7099,
+   "label": "positive",
+   "text": "Use default parameter if not set by params hash. If you know less ugly way to do this, please tell me how :)"
+  },
+  {
+   "id": "gh-2306387",
+   "row": 1068,
+   "label": "negative",
+   "text": "**This** is the discussion we're having on this change. If people are too immature, disrespectful or careless to take this discussion seriously, then they'll have lost their chance to either give us a reason to revert this commit or give us a better altern"
+  },
+  {
+   "id": "gh-890444",
+   "row": 2418,
+   "label": "positive",
+   "text": "might be possible, indeed :)"
+  },
+  {
+   "id": "gh-741336",
+   "row": 4840,
+   "label": "positive",
+   "text": "Add in the deprecated reference, so that I can test & merge this ;) Nice work as usual :)"
+  },
+  {
+   "id": "gh-846088",
+   "row": 2961,
+   "label": "positive",
+   "text": "Pretty much what I figured. Thanks for the ultra quick response! ;)"
+  },
+  {
+   "id": "gh-2442089",
+   "row": 5951,
+   "label": "positive",
+   "text": "Awesome :) n8i  Sent from my iPhone  On 16.01.2013, at 01:49, Trustin Lee <notifications@github.com> wrote:  > Yes. Let me take care of it today. >  > — > Reply to this email directly or view it on GitHub. >"
+  },
+  {
+   "id": "gh-1582787",
+   "row": 2367,
+   "label": "positive",
+   "text": "Actually I think it would be nice to maybe visualize also GM on/off with such an aura - so patches welcome :)"
+  },
+  {
+   "id": "gh-1450002",
+   "row": 2525,
+   "label": "positive",
+   "text": "I think this has already been fixed in develop.  Thanks!"
+  },
+  {
+   "id": "gh-2285083",
+   "row": 2040,
+   "label": "negative",
+   "text": "This is somewhat retarded in arenas to have all players show up as your teammates in the data log if they are the same faction you are. Just sayin. But Subv is right, i missed the TEAM_ALLIANCE change :|"
+  },
+  {
+   "id": "gh-1500256",
+   "row": 1242,
+   "label": "negative",
+   "text": "I should have pull requested this :("
+  },
+  {
+   "id": "gh-1676967",
+   "row": 2915,
+   "label": "positive",
+   "text": "@TheDgtl - yes, you're right. That's the best solution so far. The intention of this architecture is to let the chat continue to work even if the server starts becoming unresponsive. And this is a change made by Mojang, not by the Bukkit team. What you see"
+  },
+  {
+   "id": "gh-625628",
+   "row": 1188,
+   "label": "negative",
+   "text": "Don't know how to fix for this type... Can't do anything! :(\" Don't be a sad panda."
+  },
+  {
+   "id": "gh-411270",
+   "row": 1876,
+   "label": "negative",
+   "text": "Can't you just revert this and take off all the bugs caused by this? It's insane.. :s"
+  },
+  {
+   "id": "gh-117784",
+   "row": 4509,
+   "label": "negative",
+   "text": "This might be tricky. Taking a look at the script, it looks like it exits 1 on printing version or help, so we can't distinguish failure from success without doing a real run against a real djvu file."
+  },
+  {
+   "id": "gh-1258712",
+   "row": 2462,
+   "label": "positive",
+   "text": "Yeah, that's the big advantage of using jQuery.each in Callbacks.add!"
+  },
+  {
+   "id": "gh-778889",
+   "row": 4338,
+   "label": "negative",
+   "text": "Since the test is a bit weird, should the issue been mentioned in a comment / test message?"
+  },
+  {
+   "id": "gh-457644",
+   "row": 2130,
+   "label": "negative",
+   "text": "Isn't action_view/context autoloaded as well? requiring a file that may have been autoloaded somewhere else can lead to double requires due to a ruby bug. :("
+  },
+  {
+   "id": "gh-515108",
+   "row": 1861,
+   "label": "negative",
+   "text": "ugh again... credit whores"
+  },
+  {
+   "id": "gh-4047698",
+   "row": 596,
+   "label": "positive",
+   "text": "@josevalim :heart: much better now"
+  },
+  {
+   "id": "gh-2275693",
+   "row": 1056,
+   "label": "negative",
+   "text": "XemsDoom: +1  This commit is terrible mistake, and I'm not going to continue in this %#@& !"
+  },
+  {
+   "id": "gh-639032",
+   "row": 5330,
+   "label": "negative",
+   "text": "its full of hacks (including that +200 to LK height)"
+  },
+  {
+   "id": "gh-559552",
+   "row": 6003,
+   "label": "positive",
+   "text": "Thanks to QAston for his tip about the unit flag and Shauren by giving a hint I couldn't exploit since I didn't know how to exploit it the good way :p"
+  },
+  {
+   "id": "gh-3887952",
+   "row": 1129,
+   "label": "negative",
+   "text": "Seems like something is leaking memory :("
+  },
+  {
+   "id": "gh-982380",
+   "row": 5310,
+   "label": "negative",
+   "text": "Agreed with Vincent-Michael, at the moment many of those scripts were written people did not know how the spell system should work, as an example you can take script for righteous defense, which is an extreme violation of spell system rules."
+  },
+  {
+   "id": "gh-1130305",
+   "row": 1791,
+   "label": "negative",
+   "text": "That shit took 2 days to find. I hate it with every inch of my body."
+  },
+  {
+   "id": "gh-18428",
+   "row": 5818,
+   "label": "negative",
+   "text": "My bad, it's not \"dasherize\".  The issue is line 223 of hash/conversions.rb - adding \"underscore\".  Same problem, though, and a major change in functionality."
+  },
+  {
+   "id": "gh-1246546",
+   "row": 1628,
+   "label": "negative",
+   "text": "The end of an era. This saddens me."
+  },
+  {
+   "id": "gh-248995",
+   "row": 5392,
+   "label": "positive",
+   "text": "Interesting that you get key violation errors during runtime on DELETE and UPDATE queries. I'll investigate this, thank you for your feedback."
+  },
+  {
+   "id": "gh-207614",
+   "row": 1280,
+   "label": "negative",
+   "text": "> Is it even possible to reliably compute vertex normals just from the mesh? I tried this with MeshLab when I was trying to fix the first Gallardo model and I couldn't get it right :(.  Hmm, it depends of the mesh. A car can have some sharp corners, so com"
+  },
+  {
+   "id": "gh-780129",
+   "row": 1458,
+   "label": "positive",
+   "text": "Nice!!!"
+  },
+  {
+   "id": "gh-86146",
+   "row": 2982,
+   "label": "positive",
+   "text": "I give my congratulation. :)"
+  },
+  {
+   "id": "gh-2350820",
+   "row": 4132,
+   "label": "negative",
+   "text": "oops too fast, it needs to be reverted !"
+  },
+  {
+   "id": "gh-3687347",
+   "row": 4779,
+   "label": "positive",
+   "text": "This is irrelevant to the actual necessary changes, but it's a definite improvement—nice one."
+  },
+  {
+   "id": "gh-294394",
+   "row": 1918,
+   "label": "negative",
+   "text": "WTF?!?  if we discuss something and come to an agreement, could we not just undo the changes again without an agreement?"
+  },
+  {
+   "id": "gh-918185",
+   "row": 985,
+   "label": "negative",
+   "text": "yes, sure, thank you - copy and paste from go instead unit :("
+  },
+  {
+   "id": "gh-2182051",
+   "row": 4103,
+   "label": "negative",
+   "text": "That's too much worrying. I'm going to restructure it so it does the right thing without having to."
+  },
+  {
+   "id": "gh-698752",
+   "row": 1690,
+   "label": "negative",
+   "text": "WTF?????"
+  },
+  {
+   "id": "gh-1460045",
+   "row": 4405,
+   "label": "negative",
+   "text": "Having a destructive get() seems like a bad idea.  Why not just call set() afterwards to clear the block.  I'd like to avoid duplicated functionality."
+  },
+  {
+   "id": "gh-2705717",
+   "row": 4407,
+   "label": "negative",
+   "text": "bad indentation"
+  },
+  {
+   "id": "gh-2924348",
+   "row": 610,
+   "label": "positive",
+   "text": ":rocket:"
+  },
+  {
+   "id": "gh-897815",
+   "row": 4191,
+   "label": "negative",
+   "text": "OK, but I just discovered the built binaries this way behave differently. :( Seems like further investigation is needed."
+  },
+  {
+   "id": "gh-422368",
+   "row": 461,
+   "label": "positive",
+   "text": "thx!"
+  },
+  {
+   "id": "gh-340844",
+   "row": 2167,
+   "label": "negative",
+   "text": "sigh...it is not a question of syntax preference. It's an abstraction that adds no value to the underlying scripting language. It's not worth having the argument of whether it's nice or not (which is entirely subjective)...it obscures without adding value"
+  },
+  {
+   "id": "gh-1629234",
+   "row": 4529,
+   "label": "negative",
+   "text": "that is sad"
+  },
+  {
+   "id": "gh-2241234",
+   "row": 5398,
+   "label": "positive",
+   "text": "@antirez : I noticed you never but the reported-by/signed-off-by lines to your commits. My humble suggestion is that this might be a wonderful opportunity to do so:  ```` .git/COMMIT_MSG:  [...]  Reported-by: foxx <email> Tested-by/Acked-by: charsy"
+  },
+  {
+   "id": "gh-586524",
+   "row": 5233,
+   "label": "negative",
+   "text": "Meh. Ok. For now then we can't support mysql/1.9. It's more important to maintain proper equality of utf-8 strings in other configurations.  That said I don't think it's a good long term solution. I'll hack at it and see if I can make it work somehow."
+  },
+  {
+   "id": "gh-1097309",
+   "row": 5916,
+   "label": "negative",
+   "text": "I just visited html5boilerplate.com in Opera, zoomed in a bit, took a screenshot, and cropped it. Sorry if it’s not authentic enough :(  @paulirish Fun fact (just tested): iOS 5.1 doesn’t support SVG touch icons. :( I’ve reported this as bug #11068792 on"
+  },
+  {
+   "id": "gh-16725",
+   "row": 321,
+   "label": "positive",
+   "text": "Yeh, it was a nice feature but I think this is easier to understand - I like having #clear and #destroy separately, too. :-)"
+  },
+  {
+   "id": "gh-151488",
+   "row": 2783,
+   "label": "positive",
+   "text": "Sweet!"
+  },
+  {
+   "id": "gh-5444095",
+   "row": 4392,
+   "label": "negative",
+   "text": "This actually have a pattern name, but it is ugly and confusing: Flyweight factory"
+  },
+  {
+   "id": "gh-5181782",
+   "row": 6394,
+   "label": "positive",
+   "text": "yes, I wanted to listen to a view render in a crud listener, but couldn't access the view to attach an event, since the view isn't created until render() is called - had to hack around it to make it work :) I expected a View.beforeRender event in any cla"
+  },
+  {
+   "id": "gh-1651931",
+   "row": 2011,
+   "label": "negative",
+   "text": "Hey mate, this test is apparently [failing randomly on travis](http://travis-ci.org/#!/rails/rails/jobs/1999945/L163), but it's passing locally for me =(, mind taking a look?"
+  },
+  {
+   "id": "gh-568475",
+   "row": 2436,
+   "label": "positive",
+   "text": "Schmoozerd is finally a dev, cool :) Cheers! :)"
+  },
+  {
+   "id": "gh-365832",
+   "row": 2581,
+   "label": "positive",
+   "text": "As I said, probably I am just a consistency-freak...  and for that I am glad that isArrayLike will be considered. :)"
+  },
+  {
+   "id": "gh-2049951",
+   "row": 3053,
+   "label": "positive",
+   "text": "Great catch, thank you!  Also I noticed that I did this totally wrong by doing a normal assignment instead of at least <<-, if not explicit get/assign on globalenv(). Must have been in a hurry :)"
+  },
+  {
+   "id": "gh-4412256",
+   "row": 6402,
+   "label": "positive",
+   "text": "I like.  It's not obvious in the diff, but does this allow setting the value 'once' like so:  ```php $this->Html->pathPrefix = '//cakephp.org/css'; $this->Html->css('foo'); // http://cakephp.org/css/foo.css $this->Html->css(array('bar', 'spam'); //"
+  },
+  {
+   "id": "gh-1129737",
+   "row": 2054,
+   "label": "negative",
+   "text": "-1. This just seems like petty stubbornness."
+  },
+  {
+   "id": "gh-5585954",
+   "row": 6615,
+   "label": "positive",
+   "text": "Sure, http://www.openldap.org/its/index.cgi/Incoming?id=7656 :smile:"
+  },
+  {
+   "id": "gh-399903",
+   "row": 337,
+   "label": "positive",
+   "text": "that is a good idea."
+  },
+  {
+   "id": "gh-120274",
+   "row": 2921,
+   "label": "positive",
+   "text": "Love the commit message ^^"
+  },
+  {
+   "id": "gh-764852",
+   "row": 2097,
+   "label": "negative",
+   "text": "Oops. Sorry. There is one. =("
+  },
+  {
+   "id": "gh-2381",
+   "row": 2292,
+   "label": "negative",
+   "text": "ok, no idea how to format code blocks in github comments :-/"
+  },
+  {
+   "id": "gh-362454",
+   "row": 4564,
+   "label": "negative",
+   "text": "This is most likely a bad default"
+  },
+  {
+   "id": "gh-241045",
+   "row": 6168,
+   "label": "negative",
+   "text": "its hack :]"
+  },
+  {
+   "id": "gh-5675386",
+   "row": 7109,
+   "label": "positive",
+   "text": "The `as_json` requirement is a little looser than you are thinking :)  It's meant to produce a JSON representation of the object, which includes Ruby objects that have a clear meaning to the JSON encoder, like symbols and times. That's a natural way for a"
+  },
+  {
+   "id": "gh-1223480",
+   "row": 1255,
+   "label": "negative",
+   "text": "Well, I'm sorry if you see this as not useful but I could not import it because of that white space. Thought that somebody else might have same problems so I thought it was worth mentioning."
+  },
+  {
+   "id": "gh-1192080",
+   "row": 6059,
+   "label": "negative",
+   "text": "I agree this is a big ugly hack that will break more than it will fix. The original script should be kept for other systems.  If necessary you can use uname to discover distro/version and switch proper logic using that. (but I guess there are better solu"
+  },
+  {
+   "id": "gh-12990",
+   "row": 2283,
+   "label": "negative",
+   "text": "Oh my, I fail again… http://is.gd/hqCo"
+  },
+  {
+   "id": "gh-548996",
+   "row": 1853,
+   "label": "negative",
+   "text": "without working calendar in core-these dates will mislead the players. Since the date of the client are converted from DBC files :-( https://github.com/TrinityCore/TrinityCore/commits/calendar"
+  },
+  {
+   "id": "gh-386060",
+   "row": 2163,
+   "label": "negative",
+   "text": "Yeah, that is a bug. And a embarrassing one. Pull request with a fix please?"
+  },
+  {
+   "id": "gh-4651234",
+   "row": 7097,
+   "label": "positive",
+   "text": "Let's go with `ensure_reset_password_token!` here too. You can also change the line 47 of this file to call this new method. :)"
+  },
+  {
+   "id": "gh-780145",
+   "row": 1462,
+   "label": "positive",
+   "text": ":+1: for speed!"
+  },
+  {
+   "id": "gh-4676676",
+   "row": 4327,
+   "label": "negative",
+   "text": "Don't do this. This will break horribly if node.js ever adds multi-isolate support."
+  },
+  {
+   "id": "gh-366336",
+   "row": 2583,
+   "label": "positive",
+   "text": "For users, it probably don't have to be mentioned (it's a documentation). For developers there are unit tests (+docs) :)"
+  },
+  {
+   "id": "gh-443807",
+   "row": 1870,
+   "label": "negative",
+   "text": "sorry to say but still crashes when making new char.  http://pastebin.com/2mx4dmCu"
+  },
+  {
+   "id": "gh-46023",
+   "row": 3043,
+   "label": "positive",
+   "text": "now just need db support and vehicle working and more (scriptdev  aswell);)  btw nice work"
+  },
+  {
+   "id": "gh-196826",
+   "row": 1034,
+   "label": "negative",
+   "text": "Oh, sorry it was my mistake."
+  },
+  {
+   "id": "gh-3675382",
+   "row": 4175,
+   "label": "negative",
+   "text": "ugh stupid search"
+  },
+  {
+   "id": "gh-432940",
+   "row": 2136,
+   "label": "negative",
+   "text": "It does indeed needs much more documentation :("
+  },
+  {
+   "id": "gh-261232",
+   "row": 1882,
+   "label": "negative",
+   "text": "when i entered last time on pit of saron, Scourgelord Tyrannus cant be attacked but attack other players..:|"
+  },
+  {
+   "id": "gh-417310",
+   "row": 4694,
+   "label": "positive",
+   "text": "ahh, its ok :) then GJ"
+  },
+  {
+   "id": "gh-41459",
+   "row": 3050,
+   "label": "positive",
+   "text": "Nice work all!  I noticed you programmed in the new ticket system for 3.3, but is that a placeholder, or does it actually work? Because I'd love to see surveys and GM responses actually work."
+  },
+  {
+   "id": "gh-2367622",
+   "row": 2775,
+   "label": "positive",
+   "text": "Please, test without plugins.  One person already determined DynMap is the culprit, so try without plugins. To make sure. :)"
+  },
+  {
+   "id": "gh-3364642",
+   "row": 4176,
+   "label": "negative",
+   "text": "Argh! Sorry! Obviously hadn't had enough coffee this morning. Just noticed another one…"
+  },
+  {
+   "id": "gh-1212922",
+   "row": 5281,
+   "label": "negative",
+   "text": "I think this is a hack, 3kid is right... 0.5714 should be the dbc lava burst coef."
+  },
+  {
+   "id": "gh-1126386",
+   "row": 6076,
+   "label": "negative",
+   "text": "@tarcieri I don't appeal to the authority. We are talking about formal languages.  In Ruby 0 is true. That is a fact. Given that fact, the one that has to justify that it is a bad idea that 0 is true is you. And you need to argue with language designers."
+  },
+  {
+   "id": "gh-1621752",
+   "row": 1911,
+   "label": "negative",
+   "text": "Hmm, this will break some plugins that are passing objects to represent models in the view :("
+  },
+  {
+   "id": "gh-5163285",
+   "row": 4651,
+   "label": "positive",
+   "text": "Oh yes! Good catch =) Will send updated PR after lunch.   #  Tim  via phone  On 12 Jul 2013, at 13:10, Theodore Watson <notifications@github.com> wrote:  > In libs/openFrameworks/gl/ofVbo.cpp: >  > > +} > > + > > +//-------------------------"
+  },
+  {
+   "id": "gh-34574",
+   "row": 1183,
+   "label": "negative",
+   "text": "Vladimir I wouldn't waste my breathe if I were you, but I'm not. You're trying to justify yourself to someone who says he hates C++ so he's learning C# instead.  jaddie the only reason I could see why someone would hate C++ is because some functions call"
+  },
+  {
+   "id": "gh-2171142",
+   "row": 2621,
+   "label": "positive",
+   "text": "@bnoordhuis Everything is working fine. Awesome!"
+  },
+  {
+   "id": "gh-4414",
+   "row": 1740,
+   "label": "negative",
+   "text": "Yes, this is the first tiem I noticed it and it's a pretty weird idea to add something like that to the grid in the first place, IMO."
+  },
+  {
+   "id": "gh-489498",
+   "row": 4888,
+   "label": "positive",
+   "text": "Agreed. It is rather silly to set it conditionally. Anyway, should be good to go. Thanks for the suggestions."
+  },
+  {
+   "id": "gh-943701",
+   "row": 2515,
+   "label": "positive",
+   "text": "@swaroopch don't apologize, we need more nitpicking like this on the docs. You are encouraged to double-check us."
+  },
+  {
+   "id": "gh-24238",
+   "row": 4903,
+   "label": "positive",
+   "text": "Fun trick: you can use `Object` instead of `function(d) { return d; }`. But the identity function is probably more readable. :)"
+  },
+  {
+   "id": "gh-740261",
+   "row": 2119,
+   "label": "negative",
+   "text": "This sounds like a \"major\" bug. Would you mind to fill a issue for it an close it ? So we have a better history of what bugs got fixed ?"
+  },
+  {
+   "id": "gh-381122",
+   "row": 473,
+   "label": "positive",
+   "text": "He-he  http://filebeam.com/ab2603ca3af8b3130bbcac8da807677c.jpg  I wrote: \"Sorry, wrong patch)   Please delete this issue \" )))))))))))))"
+  },
+  {
+   "id": "gh-663912",
+   "row": 2257,
+   "label": "negative",
+   "text": "I don't like the idea of this patch, I see no reason for us to be able to change tracking mid run (which this patch allows.) For that matter I'm kindof against the whole idea to change buffering number based on advancedsettings (which I have stated before"
+  },
+  {
+   "id": "gh-153786",
+   "row": 2788,
+   "label": "positive",
+   "text": "Awesome, thanks!"
+  },
+  {
+   "id": "gh-2434407",
+   "row": 4748,
+   "label": "positive",
+   "text": "I think it would make \"more sense\" to let 08 extend from 07. At least it sounds more logic, even if it will not matter :)"
+  },
+  {
+   "id": "gh-3988903",
+   "row": 5098,
+   "label": "negative",
+   "text": "/Suicide...  I just hate RBAC ._."
+  },
+  {
+   "id": "gh-4149642",
+   "row": 2196,
+   "label": "negative",
+   "text": "We have a bug invasion for quests like this - spell hit this npc and it will give you a credit."
+  },
+  {
+   "id": "gh-2978027",
+   "row": 5492,
+   "label": "negative",
+   "text": "hack, hack. Why is this information useful to the user?"
+  },
+  {
+   "id": "gh-1132734",
+   "row": 1792,
+   "label": "negative",
+   "text": "Still the same on this revision - DB data are not loaded sorry ... Any idea?"
+  },
+  {
+   "id": "gh-264168",
+   "row": 2648,
+   "label": "positive",
+   "text": "wow! great work."
+  },
+  {
+   "id": "gh-2250546",
+   "row": 1726,
+   "label": "negative",
+   "text": "i wouldnt complain about it. hate cata."
+  },
+  {
+   "id": "gh-1860876",
+   "row": 1615,
+   "label": "negative",
+   "text": "they don't care for those people..."
+  },
+  {
+   "id": "gh-424688",
+   "row": 4754,
+   "label": "positive",
+   "text": "As you know we love contributions ;) And thanks again for all the work!"
+  },
+  {
+   "id": "gh-148090",
+   "row": 1872,
+   "label": "negative",
+   "text": "It's always sad to see a reference like that go, but it was probably a good move."
+  },
+  {
+   "id": "gh-3832826",
+   "row": 7121,
+   "label": "positive",
+   "text": "I trust you"
+  },
+  {
+   "id": "gh-19666",
+   "row": 2593,
+   "label": "positive",
+   "text": "I didn't know about libev. I'll check it out! Thanks."
+  },
+  {
+   "id": "gh-190462",
+   "row": 823,
+   "label": "positive",
+   "text": "Hahaha.  I mean, I don't care.  ;-)  It seems like readability is most important in this case.  But I don't care either way.  I prefer method definitions that look like this:      def foo bar, baz       ....     end  So obviously my aesthetics are"
+  },
+  {
+   "id": "gh-3630350",
+   "row": 3078,
+   "label": "positive",
+   "text": "It's as I said for cata. I'm 100% positive, especially for 4.3."
+  },
+  {
+   "id": "gh-2496968",
+   "row": 4121,
+   "label": "negative",
+   "text": "This was an accident with ctrl + f. I reverted the others but forgot about this one :("
+  },
+  {
+   "id": "gh-117051",
+   "row": 3329,
+   "label": "positive",
+   "text": "Neat.  I wouldn't pass up the opportunity to use a crazy trick!  :)"
+  },
+  {
+   "id": "gh-2466138",
+   "row": 1031,
+   "label": "negative",
+   "text": "@riyad But you added it in Pull Request. And this code is in master. So we got a broken build for one day :("
+  },
+  {
+   "id": "gh-22830",
+   "row": 1222,
+   "label": "negative",
+   "text": "Recompiled version works fine, sorry."
+  },
+  {
+   "id": "gh-242822",
+   "row": 1014,
+   "label": "negative",
+   "text": "sorry, i guess i should pay more attention to compiler warnings..."
+  },
+  {
+   "id": "gh-638738",
+   "row": 1837,
+   "label": "negative",
+   "text": "That's why search/replace is a bad idea."
+  },
+  {
+   "id": "gh-467985",
+   "row": 2459,
+   "label": "positive",
+   "text": "That is just amazing. Thank you."
+  },
+  {
+   "id": "gh-2282367",
+   "row": 6054,
+   "label": "negative",
+   "text": "It's hilarious how every time GarretSidzaka posts with seeming intention to insult me, he says things that describe none of my posts but most of his.  That a post disagrees with a commit is unrelated to whether the post is spamming, flaming, or trolling."
+  },
+  {
+   "id": "gh-1296591",
+   "row": 1787,
+   "label": "negative",
+   "text": "Yeah, totally useless."
+  },
+  {
+   "id": "gh-742306",
+   "row": 418,
+   "label": "negative",
+   "text": "Great, again client freezes ...."
+  },
+  {
+   "id": "gh-2975932",
+   "row": 2081,
+   "label": "negative",
+   "text": "For some reason this commit did some really weird things to the diff making it somewhat hard to read."
+  },
+  {
+   "id": "gh-253862",
+   "row": 346,
+   "label": "positive",
+   "text": "Right, Thanks for the clarification."
+  },
+  {
+   "id": "gh-5903991",
+   "row": 4735,
+   "label": "positive",
+   "text": "I see ok :)"
+  },
+  {
+   "id": "gh-1945505",
+   "row": 4332,
+   "label": "negative",
+   "text": "Doh!  ![facepalm](http://i.imgur.com/jF5ib.gif)  Now I'm understanding @dmethvin's remark about global settings being a bad idea. Ok. I'm walking out the door. I can look at refactoring this later."
+  },
+  {
+   "id": "gh-115536",
+   "row": 6411,
+   "label": "positive",
+   "text": "The benefit of this class isn't really to forget how to write PHP I'd say :) The main thing is that this provides encapsulation, allows you to run many request/responses within one process (for testing, subrequests, app server in php etc)."
+  },
+  {
+   "id": "gh-1244257",
+   "row": 1626,
+   "label": "negative",
+   "text": "YYYYYYYY :("
+  },
+  {
+   "id": "gh-266015",
+   "row": 6194,
+   "label": "positive",
+   "text": "Nullcheck 'e' here. Yeah I know it's a rare case but it prevents huge bugs in the future.  Also, can we change 'e' to 'event'? Obfuscated code and all :)"
+  },
+  {
+   "id": "gh-4676740",
+   "row": 3448,
+   "label": "positive",
+   "text": "It seems you are right. I've just checked and indeed it has overwritten my own Return-Path."
+  },
+  {
+   "id": "gh-2119831",
+   "row": 1406,
+   "label": "positive",
+   "text": "No worries. Thanks for getting this fix in!"
+  },
+  {
+   "id": "gh-322654",
+   "row": 2617,
+   "label": "positive",
+   "text": "For me, the only fix I was able to do (without deep research) is 'DetectPosCollision = 0' and since vmap code has been added to core years ago :)"
+  },
+  {
+   "id": "gh-2239345",
+   "row": 1405,
+   "label": "positive",
+   "text": "This makes me so happy :)  (as well as all the others that follow)"
+  },
+  {
+   "id": "gh-1302025",
+   "row": 1529,
+   "label": "negative",
+   "text": "num variable is useless. `nth` is a silly name compared to `findElementNode` or something that's actually descriptive"
+  },
+  {
+   "id": "gh-3339073",
+   "row": 2094,
+   "label": "negative",
+   "text": "Ah, never mind, you included the change and then reverted. I was confused :("
+  },
+  {
+   "id": "gh-345757",
+   "row": 2602,
+   "label": "positive",
+   "text": "Thanks for explaining it :D"
+  },
+  {
+   "id": "gh-3957219",
+   "row": 3063,
+   "label": "positive",
+   "text": "Much appreciated."
+  },
+  {
+   "id": "gh-3486831",
+   "row": 4507,
+   "label": "negative",
+   "text": "ah, sorry"
+  },
+  {
+   "id": "gh-1250522",
+   "row": 1093,
+   "label": "negative",
+   "text": ":'(  I'm keeping my hot pink!!!!"
+  },
+  {
+   "id": "gh-510350",
+   "row": 6069,
+   "label": "negative",
+   "text": "So, if I understand well, TC should stop evolving to a become a better core in order to allow you to keep your ugly hacks ?"
+  },
+  {
+   "id": "gh-3784008",
+   "row": 4739,
+   "label": "positive",
+   "text": "you can just commit and push your stuff... the pull-request is updated automatically. Just let us know once we should review again. And thanks again!"
+  },
+  {
+   "id": "gh-515532",
+   "row": 1614,
+   "label": "negative",
+   "text": "My bad! Fixed in 2fbcbe9."
+  },
+  {
+   "id": "gh-481855",
+   "row": 994,
+   "label": "negative",
+   "text": "@Undergarun: Only auction table or cleaned item_instance as well? DELETE FROM item_instance WHERE owner_id==0; typed blind will be wrong!"
+  },
+  {
+   "id": "gh-447102",
+   "row": 6007,
+   "label": "positive",
+   "text": "After this commit, the old hack for Starfall AoE Damage shouldn't be removed? :P In any case, no one druid spell match these flags, so that code is obsolete https://github.com/elecyb/TrinityCore/commit/10c5c8082a5928fc755459c139e290451c8021a5 I also did"
+  },
+  {
+   "id": "gh-6184377",
+   "row": 4398,
+   "label": "negative",
+   "text": "only one space between sentences (barbaric, I know...)"
+  },
+  {
+   "id": "gh-854558",
+   "row": 1271,
+   "label": "negative",
+   "text": "I'm very sorry to hear you spent so long stuck on this, but it IS in the upgrade guide."
+  },
+  {
+   "id": "gh-16640",
+   "row": 5807,
+   "label": "positive",
+   "text": "or.... you're hacking in too deep, depending on the name of instance vars that are prepended with an underscore (very private instance vars?)... ;)"
+  },
+  {
+   "id": "gh-114430",
+   "row": 1130,
+   "label": "negative",
+   "text": "@bigbasher I'm sorry to cause you any trouble. I'm not really sure what you mean. Was the download link incorrect? I pushed a tag of v2.1.0 which is the most recent version of the sdk."
+  },
+  {
+   "id": "gh-362546",
+   "row": 5426,
+   "label": "negative",
+   "text": "Oops... forget about this !"
+  },
+  {
+   "id": "gh-545046",
+   "row": 1171,
+   "label": "negative",
+   "text": "thank's isaacs, sadly it took us several ridiculous comment ping-pongs to come to some meaningful dialogue such is the power of \"social coding\", I suppose ..."
+  },
+  {
+   "id": "gh-1441195",
+   "row": 5994,
+   "label": "positive",
+   "text": "GOs with gossip without hacks? epic!"
+  },
+  {
+   "id": "gh-419363",
+   "row": 1718,
+   "label": "negative",
+   "text": "This bug crashed all my servers. It was terrible."
+  },
+  {
+   "id": "gh-2378208",
+   "row": 1887,
+   "label": "negative",
+   "text": "What the fuck. We ported this from a BSD..."
+  },
+  {
+   "id": "gh-160867",
+   "row": 1567,
+   "label": "negative",
+   "text": "the concept of having it done but looking like total abomination doesn't exist here.."
+  },
+  {
+   "id": "gh-2275192",
+   "row": 93,
+   "label": "negative",
+   "text": "@Runemoro https://github.com/Bukkit/CraftBukkit/commit/8f12382e8efc8c39a919af9180dd884caf3720ff#commitcomment-2275167 > @mbax , @Wolvereness There's 355 comments on this commit. 90% of them want you to revert it. Why won't you listen to the others want?"
+  },
+  {
+   "id": "gh-1299440",
+   "row": 5665,
+   "label": "positive",
+   "text": "Nice. Easy to forget :-)"
+  },
+  {
+   "id": "gh-1586769",
+   "row": 1944,
+   "label": "negative",
+   "text": "build fails for me :(  http://pastebin.com/NDCQ2zSq"
+  },
+  {
+   "id": "gh-1351383",
+   "row": 2604,
+   "label": "positive",
+   "text": "whenever i see deleted code, i get all happy and stuff."
+  },
+  {
+   "id": "gh-1915132",
+   "row": 288,
+   "label": "positive",
+   "text": ":D"
+  },
+  {
+   "id": "gh-2386669",
+   "row": 4723,
+   "label": "positive",
+   "text": "that would be great, thanks, can't find any documentation on this feature."
+  },
+  {
+   "id": "gh-1543573",
+   "row": 3788,
+   "label": "negative",
+   "text": "Alright, let me know when things are ready for review, I've got an insane amount of code to review"
+  },
+  {
+   "id": "gh-565816",
+   "row": 4186,
+   "label": "negative",
+   "text": "gah, yep :("
+  },
+  {
+   "id": "gh-1207149",
+   "row": 4679,
+   "label": "positive",
+   "text": "There, I fixed the two cleanup-issues :) Sorry about the sloppyness!"
+  },
+  {
+   "id": "gh-1037936",
+   "row": 1421,
+   "label": "positive",
+   "text": "Good work qaston"
+  },
+  {
+   "id": "gh-2515045",
+   "row": 514,
+   "label": "negative",
+   "text": "Ouch, that 'edit' button is evil. I also expected it to create a pull request."
+  },
+  {
+   "id": "gh-6080150",
+   "row": 4719,
+   "label": "positive",
+   "text": "yeah I like the idea of detecting leaks"
+  },
+  {
+   "id": "gh-570242",
+   "row": 1309,
+   "label": "negative",
+   "text": "Oh.. you custom stuff freaks.. I still hate you"
+  },
+  {
+   "id": "gh-278462",
+   "row": 2193,
+   "label": "negative",
+   "text": "Thanks, I hadn't seen the pull request. I still disagree and think this sets a bad example (i.e. people who don't have `.rvmrc` in their global `.gitignore` are doing it wrong; they should explicitly `git add -f` it on a per-project basis if they want to s"
+  },
+  {
+   "id": "gh-1016553",
+   "row": 1443,
+   "label": "positive",
+   "text": "I love clean ups. It filters out all these copy&paste noobs :=)"
+  },
+  {
+   "id": "gh-1040456",
+   "row": 2064,
+   "label": "negative",
+   "text": ":+1: @holman.  but who knows how many apps have this issue and don't even realize it. :("
+  },
+  {
+   "id": "gh-1666905",
+   "row": 4418,
+   "label": "negative",
+   "text": "This seems like a poor idea, and probably should not exist."
+  },
+  {
+   "id": "gh-109599",
+   "row": 4189,
+   "label": "negative",
+   "text": "Ugh, right. I haven't noticed this small detail. :("
+  },
+  {
+   "id": "gh-6485024",
+   "row": 4006,
+   "label": "positive",
+   "text": "Perhaps reversing the previous decision is best. Having isset() and the ArrayAccess interface work as expected is more important than handling null values. Perhaps a separate method could be used to see if a property is defined?"
+  },
+  {
+   "id": "gh-531345",
+   "row": 5981,
+   "label": "positive",
+   "text": "This fixes a movement exploit allowing bypass of this code, Good work."
+  },
+  {
+   "id": "gh-710522",
+   "row": 3696,
+   "label": "positive",
+   "text": "Oh, you're right. Misread."
+  },
+  {
+   "id": "gh-2536301",
+   "row": 4743,
+   "label": "positive",
+   "text": "I'm fine with having `freeInboundMessage(..)`.  :-)"
+  },
+  {
+   "id": "gh-2411715",
+   "row": 6266,
+   "label": "positive",
+   "text": "Well spotted.  It wasn’t actually necessary since .lineStart always reassigned it anyway, but it’s cleaner and more efficient to only reassign on ringEnd.  Fixed in @623b594cf5d9e413da78e20cadbc00726521718e."
+  },
+  {
+   "id": "gh-2395463",
+   "row": 5939,
+   "label": "negative",
+   "text": "Spambots on GitHub? Now I've seen everything. :(  >"
+  },
+  {
+   "id": "gh-4474072",
+   "row": 4408,
+   "label": "negative",
+   "text": "I am sorry. Can you provide any reference to how to cross referencing these sections from the docs in another project?"
+  },
+  {
+   "id": "gh-364550",
+   "row": 2151,
+   "label": "negative",
+   "text": "Fuck Reddit, I'm reading only commit notes from now on"
+  },
+  {
+   "id": "gh-1483085",
+   "row": 1775,
+   "label": "negative",
+   "text": "my bad -.-"
+  },
+  {
+   "id": "gh-335225",
+   "row": 6354,
+   "label": "positive",
+   "text": "The whole point behind previously removing this line was that there's no point behind assigning this variable to the value of one that already exists. :) So, it should be better to update line 191 to:      $uri = substr($_SERVER['REQUEST_URI'], strlen($_S"
+  },
+  {
+   "id": "gh-330235",
+   "row": 6053,
+   "label": "negative",
+   "text": "changes like this without spells == hack. 13 spells only in DBC, by sniff his much more."
+  },
+  {
+   "id": "gh-3696680",
+   "row": 177,
+   "label": "negative",
+   "text": "Sorry, my mistake - haven't noticed it was dropped."
+  },
+  {
+   "id": "gh-76584",
+   "row": 5082,
+   "label": "positive",
+   "text": "no, my players doing this in duel. PvP priest vs warrior and priest win with spam of one button :lol: he also said \"noob\" to this warrior xD I will try to test it self tomorrow, maybe i will find a way how to reproduce, i think it's no hard and related t"
+  },
+  {
+   "id": "gh-1174130",
+   "row": 1259,
+   "label": "negative",
+   "text": "> \\ No newline at end of file  :( Also, this might fix #4517"
+  },
+  {
+   "id": "gh-148269",
+   "row": 1873,
+   "label": "negative",
+   "text": "AGPL == epic fail. Don’t count on getting all that many contributors."
+  },
+  {
+   "id": "gh-1810292",
+   "row": 4721,
+   "label": "positive",
+   "text": "I learned something new in clojure core.  that hasn't happened for a while :)"
+  },
+  {
+   "id": "gh-1228926",
+   "row": 1078,
+   "label": "negative",
+   "text": "I was afraid this could happen. It probably needs the URLs it can match against, too. Since I never used Cubbies, I have no idea how a URL looks there :/"
+  },
+  {
+   "id": "gh-16889",
+   "row": 904,
+   "label": "positive",
+   "text": "congrats!"
+  },
+  {
+   "id": "gh-345296",
+   "row": 2628,
+   "label": "positive",
+   "text": "I am geeking out over the bug and the fix. srsly awesome."
+  },
+  {
+   "id": "gh-1454800",
+   "row": 5904,
+   "label": "negative",
+   "text": "wrong realization AKA hack. see spells 48586-48589."
+  },
+  {
+   "id": "gh-2357126",
+   "row": 2779,
+   "label": "positive",
+   "text": "Thank you sooooo much ;)"
+  },
+  {
+   "id": "gh-882049",
+   "row": 4550,
+   "label": "negative",
+   "text": "damn I need to configure spelling in emacs, this is embarrassing..."
+  },
+  {
+   "id": "gh-3974117",
+   "row": 1653,
+   "label": "negative",
+   "text": "You threw eveything in the enumerator except for these, which you commented in a fugly way. Y U DO DIS"
+  },
+  {
+   "id": "gh-2054808",
+   "row": 4522,
+   "label": "negative",
+   "text": "OUCH! (I really would like to have compiler support in catching these: `context` must not ever leave the actor’s context, because that would be completely illogical ;-) )"
+  },
+  {
+   "id": "gh-2949657",
+   "row": 1980,
+   "label": "negative",
+   "text": "Ops, that seems to have [failed the build](https://travis-ci.org/rails/rails/builds/6066789) =("
+  },
+  {
+   "id": "gh-449853",
+   "row": 6086,
+   "label": "positive",
+   "text": "already decided ^^  It's better to have it in AchievementCriteriaScripts (like other achievements) and also CheckAchievementCriteriaMeet() is not so Blizzlike (we can almost say hacky)"
+  },
+  {
+   "id": "gh-6346131",
+   "row": 3131,
+   "label": "negative",
+   "text": "this will break arm android. You must add a new case instead of replacing existing ones."
+  },
+  {
+   "id": "gh-6213710",
+   "row": 7113,
+   "label": "negative",
+   "text": "This seems a bit awkward (the `if ... continue`) part; I don't expect a function named `port_*` to return anything, and then it does return a dict which gets discarded... it's just weird. I think it might be better to just port all the cookie settings en"
+  },
+  {
+   "id": "gh-360043",
+   "row": 1005,
+   "label": "negative",
+   "text": "This broke my test suite in FF :("
+  },
+  {
+   "id": "gh-496634",
+   "row": 2443,
+   "label": "positive",
+   "text": "Cool, big thanks!"
+  },
+  {
+   "id": "gh-165811",
+   "row": 2796,
+   "label": "positive",
+   "text": "Hi Vlad, patch http://gist.github.com/619398 work perfect, no locales crashes for client esES, Gameobject Ok, Items OK, PageText OK and Gossip OK. (GCC version 4.4.1)  Thanks soo much."
+  },
+  {
+   "id": "gh-775735",
+   "row": 1491,
+   "label": "positive",
+   "text": "Love it! +1"
+  },
+  {
+   "id": "gh-76887",
+   "row": 5965,
+   "label": "positive",
+   "text": "Oh, thanks. I'm using such patch for 1,5 years, but always considered it as hack :)"
+  },
+  {
+   "id": "gh-4882967",
+   "row": 4280,
+   "label": "negative",
+   "text": "but can still invoke sounds weird. Leave that part out."
+  },
+  {
+   "id": "gh-445097",
+   "row": 1330,
+   "label": "negative",
+   "text": "problem with me is with the spell that kill npcs by Hodir.  sry for my english. :("
+  },
+  {
+   "id": "gh-140193",
+   "row": 2102,
+   "label": "negative",
+   "text": "Ah, right--I forgot we use camelCase. My fault, sorry about that."
+  },
+  {
+   "id": "gh-138",
+   "row": 2298,
+   "label": "negative",
+   "text": "You're a nasty code smell."
+  },
+  {
+   "id": "gh-1724874",
+   "row": 4819,
+   "label": "positive",
+   "text": "Its safe, at least from a unit testing perspective! I also don't see why it wouldn't be safe. An I missing something?"
+  },
+  {
+   "id": "gh-1536009",
+   "row": 639,
+   "label": "positive",
+   "text": "Do it!"
+  },
+  {
+   "id": "gh-868612",
+   "row": 6001,
+   "label": "positive",
+   "text": "Problem solved, then. Also, do not forget Subv's contribution :)"
+  },
+  {
+   "id": "gh-2851422",
+   "row": 2378,
+   "label": "positive",
+   "text": "ok perfect.. then ignore me :)"
+  },
+  {
+   "id": "gh-2413764",
+   "row": 2046,
+   "label": "negative",
+   "text": "Fuuuu ! copy paste fail :'("
+  },
+  {
+   "id": "gh-4204446",
+   "row": 2304,
+   "label": "negative",
+   "text": "crap, I'll rework it, I don't want a dangling else just waiting to f**k us over if someone does not watch what they are doing."
+  },
+  {
+   "id": "gh-959600",
+   "row": 6810,
+   "label": "positive",
+   "text": "trust me, we will not miss that :-) I can sprinkle FIXME if that makes you sleep better, but I wouldn't trust the fixmes when doing the ticket anyway"
+  },
+  {
+   "id": "gh-2389775",
+   "row": 4724,
+   "label": "positive",
+   "text": "i build my project using maven so there is no ABS library folder per se (get recreated for each build) so this might not be applicable. thanks for your help anyway!"
+  },
+  {
+   "id": "gh-695945",
+   "row": 2228,
+   "label": "negative",
+   "text": "Where is .destroy() defined?  I'm confused..."
+  },
+  {
+   "id": "gh-713896",
+   "row": 2142,
+   "label": "negative",
+   "text": "Naughty!"
+  },
+  {
+   "id": "gh-1016679",
+   "row": 1795,
+   "label": "negative",
+   "text": "And... when i do weird search and replaces i use to add as comment what i've used to change it, so others can reproduce with custom code."
+  },
+  {
+   "id": "gh-466485",
+   "row": 268,
+   "label": "negative",
+   "text": "Testing code is for chumps."
+  },
+  {
+   "id": "gh-1377418",
+   "row": 2083,
+   "label": "negative",
+   "text": "This patch does introduce a huge performance regression for target that don't use COM, it can't be merged like this."
+  },
+  {
+   "id": "gh-2295483",
+   "row": 5914,
+   "label": "negative",
+   "text": "@grum  >The other solution is to apply random obfuscation to any CraftBukkit build on everything except the main methods and the Bukkit API. > >Maybe we should just do that.  ...Wow, are you serious? Im speechless.. as @rehv said, that makes me scared"
+  },
+  {
+   "id": "gh-2621078",
+   "row": 1937,
+   "label": "negative",
+   "text": "Doh... Sorry :-("
+  },
+  {
+   "id": "gh-1396249",
+   "row": 1105,
+   "label": "negative",
+   "text": "Fancy, but just kinda wasted my time trying to figure out if it was an error or not.  My guess is It looks wrong to most developers. Wasting dev time makes me sad.  Also, it's inconsistent within the project since index.html retains the closing tags.  Also"
+  },
+  {
+   "id": "gh-3116008",
+   "row": 4680,
+   "label": "positive",
+   "text": "great - okay, makes sense.  thanks for going through these all - yay, less yellow triangles! ;)    feel free to merge!"
+  },
+  {
+   "id": "gh-1031779",
+   "row": 1431,
+   "label": "positive",
+   "text": "thats going to reduce the table character_queststatus significant... good job!!"
+  },
+  {
+   "id": "gh-2867005",
+   "row": 4611,
+   "label": "positive",
+   "text": "Nice name, buddy."
+  },
+  {
+   "id": "gh-923471",
+   "row": 2076,
+   "label": "negative",
+   "text": "@fcoury :sob:"
+  },
+  {
+   "id": "gh-1661317",
+   "row": 2355,
+   "label": "positive",
+   "text": "nice catch :)"
+  },
+  {
+   "id": "gh-3382279",
+   "row": 4608,
+   "label": "positive",
+   "text": "Is GCC charging you money for auxiliary vars, @arrbee? I'll throw in some VC so you can use one here. :p"
+  },
+  {
+   "id": "gh-1890350",
+   "row": 2898,
+   "label": "positive",
+   "text": "Nice Bukkit! Keep up the good work :-) I ran this dev today, but sadly, I was not able to hold 230+ players without TPS going down to 3, so I'm rolled back 1 dev for now until things are tweaked a bit."
+  },
+  {
+   "id": "gh-2370821",
+   "row": 1938,
+   "label": "negative",
+   "text": "Hrmpf, why doesn't my python show those :("
+  },
+  {
+   "id": "gh-1568705",
+   "row": 2371,
+   "label": "positive",
+   "text": "Just passing by :)"
+  },
+  {
+   "id": "gh-2268328",
+   "row": 86,
+   "label": "positive",
+   "text": "@me4502 Wait, are you saying that this wasn't in the API?! I don't work with entity inventories that much, but I thought it was already in there. The more you know... Thanks for submitting it, though, and I hope it gets pulled. I believe that some surviv"
+  },
+  {
+   "id": "gh-2816599",
+   "row": 1037,
+   "label": "negative",
+   "text": "Thanks for this, but things are about to explode for me. :("
+  },
+  {
+   "id": "gh-616891",
+   "row": 3321,
+   "label": "positive",
+   "text": "Thanks Ben. Just corrected the splitted line to one line.  You can LGTM the 2 commits in this pull request.  Cheers,  -- Mike   On Wed, Mar 28, 2012 at 07:54, Ben Noordhuis < reply@reply.github.com > wrote:  > > @@ -446,6 +456,8 @@ class TypedArray { > >"
+  },
+  {
+   "id": "gh-425782",
+   "row": 6030,
+   "label": "positive",
+   "text": "doh, I always forget about the gitconfig file. @joseicosta you now have one more commit to Rails :P"
+  },
+  {
+   "id": "gh-1258830",
+   "row": 4693,
+   "label": "positive",
+   "text": "ye thanks ;]"
+  },
+  {
+   "id": "gh-4037990",
+   "row": 1969,
+   "label": "negative",
+   "text": "Ok, I've opened #12157. Sorry for disturbance and actually I'm saying bullshit, we can't install Minitest 5 with Rails 4.0. :blush:"
+  },
+  {
+   "id": "gh-44907",
+   "row": 5773,
+   "label": "positive",
+   "text": "You made it on top of hacker news. Congratz."
+  },
+  {
+   "id": "gh-3913614",
+   "row": 1912,
+   "label": "negative",
+   "text": "sorry. I fucked up because I had used `git versions python` and wanted to reproduce an older issue with 2.7.3"
+  },
+  {
+   "id": "gh-19249",
+   "row": 4423,
+   "label": "negative",
+   "text": "Can you give me an example of a route? Because I'm pretty sure we don't need this weird `~` support."
+  },
+  {
+   "id": "gh-232191",
+   "row": 5004,
+   "label": "positive",
+   "text": "I cherry-pick this above existed master code and it only different from added by function name and not affected to work code changes. So if i miss some more advansed version rsa prefer hide it from us ;)"
+  },
+  {
+   "id": "gh-2216217",
+   "row": 4811,
+   "label": "positive",
+   "text": "`jsonProp` is pure brilliant!"
+  },
+  {
+   "id": "gh-941612",
+   "row": 1166,
+   "label": "negative",
+   "text": "crap, sorry, it's fixed now"
+  },
+  {
+   "id": "gh-5895963",
+   "row": 7088,
+   "label": "positive",
+   "text": "Well the current code sniffs complain about it. We could always change the rules :smile:"
+  },
+  {
+   "id": "gh-27980",
+   "row": 6084,
+   "label": "positive",
+   "text": "I hope ideally that this also accepts the syntax of {\"Set-Cookie\": ['cookie 1', 'cookie 2', 'cookie 3']} too. :)  That's how it's done in Camping, and in my Campy thingo. I think I had read somewhere that some http client (old browsers or some such thing"
+  },
+  {
+   "id": "gh-67561",
+   "row": 2306,
+   "label": "negative",
+   "text": "Ah my bad, seems it's been fixed, the current version of the docs online http://api.rubyonrails.org/classes/ActiveSupport/CoreExtensions/Time/Calculations.html still have this wrong"
+  },
+  {
+   "id": "gh-1596478",
+   "row": 7106,
+   "label": "positive",
+   "text": "I blame the computer :-) no, it should of course go together with the MurmurHash class, I think I move it to a separate file, to avoid license ambiguities, also makes sense since we use MurmurHash from other place also."
+  },
+  {
+   "id": "gh-2721548",
+   "row": 3108,
+   "label": "positive",
+   "text": "Im glad someone finally did something about this instance. Many thanks to Trista and fellas!"
+  },
+  {
+   "id": "gh-1336972",
+   "row": 4068,
+   "label": "negative",
+   "text": "Registering half of the locale stub only looks like a bad idea"
+  },
+  {
+   "id": "gh-2313742",
+   "row": 1598,
+   "label": "negative",
+   "text": "an·noy·ing. v. Causing irritation or annoyance: \"annoying habits\". Synonyms: vexatious - bothersome - troublesome - tiresome - pesky  troll. n. someone who posts inflammatory, extraneous, or off-topic messages in an online community, such as a forum, cha"
+  },
+  {
+   "id": "gh-1826087",
+   "row": 1977,
+   "label": "negative",
+   "text": "Mhhh maybe not. But what i can tell that i get crashes now as soon as i want to try airplay. I just don't get whats going on yet :("
+  },
+  {
+   "id": "gh-166590",
+   "row": 5031,
+   "label": "positive",
+   "text": "@jeresig - Welp sucko, when they fix it then something like a weak inference + version sniff will do. As for them not fixing bugs because it will affect a js lib; that is my new pet peeve, browsers should fix bugs and let libs fix there own bugs :P"
+  },
+  {
+   "id": "gh-531761",
+   "row": 1859,
+   "label": "negative",
+   "text": "@int007 you are an idiot. removing that line doesn't leave anything undefined. Go learn C++ and come back when you learn the difference between defining a variable and passing it to another function."
+  },
+  {
+   "id": "gh-725002",
+   "row": 4317,
+   "label": "negative",
+   "text": "We shouldn't use a composite buffer - it's known to perform pretty bad and it will make hotspot confused because of one more ChannelBuffer implementation to consider."
+  },
+  {
+   "id": "gh-3242099",
+   "row": 554,
+   "label": "positive",
+   "text": "Thanks for pointers, actually /home/lechup/.virtualenvs/django-sprint/local/lib/python2.7/site-packages/django/ is a symlink to /home/lechup/github/django/django/ .  I'll try that .pth thing, but I think it is not the case.  PS: Pastebin? I though abou"
+  },
+  {
+   "id": "gh-877477",
+   "row": 806,
+   "label": "positive",
+   "text": "good!"
+  },
+  {
+   "id": "gh-284329",
+   "row": 1805,
+   "label": "negative",
+   "text": "hm dunno how that happend :\\"
+  },
+  {
+   "id": "gh-46657",
+   "row": 2904,
+   "label": "positive",
+   "text": "@Garrett: Perhaps you missed my thanks in the commit message? Definitely appreciate the input.  @jdalton: When you get the volume of questions, support requests, possible bug reports, and other miscellany that I do related to jQuery it significantly help"
+  },
+  {
+   "id": "gh-40863",
+   "row": 4902,
+   "label": "positive",
+   "text": "Yeah, I had it like this to start off with but I got carried away trying to make everything line up nicely. :)  I'll put it back how it was and see what you think."
+  },
+  {
+   "id": "gh-49512",
+   "row": 153,
+   "label": "negative",
+   "text": "Relax TGM. They just do it to break our patch files and screw with our custom stuff."
+  },
+  {
+   "id": "gh-775891",
+   "row": 1705,
+   "label": "negative",
+   "text": "Is it now possible to make it NOT destroy everything?? And btw.... why the hell does he destroy everything??"
+  },
+  {
+   "id": "gh-842658",
+   "row": 1466,
+   "label": "positive",
+   "text": "Can we revert it now on master? =)"
+  },
+  {
+   "id": "gh-3093527",
+   "row": 605,
+   "label": "positive",
+   "text": "Hahaha, totally agreed I believe one is morally allowed to refactor touch typing while looking somewhere else :smile:."
+  },
+  {
+   "id": "gh-918086",
+   "row": 2408,
+   "label": "positive",
+   "text": "I also tried it, and hardly less than you:) so far obtained. though of course very easy to write ..."
+  },
+  {
+   "id": "gh-190078",
+   "row": 4395,
+   "label": "negative",
+   "text": "Oh God. I'm having trouble with PRs on GitHub. Awkward. I'll better make another one using a fresh copy of Symfony."
+  },
+  {
+   "id": "gh-3973573",
+   "row": 1651,
+   "label": "negative",
+   "text": "BURN HIM!!!"
+  },
+  {
+   "id": "gh-2477676",
+   "row": 1554,
+   "label": "negative",
+   "text": "fixed. I think that tests for Rails core is bad idea. Don't you think so too? Have you read good article from DHH about it?!"
+  },
+  {
+   "id": "gh-2335087",
+   "row": 1601,
+   "label": "negative",
+   "text": "Please stop censoring my comments...."
+  },
+  {
+   "id": "gh-741828",
+   "row": 1301,
+   "label": "negative",
+   "text": "That typo was just crazy!"
+  },
+  {
+   "id": "gh-2845047",
+   "row": 2746,
+   "label": "positive",
+   "text": "@riking   Thank you :)  I did not know about this feature (I'm new in gihub :)) In future I will use formatting for code  :)"
+  },
+  {
+   "id": "gh-487563",
+   "row": 2544,
+   "label": "positive",
+   "text": "nah it's a none-node related C project, thanks I'll check it out!"
+  },
+  {
+   "id": "gh-447660",
+   "row": 5538,
+   "label": "negative",
+   "text": "Since I really don't understand this cryptic lines I just post the error output for you to review: ``` 2>C:\\Development\\xbmc\\xbmc\\utils/GlobalsHandling.h(184): warning C4346: 'xbmcutil::GlobalsSingleton<T>::?$Deleter@V?$shared_ptr@$RX@BAAB@@boost@@' : depe"
+  },
+  {
+   "id": "gh-47677",
+   "row": 155,
+   "label": "positive",
+   "text": "Nice work !"
+  },
+  {
+   "id": "gh-2261601",
+   "row": 2822,
+   "label": "positive",
+   "text": "@BangL Check out my message about 3 hours ago in this comment section. :)"
+  },
+  {
+   "id": "gh-1578910",
+   "row": 1771,
+   "label": "negative",
+   "text": "why not convert in aura script :-("
+  },
+  {
+   "id": "gh-5095934",
+   "row": 4246,
+   "label": "positive",
+   "text": "Nice! That actually makes it much more readable, thanks!"
+  },
+  {
+   "id": "gh-185948",
+   "row": 2763,
+   "label": "positive",
+   "text": "It seams to work at the first sight. I will do further tests, but it is an improvement of this patch.  All non-Win'er will thank you ;)"
+  },
+  {
+   "id": "gh-1057796",
+   "row": 2073,
+   "label": "negative",
+   "text": "holy crap"
+  },
+  {
+   "id": "gh-5765",
+   "row": 2307,
+   "label": "negative",
+   "text": "I'm shocked and appalled by the change.  Please revert the entry for Taiwan to \"Taiwan\", which follows the standard practice of every major, important and recognized web site and software service of the world. Neither Amazon, IBM, Microsoft or Apple, to"
+  },
+  {
+   "id": "gh-2300366",
+   "row": 2027,
+   "label": "negative",
+   "text": "I think hardcoding this value is a bad idea. Making it configurable with a sensible default makes much more sense."
+  },
+  {
+   "id": "gh-346535",
+   "row": 4216,
+   "label": "positive",
+   "text": "Hey, good catch!  I'll remove them."
+  },
+  {
+   "id": "gh-279838",
+   "row": 4862,
+   "label": "positive",
+   "text": "Now *that* is perfect!"
+  },
+  {
+   "id": "gh-2208775",
+   "row": 1207,
+   "label": "negative",
+   "text": ":O, Good job! This invovled a lot of data research. Now only Last Line of Defence lies as a challenge of the series."
+  },
+  {
+   "id": "gh-554875",
+   "row": 1716,
+   "label": "negative",
+   "text": "I was the one who found the memory leak, not @Zeerix. :/"
+  },
+  {
+   "id": "gh-1615871",
+   "row": 4943,
+   "label": "negative",
+   "text": "@rsa In this case do shut up and do not bother us from your worm den. Thanks for the url anyway."
+  },
+  {
+   "id": "gh-2386670",
+   "row": 625,
+   "label": "positive",
+   "text": "@jeremy thanks SO MUCH for that writeup, explains why it was decided to be not fully baked, with a convincing and reasonable argument, and also explain what you are thinking about future directions.   It is VERY useful for us Rails-using developers to ha"
+  },
+  {
+   "id": "gh-56087",
+   "row": 2240,
+   "label": "negative",
+   "text": "Ooooh no :("
+  },
+  {
+   "id": "gh-103103",
+   "row": 3174,
+   "label": "positive",
+   "text": "> @carlosmn, +1 reason to drop MSVC support ;) > MinGW is enough.  Hahahaha.  Anyway, we cannot assume that variable-length arrays are supported. Can we please switch this to a constant? Cheers!"
+  },
+  {
+   "id": "gh-2391842",
+   "row": 2771,
+   "label": "positive",
+   "text": "Yep i had found it, but thank you very much for answering my simple question :)  Glad theres atleast some people out there that understand a simple question :P"
+  },
+  {
+   "id": "gh-5826392",
+   "row": 4250,
+   "label": "positive",
+   "text": "What a *lovely* addition. Mind boggling we didn't have this before."
+  },
+  {
+   "id": "gh-2521754",
+   "row": 4744,
+   "label": "positive",
+   "text": "Or just not allow nulls in there at all :-)"
+  },
+  {
+   "id": "gh-10740",
+   "row": 923,
+   "label": "positive",
+   "text": "@eric You make it sound so easy :)  If you can make a patch, I'd be happy to apply it."
+  }
+ ]
+}

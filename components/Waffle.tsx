@@ -11,7 +11,7 @@ export type WaffleCell = {
   label: Sentiment;
   jev: { v: Verdict; said: Sentiment | null };
   qwen: { v: Verdict; said: Sentiment | null };
-  /** Opening of the review; only sent for cells where a model erred. */
+  /** Opening of the item text; only sent for cells where a model erred. */
   snippet?: string;
 };
 
@@ -32,7 +32,7 @@ function describe(name: string, p: { v: Verdict; said: Sentiment | null }) {
   return `${p.v === 0 ? "✓" : "✕"} ${name} said ${p.said}`;
 }
 
-function Block({ cells, model, other }: { cells: WaffleCell[]; model: ModelInfo; other: ModelInfo }) {
+function Block({ cells, model, other, nouns }: { cells: WaffleCell[]; model: ModelInfo; other: ModelInfo; nouns: string }) {
   const rows = Math.ceil(cells.length / COLS);
   const k = model.key as ModelKey;
   const o = other.key as ModelKey;
@@ -41,7 +41,7 @@ function Block({ cells, model, other }: { cells: WaffleCell[]; model: ModelInfo;
       className="waffle-svg"
       viewBox={`0 0 ${COLS * PITCH - (PITCH - SIZE)} ${rows * PITCH - (PITCH - SIZE)}`}
       role="img"
-      aria-label={`${cells.length} ${cells[0]?.label} reviews: ${cells.filter((c) => c[k].v === 1).length} misclassified by ${model.name}`}
+      aria-label={`${cells.length} ${cells[0]?.label} ${nouns}: ${cells.filter((c) => c[k].v === 1).length} misclassified by ${model.name}`}
     >
       {cells.map((c, i) => {
         const lines = [
@@ -68,7 +68,7 @@ function Block({ cells, model, other }: { cells: WaffleCell[]; model: ModelInfo;
   );
 }
 
-export default function Waffle({ cells, models }: { cells: WaffleCell[]; models: ModelInfo[] }) {
+export default function Waffle({ cells, models, nouns = "reviews" }: { cells: WaffleCell[]; models: ModelInfo[]; nouns?: string }) {
   const [focus, setFocus] = useState<Focus>("all");
   const groups = useMemo(
     () => (["positive", "negative"] as const).map((label) => ({ label, cells: cells.filter((c) => c.label === label) })),
@@ -100,20 +100,20 @@ export default function Waffle({ cells, models }: { cells: WaffleCell[]; models:
             {groups.map((g) => (
               <div key={g.label} className="wall-block">
                 <div className="wall-block-label">
-                  {g.label === "positive" ? "Positive reviews" : "Negative reviews"}
+                  {g.label === "positive" ? "Positive" : "Negative"} {nouns}
                   <span>{g.cells.length}</span>
                 </div>
-                <Block cells={g.cells} model={m} other={other} />
+                <Block cells={g.cells} model={m} other={other} nouns={nouns} />
               </div>
             ))}
           </div>
         );
       }),
-    [cells, groups, models],
+    [cells, groups, models, nouns],
   );
 
   const options: { key: Focus; label: string; count?: number }[] = [
-    { key: "all", label: "Every review" },
+    { key: "all", label: `Every ${nouns.replace(/s$/, "")}` },
     { key: "split", label: "They disagree", count: counts.split },
     { key: "both-wrong", label: "Both wrong", count: counts.bothWrong },
   ];

@@ -15,16 +15,39 @@ The benchmark runs **once**. Its answers are filed in `data/results.json` (and
 `public/results.csv` for download), and the Next.js page renders them at build time.
 The deployed site makes no model calls and needs no API key.
 
+## Two datasets, one page
+
+A selector at the top of the page switches between two benchmarks. Both use the same
+sections, statistics, models and run script; only the data and the wording change
+(`lib/datasets.ts`).
+
+| Dataset | Route | Files | Run |
+| --- | --- | --- | --- |
+| IMDB movie reviews (default) | `/` | `data/sample.json`, `data/results.json`, `public/results.csv` | `npm run eval` |
+| GitHub pull-request and commit comments | `/github` | `data/github/sample.json`, `data/github/results.json`, `public/github/results.csv` | `npm run eval -- --dataset github` |
+
+The GitHub comments come from the GitHub sentiment gold standard: N. Novielli,
+F. Calefato, D. Dongiovanni, D. Girardi, F. Lanubile, "Can We Use SE-specific Sentiment
+Analysis Tools in a Cross-Platform Setting?", MSR 2020
+([Figshare](https://figshare.com/articles/dataset/A_gold_standard_for_polarity_of_emotions_of_software_developers_in_GitHub/11604597/1),
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). The unmodified source file is
+committed at `data/raw/github_gold.csv`. For this benchmark we set aside its neutral
+comments, undid a second layer of CSV quoting left by its export, dropped one duplicate,
+and drew a balanced sample of 500 positive and 500 negative comments.
+
 ## Layout
 
 ```
-data/sample.json        1,000 reviews (500 pos / 500 neg), seeded. Committed.
-data/results.json       every model answer, written by the one-time run. Committed.
-public/results.csv      the same answers as a flat CSV, linked from the page.
-scripts/sample.ts       builds data/sample.json from the full IMDB CSV
-scripts/run-eval.ts     the one-time run (resumable)
-lib/stats.ts            accuracy, Wilson CIs, exact McNemar, calibration, length buckets
-app/page.tsx            the page
+data/sample.json            1,000 IMDB reviews (500 pos / 500 neg), seeded. Committed.
+data/results.json           every model answer, written by the one-time run. Committed.
+public/results.csv          the same answers as a flat CSV, linked from the page.
+data/github/…, public/github/…   the same three files for the GitHub comments
+data/raw/github_gold.csv    GitHub gold standard source file (CC BY 4.0)
+scripts/sample.ts           builds a sample.json from a source CSV (--dataset imdb|github)
+scripts/run-eval.ts         the one-time run (resumable; --dataset imdb|github)
+lib/datasets.ts             per-dataset paths and page wording
+lib/stats.ts                accuracy, Wilson CIs, exact McNemar, calibration, length buckets
+components/BenchmarkPage.tsx  the page, shared by app/page.tsx (/) and app/github/page.tsx
 ```
 
 ## Run the benchmark (once)
@@ -50,7 +73,8 @@ instructions and the two label definitions (see `scripts/run-eval.ts`).
 ## Preview the page before running
 
 ```bash
-npm run eval:mock                               # simulated answers, no API calls
+npm run eval:mock                               # simulated IMDB answers, no API calls
+npm run eval:mock -- --dataset github           # simulated GitHub answers
 RESULTS_FILE=results.mock.json npm run dev
 ```
 
@@ -74,3 +98,9 @@ npm run sample -- "IMDB Dataset.csv" --n 2000 --seed 7
 
 The script drops exact duplicates (419 of the 50,000), converts `<br />` tags to newlines,
 and takes an equal number of positive and negative reviews.
+
+The GitHub sample is rebuilt from the committed source file:
+
+```bash
+npm run sample -- data/raw/github_gold.csv --dataset github
+```

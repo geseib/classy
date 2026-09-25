@@ -35,7 +35,7 @@ function Verdict({ name, k, said, label, extra }: { name: string; k: string; sai
   );
 }
 
-function Card({ item, models }: { item: GalleryItem; models: ModelInfo[] }) {
+function Card({ item, models, noun }: { item: GalleryItem; models: ModelInfo[]; noun: string }) {
   const [open, setOpen] = useState(false);
   const long = item.text.length > 520;
   const [j, q] = models;
@@ -46,13 +46,13 @@ function Card({ item, models }: { item: GalleryItem; models: ModelInfo[] }) {
           {item.label === "positive" ? "👍" : "👎"} Human label: {item.label}
         </span>
         <span className="review-id">
-          {item.id} · {item.words} words
+          {item.id} · {item.words} {item.words === 1 ? "word" : "words"}
         </span>
       </header>
       <p className={`review-text ${long && !open ? "clamped" : ""}`}>{item.text}</p>
       {long && (
         <button className="linklike" onClick={() => setOpen(!open)} aria-expanded={open}>
-          {open ? "Show less" : "Read the full review"}
+          {open ? "Show less" : `Read the full ${noun}`}
         </button>
       )}
       <footer>
@@ -75,7 +75,7 @@ function Card({ item, models }: { item: GalleryItem; models: ModelInfo[] }) {
   );
 }
 
-export default function Gallery({ tabs, models }: { tabs: GalleryTab[]; models: ModelInfo[] }) {
+export default function Gallery({ tabs, models, noun = "review" }: { tabs: GalleryTab[]; models: ModelInfo[]; noun?: string }) {
   const visible = tabs.filter((t) => t.items.length > 0);
   const [active, setActive] = useState(visible[0]?.key);
   const base = useId();
@@ -107,7 +107,7 @@ export default function Gallery({ tabs, models }: { tabs: GalleryTab[]; models: 
         </p>
         <div className="reviews">
           {tab.items.map((item) => (
-            <Card key={item.id} item={item} models={models} />
+            <Card key={item.id} item={item} models={models} noun={noun} />
           ))}
         </div>
       </div>

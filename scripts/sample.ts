@@ -1,13 +1,19 @@
 /**
- * Draw a reproducible, class-balanced sample from the IMDB 50K dataset.
+ * Draw a reproducible, class-balanced sample from a labelled sentiment dataset.
  *
  *   npm run sample -- "path/to/IMDB Dataset.csv" [--n 1000] [--seed 42]
+ *   npm run sample -- data/raw/github_gold.csv --dataset github
  *
- * Writes data/sample.json. The full CSV is not committed; the sample is,
- * so the eval can be re-run without the 66 MB source file.
+ * imdb    IMDB Dataset of 50K Movie Reviews (review,sentiment). Writes data/sample.json.
+ *         The 66 MB source CSV is not committed; the sample is.
+ * github  GitHub sentiment gold standard, Novielli et al. 2020 (ID;Polarity;Text,
+ *         CC BY 4.0, committed at data/raw/github_gold.csv). Neutral comments are
+ *         set aside. Writes data/github/sample.json.
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
 import { parseArgs } from "node:util";
+import { DATASETS, isDatasetKey } from "../lib/datasets";
 import type { SampleFile, SampleItem, Sentiment } from "../lib/types";
 
 const { values, positionals } = parseArgs({
@@ -15,15 +21,18 @@ const { values, positionals } = parseArgs({
   options: {
     n: { type: "string", default: "1000" },
     seed: { type: "string", default: "42" },
-    out: { type: "string", default: "data/sample.json" },
+    dataset: { type: "string", default: "imdb" },
+    out: { type: "string" },
   },
 });
 
 const csvPath = positionals[0];
-if (!csvPath) {
-  console.error('usage: npm run sample -- "IMDB Dataset.csv" [--n 1000] [--seed 42]');
+if (!csvPath || !isDatasetKey(values.dataset)) {
+  console.error('usage: npm run sample -- <source.csv> [--dataset imdb|github] [--n 1000] [--seed 42]');
   process.exit(1);
 }
+const dataset = values.dataset;
+const outPath = values.out ?? path.join(DATASETS[dataset].dir, "sample.json");
 const n = Number(values.n);
 const seed = Number(values.seed);
 if (!Number.isInteger(n) || n < 2 || n % 2 !== 0) {
@@ -31,8 +40,8 @@ if (!Number.isInteger(n) || n < 2 || n % 2 !== 0) {
   process.exit(1);
 }
 
-/** RFC 4180 parser: quoted fields, embedded commas/newlines, "" escapes. */
-function parseCsv(input: string): string[][] {
+/** RFC 4180 parser: quoted fields, embedded delimiters/newlines, "" escapes. */
+function parseCsv(input: string, delimiter = ","): string[][] {
   const rows: string[][] = [];
   let row: string[] = [];
   let field = "";
@@ -52,7 +61,7 @@ function parseCsv(input: string): string[][] {
       }
     } else if (c === '"') {
       quoted = true;
-    } else if (c === ",") {
+    } else if (c === delimiter) {
       row.push(field);
       field = "";
     } else if (c === "\n" || c === "\r") {
@@ -93,53 +102,122 @@ function shuffle<T>(arr: T[], rand: () => number): T[] {
   return a;
 }
 
-const clean = (s: string) =>
-  s
-    .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/\n{3,}/g, "\n\n")
-    .trim();
+type Parsed = {
+  source: string;
+  pool: Record<Sentiment, SampleItem[]>;
+  duplicates: number;
+  excluded?: SampleFile["excluded"];
+  unusable?: number;
+};
 
-const [header, ...data] = parseCsv(readFileSync(csvPath, "utf8"));
-if (header?.[0] !== "review" || header?.[1] !== "sentiment") {
-  throw new Error(`unexpected header: ${JSON.stringify(header)}`);
+function parseImdb(input: string): Parsed {
+  const clean = (s: string) =>
+    s
+      .replace(/<br\s*\/?>/gi, "\n")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim();
+
+  const [header, ...data] = parseCsv(input);
+  if (header?.[0] !== "review" || header?.[1] !== "sentiment") {
+    throw new Error(`unexpected header: ${JSON.stringify(header)}`);
+  }
+
+  const seen = new Set<string>();
+  let duplicates = 0;
+  const pool: Record<Sentiment, SampleItem[]> = { positive: [], negative: [] };
+  data.forEach(([review, sentiment], i) => {
+    if (review === undefined) return;
+    if (sentiment !== "positive" && sentiment !== "negative") {
+      throw new Error(`row ${i + 1}: unexpected sentiment ${JSON.stringify(sentiment)}`);
+    }
+    const text = clean(review);
+    if (seen.has(text)) {
+      duplicates++;
+      return;
+    }
+    seen.add(text);
+    const row = i + 1;
+    pool[sentiment].push({ id: `imdb-${String(row).padStart(5, "0")}`, row, label: sentiment, text });
+  });
+  return { source: "IMDB Dataset of 50K Movie Reviews (Maas et al., 2011)", pool, duplicates };
 }
 
-const seen = new Set<string>();
-let duplicates = 0;
-const pool: Record<Sentiment, SampleItem[]> = { positive: [], negative: [] };
-data.forEach(([review, sentiment], i) => {
-  if (review === undefined) return;
-  if (sentiment !== "positive" && sentiment !== "negative") {
-    throw new Error(`row ${i + 1}: unexpected sentiment ${JSON.stringify(sentiment)}`);
+function parseGithub(input: string): Parsed {
+  // The Text column was CSV-quoted twice on export: after one level of parsing,
+  // almost every text still ends in the closing quote of the inner level and
+  // quotation marks inside a comment are still doubled. Undo the inner level.
+  const clean = (s: string) => s.replace(/"$/, "").replace(/""/g, '"').trim();
+  // Spreadsheet error values that replaced a comment during export.
+  const unusableText = (s: string) => s === "" || /^(Err:\d+|#[A-Z/0!]+[?!]?)$/.test(s);
+
+  const [header, ...data] = parseCsv(input, ";");
+  if (header?.[0] !== "ID" || header?.[1] !== "Polarity" || header?.[2] !== "Text") {
+    throw new Error(`unexpected header: ${JSON.stringify(header)}`);
   }
-  const text = clean(review);
-  if (seen.has(text)) {
-    duplicates++;
-    return;
-  }
-  seen.add(text);
-  const row = i + 1;
-  pool[sentiment].push({ id: `imdb-${String(row).padStart(5, "0")}`, row, label: sentiment, text });
-});
+
+  const seen = new Set<string>();
+  let duplicates = 0;
+  let unusable = 0;
+  const excluded = new Map<string, number>();
+  const pool: Record<Sentiment, SampleItem[]> = { positive: [], negative: [] };
+  data.forEach(([id, polarity, raw], i) => {
+    if (raw === undefined) return;
+    if (polarity !== "positive" && polarity !== "negative") {
+      if (polarity !== "neutral") throw new Error(`row ${i + 1}: unexpected polarity ${JSON.stringify(polarity)}`);
+      excluded.set(polarity, (excluded.get(polarity) ?? 0) + 1);
+      return;
+    }
+    const text = clean(raw);
+    if (unusableText(text)) {
+      unusable++;
+      return;
+    }
+    if (seen.has(text)) {
+      duplicates++;
+      return;
+    }
+    seen.add(text);
+    pool[polarity].push({ id: `gh-${id}`, row: i + 1, label: polarity, text });
+  });
+  return {
+    source: "GitHub sentiment gold standard (Novielli et al., 2020), CC BY 4.0",
+    pool,
+    duplicates,
+    excluded: [...excluded].map(([label, count]) => ({ label, count })),
+    unusable,
+  };
+}
+
+const input = readFileSync(csvPath, "utf8");
+const { source, pool, duplicates, excluded, unusable } = dataset === "imdb" ? parseImdb(input) : parseGithub(input);
 
 const rand = rng(seed);
 const half = n / 2;
+if (pool.positive.length < half || pool.negative.length < half) {
+  throw new Error(`not enough items: ${pool.positive.length} positive, ${pool.negative.length} negative, need ${half} of each`);
+}
 const items = shuffle(
   [...shuffle(pool.positive, rand).slice(0, half), ...shuffle(pool.negative, rand).slice(0, half)],
   rand,
 );
 
 const out: SampleFile = {
-  source: "IMDB Dataset of 50K Movie Reviews (Maas et al., 2011)",
+  source,
   seed,
   size: items.length,
   populationSize: pool.positive.length + pool.negative.length,
   duplicatesRemoved: duplicates,
+  ...(excluded ? { excluded } : {}),
+  ...(unusable !== undefined ? { unusableRemoved: unusable } : {}),
   createdAt: new Date().toISOString(),
   items,
 };
-writeFileSync(values.out!, JSON.stringify(out, null, 1) + "\n");
+mkdirSync(path.dirname(outPath), { recursive: true });
+writeFileSync(outPath, JSON.stringify(out, null, 1) + "\n");
 console.log(
-  `sampled ${items.length} (${half} pos / ${half} neg) from ${out.populationSize} unique reviews ` +
-    `(${duplicates} duplicates dropped), seed ${seed} → ${values.out}`,
+  `sampled ${items.length} (${half} pos / ${half} neg) from ${out.populationSize} unique items ` +
+    `(${duplicates} duplicates dropped` +
+    (excluded?.length ? `, ${excluded.map((e) => `${e.count} ${e.label}`).join(", ")} set aside` : "") +
+    (unusable ? `, ${unusable} unusable` : "") +
+    `), seed ${seed} → ${outPath}`,
 );

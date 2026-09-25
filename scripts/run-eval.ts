@@ -1,24 +1,30 @@
 /**
- * One-time benchmark run. Sends every sampled review to both models through
+ * One-time benchmark run. Sends every sampled item to both models through
  * Vercel AI Gateway, with the ground-truth label withheld, and files the answers.
  *
- *   npm run eval                      # full run → data/results.json + public/results.csv
+ *   npm run eval                      # IMDB: full run → data/results.json + public/results.csv
+ *   npm run eval -- --dataset github  # GitHub: → data/github/results.json + public/github/results.csv
  *   npm run eval -- --limit 20        # smoke test (prints a summary, writes no results)
  *   npm run eval -- --concurrency 16
- *   npm run eval -- --speed 50        # time single requests per model, throttled calls discarded → data/speed.json
- *   npm run eval -- --reference 80    # Claude Sonnet 5 on the first 80 reviews → data/reference.json
- *   npm run eval -- --partial         # file the answers so far (reviews both models answered), no calls
- *   npm run eval:mock                 # simulated answers → data/results.mock.json (layout preview only)
+ *   npm run eval -- --speed 50        # time single requests per model, throttled calls discarded → <dataset dir>/speed.json
+ *   npm run eval -- --reference 80    # Claude Sonnet 5 on the first 80 items → <dataset dir>/reference.json
+ *   npm run eval -- --partial         # file the answers so far (items both models answered), no calls
+ *   npm run eval:mock                 # simulated answers → <dataset dir>/results.mock.json (layout preview only)
+ *
+ * Every mode takes --dataset; without it the dataset is IMDB and every path is
+ * the original one (data/…, public/results.csv).
  *
  * Auth: AI_GATEWAY_API_KEY (or VERCEL_OIDC_TOKEN from `vercel env pull`), read
  * from the environment, .env.local or .env.
  *
- * Every successful answer is appended to data/.checkpoints/<model>.jsonl, so an
+ * Every successful answer is appended to <checkpoint dir>/<model>.jsonl, so an
  * interrupted run resumes where it stopped. Failed calls are retried on the next run.
  */
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
 import { parseArgs } from "node:util";
 import { experimental_evaluate as evaluate, generateText } from "ai";
+import { DATASETS, isDatasetKey, type DatasetKey } from "../lib/datasets";
 import type {
   ModelInfo,
   ModelKey,
@@ -40,9 +46,17 @@ const { values } = parseArgs({
     partial: { type: "boolean", default: false },
     speed: { type: "string" },
     reference: { type: "string" },
-    sample: { type: "string", default: "data/sample.json" },
+    dataset: { type: "string", default: "imdb" },
+    sample: { type: "string" },
   },
 });
+
+if (!isDatasetKey(values.dataset)) {
+  console.error(`--dataset must be one of: ${Object.keys(DATASETS).join(", ")}`);
+  process.exit(1);
+}
+const DATASET = DATASETS[values.dataset];
+const NOUNS = DATASET.nouns;
 
 for (const file of [".env.local", ".env"]) {
   if (existsSync(file)) process.loadEnvFile(file);
@@ -50,15 +64,34 @@ for (const file of [".env.local", ".env"]) {
 
 // ─── The task, as both models see it ────────────────────────────────────────
 // Same instructions and label definitions for both models. The dataset label
-// is never part of the request.
+// is never part of the request. The IMDB wording is the original benchmark's
+// and must not change, or its filed results stop matching the code.
 
-const INSTRUCTIONS =
-  "Classify the overall sentiment the author expresses toward the film in this IMDB movie review.";
+type Task = { instructions: string; criteria: Record<Sentiment, string>; tag: string };
 
-const CRITERIA: Record<Sentiment, string> = {
-  positive: "The reviewer's overall opinion of the movie is favorable.",
-  negative: "The reviewer's overall opinion of the movie is unfavorable.",
+const TASKS: Record<DatasetKey, Task> = {
+  imdb: {
+    instructions: "Classify the overall sentiment the author expresses toward the film in this IMDB movie review.",
+    criteria: {
+      positive: "The reviewer's overall opinion of the movie is favorable.",
+      negative: "The reviewer's overall opinion of the movie is unfavorable.",
+    },
+    tag: "review",
+  },
+  github: {
+    instructions:
+      "Classify the overall emotional tone the author expresses in this comment from a GitHub pull request or commit discussion.",
+    criteria: {
+      positive: "The author's overall tone is positive, for example appreciative, pleased, enthusiastic or friendly.",
+      negative: "The author's overall tone is negative, for example frustrated, annoyed, disappointed or hostile.",
+    },
+    tag: "comment",
+  },
 };
+
+const INSTRUCTIONS = TASKS[DATASET.key].instructions;
+const CRITERIA = TASKS[DATASET.key].criteria;
+const TAG = TASKS[DATASET.key].tag;
 
 const GENERATIVE_SYSTEM = [
   "You are a sentiment classifier.",
@@ -68,7 +101,7 @@ const GENERATIVE_SYSTEM = [
   "Answer with exactly one lowercase word, positive or negative, and nothing else.",
 ].join("\n");
 
-const GENERATIVE_TEMPLATE = "<review>\n{review}\n</review>";
+const GENERATIVE_TEMPLATE = `<${TAG}>\n{${TAG}}\n</${TAG}>`;
 
 const MODELS: Record<ModelKey, ModelInfo> = {
   jev: {
@@ -77,7 +110,7 @@ const MODELS: Record<ModelKey, ModelInfo> = {
     name: "Jev",
     vendor: "Typesafe AI",
     kind: "evaluation",
-    call: "experimental_evaluate({ state: review, questions: { sentiment: { type: 'choice', … } } })",
+    call: `experimental_evaluate({ state: ${TAG}, questions: { sentiment: { type: 'choice', … } } })`,
     pricing: { inputPerMTok: 0.042, outputPerMTok: 0 },
   },
   qwen: {
@@ -143,7 +176,7 @@ async function classifyQwen(item: SampleItem, maxRetries = MAX_RETRIES): Promise
   const result = await generateText({
     model: MODELS.qwen.id,
     system: GENERATIVE_SYSTEM,
-    prompt: GENERATIVE_TEMPLATE.replace("{review}", item.text),
+    prompt: GENERATIVE_TEMPLATE.replace(`{${TAG}}`, item.text),
     temperature: 0,
     maxOutputTokens: 2048,
     maxRetries: MAX_RETRIES,
@@ -191,7 +224,7 @@ function mockPredict(key: ModelKey, item: SampleItem, index: number): Prediction
 
 // ─── Runner ─────────────────────────────────────────────────────────────────
 
-const CHECKPOINT_DIR = "data/.checkpoints";
+const CHECKPOINT_DIR = DATASET.checkpoints;
 
 function loadCheckpoint(key: ModelKey): Map<string, Prediction> {
   const done = new Map<string, Prediction>();
@@ -340,8 +373,9 @@ async function speedTest(sample: SampleFile, n: number) {
     console.log(`\n${MODELS[key].id.padEnd(22)} p50 ${models[key].p50} ms · p95 ${models[key].p95} ms`);
   }
   const out: SpeedFile = { runAt: new Date().toISOString(), n, models };
-  writeFileSync("data/speed.json", JSON.stringify(out, null, 1) + "\n");
-  console.log("\nFiled → data/speed.json");
+  const file = `${DATASET.dir}/speed.json`;
+  writeFileSync(file, JSON.stringify(out, null, 1) + "\n");
+  console.log(`\nFiled → ${file}`);
 }
 
 // ─── Reference model ────────────────────────────────────────────────────────
@@ -363,7 +397,7 @@ async function classifyReference(item: SampleItem): Promise<Prediction> {
   const result = await generateText({
     model: REFERENCE.id,
     system: GENERATIVE_SYSTEM,
-    prompt: GENERATIVE_TEMPLATE.replace("{review}", item.text),
+    prompt: GENERATIVE_TEMPLATE.replace(`{${TAG}}`, item.text),
     maxOutputTokens: 2048,
     maxRetries: 0,
     abortSignal: AbortSignal.timeout(TIMEOUT_MS),
@@ -401,15 +435,16 @@ async function referenceRun(sample: SampleFile, n: number) {
     process.stdout.write(`\r${REFERENCE.name} ${rows.length}/${n} · ${right} correct · ${throttled} throttled (discarded)   `);
   }
   const run: ReferenceRun = { runAt: new Date().toISOString(), model: REFERENCE, rows, throttledDiscarded: throttled, via: "api" };
-  const file = "data/reference.json";
+  const file = `${DATASET.dir}/reference.json`;
   const prev: ReferenceFile = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : { references: [] };
   const out: ReferenceFile = { references: [...prev.references.filter((r) => r.model.id !== REFERENCE.id), run] };
   writeFileSync(file, JSON.stringify(out, null, 1) + "\n");
-  console.log("\n\nFiled → data/reference.json");
+  console.log(`\n\nFiled → ${file}`);
 }
 
 async function main() {
-  const sample = JSON.parse(readFileSync(values.sample!, "utf8")) as SampleFile;
+  const samplePath = values.sample ?? `${DATASET.dir}/sample.json`;
+  const sample = JSON.parse(readFileSync(samplePath, "utf8")) as SampleFile;
   const limit = values.limit ? Number(values.limit) : undefined;
   let items = limit ? sample.items.slice(0, limit) : sample.items;
   const concurrency = Number(values.concurrency);
@@ -435,7 +470,7 @@ async function main() {
       process.exit(1);
     }
     mkdirSync(CHECKPOINT_DIR, { recursive: true });
-    console.log(`Classifying ${items.length} reviews with ${Object.keys(MODELS).length} models, concurrency ${concurrency}\n`);
+    console.log(`Classifying ${items.length} ${NOUNS} (${DATASET.key}) with ${Object.keys(MODELS).length} models, concurrency ${concurrency}\n`);
     const ticker = setInterval(renderProgress, process.stdout.isTTY ? 250 : 10_000);
     const [jev, qwen] = await Promise.all([
       runModel("jev", items, concurrency),
@@ -457,11 +492,11 @@ async function main() {
   }
 
   if (missing.length > 0) {
-    console.error(`\n${missing.length} answers still missing (failed calls). Re-run \`npm run eval\` to retry them.`);
+    console.error(`\n${missing.length} answers still missing (failed calls). Re-run \`npm run eval${DATASET.evalArgs}\` to retry them.`);
     process.exit(1);
   }
   if (limit) {
-    console.log(`\n--limit run: summary only. Run without --limit to file data/results.json.`);
+    console.log(`\n--limit run: summary only. Run without --limit to file ${DATASET.dir}/results.json.`);
     return;
   }
 
@@ -487,15 +522,16 @@ async function main() {
     })),
   };
 
+  const csvFile = `public${DATASET.csv}`;
   if (values.mock) {
-    writeFileSync("data/results.mock.json", JSON.stringify(results) + "\n");
-    console.log("\nSimulated results → data/results.mock.json");
-    console.log("Preview with: RESULTS_FILE=data/results.mock.json npm run dev");
+    writeFileSync(`${DATASET.dir}/results.mock.json`, JSON.stringify(results) + "\n");
+    console.log(`\nSimulated results → ${DATASET.dir}/results.mock.json`);
+    console.log("Preview with: RESULTS_FILE=results.mock.json npm run dev");
   } else {
-    writeFileSync("data/results.json", JSON.stringify(results, null, 1) + "\n");
-    mkdirSync("public", { recursive: true });
-    writeFileSync("public/results.csv", toCsv(results, sample));
-    console.log("\nFiled → data/results.json and public/results.csv. Commit both and deploy.");
+    writeFileSync(`${DATASET.dir}/results.json`, JSON.stringify(results, null, 1) + "\n");
+    mkdirSync(path.dirname(csvFile), { recursive: true });
+    writeFileSync(csvFile, toCsv(results, sample));
+    console.log(`\nFiled → ${DATASET.dir}/results.json and ${csvFile}. Commit both and deploy.`);
   }
 }
 

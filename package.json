@@ -2,7 +2,7 @@
   "name": "classy",
   "version": "0.1.0",
   "private": true,
-  "description": "IMDB sentiment classification benchmark: typesafe-ai/jev vs alibaba/qwen3.7-flash via Vercel AI Gateway",
+  "description": "Sentiment classification benchmark on IMDB reviews and GitHub comments: typesafe-ai/jev vs alibaba/qwen3.7-flash via Vercel AI Gateway",
   "type": "module",
   "scripts": {
     "dev": "next dev",

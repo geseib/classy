@@ -78,7 +78,7 @@ export function AccuracyChart({ metrics, models }: { metrics: ModelMetrics[]; mo
 
 // ─── Figure 3: confusion matrices ───────────────────────────────────────────
 
-export function ConfusionMatrix({ m, info }: { m: ModelMetrics; info: ModelInfo }) {
+export function ConfusionMatrix({ m, info, nouns = "reviews" }: { m: ModelMetrics; info: ModelInfo; nouns?: string }) {
   const classes: Sentiment[] = ["positive", "negative"];
   const showNone = m.unanswered > 0;
   const cols: (Sentiment | "none")[] = showNone ? [...classes, "none"] : classes;
@@ -117,7 +117,7 @@ export function ConfusionMatrix({ m, info }: { m: ModelMetrics; info: ModelInfo 
                       className={share > 0.5 ? "cm-strong" : "cm-weak"}
                       style={{ "--share": `${Math.round(Math.sqrt(share) * 100)}%` } as React.CSSProperties}
                       tabIndex={0}
-                      data-tip={`${fmt(v)} reviews (${pct(share)} of ${actual})\nActually ${actual}, ${
+                      data-tip={`${fmt(v)} ${nouns} (${pct(share)} of ${actual})\nActually ${actual}, ${
                         pred === "none" ? "no usable answer" : `${info.name} said ${pred}`
                       }\n${right ? "Correct" : "Error"}`}
                     >
@@ -137,11 +137,11 @@ export function ConfusionMatrix({ m, info }: { m: ModelMetrics; info: ModelInfo 
 
 // ─── Figure 4: paired agreement ─────────────────────────────────────────────
 
-export function AgreementTable({ a, models }: { a: Agreement; models: ModelInfo[] }) {
+export function AgreementTable({ a, models, nouns = "reviews" }: { a: Agreement; models: ModelInfo[]; nouns?: string }) {
   const [j, q] = models;
   const total = a.bothRight + a.onlyJev + a.onlyQwen + a.bothWrong;
   const cell = (v: number, kind: string, tip: string) => (
-    <td className={`ag-${kind}`} tabIndex={0} data-tip={`${fmt(v)} reviews (${pct(v / total)})\n${tip}`}>
+    <td className={`ag-${kind}`} tabIndex={0} data-tip={`${fmt(v)} ${nouns} (${pct(v / total)})\n${tip}`}>
       <span className="ag-count">{fmt(v)}</span>
       <span className="ag-share">{pct(v / total)}</span>
     </td>
@@ -181,7 +181,17 @@ export function AgreementTable({ a, models }: { a: Agreement; models: ModelInfo[
 
 // ─── Figure 5: accuracy by review length ────────────────────────────────────
 
-export function LengthChart({ buckets, models }: { buckets: LengthBucket[]; models: ModelInfo[] }) {
+export function LengthChart({
+  buckets,
+  models,
+  noun = "review",
+  nouns = "reviews",
+}: {
+  buckets: LengthBucket[];
+  models: ModelInfo[];
+  noun?: string;
+  nouns?: string;
+}) {
   const all = buckets.flatMap((b) => [b.accuracy.jev, b.accuracy.qwen]);
   const min = Math.max(0, Math.floor(Math.min(...all) * 20 - 0.5) / 20);
   const max = 1;
@@ -214,7 +224,7 @@ export function LengthChart({ buckets, models }: { buckets: LengthBucket[]; mode
               className={`xy-dot series-${m.key}`}
               style={{ left: `${xAt(i)}%`, top: `${yAt(b.accuracy[m.key])}%` }}
               tabIndex={0}
-              data-tip={`${pct(b.accuracy[m.key])} · ${m.name}\n${b.minWords}–${b.maxWords} words\n${b.n} reviews`}
+              data-tip={`${pct(b.accuracy[m.key])} · ${m.name}\n${b.minWords}–${b.maxWords} words\n${b.n} ${nouns}`}
             />
           )),
         )}
@@ -246,14 +256,14 @@ export function LengthChart({ buckets, models }: { buckets: LengthBucket[]; mode
           </span>
         ))}
       </div>
-      <div className="xy-xtitle">Review length, words (five equal-size groups of {buckets[0]?.n ?? 0})</div>
+      <div className="xy-xtitle">{noun.charAt(0).toUpperCase() + noun.slice(1)} length, words (five equal-size groups of {buckets[0]?.n ?? 0})</div>
     </div>
   );
 }
 
 // ─── Figure 6: calibration of the evaluation model ──────────────────────────
 
-export function ReliabilityChart({ bins, total }: { bins: CalibrationBin[]; total: number }) {
+export function ReliabilityChart({ bins, total, nouns = "reviews" }: { bins: CalibrationBin[]; total: number; nouns?: string }) {
   // x: stated confidence 50–100%. y: observed accuracy 0–100%.
   const x = (v: number) => ((v - 0.5) / 0.5) * 100;
   const y = (v: number) => (1 - v) * 100;
@@ -282,7 +292,7 @@ export function ReliabilityChart({ bins, total }: { bins: CalibrationBin[]; tota
               tabIndex={0}
               data-tip={`${pct(b.accuracy)} actually correct\nStated confidence ${pct(b.lo, 0)}–${pct(b.hi, 0)} (mean ${pct(
                 b.confidence,
-              )})\n${b.n} reviews (${pct(b.n / total)})`}
+              )})\n${b.n} ${nouns} (${pct(b.n / total)})`}
             />
           );
         })}
@@ -294,7 +304,7 @@ export function ReliabilityChart({ bins, total }: { bins: CalibrationBin[]; tota
           </span>
         ))}
       </div>
-      <div className="xy-xtitle">Jev’s probability for the label it chose · bubble area = number of reviews</div>
+      <div className="xy-xtitle">Jev’s probability for the label it chose · bubble area = number of {nouns}</div>
     </div>
   );
 }

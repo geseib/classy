@@ -3,11 +3,11 @@ export type Sentiment = "positive" | "negative";
 export type SampleItem = {
   /** Stable id derived from the row number in the source CSV. */
   id: string;
-  /** 1-based data row in `IMDB Dataset.csv` (header excluded). */
+  /** 1-based data row in the source CSV (header excluded). */
   row: number;
   /** Ground truth. Never sent to a model. */
   label: Sentiment;
-  /** Review text with the dataset's `<br />` tags converted to newlines. */
+  /** Item text after the dataset's cleanup (see scripts/sample.ts). */
   text: string;
 };
 
@@ -17,6 +17,10 @@ export type SampleFile = {
   size: number;
   populationSize: number;
   duplicatesRemoved: number;
+  /** Rows set aside before sampling because their label is neither positive nor negative. */
+  excluded?: { label: string; count: number }[];
+  /** Rows dropped because the text was empty or an export error rather than a comment. */
+  unusableRemoved?: number;
   createdAt: string;
   items: SampleItem[];
 };
@@ -97,7 +101,7 @@ export type ResultsFile = {
     generativeTemplate: string;
   };
   models: ModelInfo[];
-  /** One row per sampled review, in sample order. */
+  /** One row per sampled item, in sample order. */
   rows: {
     id: string;
     label: Sentiment;

@@ -12,6 +12,7 @@ next-env.d.ts
 # local-only eval artifacts
 data/.checkpoints/
 data/results.mock.json
+data/*/results.mock.json
 data/*.csv
 data/*.zip
 

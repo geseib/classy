@@ -205,6 +205,33 @@ code {
   }
 }
 
+/* Dataset selector: same pages, different data */
+.ds-switch a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ds-switch a:focus-visible {
+  outline: 2px solid var(--jev);
+  outline-offset: 1px;
+}
+@media (max-width: 720px) {
+  .nav-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 0;
+    row-gap: 8px;
+  }
+  .ds-switch {
+    order: 3;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .ds-switch a {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
 .footer {
   border-top: 1px solid var(--border);
   padding: 28px 0 40px;
@@ -936,7 +963,8 @@ code {
   border: 1px solid var(--border);
   font-family: var(--font-sans), sans-serif;
 }
-.seg button {
+.seg button,
+.seg a {
   font: inherit;
   font-size: 13px;
   color: var(--ink-2);
@@ -949,10 +977,12 @@ code {
   gap: 6px;
   align-items: center;
 }
-.seg button:hover {
+.seg button:hover,
+.seg a:hover {
   color: var(--ink);
 }
-.seg button.on {
+.seg button.on,
+.seg a.on {
   background: var(--card);
   color: var(--ink);
   font-weight: 500;
