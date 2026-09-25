@@ -144,7 +144,7 @@ async function classifyJev(item: SampleItem, maxRetries = MAX_RETRIES): Promise<
     questions: {
       sentiment: { type: "choice", instructions: INSTRUCTIONS, criteria: CRITERIA },
     },
-    maxRetries: MAX_RETRIES,
+    maxRetries,
     abortSignal: AbortSignal.timeout(TIMEOUT_MS),
   });
   const answer = result.answers.sentiment;
@@ -179,7 +179,7 @@ async function classifyQwen(item: SampleItem, maxRetries = MAX_RETRIES): Promise
     prompt: GENERATIVE_TEMPLATE.replace(`{${TAG}}`, item.text),
     temperature: 0,
     maxOutputTokens: 2048,
-    maxRetries: MAX_RETRIES,
+    maxRetries,
     abortSignal: AbortSignal.timeout(TIMEOUT_MS),
   });
   return {
