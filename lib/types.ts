@@ -60,7 +60,17 @@ export type SpeedFile = {
   runAt: string;
   /** Reviews timed per model (first N of the sample), after one discarded warm-up call. */
   n: number;
-  models: Record<ModelKey, { latenciesMs: number[]; p50: number; p95: number; throttledDiscarded: number }>;
+  models: Record<
+    ModelKey,
+    {
+      latenciesMs: number[];
+      p50: number;
+      p95: number;
+      throttledDiscarded: number;
+      /** Requests the service failed to serve (5xx), discarded and re-sent. Absent in files from before it was counted. */
+      failedDiscarded?: number;
+    }
+  >;
 };
 
 /** One reference model on the first N sample reviews, as a point of comparison. */

@@ -342,6 +342,14 @@ function toCsv(results: ResultsFile, sample: SampleFile): string {
 const SPEED_MIN_GAP_MS: Record<ModelKey, number> = { jev: 0, qwen: 12_500 }; // Qwen: 5 req/min team limit
 
 const isRateLimit = (err: unknown) => /rate ?limit|429/i.test(`${(err as Error)?.name} ${(err as Error)?.message}`);
+/** A request the service failed to serve (5xx, "unavailable"): not a timing of the model, so it is discarded. */
+const isTransient = (err: unknown) => {
+  const e = err as { name?: string; message?: string; statusCode?: number };
+  return (
+    (typeof e?.statusCode === "number" && e.statusCode >= 500) ||
+    /internal ?server|unavailable|overloaded|50[234]/i.test(`${e?.name} ${e?.message}`)
+  );
+};
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function speedTest(sample: SampleFile, n: number) {
@@ -350,9 +358,10 @@ async function speedTest(sample: SampleFile, n: number) {
   for (const key of ["jev", "qwen"] as const) {
     const latencies: number[] = [];
     let throttled = 0;
+    let failed = 0;
     let last = 0;
     for (const [i, item] of items.entries()) {
-      for (;;) {
+      for (let streak = 0; ; ) {
         await wait(Math.max(0, last + SPEED_MIN_GAP_MS[key] - Date.now()));
         last = Date.now();
         try {
@@ -360,16 +369,21 @@ async function speedTest(sample: SampleFile, n: number) {
           if (i > 0) latencies.push(p.latencyMs);
           break;
         } catch (err) {
-          if (!isRateLimit(err)) throw err;
-          throttled++;
+          const limited = isRateLimit(err);
+          if (!limited && !isTransient(err)) throw err;
+          if (++streak > 20) throw new Error(`${MODELS[key].id}: 20 discarded attempts in a row, giving up: ${describeError(err)}`);
+          if (limited) throttled++;
+          else failed++;
           await wait(20_000);
         }
       }
-      process.stdout.write(`\r${MODELS[key].name} ${latencies.length}/${n} timed, ${throttled} throttled (discarded)   `);
+      process.stdout.write(
+        `\r${MODELS[key].name} ${latencies.length}/${n} timed, ${throttled} throttled, ${failed} service errors (discarded)   `,
+      );
     }
     const sorted = [...latencies].sort((a, b) => a - b);
     const q = (p: number) => sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))];
-    models[key] = { latenciesMs: latencies, p50: q(0.5), p95: q(0.95), throttledDiscarded: throttled };
+    models[key] = { latenciesMs: latencies, p50: q(0.5), p95: q(0.95), throttledDiscarded: throttled, failedDiscarded: failed };
     console.log(`\n${MODELS[key].id.padEnd(22)} p50 ${models[key].p50} ms · p95 ${models[key].p95} ms`);
   }
   const out: SpeedFile = { runAt: new Date().toISOString(), n, models };
