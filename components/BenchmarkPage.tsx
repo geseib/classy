@@ -180,6 +180,7 @@ function largeModelCopy(
   const jev = metrics.jev;
   if (bigRight / n > jev.ci[1]) return null;
   const J = results.models.find((m) => m.key === "jev")!;
+  const jevSpeed = medianResponse("jev", speed);
   const bigCost = refCostPer1k(big)!;
   const share = jev.expectedCostPer1k !== null ? (100 * jev.expectedCostPer1k) / bigCost.value : null;
   // A floor on the big model's cost makes Jev's share a ceiling: say "under".
@@ -201,9 +202,10 @@ function largeModelCopy(
       <>
         We asked {countWord(results.models.length + refs.length)} AI models whether each of {fmt(n)} {ds.itemsPhrase} was
         positive or negative, without showing them the answers. <strong>{J.name}</strong>, a purpose-built evaluation model,
-        got {fmt(jev.correct)} right. <strong>{big.model.name}</strong> got {fmt(bigRight)}. {J.name} typically answered in{" "}
-        {seconds(medianResponse("jev", jev, speed))}
-        {shareText && `, for ${shareText} of ${big.model.name}’s cost`}.
+        got {fmt(jev.correct)} right. <strong>{big.model.name}</strong> got {fmt(bigRight)}.{" "}
+        {jevSpeed !== null
+          ? `${J.name} typically answered in ${seconds(jevSpeed)}${shareText && `, for ${shareText} of ${big.model.name}’s cost`}.`
+          : shareText && `${J.name} cost ${shareText} as much.`}
       </>
     ),
   };
@@ -273,7 +275,7 @@ function Scorecards({
                 <div>
                   <dt>Median response</dt>
                   {/* Only a throttle-free speed test is quoted here; the run's own latency includes rate-limit waits. */}
-                  <dd>{speed ? ms(speed.models[m.key].p50) : "n/a"}</dd>
+                  <dd>{msOrNa(medianResponse(m.key, speed))}</dd>
                 </div>
                 <div>
                   <dt>Cost / 1k {nouns}</dt>
@@ -535,7 +537,7 @@ function WithResults({
                       <td>{pct(s.recall.positive)}</td>
                       <td>{pct(s.recall.negative)}</td>
                       <td>{s.unanswered}</td>
-                      <td>{ms(medianResponse(m.key, s, speed))}</td>
+                      <td>{msOrNa(medianResponse(m.key, speed))}</td>
                       <td>
                         {s.meanInputTokens === null || s.meanOutputTokens === null
                           ? "n/a"
@@ -551,18 +553,13 @@ function WithResults({
           </div>
           <figcaption>
             <strong>Table 1.</strong> Recall + / − is accuracy on positive and on negative {nouns}.{" "}
-            {speed ? (
+            {speed && (
               <>
                 Median latency comes from a separate speed test of {fmt(speed.n)} {nouns} per model: one request at a time from one
                 client through AI Gateway, each timed as a single attempt, with any request the gateway throttled discarded rather
-                than retried (95th percentile: {models.map((m) => `${m.name} ${ms(speed.models[m.key].p95)}`).join(", ")}).
+                than retried (95th percentile: {models.map((m) => `${m.name} ${ms(speed.models[m.key].p95)}`).join(", ")}).{" "}
               </>
-            ) : (
-              <>
-                Median latency is wall-clock per request during the accuracy run, from one client through AI Gateway, retries and
-                rate-limit back-off included; treat it as indicative.
-              </>
-            )}{" "}
+            )}
             Tokens are the mean per {noun}. Expected cost is
             those tokens at list price (
             {models
@@ -575,6 +572,7 @@ function WithResults({
               .map((m) => `; ${m.name} was billed $0 on this account (free tier)`)
               .join("")}
             .
+            <ThrottleNote models={models} metrics={metrics} speed={speed} noun={noun} nouns={nouns} />
           </figcaption>
         </figure>
 
@@ -816,7 +814,7 @@ function ReferenceSection({
         name: m.name,
         right,
         ci: wilson(right, n),
-        speed: ms(medianResponse(m.key, metrics[m.key], speed)),
+        speed: msOrNa(medianResponse(m.key, speed)),
         cost: usd(metrics[m.key].expectedCostPer1k),
         price: "",
       };
@@ -922,18 +920,78 @@ function ReferenceSection({
 
 const quantileMs = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)] ?? 0;
 
-/**
- * Median response time: the throttle-free speed test when this dataset has one,
- * otherwise the accuracy run's own per-request latency (retries included).
- */
 /** Share of scored items whose human label is positive. */
 const posShare = (m: ReturnType<typeof modelMetrics>) => {
   const pos = m.confusion.positive.positive + m.confusion.positive.negative + m.confusion.positive.none;
   return m.n ? pos / m.n : 0.5;
 };
 
-const medianResponse = (k: ModelKey, m: ReturnType<typeof modelMetrics>, speed: SpeedFile | null) =>
-  speed ? speed.models[k].p50 : m.latency.p50;
+/**
+ * Median response time from the throttle-free speed test, or null without one.
+ * The accuracy run's own latency is never quoted as a model's speed: it
+ * includes waits imposed by this account's rate limit (see ThrottleNote).
+ */
+const medianResponse = (k: ModelKey, speed: SpeedFile | null) => (speed ? speed.models[k].p50 : null);
+const msOrNa = (v: number | null) => (v === null ? "n/a" : ms(v));
+
+/**
+ * AI Gateway limits on the account the benchmark ran on, not properties of the
+ * models. Qwen's matches SPEED_MIN_GAP_MS in scripts/run-eval.ts.
+ */
+const ACCOUNT_RATE_LIMITS: Partial<Record<ModelKey, string>> = { qwen: "about 5 requests a minute" };
+
+/** Footnote to Table 1: what throttling did to the full run, and why it is kept out of the speeds. */
+function ThrottleNote({
+  models,
+  metrics,
+  speed,
+  noun,
+  nouns,
+}: {
+  models: ModelInfo[];
+  metrics: Record<ModelKey, ReturnType<typeof modelMetrics>>;
+  speed: SpeedFile | null;
+  noun: string;
+  nouns: string;
+}) {
+  // A model counts as throttled when its run median is far above its clean median,
+  // or, with no speed test yet, when it has a known account limit.
+  const throttled = models.filter((m) =>
+    speed ? metrics[m.key].latency.p50 > 3 * speed.models[m.key].p50 : ACCOUNT_RATE_LIMITS[m.key] !== undefined,
+  );
+  if (throttled.length === 0) return null;
+  const limits = throttled.filter((m) => ACCOUNT_RATE_LIMITS[m.key]);
+  const runMedians = models.map((m) => `${ms(metrics[m.key].latency.p50)} for ${m.name}`).join(" and ");
+  const [J, Q] = models;
+  const jOut = metrics[J.key].meanOutputTokens;
+  const qOut = metrics[Q.key].meanOutputTokens;
+  return (
+    <>
+      <br />
+      <br />
+      <strong>Throttling.</strong>{" "}
+      {limits.length > 0 && (
+        <>
+          AI Gateway held this account to {limits.map((m) => `${ACCOUNT_RATE_LIMITS[m.key]} for ${m.name}`).join(" and ")}.{" "}
+        </>
+      )}
+      The full run sent requests in parallel and retried each one the gateway turned away, so counting those waits the median
+      request took {runMedians}. The waits come from the account’s limit, not the model, and an account with a higher limit
+      would not see them.{" "}
+      {speed
+        ? "So the response times above come only from the separate throttle-free speed test."
+        : `No throttle-free speed test has been filed for these ${nouns} yet, so response times are shown as n/a rather than the throttled figures.`}
+      {speed && jOut !== null && qOut !== null && qOut > 3 * jOut && (
+        <>
+          {" "}
+          Without throttling, {Q.name} is still slower than {J.name} because it produces about {fmt(Math.round(qOut / 10) * 10)}{" "}
+          tokens per {noun}, most of them reasoning that is not part of its one-word reply; {J.name} produces{" "}
+          {fmt(Math.round(jOut))}.
+        </>
+      )}
+    </>
+  );
+}
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
